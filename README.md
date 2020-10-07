@@ -1,3 +1,6 @@
-# MTF - Easy Cash
+## Cash Aja
 
-Aplikasi berbasis website yang digunakan untuk mempermudah proses pemberian kredit oleh Mandiri Tunas Finance
+### Authors
+- I Made Adisurya N.
+- Nathasya Eliora K.
+- Rd. Pradipta Gitaya S.

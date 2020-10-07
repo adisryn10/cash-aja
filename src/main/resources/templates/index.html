@@ -1,548 +1,380 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
-
   <head>
-    <title>MTF Kredit Multiguna &mdash; Website by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="cust/css/bootstrap.min.css">
-    <link rel="stylesheet" href="cust/css/jquery-ui.css">
-    <link rel="stylesheet" href="cust/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-
-    <link rel="stylesheet" href="cust/css/jquery.fancybox.min.css">
-
-    <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
-
-    <link rel="stylesheet" href="cust/css/aos.css">
-
-    <link rel="stylesheet" href="cust/css/style.css">
-    
+      <title>MTF Kredit Multiguna &mdash; Website by Colorlib</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+      <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
+      <link rel="stylesheet" href="cust/css/bootstrap.min.css">
+      <link rel="stylesheet" href="cust/css/jquery-ui.css">
+      <link rel="stylesheet" href="cust/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="cust/css/jquery.fancybox.min.css">
+      <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
+      <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
+      <link rel="stylesheet" href="cust/css/aos.css">
+      <link rel="stylesheet" href="cust/css/style.css">
   </head>
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
-  <div class="site-wrap"  id="home-section">
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+    <div class="site-wrap"  id="home-section">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+        <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+      </header>
+
+      <br><br>
+
+      <!-- FIRST LANDING -->
+      <div class="site-blocks-cover">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-12" style="position: relative;" data-aos="fade-up">
+              <div class="row mb-4">
+                <div class="col-lg-6 mr-auto align-items-stretch">
+                  <h1>Kredit Multiguna</h1>
+                  <p class="mb-5">Dapatkan pinjaman mudah, cepat, dan terpercaya hanya dengan jaminan BPKB kendaraan kamu! Pencairan up to 90%</p>
+                  <div>
+                    <a href="/form-jaminan" class="btn btn-primary mr-2 mb-2">Ajukan Kredit</a>
+                    <a href="#features-section" class="btn btn-secondary mr-2 mb-2">Pelajari Lebih Lanjut</a>
+                  </div>
+                </div>
+                <div class = "col-lg-6 mr-auto flex-coloumn-reverse">
+                <img src="cust/images/landing_1.png" alt="Image" class="img-fluid" >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
 
-    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
 
-      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
-      
-    </header>
-    <br><br>
-    
-    <!-- FIRST LANDING -->
-    <div class="site-blocks-cover">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
+      <!-- KEUNTUNGAN -->
+      <div class="site-section bg-light" id="features-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-3">Keuntungan</h2>
+            </div>
+          </div>
+          <div class="row align-items-stretch">
 
-          <div class="col-md-12" style="position: relative;" data-aos="fade-up">
-            
-
-            <div class="row mb-4">
-              <div class="col-lg-6 mr-auto align-items-stretch">
-                <h1>Kredit Multiguna</h1>
-                <p class="mb-5">Dapatkan pinjaman mudah, cepat, dan terpercaya hanya dengan jaminan BPKB kendaraan kamu! Pencairan up to 90%</p>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+              <div class="unit-4 d-block">
+                <div class="unit-4-icon mb-3">
+                  <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span>
+                </div>
                 <div>
-                  <a href="/form-jaminan" class="btn btn-primary mr-2 mb-2">Ajukan Kredit</a>
-                  <a href="#features-section" class="btn btn-secondary mr-2 mb-2">Pelajari Lebih Lanjut</a>
+                  <h3>Mudah dan Cepat</h3>
+                  <p>Semua proses pengajuan online dan kamu bisa mendapatkan pencairan dengan cepat.</p>
                 </div>
               </div>
-              
-              <div class = "col-lg-6 mr-auto flex-coloumn-reverse">
-              <img src="cust/images/landing_1.png" alt="Image" class="img-fluid" >
-              </div>
-
-              
             </div>
 
-          </div>
-        </div>
-      </div>
-    </div>  
-
-
-    <div class="site-section bg-light" id="features-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Keuntungan</h2>
-          </div>
-        </div>
-        <div class="row align-items-stretch">
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span>
-              </div>
-              <div>
-                <h3>Mudah dan Cepat</h3>
-                <p>Semua proses pengajuan online dan kamu bisa mendapatkan pencairan dengan cepat.</p>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p> -->
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-settings_backup_restore"></span></span>
-              </div>
-              <div>
-                <h3>Angsuran Tetap dan Terjangkau</h3>
-                <p>Angsuran yang kamu bayarkan tiap bulan adalah sama. Dan terjangkau sesuai dengan kemampuan kamu.</p>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p> -->
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-sentiment_satisfied"></span></span>
-              </div>
-              <div>
-                <h3>Metode Pembayaran Mudah</h3>
-                <p>Bisa melakukan pembayaran dengan autodebet Mandiri. Tak perlu pusing tiap bulan.</p>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p> -->
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>            
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
-              </div>
-              <div>
-                <h3>Suku Bunga Rendah</h3>
-                <p>MTF memiliki banyak pilihan bunga yang bisa disesuaikan dengan keinginan. Dimulai dari 10% pertahunnya.</p>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p> -->
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
-              </div>
-              <div>
-                <h3>Transparan</h3>
-                <p>Kamu bisa memantau progress pengajuan kredit kamu. MTF akan memberikan update status yang bisa kamu akses di account kamu.</p>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p> -->
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
-              </div>
-              <div>
-                <h3>Durasi Kredit Panjang</h3>
-                <p>Tersedia durasi kredit selama 12 bulan, 24 bulan, dan 36 bulan dengan penawaran menarik yang berbeda-beda.</p>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p> -->
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>
-          </div>          
-
-
-        </div>
-      </div>
-    </div>
-    
-    <div class="feature-big">
-      <div class="container">
-        <div class="row mb-5 site-section border-bottom">
-          <div class="col-lg-7">
-            <img src="cust/images/do_ui_kit_download_cta_floating_devices-2x.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
-            <h2 class="text-black">Apa itu Kredit Multiguna?</h2>
-            <p class="mb-4">Pemberian kredit/ pembiayaan kepada customer untuk kebutuhan konsumtif, dengan jaminan dokumen kepemilikan kendaraan yang dimiliki customer. Jenis kebutuhan konsumtif adalah untuk</p>
-            <ul class="ul-check mb-5 list-unstyled success">
-              <li>Pendidikan</li>
-              <li>Pernikahan</li>
-              <li>Renovasi Rumah</li>
-              <li>Travel</li>
-              <li>Kesehatan</li>
-              <li>Lainnya</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="mt-5 row mb-5 site-section ">
-          <div class="col-lg-7 order-1 order-lg-2">
-            <img src="cust/images/do_ui_kit_hero_floating_devices-2x.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
-            <h2 class="text-black">Jaminan Pembiayaan</h2>
-            <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto autem molestias corrupti officia veniam</p> -->
-            <ul class="ul-check mb-5 list-unstyled success">
-              <li>Kendaraan Pribadi</li>
-              <li>Usia kendaraan maksimal pada saat akhir lunas pembiayaan multiguna adalah: Jepang (10 Tahun), Korea (6 Tahun), Eropa / USA (Chevrolet, BMW dan Mercedes Benz)</li>
-              <li>Nama BPKB wajib atas nama pemohon atau pasangan atau anak dibuktikan dengan dokumen legal</li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- About
-    <div class="site-section bg-light" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">About Us</h2>
-          </div>
-        </div>
-        <div class="row mb-5">
-          <div class="col-lg-6">
-            <img src="images/about_1.jpg" alt="Image" class="img-fluid mb-5 mb-lg-0 rounded shadow">
-          </div>
-          <div class="col-lg-5 ml-auto pl-lg-5">
-            <h2 class="text-black mb-4">Create interactive prototypes</h2>
-            <p class="mb-4">Eos cumque optio dolores excepturi rerum temporibus magni recusandae eveniet, totam omnis consectetur maxime quibusdam expedita dolorem dolor nobis dicta labore quaerat esse magnam unde, aperiam delectus! At maiores, itaque.</p>
-            <p><a href="#" class="btn btn-primary">Learn More</a></p>
-          </div>
-        </div>
-        
-      </div>
-    </div> -->
-
-
-    <div class="site-section testimonial-wrap" id="testimonials-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Testimoni</h2>
-          </div>
-        </div>
-      </div>
-      <div class="slide-one-item home-slider owl-carousel">
-          <div>
-            <div class="testimonial">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="cust/images/person_3.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
-              </figure>
-              <blockquote class="mb-3">
-                <p>&ldquo;Terimakasih MTF! Sangat mudah meminjam disini dengan bunga yang bersaing pula. Saya sangat terbantu.&rdquo;</p>
-              </blockquote>
-              <p class="text-black"><strong>Adi Matahari</strong></p>
-
-              
-            </div>
-          </div>
-          <div>
-            <div class="testimonial">
-              
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="cust/images/person_2.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
-              </figure>
-
-              <blockquote class="mb-3">
-                <p>&ldquo;MTF sangat terpercaya dan membantu. Mereka memberikan pinjaman dengan angsuran sesuai dengan kemampuan saya.&rdquo;</p>
-              </blockquote>
-              
-              <p class="text-black"><strong>El Fira</strong></p>
-              
-              
-            </div>
-          </div>
-
-          <div>
-            <div class="testimonial">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="cust/images/person_4.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
-              </figure>
-              <blockquote class="mb-3">
-                <p>&ldquo;Proses pencairan sangat cepat! Proses pengajuan kredit pun sangat mudah dan tidak bertele-tele. Kalau kamu membutuhkan dana dalam waktu cepat MTF adalah pilihan yang tepat.&rdquo;</p>
-              </blockquote>
-              <p class="text-black"><strong>Tasya Miranda</strong></p>
-
-              
-            </div>
-           
-          </div>
-
-          <!-- <div>
-            <div class="testimonial">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="images/person_1.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
-              </figure>
-              <blockquote class="mb-3">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-              <p class="text-black"><strong>Kyle McDonald</strong></p>
-
-              
-            </div> -->
-
-          </div>
-
-        </div>
-    </div>
-
-    <!-- Blog post
-    <div class="site-section" id="blog-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Blog Posts</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              <h2><a href="#">Create interactive prototypes</a></h2>
-              <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div> 
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              <h2><a href="#">Create interactive prototypes</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              <h2><a href="#">Create interactive prototypes</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div> 
-          </div>
-          
-        </div>
-      </div>
-    </div> -->
-
-<!-- SIMULASI  -->
-    <div id="simulation-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Simulasi Kredit</h2>
-          </div>
-        </div>
-
-        <div class = "col-6" style="margin-left: auto; margin-right: auto;">
-          <!-- <div class="col-sm-6"> -->
-        <!-- FOrm -->
-        <!-- <div class="col-sm-6"> -->
-        <div class="justify-content-center">
-          <!-- <div class="col-md-6"> -->
-            
-            <form th:action="@{simulasi/form-nominal}" th:object="${jaminanModel}" class="p-8 bg-white" method=POST>
-            
-              <!-- <h2 class="h4 text-black mb-5">(1/3) Data Kredit & Jaminan</h2>  -->
-
-                 <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="merk">Kendaraan</label> 
-                  <div>
-                    <select class="form-control rounded-0" th:field="${jaminanModel.kendaraan}">
-                      <option th:each="kendaraan : ${listKendaraan}" th:value="${kendaraan.id}" th:text="${kendaraan.jenis}  + ' -  ' +  ${kendaraan.merk}"></option>
-                    </select>
-                  </div>
-                  <!-- <input type="text" id="merk" th:field="${jaminanModel.merk}" class="form-control rounded-0"> -->
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+              <div class="unit-4 d-block">
+                <div class="unit-4-icon mb-3">
+                  <span class="icon-wrap"><span class="text-primary icon-settings_backup_restore"></span></span>
                 </div>
-              </div>  
+                <div>
+                  <h3>Angsuran Tetap dan Terjangkau</h3>
+                  <p>Angsuran yang kamu bayarkan tiap bulan adalah sama. Dan terjangkau sesuai dengan kemampuan kamu.</p>
+                </div>
+              </div>
+            </div>
 
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Tahun Kendaraan</label> 
-                  <input type="number" th:min= "1980" th:max="2020"id="tahun" th:field="${jaminanModel.tahun}" class="form-control rounded-0" required>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+              <div class="unit-4 d-block">
+                <div class="unit-4-icon mb-3">
+                  <span class="icon-wrap"><span class="text-primary icon-sentiment_satisfied"></span></span>
+                </div>
+                <div>
+                  <h3>Metode Pembayaran Mudah</h3>
+                  <p>Bisa melakukan pembayaran dengan autodebet Mandiri. Tak perlu pusing tiap bulan.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+
+              <div class="unit-4 d-block">
+                <div class="unit-4-icon mb-3">
+                  <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
+                </div>
+                <div>
+                  <h3>Suku Bunga Rendah</h3>
+                  <p>MTF memiliki banyak pilihan bunga yang bisa disesuaikan dengan keinginan. Dimulai dari 10% pertahunnya.</p>
                 </div>
               </div>
 
-              <!-- <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Harga Kendaraan</label> 
-                  <input type="text" id="harga" th:field="${jaminanModel.harga}" class="form-control rounded-0">
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+              <div class="unit-4 d-block">
+                <div class="unit-4-icon mb-3">
+                  <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
                 </div>
+                <div>
+                  <h3>Transparan</h3>
+                  <p>Kamu bisa memantau progress pengajuan kredit kamu. MTF akan memberikan update status yang bisa kamu akses di account kamu.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
+              <div class="unit-4 d-block">
+                <div class="unit-4-icon mb-3">
+                  <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
+                </div>
+                <div>
+                  <h3>Durasi Kredit Panjang</h3>
+                  <p>Tersedia durasi kredit selama 12 bulan, 24 bulan, dan 36 bulan dengan penawaran menarik yang berbeda-beda.</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!--APA ITU KREDIT MULTIGUNA-->
+      <div class="feature-big">
+        <div class="container">
+          <div class="row mb-5 site-section border-bottom">
+            <div class="col-lg-7">
+              <img src="cust/images/do_ui_kit_download_cta_floating_devices-2x.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+              <h2 class="text-black">Apa itu Kredit Multiguna?</h2>
+              <p class="mb-4">Pemberian kredit/ pembiayaan kepada customer untuk kebutuhan konsumtif, dengan jaminan dokumen kepemilikan kendaraan yang dimiliki customer. Jenis kebutuhan konsumtif adalah untuk</p>
+              <ul class="ul-check mb-5 list-unstyled success">
+                <li>Pendidikan</li>
+                <li>Pernikahan</li>
+                <li>Renovasi Rumah</li>
+                <li>Travel</li>
+                <li>Kesehatan</li>
+                <li>Lainnya</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-5 row mb-5 site-section ">
+            <div class="col-lg-7 order-1 order-lg-2">
+              <img src="cust/images/do_ui_kit_hero_floating_devices-2x.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
+              <h2 class="text-black">Jaminan Pembiayaan</h2>
+                <ul class="ul-check mb-5 list-unstyled success">
+                  <li>Kendaraan Pribadi</li>
+                  <li>Usia kendaraan maksimal pada saat akhir lunas pembiayaan multiguna adalah: Jepang (10 Tahun), Korea (6 Tahun), Eropa / USA (Chevrolet, BMW dan Mercedes Benz)</li>
+                  <li>Nama BPKB wajib atas nama pemohon atau pasangan atau anak dibuktikan dengan dokumen legal</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT-->
+      <!-- About
+      <div class="site-section bg-light" id="about-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-3">About Us</h2>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-lg-6">
+              <img src="images/about_1.jpg" alt="Image" class="img-fluid mb-5 mb-lg-0 rounded shadow">
+            </div>
+            <div class="col-lg-5 ml-auto pl-lg-5">
+              <h2 class="text-black mb-4">Create interactive prototypes</h2>
+              <p class="mb-4">Eos cumque optio dolores excepturi rerum temporibus magni recusandae eveniet, totam omnis consectetur maxime quibusdam expedita dolorem dolor nobis dicta labore quaerat esse magnam unde, aperiam delectus! At maiores, itaque.</p>
+              <p><a href="#" class="btn btn-primary">Learn More</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div> -->
+
+
+      <!--TESTIMONIAL-->
+      <div class="site-section testimonial-wrap" id="testimonials-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-3">Testimoni</h2>
+            </div>
+          </div>
+        </div>
+        <div class="slide-one-item home-slider owl-carousel">
+            <div>
+              <div class="testimonial">
+                <figure class="mb-4 d-block align-items-center justify-content-center">
+                  <div><img src="cust/images/person_3.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
+                </figure>
+                <blockquote class="mb-3">
+                  <p>&ldquo;Terimakasih MTF! Sangat mudah meminjam disini dengan bunga yang bersaing pula. Saya sangat terbantu.&rdquo;</p>
+                </blockquote>
+                <p class="text-black"><strong>Adi Matahari</strong></p>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <figure class="mb-4 d-block align-items-center justify-content-center">
+                  <div><img src="cust/images/person_2.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
+                </figure>
+                <blockquote class="mb-3">
+                  <p>&ldquo;MTF sangat terpercaya dan membantu. Mereka memberikan pinjaman dengan angsuran sesuai dengan kemampuan saya.&rdquo;</p>
+                </blockquote>
+                <p class="text-black"><strong>El Fira</strong></p>
+
+
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial">
+                <figure class="mb-4 d-block align-items-center justify-content-center">
+                  <div><img src="cust/images/person_4.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
+                </figure>
+                <blockquote class="mb-3">
+                  <p>&ldquo;Proses pencairan sangat cepat! Proses pengajuan kredit pun sangat mudah dan tidak bertele-tele. Kalau kamu membutuhkan dana dalam waktu cepat MTF adalah pilihan yang tepat.&rdquo;</p>
+                </blockquote>
+                <p class="text-black"><strong>Tasya Miranda</strong></p>
+              </div>
+
+            </div>
+
+            <!-- <div>
+              <div class="testimonial">
+                <figure class="mb-4 d-block align-items-center justify-content-center">
+                  <div><img src="images/person_1.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
+                </figure>
+                <blockquote class="mb-3">
+                  <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                </blockquote>
+                <p class="text-black"><strong>Kyle McDonald</strong></p>
+
+
               </div> -->
 
-              <div class="row form-group">
-                <div class="col-md-12">
-                <label class="text-black" for="subject">Area</label>
-                <select class="form-control rounded-0" id="exampleFormControlSelect1" th:field="${jaminanModel.area}">
-                  <option th:value="Sumatra">Sumatera</option>
-                  <option th:value="Jakarta">Jakarta dan sekitarnya</option>
-                  <option th:value="Other">Lainnya</option>
-                </select>
-              </div>
-              </div>
+            </div>
 
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="merk">Asuransi</label> 
-                  <div>
-                    <select class="form-control rounded-0" th:field= "${jaminanModel.asuransi}">
-                      <option th:each="asuransi : ${listAsuransi}" th:value="${asuransi.id}" th:text="${asuransi.nama}"></option>
-                    </select>
-                  </div>
-                  <!-- <input type="text" id="merk" th:field="${jaminanModel.merk}" class="form-control rounded-0"> -->
-                </div>
-              </div>
-
-              <!-- <div class="row form-group">
-                <div class="col-md-12">
-                <label class="text-black" for="subject">Asuransi</label>
-                <select class="form-control" id="exampleFormControlSelect1" th:field= "${jaminanModel.asuransi}">
-                  <option th:value="TLO">TLO</option>
-                  <option th:value="Komprehensif">Komprehensif</option>
-                </select>
-              </div>
-              </div> -->
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Selanjutnya" class="btn btn-primary mr-2 mb-2">
-                </div>
-              </div>
-
-
-        </form>
-        </div>
-        <!-- </div> -->
-      
-      <!-- <div class="col-sm-6">
-      <div class="row justify-content-center">
-       <div class="col-md-6">
-          <h2>Angsuran kamu sebesar sekian perbulan </h2>
-          <div id = "result"></div>
           </div>
-        </div> -->
-    
-  </div>
 
+      <!--BLOG-->
+      <!-- Blog post
+      <div class="site-section" id="blog-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-3">Blog Posts</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="h-entry">
+                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <h2><a href="#">Create interactive prototypes</a></h2>
+                <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                <p><a href="#">Continue Reading...</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="h-entry">
+                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                <h2><a href="#">Create interactive prototypes</a></h2>
+                <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                <p><a href="#">Continue Reading...</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              <div class="h-entry">
+                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+                <h2><a href="#">Create interactive prototypes</a></h2>
+                <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                <p><a href="#">Continue Reading...</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!--FOOTER-->
     <div class="footer py-5 border-top text-center">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12">
-            <p class="mb-0">
-              <a href="#" class="p-3"><span class="icon-facebook"></span></a>
-              <a href="#" class="p-3"><span class="icon-twitter"></span></a>
-              <a href="#" class="p-3"><span class="icon-instagram"></span></a>
-            </p>
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12">
+              <p class="mb-0">
+                <a href="#" class="p-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="p-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="mb-0">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="mb-0">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> <!-- .site-wrap -->
 
-  
-     
-    
-  </div> <!-- .site-wrap -->
+    <script src="cust/js/jquery-3.3.1.min.js"></script>
+    <script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="cust/js/jquery-ui.js"></script>
+    <script src="cust/js/popper.min.js"></script>
+    <script src="cust/js/bootstrap.min.js"></script>
+    <script src="cust/js/owl.carousel.min.js"></script>
+    <script src="cust/js/jquery.stellar.min.js"></script>
+    <script src="cust/js/jquery.countdown.min.js"></script>
+    <script src="cust/js/bootstrap-datepicker.min.js"></script>
+    <script src="cust/js/jquery.easing.1.3.js"></script>
+    <script src="cust/js/aos.js"></script>
+    <script src="cust/js/jquery.fancybox.min.js"></script>
+    <script src="cust/js/jquery.sticky.js"></script>
+    <script src="cust/js/main.js"></script>
 
-  <script src="cust/js/jquery-3.3.1.min.js"></script>
-  <script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="cust/js/jquery-ui.js"></script>
-  <script src="cust/js/popper.min.js"></script>
-  <script src="cust/js/bootstrap.min.js"></script>
-  <script src="cust/js/owl.carousel.min.js"></script>
-  <script src="cust/js/jquery.stellar.min.js"></script>
-  <script src="cust/js/jquery.countdown.min.js"></script>
-  <script src="cust/js/bootstrap-datepicker.min.js"></script>
-  <script src="cust/js/jquery.easing.1.3.js"></script>
-  <script src="cust/js/aos.js"></script>
-  <script src="cust/js/jquery.fancybox.min.js"></script>
-  <script src="cust/js/jquery.sticky.js"></script>
+    <script>
 
-  
-  <script src="cust/js/main.js"></script>
+    $.ajax({
+            type: "POST",
+            url: "/",
+            data: $("#contact-section").serialize(),
 
-  <script>
+            success: function(data)
+            {
+                alert(html);
+                $('#result').html(data);
+            }
+        });
 
-  $.ajax({
-          type: "POST",
-          url: "/",
-          data: $("#contact-section").serialize(),
-
-          success: function(data)
-          {   
-              alert(html);
-              $('#result').html(data);
-          }
-      });
-
-// function showValues() {
-//     var str = $("#contact-section").serialize();
-//     $("#results").text( str );
-//     }
-//   $( "input[type='checkbox'], input[type='radio']" ).on( "click", showValues );
-//   $( "select" ).on( "change", showValues );
-//   showValues();
-
-  //   $(function() {
-  //  //twitter bootstrap script
-  //   $("button#submit").click(function(){
-  //     $.ajax({
-  //       type: "POST",
-  //       url: "PastSurgicalCustomItem",
-  //       data: $('form.form-horizontal').serialize(),
-  //       success: function(msg){
-  //         alert(msg);
-  //         },
-  //       error: function(){
-  //         alert("failure");
-  //         }
-  //       });
-  //     });
-  //   });
-
-   </script>
+     </script>
     
   </body>
 </html>

@@ -38,39 +38,6 @@ public class UserRoleModel implements Serializable{
     @JsonIgnore
     private RoleModel role;
 
-    @OneToOne(mappedBy = "user")
-    private KreditModel kredit;
-
-    @OneToOne(mappedBy = "user")
-    private AngsuranModel angsuran;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_user_integrity", referencedColumnName = "id")
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    private UserIntegrityModel userIntegrity;
-
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user_personal")
-    private UserPersonalModel userPersonal;
-
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user_identity")
-    private UserIdentityModel userIdentity;
-
-    @OneToOne(mappedBy = "user")
-    private JaminanModel jaminan;
-
-	public JaminanModel getJaminan() {
-		return this.jaminan;
-	}
-
-	public void setJaminan(JaminanModel jaminan) {
-		this.jaminan = jaminan;
-	}
-
-
     public String getId() {
         return id;
     }
@@ -102,37 +69,4 @@ public class UserRoleModel implements Serializable{
     public void setRole(RoleModel role) {
         this.role = role;
     }
-    public KreditModel getKredit() {
-        return this.kredit;
-    }
-    public void setKredit(KreditModel kredit) {
-        this.kredit = kredit;
-    }
-    public AngsuranModel getAngsuran() {
-        return this.angsuran;
-    }
-    public void setAngsuran(AngsuranModel angsuran) {
-        this.angsuran = angsuran;
-    }
-    public UserIntegrityModel getUserIntegrity() {
-        return this.userIntegrity;
-    }
-    public void setUserIntegrity(UserIntegrityModel userIntegrity) {
-        this.userIntegrity = userIntegrity;
-    }
-    public UserIdentityModel getUserIdentity() {
-        return this.userIdentity;
-    }
-    public void setUserIdentity(UserIdentityModel userIdentity) {
-        this.userIdentity = userIdentity;
-    }
-
-    public UserPersonalModel getUserPersonal() {
-        return this.userPersonal;
-    }
-    public void setUserPersonal(UserPersonalModel userPersonal) {
-        this.userPersonal = userPersonal;
-    }
-
-    
 }

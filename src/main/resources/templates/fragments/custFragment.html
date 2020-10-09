@@ -4,32 +4,22 @@
   <title>MTF Kredit Multiguna</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
-
   <link rel="stylesheet" href="/cust/css/bootstrap.min.css">
   <link rel="stylesheet" href="/cust/css/jquery-ui.css">
   <link rel="stylesheet" href="/cust/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/cust/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="/cust/css/owl.theme.default.min.css">
-
   <link rel="stylesheet" href="/cust/css/jquery.fancybox.min.css">
-
   <link rel="stylesheet" href="/cust/css/bootstrap-datepicker.css">
-
   <link rel="stylesheet" href="/cust/fonts/flaticon/font/flaticon.css">
-
   <link rel="stylesheet" href="/cust/css/aos.css">
-
   <link rel="stylesheet" href="/cust/css/style.css">
-  
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-<div class="site-wrap"  id="home-section">
-
+<div class="site-wrap" id="home-section">
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
@@ -39,31 +29,20 @@
     <div class="site-mobile-menu-body"></div>
   </div>
 
-  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-
-    <div class="container">          
-        <div class="col-12 col-md-10 main-menu" style="vertical-align: middle;">
-          <!-- <div class="mb-0 site-logo"s><a href="index.html" class="text-black h2 mb-0"><img src="cust/images/ic-mtf-logo.png" ></a> -->
-            <nav class="site-navigation position-relative text-left" role="navigation" style="vertical-align: middle;">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" padding="0px 0px 0px ">
-                <!-- <li><a href="#home-section" class="nav-link">Beranda</a></li> -->
-                <a href="index.html" class="text-black h2 mb-0"><img src="cust/images/ic-mtf-logo.png" ></a>
-
-                <li><a th:href="@{/}" class="nav-link">Home</a></li>
-                <li><a th:href="@{/#features-section}" class="nav-link">Keuntungan</a></li>
-                <li><a th:href="@{/#testimonials-section}" class="nav-link">Testimoni</a></li>
+  <header class="site-navbar" role="banner">
+    <div>
+        <div class="col-12 col-md-12 main-menu">
+            <nav class="site-navigation position-relative" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" padding="0px 0px 0px">
+                <a href="index.html" class="text-black h2 mb-0"><img src="cust/images/cash-aja.png" style="width:45%"></a>
                 <li><a th:href="@{/#simulation-section}" class="nav-link">Simulasi</a></li>
-                <li><a th:if = "${#httpServletRequest.remoteUser} == null" th:href="@{/login}" class="nav-link">Log In</a></li>
-                <li th:if = "${#httpServletRequest.remoteUser} != null"><a th:href="@{/form-jaminan}" class="nav-link">Ajukan Kredit</a></li>
-                <li th:if = "${#httpServletRequest.remoteUser} != null"><a th:href="@{/account}" class="nav-link">Dashboard</a></li>
-                <li th:if = "${#httpServletRequest.remoteUser} != null"><a th:href="@{/logout}" class="nav-link" style="color: red;">Log Out</a></li>
+                <li><a th:href="@{/#testimonials-section}" class="nav-link">Top Up Express</a></li>
+                <li><a th:href="@{/#simulation-section}" class="nav-link">WIRA</a></li>
+                <li><a th:href="@{/#features-section}" class="nav-link">FAQ</a></li>
               </ul>
             </nav>
           </div>
-
         </div>
-
-
         <div class="col-6 col-md-6 d-inline-block d-lg-none ml-md-0" ><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
 
       </div>

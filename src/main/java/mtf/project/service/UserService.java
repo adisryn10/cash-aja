@@ -11,6 +11,4 @@ public interface UserService{
     List<UserRoleModel> getAllUser();
 	UserRoleModel addUser(UserRoleModel user);
 	List<UserRoleModel> getUserByRoleNama(String string);
-	void changeUser(UserRoleModel userPers);
-	void changeIdentity(UserRoleModel currentUser);
 }

@@ -1750,11 +1750,15 @@ h1, h2, h3, h4, h5,
   text-transform: uppercase; }
 
 .section-title {
+  margin-top:50px;
+	margin-bottom:50px;
   color: #000;
   font-size: 40px;
   font-weight: 900; }
   @media (max-width: 991.98px) {
     .section-title {
+      margin-top:50px;
+      margin-bottom:50px;
       font-size: 30px; } }
 
 .position-relative {

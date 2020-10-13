@@ -26,6 +26,15 @@ public class PageController{
         return "index";
     }
 
+    @RequestMapping(path = "/faq", method = RequestMethod.GET)
+    public String faqPage(Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        for (GrantedAuthority authority: auth.getAuthorities()){
+            model.addAttribute("role", authority.getAuthority());
+        }
+        return "faq";
+    }
+
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public String login(){
         return "login";

@@ -4,7 +4,10 @@
     <title>MTF Kredit Multiguna &mdash; Website by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
     <link rel="stylesheet" href="cust/css/bootstrap.min.css">
     <link rel="stylesheet" href="cust/css/jquery-ui.css">
@@ -54,30 +57,238 @@
             <div class="col-md-12" style="position: relative;" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-7 mr-auto">
-                        <div class="panel-group">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
-                                    </h4>
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="btn-link mt-3 mb-3" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
+                                        Siapa saja yang dapat mengajukan Pembiayaan Multiguna?
+                                    </h5>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse">
-                                    <div class="panel-body">Panel Body</div>
-                                    <div class="panel-footer">Panel Footer</div>
+
+                                <div id="collapseOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Pembiayaan Multiguna dapat diajukan oleh customer Perorangan dan Badan Usaha (Perusahaan)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Jenis2 Kendaraan apa saja yang dapat dibiayai?
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Jawaban 2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Jawaban 3
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Apa saja ketentuan unit yang bisa dibiayai?
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Jawaban 4
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingFive">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Jenis asuransi apa saja yang dicover?
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Jawaban 5
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingSix">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        Apa yang dimaksud ADDM dan ADDB?
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Jawaban 6
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingSeven">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        Apa yang dimaksud dengan ACP?
+                                    </h5>
+                                </div>
+                                <div id="collapseSeven" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        ACP adalah "Asuransi Credit Protection" dimana pembiayaan kredit customer di cover oleh asuransi yang artinya jika customer (pemohon) meninggal dunia, maka kreditnya akan dilunasi oleh pihak asuransi (jika syarat dan ketentuan terpenuhi)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingEight">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        Apa yang dimaksud dengan Provisi?
+                                    </h5>
+                                </div>
+                                <div id="collapseEight" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Provisi adalah biaya proses kredit yang dibebankan kepada customer. Biaya provisi akan mengurangi pencairan customer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header" id="headingNine">
+                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        Apa yang dimaksud dengan Fidusia
+                                    </h5>
+                                </div>
+                                <div id="collapseNine" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Fidusia adalah jaminan untuk perusahaan pembiayaan agar bisa melakukan penarikan unit ketika terjadi wanprestasi / customer menunggak bayar dalam kurun waktu yang telah ditentukan
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class = "col-lg-5">
-                        <h4 class="text-black">Masih belum menemukan jawabanmu?</h4>
+                    <div class = "col-lg-4 " style="margin-left:auto;margin-right:auto">
+
+                        <!--Contact info-->
+                        <h2 class="text-black mt-5">Hubungi Kami</h2>
+                        <div>Siap menjawab pertanyaan kamu </br>Senin-Jumat, pukul 08.00 - 17.00</div>
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <i class="fab fa-whatsapp-square" style='font-size:38px;'></i>
+                            </div>
+                            <div class = "col">
+                                <p>Whatsapp<br><a href="#">+62 81113705740</a></p>
+                            </div>
+                        </div>
+
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <i class="fab fa-line" style='font-size:38px;'></i>
+                            </div>
+                            <div class = "col">
+                                <p>LINE<br><a href="#">@mandiritunasfin</a></p>
+                            </div>
+                        </div>
+
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <i class="fa fa-globe" style='font-size:38px;'></i>
+                            </div>
+                            <div class = "col">
+                                <p>Website<br><a href="#">mtf.co.id</a></p>
+                            </div>
+                        </div>
+
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <i class="fa fa-phone" style='font-size:38px;'></i>
+                            </div>
+                            <div class = "col">
+                                <p>Care Center<br><a href="#">1500059</a></p>
+                            </div>
+                        </div>
+
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <i class="material-icons" style='font-size:38px;'>email</i>
+                            </div>
+                            <div class = "col">
+                                <p>E-mail<br><a href="#">customer.service@mtf.co.id</a></p>
+                            </div>
+                        </div>
+
+                        <!--Lokasi-->
+                        <h2 class="text-black mt-5">Lokasi</h2>
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <i class="material-icons" style='font-size:48px;'>location_on</i>
+                            </div>
+                            <div class = "col">
+                                <p>Graha Mandiri Lt.3A<br>Jl. Imam Bonjol No.61<br>Jakarta 10310</p>
+                            </div>
+                        </div>
+
+                        <!--Media Sosial-->
+                        <h2 class="text-black mt-5">Media Sosial</h2>
+                        <div class ="row mt-3">
+                            <div class = "col-2">
+                                <a href="/">
+                                   <i class="fab fa-facebook-f" style='font-size:38px;'></i>
+                                </a>
+                            </div>
+                            <div class = "col-2">
+                                <a href="/">
+                                    <i class="fab fa-instagram" style='font-size:38px;'></i>
+                                </a>
+                            </div>
+                            <div class = "col-2">
+                                <a href="/">
+                                    <i class="fab fa-twitter" style='font-size:38px;'></i>
+                                </a>
+                            </div>
+                            <div class = "col-2">
+                                <a href="/">
+                                    <i class="fab fa-youtube" style='font-size:38px;'></i>
+                                </a>
+                            </div>
+                            <div class = "col-2">
+                                <a href="/">
+                                    <i class="fab fa-linkedin" style='font-size:38px;'></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--Download MTF GO-->
+                        <h2 class="text-black mt-5">Download MTF GO mobile</h2>
+                        <div class ="row mt-3">
+                            <div class = "col-6">
+                                <button style="background-color:black;width:100%">
+                                    <i class="fab fa-apple" style="font-size:36px;color:white">
+                                        <p style="font-size:12px"><br>Temukan di</p>
+                                        <p style="font-size:16px">App Store</p>
+                                    </i>
+                                </button>
+                            </div>
+                            <div class = "col-6">
+                                <button style="background-color:black;width:100%">
+                                    <i class="fab fa-google-play" style="font-size:36px;color:white">
+                                        <p style="font-size:12px"><br>Temukan di</p>
+                                        <p style="font-size:16px">Google Play</p>
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="cust/js/jquery-3.3.1.min.js"></script>
 <script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="cust/js/jquery-ui.js"></script>

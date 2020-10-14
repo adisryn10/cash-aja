@@ -194,7 +194,8 @@ button {
 
 button:focus {
   outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color; }
+  outline: 5px auto -webkit-focus-ring-color;
+}
 
 input,
 button,
@@ -8337,3 +8338,4 @@ a[data-toggle="collapse"] {
 
 .subscribe-form .form-control {
   background: #5356b1; }
+

@@ -1825,3 +1825,35 @@ h1, h2, h3, h4, h5,
 @media (max-width: 991.98px) {
   .main-menu {
     display: none !important; } }
+    .blue-bg{
+      background-color: #1B6DB4;
+    }
+
+.topupexpress{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#topupexpress-img{
+  flex: 2
+}
+
+#topupexpress-text{
+  flex: 3
+}
+
+#wira{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#wira-detail{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

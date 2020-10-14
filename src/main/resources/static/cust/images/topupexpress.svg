@@ -1,16 +1,16 @@
-<svg width="565" height="420" viewBox="0 0 565 420" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="2" width="565" height="416">
-<rect y="2" width="565" height="416" fill="#4889C3"/>
+<svg width="616" height="420" viewBox="0 0 616 420" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="616" height="416">
+<rect y="1" width="616" height="416" fill="#4889C3"/>
 </mask>
 <g mask="url(#mask0)">
-<circle cx="265" cy="209.521" r="265" fill="#1B6DB4" stroke="#498AC3" stroke-width="80"/>
-<circle cx="277.5" cy="209.021" r="153.5" fill="#1B6DB4" stroke="#498AC3" stroke-width="40"/>
+<circle cx="309" cy="210" r="265" fill="#1B6DB4" stroke="#498AC3" stroke-width="80"/>
+<circle cx="309.5" cy="209.5" r="153.5" fill="#1B6DB4" stroke="#498AC3" stroke-width="40"/>
 </g>
-<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="113" y="-1" width="322" height="421">
-<path d="M218.918 418H317H377L393 386L405 343.537L434 267.533L422.608 139.847L373.966 97.2847L361.805 36.4818L288.842 0C232.599 27.3613 237.159 42.5621 237.159 54.7226C237.159 64.4511 244.253 58.7762 247.8 54.7226V77.5238H256.92V97.2847L218.918 106.405C215.878 100.832 206.758 88.7725 194.597 85.1244C182.437 81.4762 143.928 132.247 126.194 158.088L139.874 193.05L126.194 203.69L139.874 240.172L114.033 267.533L139.874 332.896L167.236 343.537L176.356 392.179C192.064 427.648 194.597 418 218.918 418Z" fill="#C4C4C4" stroke="black"/>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="148" y="-1" width="322" height="421">
+<path d="M253.885 418H351.967H411.967L427.967 386L439.967 343.537L468.967 267.533L457.575 139.847L408.933 97.2847L396.772 36.4818L323.808 0C267.566 27.3613 272.126 42.5621 272.126 54.7226C272.126 64.4511 279.22 58.7762 282.766 54.7226V77.5238H291.887V97.2847L253.885 106.405C250.845 100.832 241.725 88.7725 229.564 85.1244C217.403 81.4762 178.895 132.247 161.161 158.088L174.841 193.05L161.161 203.69L174.841 240.172L149 267.533L174.841 332.896L202.203 343.537L211.323 392.179C227.03 427.648 229.564 418 253.885 418Z" fill="#C4C4C4" stroke="black"/>
 </mask>
 <g mask="url(#mask1)">
-<rect x="-34.9668" width="638.431" height="417.521" fill="url(#pattern0)"/>
+<rect width="638.431" height="417.521" fill="url(#pattern0)"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

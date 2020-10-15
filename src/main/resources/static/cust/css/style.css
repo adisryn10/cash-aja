@@ -1924,6 +1924,16 @@ h1{
 	justify-content: space-around;
 }
 
+.testimoni{
+  background-color:#F4F9FE;
+}
+
+#youtube-image{
+  flex: 2;
+  height: 100%;
+  width:100%;
+}
+
 
 /* @media only screen and (max-width: 1024) {
   #wira-detail {

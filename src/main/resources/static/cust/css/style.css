@@ -98,6 +98,7 @@ h1{
 
   .btn.btn-secondary {
     border-width: 2px;
+    font-weight: 700;
     background: #FBCB0F;
     border-color: #FBCB0F;
     color: #1F3C78;

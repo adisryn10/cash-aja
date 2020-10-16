@@ -1966,12 +1966,6 @@ h1{
   font-weight:400;
 }
 
-/* @media only screen and (max-width: 1024) {
-  #wira-detail {
-    flex-direction: column-reverse;
-  }
-} */
-
 #testimonial-row{
   display:flex;
   flex-direction: row;
@@ -1997,4 +1991,34 @@ iframe{
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.set-top{
+  margin-top:2em;
+}
+
+#row-first{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#first-text {
+  order: 0; 
+}
+#first-img{
+  order:1;
+}
+
+@media (max-width: 1024px) {
+  .row-first{
+    flex-direction: column;
+  }
+  #first-text {
+    order:1; 
+  }
+  #first-img{
+    order:0;
+    max-width: 20em;
+  }
 }

@@ -1971,3 +1971,20 @@ h1{
     flex-direction: column-reverse;
   }
 } */
+
+#testimonial-row{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+#youtube{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+iframe{
+  min-height: fit-content;
+}

@@ -4,6 +4,9 @@
       <title>MTF Kredit Multiguna &mdash; Website by Colorlib</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
       <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
       <link rel="stylesheet" href="cust/css/bootstrap.min.css">
@@ -41,8 +44,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-12" style="position: relative;" data-aos="fade-up">
-              <div class="row mb-4">
-                <div class="col-lg-6 mr-auto align-items-stretch" style="margin: auto;">
+              <div id="row-first">
+                <div id="first-text" class="col-lg-6 mr-auto align-items-stretch" style="margin:auto;">
                   <h1>CashAja MTF</h1>
                   <p class="mb-5">Pemberian kredit atau pembiayaan multiguna kepada customer untuk kebutuhan produktif dan konsumtif dengan menjaminkan BPKB kendaraan yang dimiliki.
                     <br><br>
@@ -51,7 +54,7 @@
                     <a href="#form-jaminan" class="btn btn-primary mr-2 mb-2">Ajukan Kredit</a>
                   </div>
                 </div>
-                <div class = "col-lg-6 mr-auto flex-coloumn-reverse">
+                <div id="first-img" class = "col-lg-6 mr-auto">
                 <img src="cust/images/landing-1.png" alt="Image" class="img-fluid" >
                 </div>
               </div>
@@ -87,19 +90,21 @@
       <!-- KEUNTUNGAN -->
       <section class="site-section bg-light" id="features-section">
         <div class="container">
-          <div class="row mb-5">
+          <div class="row">
             <div class="col-12 text-center">
-              <h1 class="mb-5 text-black text-left"><strong>Mengapa Harus CashAja?</strong></h1>
+              <h1 class="mb-5 text-black text-left"><bold>Mengapa Harus CashAja?</bold></h1>
             </div>
           </div>
-          <div class="row align-items-stretch">
+          <div id="benefits" class="row align-items-stretch">
 
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
               <div class="unit-4 d-block">
-                <div class="unit-4-icon mb-3">
-                  <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span>
-                </div>
+                <!-- <div class="unit-4-icon mb-3"> -->
+
+                  <!-- <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span> -->
+                <!-- </div> -->
                 <div>
+                  <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
                   <h3>Pencairan Tinggi</h3>
                   <p>Pencairan dana up to 80% dari harga kendaraanmu</p>
                 </div>
@@ -108,11 +113,9 @@
 
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
               <div class="unit-4 d-block">
-                <div class="unit-4-icon mb-3">
-                  <span class="icon-wrap"><span class="text-primary icon-settings_backup_restore"></span></span>
-                </div>
                 <div>
-                  <h3>Suku Bunga KompetitifAngsuran Tetap dan Terjangkau</h3>
+                  <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+                  <h3>Suku Bunga Kompetitif</h3>
                   <p>Kamu bisa mendapatkan bunga pinjaman yang kompetitif</p>  
                 </div>
               </div>
@@ -120,10 +123,8 @@
 
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
               <div class="unit-4 d-block">
-                <div class="unit-4-icon mb-3">
-                  <span class="icon-wrap"><span class="text-primary icon-sentiment_satisfied"></span></span>
-                </div>
                 <div>
+                  <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
                   <h3><i>Fast & Easy</i></h3>
                   <p>Proses pengajuan cepat dan persyaratan mudah</p>
                 </div>
@@ -134,10 +135,8 @@
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
 
               <div class="unit-4 d-block">
-                <div class="unit-4-icon mb-3">
-                  <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
-                </div>
                 <div>
+                  <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
                   <h3>Angsuran Terjangkau & Tetap Setiap Bulan</h3>
                   <p>Kamu bisa atur besar angsuran sesuai kemampuanmu tanpa berubah setiap bulan</p>
                 </div>
@@ -147,10 +146,8 @@
 
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
               <div class="unit-4 d-block">
-                <div class="unit-4-icon mb-3">
-                  <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
-                </div>
                 <div>
+                  <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
                   <h3>Jaringan Luas Seluruh Indonesia</h3>
                   <p>Kantor cabang MTF tersebar di seluruh Indonesia, ajukan di cabang terdekatmu.<br>
                     <a href="https://www.mtf.co.id/id/jaringan-mtf"><u>Klik disini untuk cabang terdekat</u></a>
@@ -169,7 +166,7 @@
         <img src="cust/images/topupexpress.svg" alt="Image" class="img-fluid" id="topupexpress-img" >
       </div>
         <div id ="topupexpress-text">
-          <h6><strong>TOP UP EXPRESS</strong></h6>
+          <h6><bold>TOP UP EXPRESS</bold></h6>
           <h4>Cicilan di MTF masih jalan tapi kamu butuh duit?
             <br>
             Langsung Klik, Dana Cair!</h4>  
@@ -182,52 +179,57 @@
         <div class="container">
           <div class="row mb-6">
             <div class="col-12 text-left">
-              <h1 class="mb-5 text-black"><strong>Testimoni</strong></h1>
+              <h1 class="mb-5 text-black"><bold>Testimoni</bold></h1>
             </div>
           </div>
-          <div class = "row">
-            <div class = "col-lg-6 col-md-12 col-12">
-              <iframe src="https://www.youtube.com/embed/5Ml9CAMLAxA" allowfullscreen frameborder="0" height="100%" width="100%">
-              </iframe>
+          <div id="testimonial-row">
+            <div id="youtube" class="col-lg-6 col-md-12 col-12">
               <div style="word-wrap:break-word;">
-              <h4 class="text-black mb-3 my-3 text-left"><strong>Cerita dari Aria</strong></h4>
-              <p class="text-left">WIRA merupakan Partner bisnis Mandiri Tunas Finance sebagai agen multiguna yang bekerja secara perorangan / grup / media dengan menggunakan metode penawaran langsung  kepada customer (Referral).</p>
+                <iframe src="https://www.youtube.com/embed/5Ml9CAMLAxA" allowfullscreen frameborder="0" height="100%" width="100%">
+                </iframe>
               </div>
-             </div>
-            <div class = "col-lg-4 col-md-8 col-8" style="margin:auto">
-              <div class = "card container" style="background-color:#F4F9FE;">
-                <div class="slide-one-item home-slider owl-carousel">
-                  <div class="testimonial">
-                    <figure class="mb-4 d-block align-items-center justify-content-center">
-                      <div><img src="cust/images/person_3.jpg" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
-                    </figure>
-                    <h4 class="text-black mb-3">Adi Matahari</h4>
-                    <p class="text-black mb-3"><strong>Businessman</strong></p>
-                    <p class="mb-3 text-black">&ldquo;Terimakasih MTF! Sangat mudah meminjam disini dengan bunga yang bersaing pula. Saya sangat terbantu.&rdquo;</p>
-                  </div>
-                  <div class="testimonial">
-                    <figure class="mb-4 d-block align-items-center justify-content-center">
-                      <div><img src="cust/images/person_4.jpg" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
-                    </figure>
-                    <h4 class="text-black mb-3">Tasya Miranda</h4>
-                    <p class="text-black mb-3"><strong>Businesswoman</strong></p>
-                    <p class="mb-3 text-black">MTF sangat terpercaya dan membantu. Mereka memberikan pinjaman dengan angsuran sesuai dengan kemampuan saya.&rdquo;</p>
+              <div>
+                <h4 class="text-black mb-3 my-3 text-left"><bold>Cerita dari Aria</bold></h4>
+                <p class="text-left">Simak cerita dari Pak Aria, sahabat setia CashAja Mandiri Tunas Finance.</p>
+              </div>
+            </div>
+             
+              <div class = "col-lg-4 col-md-8 col-8" style="margin:auto">
+                <div class = "card container" style="background-color:#F4F9FE;">
+                  <div class="slide-one-item home-slider owl-carousel">
+                    <div class="testimonial">
+                      <figure class="mb-4 d-block align-items-center justify-content-center">
+                        <div><img src="cust/images/person_3.jpg" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
+                      </figure>
+                      <h4 class="text-black mb-3">Adi Matahari</h4>
+                      <p class="text-black mb-3"><bold>Businessman</bold></p>
+                      <p class="mb-3 text-black">&ldquo;Terimakasih MTF! Sangat mudah meminjam disini dengan bunga yang bersaing pula. Saya sangat terbantu.&rdquo;</p>
+                    </div>
+                    <div class="testimonial">
+                      <figure class="mb-4 d-block align-items-center justify-content-center">
+                        <div><img src="cust/images/person_4.jpg" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
+                      </figure>
+                      <h4 class="text-black mb-3">Tasya Miranda</h4>
+                      <p class="text-black mb-3"><bold>Businesswoman</bold></p>
+                      <p class="mb-3 text-black">MTF sangat terpercaya dan membantu. Mereka memberikan pinjaman dengan angsuran sesuai dengan kemampuan saya.&rdquo;</p>
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
+
           </div>
         </div>
       </section>
 
-      <br><br><br><br><br><br><br>
-
+      <br><br>
 
       <!--WIRA-->
-      <div id="wira" class ="container mb-5">
+      <div id="wira" class ="container mb-5 fade-up">
         <div id="wira-detail">
           <div id="wira-text">
-            <h1><strong>WIRA MTF</strong></h1>
+            <h1><bold>WIRA MTF</bold> </h1>
             <h4>Mau penghasilan tambahan tak terbatas tanpa ribet?</h4>
             <p>WIRA merupakan partner bisnis Mandiri Tunas Finance
               sebagai agen multiguna yang bekerja secara perorangan / grup / media 

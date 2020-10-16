@@ -1856,19 +1856,26 @@ h1{
   flex-direction: row;
   flex-wrap: wrap;
   align-items:center;
-  height: 250px;
+  align-self:center;
+  min-height: 232px;
 }
 
 #topupexpress-img{
-  flex: 2;
+  max-height: 250px;
   height: 100%;
   left:0px;
+  flex:2;
+} @media (max-width: 1024px) {
+  #topupexpress-img{
+    display: none;
+  }
 }
 
 #topupexpress-text{
   flex: 3;
   color: white;
   margin-left: 3em;
+  max-height: 250px; 
 }
 
 #wira {

@@ -1988,3 +1988,13 @@ h1{
 iframe{
   min-height: fit-content;
 }
+
+.icon-benefit-ca{
+  max-width: 10em;
+}
+
+.unit-4.d-block{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

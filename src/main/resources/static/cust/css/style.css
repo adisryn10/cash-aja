@@ -1,9 +1,22 @@
 /* Base */
 body {
   line-height: 1.7;
-  color: gray;
-  /* font-weight: 300; */
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: rgba(246,246,246);
+  background-color: #061977;
+  transition: background 1s ease; }
+
+#container-iframe{
+  min-height: 20em;
+}
+
+#h1-first{
+  text: #f6f6f6;
+}
+
+#p-first{
+  text: #f6f6f6;
+}
 
 ::-moz-selection {
   background: #000;
@@ -97,6 +110,7 @@ h1{
       color: #fff; }
 
   .btn.btn-secondary {
+    font-weight: bold;
     border-width: 2px;
     font-weight: 700;
     background: #FBCB0F;
@@ -616,7 +630,7 @@ h1{
   .site-blocks-cover h1 {
     font-size: 3.5rem;
     font-weight: 400;
-    color:rgb(46, 39, 39);
+    color:rgb(246, 246, 246);
     font-weight: 700; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {

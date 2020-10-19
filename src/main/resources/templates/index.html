@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-  <title>MTF Kredit Multiguna</title>
+  <title>MTF Kredit Multiguna &mdash; Website by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -47,18 +47,19 @@
       <div class="col-md-12" style="position: relative;" data-aos="fade-up">
         <div id="row-first">
           <div id="first-text" class="col-lg-6 mr-auto align-items-stretch" style="margin:auto;">
-            <h1>CashAja MTF</h1>
-            <p class="mb-5">Pemberian kredit atau pembiayaan multiguna kepada customer untuk kebutuhan produktif dan
-              konsumtif dengan menjaminkan BPKB kendaraan yang dimiliki.
+            <h1 id="h1-first">CashAja MTF</h1>
+            <p id="p-first" style="color: rgb(246, 246, 246);" class="mb-5">Pemberian kredit atau pembiayaan multiguna
+              kepada customer untuk kebutuhan produktif dan konsumtif dengan menjaminkan BPKB kendaraan yang dimiliki.
               <br><br>
               Penuhi kebutuhanmu untuk biaya pernikahan, renovasi rumah, kesehatan, pendidikan, travelling, dan
               lainnya dengan CashAja</p>
             <div>
-              <a href="#form-jaminan" class="btn btn-primary mr-2 mb-2">Ajukan Kredit</a>
+              <!-- <a href="#form-jaminan" class="btn mr-2 mb-2 btn-primary">Ajukan Kredit</a> -->
+              <a href="#form-jaminan" class="btn btn-secondary mr-2 mb-2">Ajukan Kredit</a>
             </div>
           </div>
           <div id="first-img" class="col-lg-6 mr-auto">
-            <img src="cust/images/landing-1.png" alt="Image" class="img-fluid">
+            <img src="cust/images/landing-bluebg.png" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -67,7 +68,7 @@
 </div>
 
 <!--Slider Promo-->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
+<div id="carouselExampleControls" data-background="#41a7b3" class="carousel slide" data-ride="carousel"
      style="margin-top:30px;margin-bottom:30px">
   <div class="carousel-inner container">
     <div class="carousel-item active">
@@ -213,8 +214,12 @@
 
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
         <div class="unit-4 d-block">
+          <!-- <div class="unit-4-icon mb-3"> -->
+
+          <!-- <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span> -->
+          <!-- </div> -->
           <div>
-            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+            <img src="cust/images/pencairantinggi.png" alt="Image" class="img-fluid icon-benefit-ca">
             <h3>Pencairan Tinggi</h3>
             <p>Pencairan dana up to 80% dari harga kendaraanmu</p>
           </div>
@@ -224,7 +229,7 @@
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
         <div class="unit-4 d-block">
           <div>
-            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+            <img src="cust/images/sukubungakompetitif.png" alt="Image" class="img-fluid icon-benefit-ca">
             <h3>Suku Bunga Kompetitif</h3>
             <p>Kamu bisa mendapatkan bunga pinjaman yang kompetitif</p>
           </div>
@@ -241,20 +246,23 @@
         </div>
       </div>
 
+
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+
         <div class="unit-4 d-block">
           <div>
-            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+            <img src="cust/images/angsuranterjangkau.png" alt="Image" class="img-fluid icon-benefit-ca">
             <h3>Angsuran Terjangkau & Tetap Setiap Bulan</h3>
             <p>Kamu bisa atur besar angsuran sesuai kemampuanmu tanpa berubah setiap bulan</p>
           </div>
         </div>
+
       </div>
 
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
         <div class="unit-4 d-block">
           <div>
-            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+            <img src="cust/images/jaringanluas.png" alt="Image" class="img-fluid icon-benefit-ca">
             <h3>Jaringan Luas Seluruh Indonesia</h3>
             <p>Kantor cabang MTF tersebar di seluruh Indonesia, ajukan di cabang terdekatmu.<br>
               <a href="https://www.mtf.co.id/id/jaringan-mtf"><u>Klik disini untuk cabang terdekat</u></a>
@@ -264,6 +272,7 @@
       </div>
     </div>
   </div>
+
 </section>
 
 <!--Top Up Express-->
@@ -277,9 +286,7 @@
     </h6>
     <h4>Cicilan di MTF masih jalan tapi kamu butuh duit?
       <br>
-      Langsung Klik, Dana Cair!
-    </h4>
-    <br>
+      Langsung Klik, Dana Cair!</h4>
     <a href="https://www.mtf.co.id/id/top-up-express-kreditpas" class="btn btn-secondary mr-2 mb-2">Ajukan Top Up
       Express</a>
   </div>
@@ -297,7 +304,7 @@
     </div>
     <div id="testimonial-row">
       <div id="youtube" class="col-lg-6 col-md-12 col-12">
-        <div style="word-wrap:break-word;">
+        <div id="container-iframe" style="word-wrap:break-word;">
           <iframe src="https://www.youtube.com/embed/5Ml9CAMLAxA" allowfullscreen frameborder="0" height="100%"
                   width="100%">
           </iframe>
@@ -395,8 +402,10 @@
         Dimana Saja
       </h7>
     </div>
+
   </div>
 </div>
+
 
 <!--FOOTER-->
 <div class="footer bg-light">
@@ -476,8 +485,28 @@
 <script src="cust/js/jquery.fancybox.min.js"></script>
 <script src="cust/js/jquery.sticky.js"></script>
 <script src="cust/js/main.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="cust/js/jquery.scrollie.min.js"></script>
 
 <script>
+    $(document).ready(function () {
+        var scroll_pos = 0;
+        $(document).scroll(function () {
+            scroll_pos = $(this).scrollTop();
+            if (scroll_pos > 210) {
+                $("body").css('background-color', '#f6f6f6');
+                $("#h1-first").css('color', '#2E2727');
+                $("#p-first").css('color', 'gray');
+                $("body").css('color', 'gray');
+
+            } else {
+                $("body").css('background-color', '#061977');
+                $("#h1-first").css('color', '#f6f6f6');
+                $("#p-first").css('color', '#f6f6f6');
+            }
+        });
+    });
+
     $.ajax({
         type: "POST",
         url: "/",
@@ -488,6 +517,7 @@
             $('#result').html(data);
         }
     });
+
 </script>
 
 </body>

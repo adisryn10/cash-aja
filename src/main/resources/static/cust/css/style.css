@@ -1,9 +1,19 @@
 /* Base */
 body {
   line-height: 1.7;
-  color: gray;
   /* font-weight: 300; */
-  font-size: 1rem; }
+  font-size: 1rem;
+  /* background-color: #8675a9; */
+  background-color: #061977;
+  transition: background 1s ease; }
+
+#h1-first{
+  text: #f6f6f6;
+}
+
+#p-first{
+  text: #f6f6f6;
+}
 
 ::-moz-selection {
   background: #000;
@@ -97,6 +107,7 @@ h1{
       color: #fff; }
 
   .btn.btn-secondary {
+    font-weight: bold;
     border-width: 2px;
     font-weight: 700;
     background: #FBCB0F;

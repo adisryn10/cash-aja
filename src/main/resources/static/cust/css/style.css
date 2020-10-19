@@ -20,10 +20,13 @@ a {
   a:hover {
     text-decoration: none; }
 
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+h1, h2, h3, h4, h5, h6, h7,
+.h1, .h2, .h3, .h4, .h5, .h6, .h7{
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
+p{
+  font-family: "Open Sans";
+}
 h1{
   color:rgb(46, 39, 39)
 }
@@ -95,6 +98,7 @@ h1{
 
   .btn.btn-secondary {
     border-width: 2px;
+    font-weight: 700;
     background: #FBCB0F;
     border-color: #FBCB0F;
     color: #1F3C78;
@@ -114,8 +118,7 @@ h1{
 
 .form-control {
   height: 43px;
-  border-radius: 30px;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  font-family: "Roboto", "Open Sans" -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
   .form-control:active, .form-control:focus {
     border-color: #1F3C78; }
   .form-control:hover, .form-control:active, .form-control:focus {
@@ -614,7 +617,7 @@ h1{
     font-size: 3.5rem;
     font-weight: 400;
     color:rgb(46, 39, 39);
-    font-weight: 900; }
+    font-weight: 700; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
         font-size: 2rem; } }
@@ -1958,8 +1961,98 @@ h1{
   flex:1;
 }
 
-/* @media only screen and (max-width: 1024) {
-  #wira-detail {
-    flex-direction: column-reverse;
+.nav-link{
+  font-weight:400;
+}
+
+#testimonial-row{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+#youtube{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+iframe{
+  min-height: fit-content;
+}
+
+.icon-benefit-ca{
+  max-width: 10em;
+}
+
+.unit-4.d-block{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.set-top{
+  margin-top:2em;
+}
+
+#row-first{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#first-text {
+  order: 0; 
+}
+#first-img{
+  order:1;
+}
+
+@media (max-width: 1024px) {
+  .row-first{
+    flex-direction: column;
   }
-} */
+  #first-text {
+    order:1; 
+  }
+  #first-img{
+    order:0;
+    max-width: 20em;
+  }
+}
+
+/* Section Pengajuan CashAja */
+.cashaja-step-container {
+  margin-top: 30px;
+}
+.cashaja-step-section-highlight {
+  color: #061977;
+}
+.cashaja-step-text {
+  margin-top: 20px;
+}
+.black-text {
+  color: black;
+}
+.confirmation-box {
+  text-align: justify;
+  font-size: small;
+  color: black;
+}
+.submit-btn {
+  display: block;
+  width: fit-content;
+}
+
+/* Footer Sebelah Kanan */
+.social-media-container {
+  margin-top: 15px;
+}
+.social-media {
+  margin-left: 40px;
+}
+.store-badge {
+  margin-left: 10px;
+}
+

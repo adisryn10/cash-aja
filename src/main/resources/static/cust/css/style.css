@@ -436,7 +436,7 @@ h1{
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: #061977;
+  background: #fff;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);

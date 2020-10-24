@@ -62,7 +62,7 @@
                         <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <h5 class="btn-link mt-3 mb-3">
+                                    <h5 class="btn-link-faq mt-3 mb-3">
                                         Siapa saja yang dapat mengajukan Pembiayaan Multiguna?
                                     </h5>
                                 </div>
@@ -75,7 +75,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
                                         Jenis-jenis Kendaraan apa saja yang dapat dibiayai?
                                     </h5>
                                 </div>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree"  aria-expanded="false" aria-controls="collapseThree">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
                                         Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
                                     </h5>
                                 </div>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingFour">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                         Apa saja ketentuan unit yang bisa dibiayai?
                                     </h5>
                                 </div>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingFive">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                         Jenis asuransi apa saja yang dicover?
                                     </h5>
                                 </div>
@@ -173,7 +173,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingSix">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                         Apa yang dimaksud ADDM dan ADDB?
                                     </h5>
                                 </div>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingSeven" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
                                         Apa yang dimaksud dengan ACP?
                                     </h5>
                                 </div>
@@ -244,7 +244,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingEight" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed" >
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed" >
                                         Apa yang dimaksud dengan Provisi?
                                     </h5>
                                 </div>
@@ -256,7 +256,7 @@
                             </div>
                             <div class="card mt-4">
                                 <div class="card-header" id="headingNine" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                    <h5 class="btn-link mt-3 mb-3 collapsed">
+                                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
                                         Apa yang dimaksud dengan Fidusia
                                     </h5>
                                 </div>
@@ -415,7 +415,7 @@
 <script src="cust/js/jquery.sticky.js"></script>
 <script src="cust/js/main.js"></script>
 <script>
-  var acc = document.getElementsByClassName("btn-link");
+  var acc = document.getElementsByClassName("btn-link-faq");
   var i;
 
   for (i = 0; i < acc.length; i++) {
@@ -433,7 +433,7 @@
         var scroll_pos = 0;
         $(document).scroll(function () {
             scroll_pos = $(this).scrollTop();
-            if (scroll_pos > 50) {
+            if (scroll_pos > 150) {
                 $(".faq-content").css('background-color', '#f6f6f6');
                 $(".faq-text").css('color', '#2E2727');
                 $(".faq-content").css('color', 'gray');

@@ -61,7 +61,7 @@
                     <div class="col-lg-7 mr-auto">
                         <div id="accordion">
                             <div class="card">
-                                <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
+                                <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     <h5 class="btn-link mt-3 mb-3">
                                         Siapa saja yang dapat mengajukan Pembiayaan Multiguna?
                                     </h5>
@@ -79,7 +79,7 @@
                                         Jenis-jenis Kendaraan apa saja yang dapat dibiayai?
                                     </h5>
                                 </div>
-                                <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                                <div id="collapseTwo" data-parent="#accordion">
                                     <div class="card-body">
                                         2 jenis kendaraan yang dapat dibiayai yaitu :
                                         <ol>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="card mt-4">
-                                <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree"  aria-expanded="false" aria-controls="collapseThree">
                                     <h5 class="btn-link mt-3 mb-3 collapsed">
                                         Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
                                     </h5>
@@ -415,6 +415,20 @@
 <script src="cust/js/jquery.sticky.js"></script>
 <script src="cust/js/main.js"></script>
 <script>
+  var acc = document.getElementsByClassName("btn-link");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
     $(document).ready(function () {
         var scroll_pos = 0;
         $(document).scroll(function () {

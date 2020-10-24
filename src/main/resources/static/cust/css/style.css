@@ -1,4 +1,16 @@
 /* Base */
+
+.faq-table{
+    text-align:center;
+    border: 1px solid black;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
 body {
   line-height: 1.7;
   font-size: 1rem;
@@ -1880,6 +1892,26 @@ h1{
   align-items:center;
   align-self:center;
   min-height: 232px;
+}
+
+.faq-text{
+  color:white;
+  margin-top:140px;
+  margin-bottom:60px;
+}@media (max-width: 1024px) {
+  .faq-text{
+    margin-top:100px;
+    margin-bottom:60px;
+  }
+}
+
+#faq-logo{
+  margin-top:140px;
+  margin-bottom:60px;
+} @media (max-width: 1024px) {
+  #faq-logo{
+    display: none;
+  }
 }
 
 #topupexpress-img{

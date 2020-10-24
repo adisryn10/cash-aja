@@ -1,5 +1,5 @@
 /* Base */
-.btn-link:after {
+.btn-link-faq:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: #777;
@@ -7,7 +7,7 @@
   margin-left: 5px;
 }
 
-.active:after {
+.btn-link-faq.active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 

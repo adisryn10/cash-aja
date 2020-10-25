@@ -11,6 +11,10 @@
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.faq-content{
+  transition: background 1s ease; 
+}
+
 .faq-table{
     text-align:center;
     border: 1px solid black;

@@ -95,7 +95,7 @@
                                         Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
                                     </h5>
                                 </div>
-                                <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                                <div id="collapseThree" data-parent="#accordion">
                                     <div class="card-body">
                                         Terdapat dua jenis yaitu:
                                         <ul>
@@ -121,7 +121,7 @@
                                         Apa saja ketentuan unit yang bisa dibiayai?
                                     </h5>
                                 </div>
-                                <div id="collapseFour" class="collapse show" data-parent="#accordion">
+                                <div id="collapseFour" data-parent="#accordion">
                                     <div class="card-body">
                                         Ketentuannya yaitu:
                                         <ol>
@@ -151,7 +151,7 @@
                                         Jenis asuransi apa saja yang dicover?
                                     </h5>
                                 </div>
-                                <div id="collapseFive" class="collapse show" data-parent="#accordion">
+                                <div id="collapseFive" data-parent="#accordion">
                                     <div class="card-body">
                                         <ul>
                                             <li>
@@ -177,7 +177,7 @@
                                         Apa yang dimaksud ADDM dan ADDB?
                                     </h5>
                                 </div>
-                                <div id="collapseSix" class="collapse show" data-parent="#accordion">
+                                <div id="collapseSix" data-parent="#accordion">
                                     <div class="card-body">
                                         <table class="faq-table" >
                                             <tr>
@@ -236,7 +236,7 @@
                                         Apa yang dimaksud dengan ACP?
                                     </h5>
                                 </div>
-                                <div id="collapseSeven" class="collapse show" data-parent="#accordion">
+                                <div id="collapseSeven" data-parent="#accordion">
                                     <div class="card-body">
                                         ACP adalah "Asuransi Credit Protection" dimana pembiayaan kredit customer di cover oleh asuransi yang artinya jika customer (pemohon) meninggal dunia, maka kreditnya akan dilunasi oleh pihak asuransi (jika syarat dan ketentuan terpenuhi)
                                     </div>
@@ -248,7 +248,7 @@
                                         Apa yang dimaksud dengan Provisi?
                                     </h5>
                                 </div>
-                                <div id="collapseEight" class="collapse show" data-parent="#accordion">
+                                <div id="collapseEight" data-parent="#accordion">
                                     <div class="card-body">
                                         Provisi adalah biaya proses kredit yang dibebankan kepada customer. Biaya provisi akan mengurangi pencairan customer
                                     </div>
@@ -260,7 +260,7 @@
                                         Apa yang dimaksud dengan Fidusia
                                     </h5>
                                 </div>
-                                <div id="collapseNine" class="collapse show" data-parent="#accordion">
+                                <div id="collapseNine" data-parent="#accordion">
                                     <div class="card-body">
                                         Fidusia adalah jaminan untuk perusahaan pembiayaan agar bisa melakukan penarikan unit ketika terjadi wanprestasi / customer menunggak bayar dalam kurun waktu yang telah ditentukan
                                     </div>
@@ -433,7 +433,7 @@
         var scroll_pos = 0;
         $(document).scroll(function () {
             scroll_pos = $(this).scrollTop();
-            if (scroll_pos > 150) {
+            if (scroll_pos > 50) {
                 $(".faq-content").css('background-color', '#f6f6f6');
                 $(".faq-text").css('color', '#2E2727');
                 $(".faq-content").css('color', 'gray');

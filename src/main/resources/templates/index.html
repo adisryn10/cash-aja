@@ -106,7 +106,7 @@
         <div id="simulasi-form">
           <div class="card shadow">
             <div class="card-body">
-              <h4 class="card-title black-text">Form Simulasi</h4>
+              <h4 class="card-title black-text">FORM SIMULASI</h4>
               <br>
               <form>
                 <div class="form-row">
@@ -409,63 +409,200 @@
         <div id="prosedur-form">
           <div class="card shadow">
             <div class="card-body">
-              <h4 class="card-title black-text">Form Pengajuan</h4>
+              <h4 class="card-title black-text">FORM PENGAJUAN</h4>
               <br>
-              <form>
+              <form id="form-pengajuan" class="needs-validation" novalidate>
                 <div class="form-group">
                   <label for="inputName">Nama Kamu</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Masukkan nama lengkap kamu">
+                  <input required
+                         type="text"
+                         class="form-control"
+                         id="inputName"
+                         placeholder="Masukkan nama lengkap kamu">
+                  <div class="invalid-feedback">
+                    Masukkan nama kamu!
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">Alamat E-mail</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Masukkan e-mail">
+                  <input required
+                         type="email"
+                         class="form-control"
+                         id="inputEmail"
+                         placeholder="Masukkan e-mail">
+                  <div class="invalid-feedback">
+                    Masukkan alamat e-mail yang berlaku!
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPhone">Nomor Handphone</label>
-                  <input type="number"
+                  <input required
+                         type="number"
                          class="form-control"
                          id="inputPhone"
                          placeholder="Masukkan nomor yang bisa dihubungi"
                   >
+                  <div class="invalid-feedback">
+                    Masukkan nomor handphone kamu!
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputKTP">Nomor KTP</label>
-                  <input type="number" class="form-control" id="inputKTP" placeholder="Masukkan 16 digit nomor KTP">
+                  <input required
+                         type="number"
+                         class="form-control"
+                         id="inputKTP"
+                         placeholder="Masukkan 16 digit nomor KTP">
+                  <div class="invalid-feedback">
+                    Masukkan 16 digit nomor KTP kamu!
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputDomisili">Domisili</label>
-                  <select class="form-control" id="inputDomisili">
+                  <select required class="form-control" id="inputDomisili">
                     <option value="" selected disabled>Pilih Domisili Terdekat Cabang MTF</option>
-                    <option>Jakarta</option>
-                    <option>Bogor</option>
-                    <option>Depok</option>
-                    <option>Tangerang</option>
-                    <option>Bekasi</option>
+                    <option value="Ambon - REG 9">Ambon - REG 9</option>
+                    <option value="Balikpapan - REG 8">Balikpapan - REG 8</option>
+                    <option value="Banda Aceh - REG 1">Banda Aceh - REG 1</option>
+                    <option value="Bandar Jaya - REG 2">Bandar Jaya - REG 2</option>
+                    <option value="Bandung - REG 5">Bandung - REG 5</option>
+                    <option value="Banjarbaru - REG 8">Banjarbaru - REG 8</option>
+                    <option value="Banjarmasin - REG 8">Banjarmasin - REG 8</option>
+                    <option value="Banyuwangi - REG 7">Banyuwangi - REG 7</option>
+                    <option value="Batam - REG 1">Batam - REG 1</option>
+                    <option value="Baturaja - REG 2">Baturaja - REG 2</option>
+                    <option value="Bekasi - REG 4">Bekasi - REG 4</option>
+                    <option value="Bengkulu - REG 2">Bengkulu - REG 2</option>
+                    <option value="Bintaro - REG 3">Bintaro - REG 3</option>
+                    <option value="Bogor - REG 4">Bogor - REG 4</option>
+                    <option value="Bontang - REG 8">Bontang - REG 8</option>
+                    <option value="BSD - REG 3">BSD - REG 3</option>
+                    <option value="Bukit Tinggi - REG 2">Bukit Tinggi - REG 2</option>
+                    <option value="Cibinong - REG 4">Cibinong - REG 4</option>
+                    <option value="Cibubur - REG 4">Cibubur - REG 4</option>
+                    <option value="Cikarang - REG 4">Cikarang - REG 4</option>
+                    <option value="Cilegon - REG 3">Cilegon - REG 3</option>
+                    <option value="Cirebon - REG 5">Cirebon - REG 5</option>
+                    <option value="Denpasar - REG 7">Denpasar - REG 7</option>
+                    <option value="Depok - REG 4">Depok - REG 4</option>
+                    <option value="Duren Tiga 2 - REG 4">Duren Tiga 2 - REG 4</option>
+                    <option value="Duri - REG 1">Duri - REG 1</option>
+                    <option value="Fatmawati - REG 4">Fatmawati - REG 4</option>
+                    <option value="Garut - REG 5">Garut - REG 5</option>
+                    <option value="Gianyar - REG 7">Gianyar - REG 7</option>
+                    <option value="Gorontalo - REG 9">Gorontalo - REG 9</option>
+                    <option value="Gresik - REG 7">Gresik - REG 7</option>
+                    <option value="Jakarta Selatan - REG 4">Jakarta Selatan - REG 4</option>
+                    <option value="Jakarta Timur - REG 4">Jakarta Timur - REG 4</option>
+                    <option value="Jakarta Barat - REG 3">Jakarta Barat - REG 3</option>
+                    <option value="Jakarta Utara - REG 3">Jakarta Utara - REG 3</option>
+                    <option value="Jakarta Pusat - REG 3">Jakarta Pusat - REG 3</option>
+                    <option value="Jambi - REG 2">Jambi - REG 2</option>
+                    <option value="Jayapura - REG 9">Jayapura - REG 9</option>
+                    <option value="Jember - REG 7">Jember - REG 7</option>
+                    <option value="Karawang - REG 5">Karawang - REG 5</option>
+                    <option value="Kebon Jeruk - REG 3">Kebon Jeruk - REG 3</option>
+                    <option value="Kemayoran - REG 3">Kemayoran - REG 3</option>
+                    <option value="Kediri- REG 7">Kediri- REG 7</option>
+                    <option value="Kendari - REG 9">Kendari - REG 9</option>
+                    <option value="Ketapang - REG 8">Ketapang - REG 8</option>
+                    <option value="Kotamobagu - REG 9">Kotamobagu - REG 9</option>
+                    <option value="Kudus - REG 6">Kudus - REG 6</option>
+                    <option value="Kupang - REG 7">Kupang - REG 7</option>
+                    <option value="Lampung - REG 2">Lampung - REG 2</option>
+                    <option value="Lebak Bulus - REG 4">Lebak Bulus - REG 4</option>
+                    <option value="Lubuk Linggau - REG 2">Lubuk Linggau - REG 2</option>
+                    <option value="Luwuk - REG 9">Luwuk - REG 9</option>
+                    <option value="Madiun - REG 7">Madiun - REG 7</option>
+                    <option value="Magelang - REG 6">Magelang - REG 6</option>
+                    <option value="Makassar - REG 9">Makassar - REG 9</option>
+                    <option value="Malang- REG 7">Malang- REG 7</option>
+                    <option value="Mamuju - REG 9">Mamuju - REG 9</option>
+                    <option value="Manado - REG 9">Manado - REG 9</option>
+                    <option value="Mataram - REG 7">Mataram - REG 7</option>
+                    <option value="Matraman - REG 4">Matraman - REG 4</option>
+                    <option value="Medan - REG 1">Medan - REG 1</option>
+                    <option value="Mojokerto - REG 7">Mojokerto - REG 7</option>
+                    <option value="Muara Bungo - REG 2">Muara Bungo - REG 2</option>
+                    <option value="Padang - REG 2">Padang - REG 2</option>
+                    <option value="Palangkaraya - REG 8">Palangkaraya - REG 8</option>
+                    <option value="Palembang - REG 2">Palembang - REG 2</option>
+                    <option value="Palu - REG 9">Palu - REG 9</option>
+                    <option value="Pangkal Pinang - REG 2">Pangkal Pinang - REG 2</option>
+                    <option value="Pare-Pare - REG 9">Pare-Pare - REG 9</option>
+                    <option value="Pecenongan - REG 3">Pecenongan - REG 3</option>
+                    <option value="Pekalongan - REG 6">Pekalongan - REG 6</option>
+                    <option value="Pekanbaru - REG 1">Pekanbaru - REG 1</option>
+                    <option value="Pluit - REG 3">Pluit - REG 3</option>
+                    <option value="Pondok Gede - REG 4">Pondok Gede - REG 4</option>
+                    <option value="Pontianak - REG 8">Pontianak - REG 8</option>
+                    <option value="Purwokerto - REG 6">Purwokerto - REG 6</option>
+                    <option value="Rangkas Bitung - REG 3">Rangkas Bitung - REG 3</option>
+                    <option value="Rantau Prapat - REG 1">Rantau Prapat - REG 1</option>
+                    <option value="Samarinda - REG 8">Samarinda - REG 8</option>
+                    <option value="Sampit - REG 8">Sampit - REG 8</option>
+                    <option value="Semarang - REG 6">Semarang - REG 6</option>
+                    <option value="Serang - REG 3">Serang - REG 3</option>
+                    <option value="Sintang - REG 8">Sintang - REG 8</option>
+                    <option value="Solo - REG 6">Solo - REG 6</option>
+                    <option value="Sorong - REG 9">Sorong - REG 9</option>
+                    <option value="Subang - REG 5">Subang - REG 5</option>
+                    <option value="Sukabumi - REG 5">Sukabumi - REG 5</option>
+                    <option value="Surabaya - REG 7">Surabaya - REG 7</option>
+                    <option value="Tangerang - REG 3">Tangerang - REG 3</option>
+                    <option value="Tarakan - REG 8">Tarakan - REG 8</option>
+                    <option value="Tasikmalaya - REG 5">Tasikmalaya - REG 5</option>
+                    <option value="Tegal - REG 6">Tegal - REG 6</option>
+                    <option value="Tuban - REG 7">Tuban - REG 7</option>
+                    <option value="Ungaran - REG 6">Ungaran - REG 6</option>
+                    <option value="Yogyakarta - REG 6">Yogyakarta - REG 6</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Pilih lokasi terdekat dengan kamu!
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="inputKetersediaanWaktu">Kapan Kamu Bersedia Dihubungi ?</label>
-                  <select class="form-control" id="inputKetersediaanWaktu">
+                  <select required class="form-control" id="inputKetersediaanWaktu">
                     <option value="" selected disabled>Pilih waktu</option>
-                    <option>Pagi Hari</option>
-                    <option>Siang Hari</option>
-                    <option>Sore Hari</option>
-                    <option>Malam Hari</option>
+                    <option value="Hari Kerja - Pagi Hari">Hari Kerja - Pagi Hari</option>
+                    <option value="Hari Kerja - Siang Hari">Hari Kerja - Siang Hari</option>
+                    <option value="Hari Kerja - Sore Hari">Hari Kerja - Sore Hari</option>
+                    <option value="Bersedia Kapan Saja">Bersedia Kapan Saja</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Pilih waktu yang kamu inginkan!
+                  </div>
                 </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="inputConfirmation">
-                  <label class="form-check-label confirmation-box" for="inputConfirmation">
-                    Data yang saya berikan adalah benar. Dengan saya mengirimkan form ini saya
-                    mengizinkan pihak Mandiri Tunas Finance untuk menghubungi saya dalam
-                    membantu proses pengajuan dan bersedia menerima informasi lanjutan.
-                  </label>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input required type="checkbox" class="form-check-input" value="" id="inputConfirmation">
+                    <label class="form-check-label confirmation-box" for="inputConfirmation">
+                      Data yang saya berikan adalah benar.
+                      Dengan saya mengirimkan form ini saya mengizinkan pihak Mandiri Tunas Finance
+                      untuk menghubungi saya dalam membantu proses pengajuan dan
+                      bersedia menerima informasi lanjutan.
+                    </label>
+                    <div class="invalid-feedback">
+                      Kamu harus menyetujui sebelum melanjutkan
+                    </div>
+                  </div>
                 </div>
-                <br>
                 <button type="submit" class="btn btn-primary">
                   Ajukan Sekarang
                 </button>
               </form>
+              <br>
+
+              <!-- Alert Form Pengajuan -->
+              <div id="pengajuan-success" class="alert alert-info text-center d-none" role="alert">
+                Terima kasih telah melakukan pengajuan, data Anda telah tersimpan di sistem kami.
+                Anda akan segera dihubungi oleh pihak MTF.
+              </div>
+              <div id="pengajuan-fail" class="alert alert-danger text-center d-none" role="alert">
+                Data tidak berhasil kami terima. Mohon dicoba kembali.
+              </div>
+
             </div>
           </div>
         </div>
@@ -733,6 +870,7 @@
             }
         });
     });
+    // Perubahan desain pada bagian pengajuan CashAja
     $('#prosedur-title-btn').click(function () {
         $(this).addClass('btn-primary').removeClass('d-none')
         $('#prosedur-content').removeClass('d-none')
@@ -770,16 +908,57 @@
         $('#pengajuan-3-desc').removeClass("black-text")
         $('#pengajuan-3-img').attr("src", "cust/images/pengajuan/3-uncolored.png")
     });
-    $.ajax({
-        type: "POST",
-        url: "/",
-        data: $("#contact-section").serialize(),
-        success: function (data) {
-            alert(html);
-            $('#result').html(data);
-        }
-    });
 
+    // Validasi form pengajuan
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        kirim_pengajuan()
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+
+    // Melakukan sembunyikan alert pengajuan sebelum melakukan POST
+    function preprocess_pengajuan() {
+        $('#pengajuan-success').addClass('d-none')
+        $('#pengajuan-fail').addClass('d-none')
+    }
+
+    // Fungsi melakukan start pengajuan CashAja
+    function kirim_pengajuan() {
+        preprocess_pengajuan()
+        $.post("https://www.mtf.co.id/id/multiguna", {
+            "name": $('#inputName').val(),
+            "email": $('#inputEmail').val(),
+            "phone": $('#inputPhone').val(),
+            "noktp": $('#inputKTP').val(),
+            "lokasi": $('#inputDomisili').val(),
+            "hubungi": $('#inputKetersediaanWaktu').val(),
+
+            // Kami tim BCC tidak mengerti, kedua baris ini isinya untuk apa ya ?
+            "utm_source": "Pengajuan CashAja",
+            "status": 1
+
+        }, "json")
+            // Pemanggilan AJAX sukses
+            .done(function (data) {
+                $('#pengajuan-success').removeClass('d-none')
+            })
+            // Pemanggilan AJAX gagal, umumnya karena masalah sistem & internet
+            .fail(function (data) {
+                $('#pengajuan-fail').removeClass('d-none')
+            });
+    }
 </script>
 
 </body>

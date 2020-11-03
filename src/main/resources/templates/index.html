@@ -437,8 +437,10 @@
                 <div class="form-group">
                   <label for="inputPhone">Nomor Handphone</label>
                   <input required
-                         type="number"
+                         type="text"
                          class="form-control"
+                         pattern="\d*"
+                         maxlength="12"
                          id="inputPhone"
                          placeholder="Masukkan nomor yang bisa dihubungi"
                   >
@@ -449,8 +451,10 @@
                 <div class="form-group">
                   <label for="inputKTP">Nomor KTP</label>
                   <input required
-                         type="number"
+                         type="text"
                          class="form-control"
+                         pattern="\d*"
+                         maxlength="16"
                          id="inputKTP"
                          placeholder="Masukkan 16 digit nomor KTP">
                   <div class="invalid-feedback">
@@ -916,11 +920,12 @@
             var forms = document.getElementsByClassName('needs-validation');
             var validation = Array.prototype.filter.call(forms, function (form) {
                 form.addEventListener('submit', function (event) {
+                    event.preventDefault();
                     if (form.checkValidity() === false) {
-                        event.preventDefault();
                         event.stopPropagation();
                     } else {
                         kirim_pengajuan()
+                        return false
                     }
                     form.classList.add('was-validated');
                 }, false);
@@ -937,18 +942,13 @@
     // Fungsi melakukan start pengajuan CashAja
     function kirim_pengajuan() {
         preprocess_pengajuan()
-        $.post("https://www.mtf.co.id/id/multiguna", {
+        $.post("/pengajuan/add/", {
             "name": $('#inputName').val(),
             "email": $('#inputEmail').val(),
             "phone": $('#inputPhone').val(),
             "noktp": $('#inputKTP').val(),
             "lokasi": $('#inputDomisili').val(),
             "hubungi": $('#inputKetersediaanWaktu').val(),
-
-            // Kami tim BCC tidak mengerti, kedua baris ini isinya untuk apa ya ?
-            "utm_source": "Pengajuan CashAja",
-            "status": 1
-
         }, "json")
             // Pemanggilan AJAX sukses
             .done(function (data) {

@@ -2022,11 +2022,7 @@ h1{
 
 .footer{
   background-color: #ccc;
-  display: flex;
-  align-content: flex-end;
   bottom: 0;
-  flex-direction: row;
-  justify-content: flex-start;
   padding: 3em;
 }
 
@@ -2111,25 +2107,33 @@ iframe{
 
 /* Section Pengajuan CashAja */
 .cashaja-step-container {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 .cashaja-step-section-highlight {
   color: #061977;
 }
 .cashaja-step-text {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .black-text {
   color: black;
 }
 .confirmation-box {
   text-align: justify;
-  font-size: small;
   color: black;
 }
 .submit-btn {
   display: block;
   width: fit-content;
+}
+#syarat-img{
+  max-width:500px;
+  width: 100%;
+  padding-left: 1em;}
+@media (max-width: 1024px) {
+  #syarat-img{
+    display:none;
+  }
 }
 
 /* Footer Sebelah Kanan */
@@ -2143,3 +2147,7 @@ iframe{
   margin-left: 10px;
 }
 
+/* Untuk label form */
+label {
+  color: black;
+}

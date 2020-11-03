@@ -11,6 +11,9 @@
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.logo-navbar{
+  text-align: left;
+}
 .faq-content{
   transition: background 1s ease; 
 }
@@ -19,24 +22,19 @@
     text-align:center;
     border: 1px solid black;
 }
+    @media (max-width: 768px) {
+        .faq-table{
+          font-size: 9px;
+        }
+     }
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
-  @media (max-width: 768px) {
-    table, th, td{
-      font-size: 14px;
-    }
-  }
 }
 th, td {
   padding: 15px;
-  @media (max-width: 768px){
-    th, td {
-        padding:10px;
-
-    }
-  }
 }
+
 body {
   line-height: 1.7;
   font-size: 1rem;
@@ -370,11 +368,14 @@ h1{
       display: inline-block;
       padding: 5px 20px; }
     .site-navbar .site-navigation .site-menu a {
+      text-align: left;
       text-decoration: none !important;
       display: inline-block; }
     .site-navbar .site-navigation .site-menu > li {
+      text-align: right;
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > li > a {
+        text-align: right;
         padding: 5px 20px;
         color: #000;
         display: inline-block;
@@ -476,7 +477,6 @@ h1{
   width: 300px;
   position: fixed;
   right: 0;
-  z-index: 2000;
   padding-top: 20px;
   background: #fff;
   height: calc(100vh);

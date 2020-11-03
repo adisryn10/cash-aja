@@ -3,25 +3,25 @@
 <head>
   <title>MTF Kredit Multiguna</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
-  <link rel="stylesheet" href="cust/css/bootstrap.min.css">
-  <link rel="stylesheet" href="cust/css/jquery-ui.css">
-  <link rel="stylesheet" href="cust/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="cust/css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="cust/css/aos.css">
-  <link rel="stylesheet" href="cust/css/style.css">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="cust/fonts/icomoon/style.css" rel="stylesheet">
+  <link href="cust/css/bootstrap.min.css" rel="stylesheet">
+  <link href="cust/css/jquery-ui.css" rel="stylesheet">
+  <link href="cust/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="cust/css/owl.theme.default.min.css" rel="stylesheet">
+  <link href="cust/css/owl.theme.default.min.css" rel="stylesheet">
+  <link href="cust/css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="cust/css/bootstrap-datepicker.css" rel="stylesheet">
+  <link href="cust/fonts/flaticon/font/flaticon.css" rel="stylesheet">
+  <link href="cust/css/aos.css" rel="stylesheet">
+  <link href="cust/css/style-faq.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body class="faq" data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
 <div class="site-wrap" id="home-section">
   <div class="site-mobile-menu site-navbar-target">
@@ -37,314 +37,429 @@
     <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
   </header>
 
-  <div style="background-color:#314777">
+  <div class="faq-content">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col text-center" style="color:white;margin-top:120px;margin-bottom:10px">
-          <h2>Frequently Asked Questions</h2>
-          <p style="color:white">Temukan jawaban pertanyaan kamu di sini</p>
+        <div class="col-md-8 col-sm-12">
+          <div class="faq-text">
+            <h2>Frequently Asked Question</h2>
+            <p>Temukan jawaban dari pertanyaan kamu di sini.</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-12" style="position: relative;" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-7 mr-auto">
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                  >
-                    Siapa saja yang dapat mengajukan Pembiayaan Multiguna?
-                  </h5>
-                </div>
-                <div id="collapseOne" data-parent="#accordion">
-                  <div class="card-body">
-                    Pembiayaan Multiguna dapat diajukan oleh customer Perorangan dan Badan Usaha (Perusahaan)
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                  >
-                    Jenis - Jenis kendaraan apa saja yang dapat dibiayai?
-                  </h5>
-                </div>
-                <div id="collapseTwo" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Jawaban 2
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingThree">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                  >
-                    Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
-                  </h5>
-                </div>
-                <div id="collapseThree" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Jawaban 3
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingFour">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseFour"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                  >
-                    Apa saja ketentuan unit yang bisa dibiayai?
-                  </h5>
-                </div>
-                <div id="collapseFour" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Jawaban 4
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingFive">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                  >
-                    Jenis asuransi apa saja yang dicover?
-                  </h5>
-                </div>
-                <div id="collapseFive" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Jawaban 5
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingSix">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseSix"
-                      aria-expanded="false"
-                      aria-controls="collapseSix"
-                  >
-                    Apa yang dimaksud ADDM dan ADDB?
-                  </h5>
-                </div>
-                <div id="collapseSix" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Jawaban 6
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingSeven">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseSeven"
-                      aria-expanded="false"
-                      aria-controls="collapseSeven"
-                  >
-                    Apa yang dimaksud dengan ACP?
-                  </h5>
-                </div>
-                <div id="collapseSeven" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    ACP adalah "Asuransi Credit Protection" dimana pembiayaan kredit customer di cover oleh asuransi
-                    yang artinya jika customer (pemohon) meninggal dunia, maka kreditnya akan dilunasi oleh pihak
-                    asuransi (jika syarat dan ketentuan terpenuhi)
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingEight">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseEight"
-                      aria-expanded="false"
-                      aria-controls="collapseEight"
-                  >
-                    Apa yang dimaksud dengan Provisi?
-                  </h5>
-                </div>
-                <div id="collapseEight" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Provisi adalah biaya proses kredit yang dibebankan kepada customer. Biaya provisi akan mengurangi
-                    pencairan customer
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-header" id="headingNine">
-                  <h5 class="btn-link mt-3 mb-3 collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseNine"
-                      aria-expanded="false"
-                      aria-controls="collapseNine"
-                  >
-                    Apa yang dimaksud dengan Fidusia
-                  </h5>
-                </div>
-                <div id="collapseNine" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">
-                    Fidusia adalah jaminan untuk perusahaan pembiayaan agar bisa melakukan penarikan unit ketika terjadi
-                    wanprestasi / customer menunggak bayar dalam kurun waktu yang telah ditentukan
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 " style="margin-left:auto;margin-right:auto">
-
-            <!--Contact info-->
-            <h3 class="text-black mt-5">Hubungi Kami</h3>
-            <div>Siap menjawab pertanyaan kamu </br>Senin-Jumat, pukul 08.00 - 17.00</div>
-            <div class="row mt-3">
-              <div class="col-2">
-                <i class="fab fa-whatsapp-square" style='font-size:38px;'></i>
-              </div>
-              <div class="col">
-                <p>Whatsapp<br><a href="https://api.whatsapp.com/send?phone=6281113705740">+62 81113705740</a></p>
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-2">
-                <i class="fab fa-line" style='font-size:38px;'></i>
-              </div>
-              <div class="col">
-                <p>LINE<br><a href="https://line.me/R/ti/p/@mandiritunasfin">@mandiritunasfin</a></p>
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-2">
-                <i class="fa fa-globe" style='font-size:38px;'></i>
-              </div>
-              <div class="col">
-                <p>Website<br><a href="https://mtf.co.id">mtf.co.id</a></p>
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-2">
-                <i class="fa fa-phone" style='font-size:38px;'></i>
-              </div>
-              <div class="col">
-                <p>Care Center<br><a href="tel:1500089">1500059</a></p>
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-2">
-                <i class="material-icons" style='font-size:38px;'>email</i>
-              </div>
-              <div class="col">
-                <p>E-mail<br><a href="mailto:customer.service@mtf.co.id">customer.service@mtf.co.id</a></p>
-              </div>
-            </div>
-
-            <!--Lokasi-->
-            <h3 class="text-black mt-5">Lokasi</h3>
-            <div class="row mt-3">
-              <div class="col-2">
-                <i class="material-icons" style='font-size:48px;'>location_on</i>
-              </div>
-              <div class="col">
-                <p>Graha Mandiri Lt.3A<br>Jl. Imam Bonjol No.61<br>Jakarta 10310</p>
-              </div>
-            </div>
-
-            <!--Media Sosial-->
-            <h3 class="text-black mt-5">Media Sosial</h3>
-            <div class="row mt-3">
-              <div class="col-2">
-                <a href="https://www.facebook.com/MTFAutoLoan">
-                  <i class="fab fa-facebook-f" style='font-size:38px;'></i>
-                </a>
-              </div>
-              <div class="col-2">
-                <a href="https://www.instagram.com/mandiritunasfinance">
-                  <i class="fab fa-instagram" style='font-size:38px;'></i>
-                </a>
-              </div>
-              <div class="col-2">
-                <a href="https://twitter.com/MandiriTunasFin">
-                  <i class="fab fa-twitter" style='font-size:38px;'></i>
-                </a>
-              </div>
-              <div class="col-2">
-                <a href="https://www.youtube.com/MandiriTunasFinanceOfficial">
-                  <i class="fab fa-youtube" style='font-size:38px;'></i>
-                </a>
-              </div>
-              <div class="col-2">
-                <a href="https://www.youtube.com/MandiriTunasFinanceOfficial">
-                  <i class="fab fa-linkedin" style='font-size:38px;'></i>
-                </a>
-              </div>
-            </div>
-
-            <!--Download MTF GO-->
-            <h3 class="text-black mt-5">Unduh Aplikasi MTF GO</h3>
-            <div class="row mt-3">
-              <div class="col-md-6 col-sm-12">
-                <a href="https://apps.apple.com/my/app/mtf-go/id1123593855">
-                  <img id="app-store-badge"
-                       src="cust/images/store-badge/app-store.png"
-                       alt="Unduh Aplikasi MTF GO di Apple App Store">
-                </a>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <a href="https://play.google.com/store/apps/details?id=com.mtf.calculator.external">
-                  <img id="google-play-badge"
-                       src="cust/images/store-badge/google-play.png"
-                       alt="Unduh Aplikasi MTF GO di Google Play Store">
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-4 col-sm-12">
+          <img alt="Image" class="img-fluid" id="faq-logo" src="cust/images/cashajalogo-blue.png">
         </div>
       </div>
     </div>
   </div>
 </div>
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="cust/js/jquery-3.3.1.min.js"></script>
-<script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="cust/js/jquery-ui.js"></script>
-<script src="cust/js/popper.min.js"></script>
-<script src="cust/js/bootstrap.min.js"></script>
-<script src="cust/js/owl.carousel.min.js"></script>
-<script src="cust/js/jquery.stellar.min.js"></script>
-<script src="cust/js/jquery.countdown.min.js"></script>
-<script src="cust/js/bootstrap-datepicker.min.js"></script>
-<script src="cust/js/jquery.easing.1.3.js"></script>
-<script src="cust/js/aos.js"></script>
-<script src="cust/js/jquery.fancybox.min.js"></script>
-<script src="cust/js/jquery.sticky.js"></script>
-<script src="cust/js/main.js"></script>
+</div>
+
+<!-- FAQ -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12" data-aos="fade-up" style="position: relative;">
+      <div class="row">
+        <div class="col-md-12" data-aos="fade-up" style="position: relative;">
+          <div class="row">
+            <div class="col-lg-7 mr-auto">
+              <div id="accordion">
+                <div class="card">
+                  <div aria-controls="collapseOne" aria-expanded="false" class="card-header" data-target="#collapseOne"
+                       data-toggle="collapse" id="headingOne">
+                    <h5 class="btn-link-faq mt-3 mb-3">
+                      Siapa saja yang dapat mengajukan Pembiayaan Multiguna?
+                    </h5>
+                  </div>
+
+                  <div data-parent="#accordion" id="collapseOne">
+                    <div class="card-body">
+                      Pembiayaan Multiguna dapat diajukan oleh customer Perorangan dan Badan Usaha (Perusahaan)
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div aria-controls="collapseTwo" aria-expanded="false" class="card-header" data-target="#collapseTwo"
+                       data-toggle="collapse" id="headingTwo">
+                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
+                      Jenis-jenis Kendaraan apa saja yang dapat dibiayai?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseTwo">
+                    <div class="card-body">
+                      2 jenis kendaraan yang dapat dibiayai yaitu :
+                      <ol>
+                        <li>Passenger : Tenor max 4 tahun</li>
+                        <li>Commercial : Tenor max 3 tahun</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div aria-controls="collapseThree" aria-expanded="false" class="card-header" data-target="#collapseThree"
+                       data-toggle="collapse" id="headingThree">
+                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
+                      Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseThree">
+                    <div class="card-body">
+                      Terdapat dua jenis yaitu:
+                      <ul>
+                        <li>
+                          Fasilitas Dana <br>
+                          Pembiayaan barang dan / atau jasa yang disalurkan langsung kepada
+                          debitur untuk pemakaian / kebutuhan konsumtif atau produktif seperti
+                          Pendidikan, pernikahan, renovasi rumah, travelling, Kesehatan, dan
+                          lainnya dimana nilai pembiayaan setiap debitur maksimal
+                        </li>
+                        <li>
+                          Modal Usaha <br>
+                          Pembiayaan untuk memenuhi kebutuhan pengeluaran yang habis
+                          dalam satu siklus usaha
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div class="card-header" id="headingFour">
+                    <h5 aria-controls="collapseFour" aria-expanded="false" class="btn-link-faq mt-3 mb-3 collapsed"
+                        data-target="#collapseFour" data-toggle="collapse">
+                      Apa saja ketentuan unit yang bisa dibiayai?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseFour">
+                    <div class="card-body">
+                      Ketentuannya yaitu:
+                      <ol>
+                        <li>
+                          Passenger Car &amp; Commercial Car
+                        </li>
+                        <li>
+                          Usia Kendaraan maksimal pada saat akhir masa tenor
+                          <ul>
+                            <li>Jepang : 12 Tahun</li>
+                            <li>Non Jepang : 10 Tahun</li>
+                            <li>Commercial : 7 Tahun</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Jika jenis pembiayaan di Lembaga keuangan sebelumnya used car
+                          dan belum dibalik nama ken ama customer, maka wajib dilakukan
+                          balik nama di MTF
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div class="card-header" id="headingFive">
+                    <h5 aria-controls="collapseFive" aria-expanded="false" class="btn-link-faq mt-3 mb-3 collapsed"
+                        data-target="#collapseFive" data-toggle="collapse">
+                      Jenis asuransi apa saja yang dicover?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseFive">
+                    <div class="card-body">
+                      <ul>
+                        <li>
+                          Comprehensive (All Risk)<br>
+                          Melindungi kendaraan kerusakan sebagian / keseluruhan dan kehilangan
+                          Sebagian / keseluruhan
+                        </li>
+                        <li>
+                          TLO (Total Loss Only) <br>
+                          Melindungi kendaraan dari kerusakan &amp; kehilangan keseluruhan
+                        </li>
+                        <li>
+                          Kombinasi (1 Tahun All Risk, Tahun Selanjutnya TLO) <br>
+                          All Risk untuk tahun pertama dan TLO untuk tahun selanjutnya
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div class="card-header" id="headingSix">
+                    <h5 aria-controls="collapseSix" aria-expanded="false" class="btn-link-faq mt-3 mb-3 collapsed"
+                        data-target="#collapseSix" data-toggle="collapse">
+                      Apa yang dimaksud ADDM dan ADDB?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseSix">
+                    <div class="card-body">
+                      <table class="faq-table">
+                        <tr>
+                          <th>Keterangan</th>
+                          <th>ADMM</th>
+                          <th>ADDB</th>
+                        </tr>
+                        <tr>
+                          <td>Pencairan Dana</td>
+                          <td>
+                            ”Angsuran Dibayar Di
+                            Muka” dimana customer
+                            terhitung telah
+                            melakukan pembayaran
+                            angsuran pertama
+                            dengan metode potong
+                            pencairan (pencairan
+                            berkurang 1x angsuran)
+                          </td>
+                          <td>
+                            “Angsuran Dibayar Di
+                            Belakang” dimana
+                            nominal pencairan
+                            customer belum
+                            dipotong dengan
+                            angsurannya
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Pencairan Dana</td>
+                          <td>Lebih Kecil</td>
+                          <td>Lebih Besar</td>
+                        </tr>
+                        <tr>
+                          <td>Bunga</td>
+                          <td>Lebih Murah</td>
+                          <td>Lebih Mahal</td>
+                        </tr>
+                        <tr>
+                          <td>Contoh</td>
+                          <td>
+                            Jika customer mengambil pembiayaan 1 tahun (12 bulan) dengan skema ADDM
+                            maka customer hanya perlu membayar 11x angsuran
+                          </td>
+                          <td>Jika customer mengambil pembiayaan 1 tahun (12 bulan) dengan skema ADDB
+                            maka customer tetap harus membayar 12x angsuran
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div aria-controls="collapseSeven" aria-expanded="false" class="card-header" data-target="#collapseSeven"
+                       data-toggle="collapse" id="headingSeven">
+                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
+                      Apa yang dimaksud dengan ACP?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseSeven">
+                    <div class="card-body">
+                      ACP adalah "Asuransi Credit Protection" dimana pembiayaan kredit customer di cover oleh asuransi
+                      yang artinya jika customer (pemohon) meninggal dunia, maka kreditnya akan dilunasi oleh pihak
+                      asuransi (jika syarat dan ketentuan terpenuhi)
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div aria-controls="collapseEight" aria-expanded="false" class="card-header" data-target="#collapseEight"
+                       data-toggle="collapse" id="headingEight">
+                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
+                      Apa yang dimaksud dengan Provisi?
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseEight">
+                    <div class="card-body">
+                      Provisi adalah biaya proses kredit yang dibebankan kepada customer. Biaya provisi akan mengurangi
+                      pencairan customer
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-4">
+                  <div aria-controls="collapseNine" aria-expanded="false" class="card-header" data-target="#collapseNine"
+                       data-toggle="collapse" id="headingNine">
+                    <h5 class="btn-link-faq mt-3 mb-3 collapsed">
+                      Apa yang dimaksud dengan Fidusia
+                    </h5>
+                  </div>
+                  <div data-parent="#accordion" id="collapseNine">
+                    <div class="card-body">
+                      Fidusia adalah jaminan untuk perusahaan pembiayaan agar bisa melakukan penarikan unit ketika
+                      terjadi wanprestasi / customer menunggak bayar dalam kurun waktu yang telah ditentukan
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 " style="margin-left:auto;margin-right:auto">
+
+              <!--Contact info-->
+              <h2 class="text-black mt-5">Hubungi Kami</h2>
+              <div>Siap menjawab pertanyaan kamu </br>Senin-Jumat, pukul 08.00 - 17.00</div>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <i class="fab fa-whatsapp-square" style='font-size:38px;'></i>
+                </div>
+                <div class="col">
+                  <p>Whatsapp<br>+62 81113705740</a></p>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-2">
+                  <i class="fab fa-line" style='font-size:38px;'></i>
+                </div>
+                <div class="col">
+                  <p>LINE<br>@mandiritunasfin</p>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-2">
+                  <i class="fa fa-globe" style='font-size:38px;'></i>
+                </div>
+                <div class="col">
+                  <p>Website<br><a href="https://www.mtf.co.id/">mtf.co.id</a></p>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-2">
+                  <i class="fa fa-phone" style='font-size:38px;'></i>
+                </div>
+                <div class="col">
+                  <p>Care Center<br>1500059</p>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-2">
+                  <i class="material-icons" style='font-size:38px;'>email</i>
+                </div>
+                <div class="col">
+                  <p>E-mail<br>customer.service@mtf.co.id</p>
+                </div>
+              </div>
+
+              <!--Lokasi-->
+              <h5 class="text-black mt-5">Lokasi</h5>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <i class="material-icons" style='font-size:48px;'>location_on</i>
+                </div>
+                <div class="col">
+                  <p>Graha Mandiri Lt.3A<br>Jl. Imam Bonjol No.61<br>Jakarta 10310</p>
+                </div>
+              </div>
+
+              <!--Media Sosial-->
+              <h5 class="text-black mt-5">Media Sosial</h5>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <a href="https://www.facebook.com/MTFAutoLoan">
+                    <i class="fab fa-facebook-f" style='font-size:38px;'></i>
+                  </a>
+                </div>
+                <div class="col-2">
+                  <a href="https://www.instagram.com/mandiritunasfinance">
+                    <i class="fab fa-instagram" style='font-size:38px;'></i>
+                  </a>
+                </div>
+                <div class="col-2">
+                  <a href="https://twitter.com/MandiriTunasFin">
+                    <i class="fab fa-twitter" style='font-size:38px;'></i>
+                  </a>
+                </div>
+                <div class="col-2">
+                  <a href="https://www.youtube.com/MandiriTunasFinanceOfficial">
+                    <i class="fab fa-youtube" style='font-size:38px;'></i>
+                  </a>
+                </div>
+                <div class="col-2">
+                  <a href="https://www.linkedin.com/company/pt.-mandiri-tunas-finance">
+                    <i class="fab fa-linkedin" style='font-size:38px;'></i>
+                  </a>
+                </div>
+              </div>
+
+              <!--Download MTF GO-->
+              <h5 class="text-black mt-5">Download MTF GO mobile</h5>
+              <div>
+                <a href="https://play.google.com/store/apps/details?id=com.mtf.calculator.external">
+                  <img
+                          alt="Unduh Aplikasi MTF GO di Google Play Store"
+                          src="cust/images/store-badge/google-play.png">
+                </a>
+                <a href="https://apps.apple.com/my/app/mtf-go/id1123593855">
+                  <img
+                          alt="Unduh Aplikasi MTF GO di Apple App Store"
+                          src="cust/images/store-badge/app-store.png">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--FOOTER-->
+      <div class="footer bg-light">
+        <div class="half-container">
+          <p style="opacity: 0;">Mandiri Tunas Finance</p>
+          <img alt="Image" class="img-fluid" id="logo" src="cust/images/footer-logo.svg">
+          <p class="footer-text">Mandiri Tunas Finance terdaftar dan diawasi oleh OJK</p>
+          <p class="footer-text">Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="cust/js/jquery-3.3.1.min.js"></script>
+    <script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="cust/js/jquery-ui.js"></script>
+    <script src="cust/js/popper.min.js"></script>
+    <script src="cust/js/bootstrap.min.js"></script>
+    <script src="cust/js/owl.carousel.min.js"></script>
+    <script src="cust/js/jquery.stellar.min.js"></script>
+    <script src="cust/js/jquery.countdown.min.js"></script>
+    <script src="cust/js/bootstrap-datepicker.min.js"></script>
+    <script src="cust/js/jquery.easing.1.3.js"></script>
+    <script src="cust/js/aos.js"></script>
+    <script src="cust/js/jquery.fancybox.min.js"></script>
+    <script src="cust/js/jquery.sticky.js"></script>
+    <script src="cust/js/main.js"></script>
+    <script>
+        var acc = document.getElementsByClassName("btn-link-faq");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+        $(document).ready(function () {
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 50) {
+                    $(".faq-content").css('background-color', '#f6f6f6');
+                    $(".faq-text").css('color', '#2E2727');
+                    $(".faq-content").css('color', 'gray');
+
+                } else {
+                    $(".faq-content").css('background-color', '#133061');
+                    $(".faq-text").css('color', '#f6f6f6');
+
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

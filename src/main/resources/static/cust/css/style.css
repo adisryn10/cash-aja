@@ -1,10 +1,51 @@
 /* Base */
+.btn-link-faq:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.btn-link-faq.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.logo-navbar{
+  text-align: left;
+}
+.faq-content{
+  transition: background 1s ease; 
+}
+
+.faq-table{
+    text-align:center;
+    border: 1px solid black;
+}
+    @media (max-width: 768px) {
+        .faq-table{
+          font-size: 9px;
+        }
+     }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+
 body {
   line-height: 1.7;
   font-size: 1rem;
   color: rgba(246,246,246);
   background-color: #061977;
   transition: background 1s ease; }
+
+.faq{
+  color: rgba(46, 39, 39);
+  background-color: rgba(246, 246, 246);
+}
 
 #container-iframe{
   min-height: 20em;
@@ -327,11 +368,14 @@ h1{
       display: inline-block;
       padding: 5px 20px; }
     .site-navbar .site-navigation .site-menu a {
+      text-align: left;
       text-decoration: none !important;
       display: inline-block; }
     .site-navbar .site-navigation .site-menu > li {
+      text-align: right;
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > li > a {
+        text-align: right;
         padding: 5px 20px;
         color: #000;
         display: inline-block;
@@ -433,7 +477,6 @@ h1{
   width: 300px;
   position: fixed;
   right: 0;
-  z-index: 2000;
   padding-top: 20px;
   background: #fff;
   height: calc(100vh);
@@ -1877,6 +1920,26 @@ h1{
   min-height: 232px;
 }
 
+.faq-text{
+  color:white;
+  margin-top:140px;
+  margin-bottom:60px;
+}@media (max-width: 1024px) {
+  .faq-text{
+    margin-top:100px;
+    margin-bottom:60px;
+  }
+}
+
+#faq-logo{
+  margin-top:140px;
+  margin-bottom:60px;
+} @media (max-width: 1024px) {
+  #faq-logo{
+    display: none;
+  }
+}
+
 #topupexpress-img{
   max-height: 250px;
   height: 100%;
@@ -1945,6 +2008,16 @@ h1{
 	flex-flow: row wrap;
 	width: 100%;
 	justify-content: space-around;
+}
+
+.testimoni{
+  background-color:#F4F9FE;
+}
+
+#youtube-image{
+  flex: 2;
+  height: 100%;
+  width:100%;
 }
 
 .footer{

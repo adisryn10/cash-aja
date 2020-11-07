@@ -42,12 +42,15 @@
       <div class="row align-items-center">
         <div class="col-md-8 col-sm-12">
           <div class="faq-text">
-            <h2>Frequently Asked Question</h2>
-            <p>Temukan jawaban dari pertanyaan kamu di sini.</p>
+            <h2>Tentang Cash Aja</h2>
+            <p>Pemberian kredit atau pembiayaan kepada customer untuk kebutuhan dana atau kebutuhan konsumtif dengan jaminan 
+            dokumen kepemilikan kendaraan (BPKB) yang dimiliki customer dengan batas tahun kendaraan 2012-2020.Penuhi kebutuhan 
+            untuk Modal Bisnis, Pendidikan, Pernikahan, Renovasi rumah, Travel, Kesehatan, dll.
+            </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
-          <img alt="Image" class="img-fluid" id="faq-logo" src="cust/images/cashajalogo-blue.png">
+          <img alt="Image" class="img-fluid" id="faq-logo" src="cust/images/cashajalogo-yellow.png">
         </div>
       </div>
     </div>
@@ -64,6 +67,8 @@
           <div class="row">
             <div class="col-lg-7 mr-auto">
               <div id="accordion-faq">
+                <h2 class="text-faq">Frequently Asked Question</h2>
+                <p>Temukan jawaban dari pertanyaanmu disini.</p>
                 <div class="card">
                   <div aria-controls="collapseOne" class="card-header" data-target="#collapseOne"
                        data-toggle="collapse" id="headingOne">
@@ -286,10 +291,10 @@
               </div>
             </div>
 
-            <div class="col-lg-4 " style="margin-left:auto;margin-right:auto">
+            <div class="col-lg-4 " style="margin-left:auto;margin-right:auto;margin-top:0px;">
 
               <!--Contact info-->
-              <h2 class="text-black mt-5">Hubungi Kami</h2>
+              <h2 class="text-faq mt-5">Hubungi Kami</h2>
               <div>Siap menjawab pertanyaan kamu </br>Senin-Jumat, pukul 08.00 - 17.00</div>
               <div class="row mt-3">
                 <div class="col-2">
@@ -450,13 +455,13 @@
             var scroll_pos = 0;
             $(document).scroll(function () {
                 scroll_pos = $(this).scrollTop();
-                if (scroll_pos > 50) {
+                if (scroll_pos > 80) {
                     $(".faq-content").css('background-color', '#f6f6f6');
                     $(".faq-text").css('color', '#2E2727');
                     $(".faq-content").css('color', 'gray');
 
                 } else {
-                    $(".faq-content").css('background-color', '#133061');
+                    $(".faq-content").css('background-color', '#1B6DB4');
                     $(".faq-text").css('color', '#f6f6f6');
 
                 }

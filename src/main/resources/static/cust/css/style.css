@@ -11,6 +11,10 @@
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.card-testimoni{
+  background-color:#F4F9FE;
+}
+
 .logo-navbar{
   text-align: left;
 }
@@ -1944,10 +1948,15 @@ h1{
   }
 }
 
+.text-faq{
+  color:#1B6DB4;
+}
+
 #faq-logo{
-  margin-top:140px;
+  max-width: 120%;
+  margin-top:50px;
   margin-bottom:60px;
-} @media (max-width: 1024px) {
+} @media (max-width: 1030px) {
   #faq-logo{
     display: none;
   }

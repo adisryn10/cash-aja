@@ -17,7 +17,12 @@
   <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="cust/css/aos.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="cust/css/style.css">
+  <script>
+    AOS.init();
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -41,9 +46,9 @@
 
 <!-- FIRST LANDING -->
 <div class="site-blocks-cover">
-  <div class="container">
+  <div class="container" data-aos="fade-up">
     <div class="row align-items-center justify-content-center">
-      <div class="col-md-12" style="position: relative;" data-aos="fade-up">
+      <div class="col-md-12" style="position: relative;">
         <div id="row-first">
           <div id="first-text" class="col-lg-6 mr-auto align-items-stretch" style="margin:auto;">
             <br>
@@ -55,7 +60,7 @@
               Penuhi kebutuhanmu untuk biaya pernikahan, renovasi rumah, kesehatan, pendidikan, travelling, dan
               lainnya dengan CashAja</p>
             <div>
-              <a href="#pengajuan-section" class="btn btn-primarymr-2 mb-2">Ajukan Kredit</a>
+              <a href="#pengajuan-section" class="btn btn-primary mr-2 mb-2">Ajukan Kredit</a>
             </div>
           </div>
           <div id="first-img" class="col-lg-6 mr-auto">
@@ -68,7 +73,7 @@
 </div>
 
 <!--Slider Promo-->
-<div id='slider-promo'>
+<div id='slider-promo' data-aos="fade-up">
 <div id="carouselExampleControls" data-background="#41a7b3" class="carousel slide" data-ride="carousel"
      style="margin-top:30px;margin-bottom:30px">
   <div class="carousel-inner container">
@@ -94,7 +99,7 @@
 </div>
 
 <!-- SIMULASI -->
-<section class="site-section bg-light" id="simulation-section">
+<section class="site-section bg-light" data-aos="fade-up" id="simulation-section">
   <div class="container">
     <h1 class="text-black">
       <strong>Simulasi</strong>
@@ -222,7 +227,7 @@
 </div>
 
 <!-- CARA PENGAJUAN -->
-<section class="site-section" id="pengajuan-section">
+<section class="site-section" id="pengajuan-section" data-aos="fade-up">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -622,7 +627,7 @@
 </section>
 
 <!-- KEUNTUNGAN -->
-<section class="site-section bg-light" id="features-section">
+<section class="site-section bg-light" id="features-section" data-aos="fade-up">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -656,7 +661,7 @@
         <div class="unit-4 d-block">
           <div>
             <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
-            <h3><i>Fast & Easy</i></h3>
+            <h3>Fast & Easy</h3>
             <p>Proses pengajuan cepat dan persyaratan mudah</p>
           </div>
         </div>
@@ -689,7 +694,7 @@
 </section>
 
 <!--TESTIMONIAL-->
-<section class="site-section" id="testimonials-section">
+<section class="site-section" id="testimonials-section" data-aos="fade-up">
   <div class="container">
     <div class="row mb-6">
       <div class="col-12 text-left">
@@ -749,7 +754,7 @@
 <br><br>
 
 <!--WIRA-->
-<section class="site-section" id="wira-section">
+<section class="site-section" id="wira-section" data-aos="fade-up">
   <div id="wira" class="container">
 
     <!-- Penegenalan WIRA -->
@@ -772,28 +777,28 @@
 
     <!-- Benefit WIRA -->
     <h4>Apa keuntungannya?</h4>
-    <div id="wira-benefit">
+    <div id="wira-benefit" class="row align-items-stretch" data-aos="fade-up">
       <div class='item5'>
-        <img src="cust/images/icon-benefit.svg" alt="Image" class="img-fluid">
+        <img src="cust/images/benefit-wira/penghasilantakterbatas.png" alt="Image" class="img-fluid">
         <h7>Penghasilan
           <br>Tak Terbatas
         </h7>
       </div>
       <div class='item5'>
-        <img src="cust/images/icon-benefit.svg" alt="Image" class="img-fluid">
+        <img src="cust/images/benefit-wira/traininggratis.png" alt="Image" class="img-fluid">
         <h7>Training GRATIS</h7>
       </div>
       <div class='item5'>
-        <img src="cust/images/icon-benefit.svg" alt="Image" class="img-fluid">
+        <img src="cust/images/benefit-wira/hadiahmenarik.png" alt="Image" class="img-fluid">
         <h7>Hadiah Menarik</h7>
       </div>
       <div class='item5'>
-        <img src="cust/images/icon-benefit.svg" alt="Image" class="img-fluid">
+        <img src="cust/images/benefit-wira/flexibleworkinghours.png" alt="Image" class="img-fluid">
         <h7><i>Flexible Working <br>
           Day and Hours</i></h7>
       </div>
       <div class='item5'>
-        <img src="cust/images/icon-benefit.svg" alt="Image" class="img-fluid">
+        <img src="cust/images/benefit-wira/bekerjadimanasaja.png" alt="Image" class="img-fluid">
         <h7>Bisa Bekerja<br>
           Dimana Saja
         </h7>

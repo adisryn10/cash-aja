@@ -96,7 +96,7 @@ h1{
 
 #slider-promo{
   background-color: #1B6DB4;
-  padding-top: 3  em;
+  padding-top: 3em;
   padding-bottom: 3em;
 }
 .bg-light {
@@ -155,7 +155,7 @@ h1{
     border-width: 2px;
     background: #1F3C78;
     border-color: #1F3C78;
-    color: #fff;
+    color: #ffffff;
     /* -webkit-box-shadow: 0 4px 20px -5px rgba(0, 16, 210, 0.34); */
     /* box-shadow: 0 4px 20px -5px rgba(0, 16, 210, 0.34); } */
     }
@@ -2011,6 +2011,7 @@ h1{
 
 .item5{
   display: flex;
+  max-width: 10em;
   flex-direction: column;
   align-content: center;
   align-items: center;
@@ -2023,8 +2024,9 @@ h1{
 
 #wira-benefit {
   margin: 1em;
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-around;
 }

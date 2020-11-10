@@ -55,8 +55,8 @@ th, td {
 body {
   line-height: 1.7;
   font-size: 1rem;
-  color: rgba(246,246,246);
-  background-color: #061977;
+  /* color: rgba(246,246,246); */
+  background-color: #ffffff;
   transition: background 1s ease; }
 
 .faq{
@@ -66,14 +66,6 @@ body {
 
 #container-iframe{
   min-height: 20em;
-}
-
-#h1-first{
-  text: #f6f6f6;
-}
-
-#p-first{
-  text: #f6f6f6;
 }
 
 ::-moz-selection {
@@ -102,6 +94,11 @@ h1{
   color:rgb(46, 39, 39)
 }
 
+#slider-promo{
+  background-color: #1B6DB4;
+  padding-top: 3  em;
+  padding-bottom: 3em;
+}
 .bg-light {
   background: #f6f6f6 !important; }
 
@@ -690,7 +687,7 @@ h1{
   .site-blocks-cover h1 {
     font-size: 3.5rem;
     font-weight: 400;
-    color:rgb(246, 246, 246);
+    color:rgb(46, 39, 39)
     font-weight: 700; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {

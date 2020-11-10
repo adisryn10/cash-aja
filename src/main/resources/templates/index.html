@@ -48,14 +48,14 @@
           <div id="first-text" class="col-lg-6 mr-auto align-items-stretch" style="margin:auto;">
             <br>
             <h1 id="h1-first">CashAja MTF</h1>
-            <p id="p-first" style="color: rgb(246, 246, 246);" class="mb-5 text-justify">
+            <p id="p-first" class="mb-5 text-justify">
               Pemberian kredit atau pembiayaan multiguna kepada customer untuk kebutuhan produktif dan konsumtif
               dengan menjaminkan BPKB kendaraan yang dimiliki.
               <br><br>
               Penuhi kebutuhanmu untuk biaya pernikahan, renovasi rumah, kesehatan, pendidikan, travelling, dan
               lainnya dengan CashAja</p>
             <div>
-              <a href="#pengajuan-section" class="btn btn-secondary mr-2 mb-2">Ajukan Kredit</a>
+              <a href="#pengajuan-section" class="btn btn-primarymr-2 mb-2">Ajukan Kredit</a>
             </div>
           </div>
           <div id="first-img" class="col-lg-6 mr-auto">
@@ -68,6 +68,7 @@
 </div>
 
 <!--Slider Promo-->
+<div id='slider-promo'>
 <div id="carouselExampleControls" data-background="#41a7b3" class="carousel slide" data-ride="carousel"
      style="margin-top:30px;margin-bottom:30px">
   <div class="carousel-inner container">
@@ -90,9 +91,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+</div>
 
 <!-- SIMULASI -->
-<section class="site-section" id="simulation-section">
+<section class="site-section bg-light" id="simulation-section">
   <div class="container">
     <h1 class="text-black">
       <strong>Simulasi</strong>
@@ -620,7 +622,7 @@
 </section>
 
 <!-- KEUNTUNGAN -->
-<section class="site-section" id="features-section">
+<section class="site-section bg-light" id="features-section">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -761,7 +763,7 @@
           sebagai agen multiguna yang bekerja secara perorangan / grup / media
           dengan menggunakan metode penawaran langsung kepada customer (referral).
         </p>
-        <a href="https://www.mtf.co.id/id/mandiri-wira" class="btn btn-primary mr-2 mb-2">GABUNG WIRA</a>
+        <a href="https://www.mtf.co.id/id/mandiri-wira" class="btn btn-primary mr-2 mb-2">Gabung WIRA</a>
       </div>
       <div id="wira-img">
         <img src="cust/images/wira.svg" alt="Image" class="img-fluid">
@@ -857,23 +859,6 @@
 <script src="cust/js/jquery.scrollie.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        var scroll_pos = 0;
-        $(document).scroll(function () {
-            scroll_pos = $(this).scrollTop();
-            if (scroll_pos > 210) {
-                $("body").css('background-color', '#f6f6f6');
-                $("#h1-first").css('color', '#2E2727');
-                $("#p-first").css('color', 'gray');
-                $("body").css('color', 'gray');
-
-            } else {
-                $("body").css('background-color', '#061977');
-                $("#h1-first").css('color', '#f6f6f6');
-                $("#p-first").css('color', '#f6f6f6');
-            }
-        });
-    });
     // Perubahan desain pada bagian pengajuan CashAja
     $('#prosedur-title-btn').click(function () {
         $(this).addClass('btn-primary').removeClass('d-none')

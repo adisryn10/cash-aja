@@ -34,6 +34,15 @@ public class PageController{
         }
         return "faq";
     }
+    
+    @RequestMapping(path = "/detail-promo", method = RequestMethod.GET)
+    public String detailPromoPage(Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        for (GrantedAuthority authority: auth.getAuthorities()){
+            model.addAttribute("role", authority.getAuthority());
+        }
+        return "promo-detail";
+    }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public String login(){

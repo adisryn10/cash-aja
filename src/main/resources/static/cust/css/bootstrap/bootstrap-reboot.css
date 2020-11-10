@@ -92,7 +92,8 @@ dfn {
 
 b,
 strong {
-  font-weight: bolder; }
+  /* font-weight: bolder; */
+ }
 
 small {
   font-size: 80%; }

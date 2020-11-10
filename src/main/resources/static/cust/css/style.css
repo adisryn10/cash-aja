@@ -29,9 +29,14 @@ th, td {
 body {
   line-height: 1.7;
   font-size: 1rem;
+  /* color: #fff; */
   color: rgba(246,246,246);
   background-color: #061977;
   transition: background 1s ease; }
+
+.light-grey-bg{
+  background-color: #f6f6f6 ;
+}
 
 .faq{
   color: rgba(46, 39, 39);
@@ -109,7 +114,9 @@ h1{
   bottom: 0;
   opacity: 0;
   visibility: hidden; }
-
+b{
+  font-weight: 700;
+}
 .offcanvas-menu .site-wrap {
   height: 100%;
   width: 100%;
@@ -797,7 +804,8 @@ h1{
   position: relative;
   margin-top: -70px;
   z-index: 2;
-  color: #999999; }
+  color: #999999;
+}
   .feature-blocks-1.no-margin-top {
     margin-top: 0px; }
   .feature-blocks-1 .feature-block-1 {
@@ -1989,6 +1997,7 @@ h1{
   margin: 1em;
   column-gap: 1em;
   justify-content: space-around;
+  max-width: 10em;
 }
 
 #wira-benefit {

@@ -1,14 +1,15 @@
 package mtf.project.service;
 
-import mtf.project.model.*;
-import mtf.project.repository.*;
-import org.springframework.stereotype.Service;
+import mtf.project.model.RoleModel;
+import mtf.project.model.UserRoleModel;
+import mtf.project.repository.RoleDb;
+import mtf.project.repository.UserDb;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
 @Transactional
@@ -16,13 +17,13 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDb userDb;
-    
+
     @Autowired
     private RoleDb roleDb;
 
     @Override
-	public List<UserRoleModel> getAllUser() {
-		return userDb.findAll();
+    public List<UserRoleModel> getAllUser() {
+        return userDb.findAll();
     }
 
     @Override

@@ -37,25 +37,13 @@
       <div class="col-12 col-md-12 main-menu">
         <nav class="site-navigation" role="navigation">
           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" padding="0px 0px 0px">
-            <a href="index.html" class="text-black h2 mb-0"><img src="cust/images/cash-aja.png" style="width:45%"></a>
-            <li><a th:href="@{/#simulation-section}" class="nav-link">
-              <bold>Simulasi</bold>
-            </a></li>
-            <li><a th:href="@{https://topup.mtf.co.id:2121/Multiguna/TopUpMultiguna}" class="nav-link">Top Up Express</a>
-            </li>
-            <li><a th:href="@{https://www.mtf.co.id/id/wirareguler}" class="nav-link">WIRA</a></li>
-            <li><a th:href="@{/faq}" class="nav-link">Tentang CashAja</a></li>
+            <li><a th:href="@{/#simulation-section}" class="nav-link first-link">Simulasi</a></li>
+            <li><a href="https://mtf.co.id/id/top-up-express-kreditpas" onclick="window.open('https://mtf.co.id/id/top-up-express-kreditpas','_self')" class="nav-link">Top Up Express</a></li>
+            <li><a href="https://www.mtf.co.id/id/mandiri-wira" onclick="window.open('https://www.mtf.co.id/id/mandiri-wira','_self')" class="nav-link">WIRA</a></li>
+            <li><a th:href="@{/faq}" onclick="window.open('/faq','_self')" class="nav-link">Tentang CashAja</a></li>
           </ul>
         </nav>
       </div>
     </div>
-    <div class="col-12 col-md-12 d-inline-block d-lg-none ml-md-0">
-      <a href="#"
-         class="site-menu-toggle js-menu-toggle text-black float-right">
-        <span class="icon-menu h3"></span>
-      </a>
-    </div>
-  </header>
-</div>
 </body>
 </html>

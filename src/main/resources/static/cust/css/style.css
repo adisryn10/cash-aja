@@ -11,13 +11,38 @@
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.card-testimoni{
+  background-color:#F4F9FE;
+}
+
+.logo-navbar{
+  text-align: left;
+}
 .faq-content{
   transition: background 1s ease; 
 }
 
+.first-link{
+  margin-left:300px;
+}@media (max-width: 1095px) {
+  .first-link{
+    margin-left: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .first-link{
+    margin-left: 0px;
+  }
+}
+
+
 .faq-table{
     text-align:center;
     border: 1px solid black;
+}@media (max-width: 768px) {
+  .faq-table{
+    font-size: 9px;
+  }
 }
 table, th, td {
   border: 1px solid black;
@@ -26,6 +51,7 @@ table, th, td {
 th, td {
   padding: 15px;
 }
+
 body {
   line-height: 1.7;
   font-size: 1rem;
@@ -366,11 +392,14 @@ b{
       display: inline-block;
       padding: 5px 20px; }
     .site-navbar .site-navigation .site-menu a {
+      text-align: left;
       text-decoration: none !important;
       display: inline-block; }
     .site-navbar .site-navigation .site-menu > li {
+      text-align: right;
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > li > a {
+        text-align: right;
         padding: 5px 20px;
         color: #000;
         display: inline-block;
@@ -472,7 +501,6 @@ b{
   width: 300px;
   position: fixed;
   right: 0;
-  z-index: 2000;
   padding-top: 20px;
   background: #fff;
   height: calc(100vh);
@@ -1928,10 +1956,15 @@ b{
   }
 }
 
+.text-faq{
+  color:#1B6DB4;
+}
+
 #faq-logo{
-  margin-top:140px;
+  max-width: 120%;
+  margin-top:50px;
   margin-bottom:60px;
-} @media (max-width: 1024px) {
+} @media (max-width: 1030px) {
   #faq-logo{
     display: none;
   }
@@ -2118,7 +2151,6 @@ iframe{
 }
 .confirmation-box {
   text-align: justify;
-  font-size: small;
   color: black;
 }
 .submit-btn {

@@ -31,7 +31,7 @@ public class AdminController{
         List<UserRoleModel> listUser = userService.getUserByRoleNama("CUSTOMER");
 
         model.addAttribute("listUser", listUser);
-        return "admin";
+        return "admin-home";
     }
 
     @RequestMapping(path = "user/detail/{idUser}", method = RequestMethod.GET)

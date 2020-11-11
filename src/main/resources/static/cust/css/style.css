@@ -1,4 +1,6 @@
 /* Base */
+
+
 .btn-link-faq:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
@@ -41,7 +43,7 @@
     border: 1px solid black;
 }@media (max-width: 768px) {
   .faq-table{
-    font-size: 9px;
+    font-size:10px;
   }
 }
 table, th, td {
@@ -2171,4 +2173,12 @@ iframe{
 /* Untuk label form */
 label {
   color: black;
+}
+
+/* Untuk tabel simulasi */
+.table-simulation {
+  border: transparent;
+}
+th {
+  color: #061977;
 }

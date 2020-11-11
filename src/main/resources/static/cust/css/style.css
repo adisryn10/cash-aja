@@ -2175,3 +2175,11 @@ iframe{
 label {
   color: black;
 }
+
+/* Untuk tabel simulasi */
+.table-simulation {
+  border: transparent;
+}
+th {
+  color: #061977;
+}

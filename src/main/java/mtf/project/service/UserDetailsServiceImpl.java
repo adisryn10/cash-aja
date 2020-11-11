@@ -1,7 +1,7 @@
 package mtf.project.service;
 
-import mtf.project.model.*;
-import mtf.project.repository.*;
+import mtf.project.model.UserRoleModel;
+import mtf.project.repository.UserDb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-  <title>MTF Kredit Multiguna</title>
+  <title>Tentang Cash Aja</title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
-  <link rel="stylesheet" href="cust/css/bootstrap.min.css">
-  <link rel="stylesheet" href="cust/css/jquery-ui.css">
-  <link rel="stylesheet" href="cust/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="cust/css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="cust/css/aos.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="cust/css/style.css">
-  <script>
-    AOS.init();
-  </script>
-  
+  <link href="cust/fonts/icomoon/style.css" rel="stylesheet">
+  <link href="cust/css/bootstrap.min.css" rel="stylesheet">
+  <link href="cust/css/jquery-ui.css" rel="stylesheet">
+  <link href="cust/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="cust/css/owl.theme.default.min.css" rel="stylesheet">
+  <link href="cust/css/owl.theme.default.min.css" rel="stylesheet">
+  <link href="cust/css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="cust/css/bootstrap-datepicker.css" rel="stylesheet">
+  <link href="cust/fonts/flaticon/font/flaticon.css" rel="stylesheet">
+  <link href="cust/css/aos.css" rel="stylesheet">
+  <link href="cust/css/style-faq.css" rel="stylesheet">
 </head>
 
 <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
@@ -45,7 +39,8 @@
   <div id='promo-detail'>
       <h1><Strong>Penawaran Spesial Khusus BUMN</Strong></h1>
       <div id="detail-asset">
-        <img src="cust/images/promo/BUMN_detail.png" alt="Image" class="img-fluid">
+        <img th:src="@{cust/images/promo/BUMN_detail.png}" />
+        <!-- <img src="cust/images/promo/BUMN_detail.png" alt="Image" class="img-fluid"> -->
       </div>
       
   </div>
@@ -68,7 +63,6 @@
     </div>
 
 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="cust/js/jquery-3.3.1.min.js"></script>
     <script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="cust/js/jquery-ui.js"></script>
@@ -83,6 +77,8 @@
     <script src="cust/js/jquery.fancybox.min.js"></script>
     <script src="cust/js/jquery.sticky.js"></script>
     <script src="cust/js/main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="cust/js/jquery.scrollie.min.js"></script>
 
   </body>
 </html>

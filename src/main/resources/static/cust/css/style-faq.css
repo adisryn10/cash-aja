@@ -22,10 +22,10 @@ body {
   
   h1, h2, h3, h4, h5, h6, h7,
   .h1, .h2, .h3, .h4, .h5, .h6, .h7{
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+    font-family: "Quicksand", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
   
   p{
-    font-family: "Open Sans";
+    font-family: "Quicksand";
   }
   h1{
     color:rgb(46, 39, 39)
@@ -119,7 +119,7 @@ body {
   .form-control {
     height: 43px;
     border-radius: 30px;
-    font-family: "Roboto", "Open Sans" -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+    font-family: "Quicksand", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
     .form-control:active, .form-control:focus {
       border-color: #1F3C78; }
     .form-control:hover, .form-control:active, .form-control:focus {

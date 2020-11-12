@@ -5,20 +5,24 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-  <link href="cust/fonts/icomoon/style.css" rel="stylesheet">
-  <link href="cust/css/bootstrap.min.css" rel="stylesheet">
-  <link href="cust/css/jquery-ui.css" rel="stylesheet">
-  <link href="cust/css/owl.carousel.min.css" rel="stylesheet">
-  <link href="cust/css/owl.theme.default.min.css" rel="stylesheet">
-  <link href="cust/css/owl.theme.default.min.css" rel="stylesheet">
-  <link href="cust/css/jquery.fancybox.min.css" rel="stylesheet">
-  <link href="cust/css/bootstrap-datepicker.css" rel="stylesheet">
-  <link href="cust/fonts/flaticon/font/flaticon.css" rel="stylesheet">
-  <link href="cust/css/aos.css" rel="stylesheet">
-  <link href="cust/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="cust/css/bootstrap.min.css">
+  <link rel="stylesheet" href="cust/css/jquery-ui.css">
+  <link rel="stylesheet" href="cust/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="cust/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="cust/css/aos.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="cust/css/style.css">
+  <script>
+    AOS.init();
+  </script>
 </head>
 
 <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
@@ -42,25 +46,25 @@
 
 <!-- FIRST LANDING -->
 <div class="site-blocks-cover">
-  <div class="container">
+  <div class="container" data-aos="fade-up">
     <div class="row align-items-center justify-content-center">
-      <div class="col-md-12" data-aos="fade-up" style="position: relative;">
+      <div class="col-md-12" style="position: relative;">
         <div id="row-first">
           <div class="col-lg-6 mr-auto align-items-stretch" id="first-text" style="margin:auto;">
             <br>
-            <h1 id="h1-first">CashAja MTF</h1>
-            <p class="mb-5 text-justify" id="p-first" style="color: rgb(246, 246, 246);">
+            <h1 id="h1-first"><strong>CashAja MTF</strong></h1>
+            <p id="p-first" class="mb-5 text-justify">
               Pemberian kredit atau pembiayaan multiguna kepada customer untuk kebutuhan produktif dan konsumtif
               dengan menjaminkan BPKB kendaraan yang dimiliki.
               <br><br>
               Penuhi kebutuhanmu untuk biaya pernikahan, renovasi rumah, kesehatan, pendidikan, travelling, dan
               lainnya dengan CashAja</p>
             <div>
-              <a class="btn btn-secondary mr-2 mb-2" href="#pengajuan-section">Ajukan Kredit</a>
+              <a href="#pengajuan-section" class="btn btn-primary mr-2 mb-2">Ajukan Kredit</a>
             </div>
           </div>
-          <div class="col-lg-6 mr-auto" id="first-img">
-            <img alt="Image" class="img-fluid" src="cust/images/landing-bluebg.png">
+          <div id="first-img" class="col-lg-6 mr-auto">
+            <img src="cust/images/landing-first.png" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -69,17 +73,18 @@
 </div>
 
 <!--Slider Promo-->
-<div class="carousel slide" data-background="#41a7b3" data-ride="carousel" id="carouselExampleControls"
+<div id='slider-promo' data-aos="fade-up">
+<div id="carouselExampleControls" data-background="#41a7b3" class="carousel slide" data-ride="carousel"
      style="margin-top:30px;margin-bottom:30px">
   <div class="carousel-inner container">
     <div class="carousel-item active">
-      <img alt="First slide" class="d-block w-100" src="cust/images/promo1.png">
+      <a href="/promo/bumn"><img class="d-block w-100" src="cust/images/promo/BUMN_banner.png" alt="First slide"></a>
     </div>
     <div class="carousel-item">
-      <img alt="Second slide" class="d-block w-100" src="cust/images/promo2.png">
+      <a href="/promo/pns"><img class="d-block w-100" src="cust/images/promo/PNS_banner.png" alt="Second slide"></a>
     </div>
     <div class="carousel-item">
-      <img alt="Third slide" class="d-block w-100" src="cust/images/promo3.png">
+      <a href="/promo/wiraswasta"><img class="d-block w-100" src="cust/images/promo/Wiraswasta_banner.png" alt="Third slide"></a>
     </div>
   </div>
   <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls" role="button">
@@ -91,9 +96,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+</div>
 
 <!-- SIMULASI -->
-<section class="site-section" id="simulation-section">
+<section class="site-section bg-light" data-aos="fade-up" id="simulation-section">
   <div class="container">
     <h1 class="text-black">
       <strong>Simulasi Kredit</strong>
@@ -288,7 +294,7 @@
 <!--TOP UP EXPRESS-->
 <div class="topupexpress blue-bg" data-aos="fade-up">
   <div id="topupexpress-asset">
-    <img alt="Image" class="img-fluid" id="topupexpress-img" src="cust/images/topupexpress.svg">
+    <img src="cust/images/topup-express.png" alt="Image" class="img-fluid" id="topupexpress-img">
   </div>
   <div id="topupexpress-text">
     <h6>
@@ -305,7 +311,7 @@
 </div>
 
 <!-- CARA PENGAJUAN -->
-<section class="site-section" id="pengajuan-section">
+<section class="site-section" id="pengajuan-section" data-aos="fade-up">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -716,7 +722,7 @@
 </section>
 
 <!-- KEUNTUNGAN -->
-<section class="site-section" id="features-section">
+<section class="site-section bg-light" id="features-section" data-aos="fade-up">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -749,8 +755,8 @@
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
         <div class="unit-4 d-block">
           <div>
-            <img alt="Image" class="img-fluid icon-benefit-ca" src="cust/images/fastneasy.png">
-            <h3><i>Fast & Easy</i></h3>
+            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+            <h3>Fast & Easy</h3>
             <p>Proses pengajuan cepat dan persyaratan mudah</p>
           </div>
         </div>
@@ -783,7 +789,7 @@
 </section>
 
 <!--TESTIMONIAL-->
-<section class="site-section" id="testimonials-section">
+<section class="site-section" id="testimonials-section" data-aos="fade-up">
   <div class="container">
     <div class="row mb-6">
       <div class="col-12 text-left">
@@ -849,8 +855,8 @@
 <br><br>
 
 <!--WIRA-->
-<section class="site-section" id="wira-section">
-  <div class="container" id="wira">
+<section class="site-section" id="wira-section" data-aos="fade-up">
+  <div id="wira" class="container">
 
     <!-- Penegenalan WIRA -->
     <div id="wira-detail">
@@ -863,7 +869,7 @@
           sebagai agen multiguna yang bekerja secara perorangan / grup / media
           dengan menggunakan metode penawaran langsung kepada customer (referral).
         </p>
-        <a class="btn btn-primary mr-2 mb-2" href="https://www.mtf.co.id/id/mandiri-wira">GABUNG WIRA</a>
+        <a href="https://www.mtf.co.id/id/mandiri-wira" class="btn btn-primary mr-2 mb-2">Gabung WIRA</a>
       </div>
       <div id="wira-img">
         <img alt="Image" class="img-fluid" src="cust/images/wira.svg">
@@ -872,28 +878,28 @@
 
     <!-- Benefit WIRA -->
     <h4>Apa keuntungannya?</h4>
-    <div id="wira-benefit">
+    <div id="wira-benefit" class="row align-items-stretch" data-aos="fade-up">
       <div class='item5'>
-        <img alt="Image" class="img-fluid" src="cust/images/icon-benefit.svg">
+        <img src="cust/images/benefit-wira/penghasilantakterbatas.png" alt="Image" class="img-fluid">
         <h7>Penghasilan
           <br>Tak Terbatas
         </h7>
       </div>
       <div class='item5'>
-        <img alt="Image" class="img-fluid" src="cust/images/icon-benefit.svg">
+        <img src="cust/images/benefit-wira/traininggratis.png" alt="Image" class="img-fluid">
         <h7>Training GRATIS</h7>
       </div>
       <div class='item5'>
-        <img alt="Image" class="img-fluid" src="cust/images/icon-benefit.svg">
+        <img src="cust/images/benefit-wira/hadiahmenarik.png" alt="Image" class="img-fluid">
         <h7>Hadiah Menarik</h7>
       </div>
       <div class='item5'>
-        <img alt="Image" class="img-fluid" src="cust/images/icon-benefit.svg">
+        <img src="cust/images/benefit-wira/flexibleworkinghours.png" alt="Image" class="img-fluid">
         <h7><i>Flexible Working <br>
           Day and Hours</i></h7>
       </div>
       <div class='item5'>
-        <img alt="Image" class="img-fluid" src="cust/images/icon-benefit.svg">
+        <img src="cust/images/benefit-wira/bekerjadimanasaja.png" alt="Image" class="img-fluid">
         <h7>Bisa Bekerja<br>
           Dimana Saja
         </h7>
@@ -959,23 +965,6 @@
 <script src="cust/js/jquery.scrollie.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        var scroll_pos = 0;
-        $(document).scroll(function () {
-            scroll_pos = $(this).scrollTop();
-            if (scroll_pos > 210) {
-                $("body").css('background-color', '#f6f6f6');
-                $("#h1-first").css('color', '#2E2727');
-                $("#p-first").css('color', 'gray');
-                $("body").css('color', 'gray');
-
-            } else {
-                $("body").css('background-color', '#061977');
-                $("#h1-first").css('color', '#f6f6f6');
-                $("#p-first").css('color', '#f6f6f6');
-            }
-        });
-    });
     // Perubahan desain pada bagian pengajuan CashAja
     $('#prosedur-title-btn').click(function () {
         $(this).addClass('btn-primary').removeClass('d-none')

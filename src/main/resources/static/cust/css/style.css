@@ -2182,3 +2182,16 @@ label {
 th {
   color: #061977;
 }
+
+#detail-asset{
+  display: block;
+  /* max-width: 70%; */
+  text-align: center;
+}
+
+#promo-detail{
+  padding-top: 7em;
+  padding-bottom: 5em;
+  padding-left: 5em;
+  padding-right: 5em;
+}

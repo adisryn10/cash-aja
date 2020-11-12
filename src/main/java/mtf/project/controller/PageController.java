@@ -40,7 +40,7 @@ public class PageController{
         return "login";
     }
 
-    @RequestMapping(path = "/promo/bumn", method = RequestMethod.GET)
+    @RequestMapping(path = "/promo-bumn", method = RequestMethod.GET)
     public String bumn(Model model){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         for (GrantedAuthority authority: auth.getAuthorities()){
@@ -49,7 +49,7 @@ public class PageController{
         return "bumn-promo-detail";
     }
 
-    @RequestMapping(path = "/promo/pns", method = RequestMethod.GET)
+    @RequestMapping(path = "/promo-pns", method = RequestMethod.GET)
     public String pns(Model model){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         for (GrantedAuthority authority: auth.getAuthorities()){
@@ -58,7 +58,7 @@ public class PageController{
         return "pns-promo-detail";
     }
 
-    @RequestMapping(path = "/promo/wiraswasta", method = RequestMethod.GET)
+    @RequestMapping(path = "/promo-wiraswasta", method = RequestMethod.GET)
     public String wiraswasta(Model model){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         for (GrantedAuthority authority: auth.getAuthorities()){

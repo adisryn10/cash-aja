@@ -3,10 +3,11 @@
 <head>
   <title>MTF Kredit Multiguna</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" href="/cust/images/cash-aja-square.PNG">
   <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
   <link rel="stylesheet" href="cust/css/bootstrap.min.css">
   <link rel="stylesheet" href="cust/css/jquery-ui.css">
@@ -25,7 +26,7 @@
   </script>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
 <div class="site-wrap" id="home-section">
   <div class="site-mobile-menu site-navbar-target">
@@ -50,7 +51,7 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-md-12" style="position: relative;">
         <div id="row-first">
-          <div id="first-text" class="col-lg-6 mr-auto align-items-stretch" style="margin:auto;">
+          <div class="col-lg-6 mr-auto align-items-stretch" id="first-text" style="margin:auto;">
             <br>
             <h1 id="h1-first"><strong>CashAja MTF</strong></h1>
             <p id="p-first" class="mb-5 text-justify">
@@ -78,153 +79,93 @@
      style="margin-top:30px;margin-bottom:30px">
   <div class="carousel-inner container">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="cust/images/promo1.png" alt="First slide">
+      <a href="/promo-bumn"><img class="d-block w-100" src="cust/images/promo/BUMN_banner.png" alt="First slide"></a>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="cust/images/promo2.png" alt="Second slide">
+      <a href="/promo-pns"><img class="d-block w-100" src="cust/images/promo/PNS_banner.png" alt="Second slide"></a>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="cust/images/promo3.png" alt="Third slide">
+      <a href="/promo-wiraswasta"><img class="d-block w-100" src="cust/images/promo/Wiraswasta_banner.png" alt="Third slide"></a>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls" role="button">
+    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <a class="carousel-control-next" data-slide="next" href="#carouselExampleControls" role="button">
+    <span aria-hidden="true" class="carousel-control-next-icon"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
 </div>
 
-<!-- SIMULASI -->
-<section class="site-section bg-light" data-aos="fade-up" id="simulation-section">
+<!-- KEUNTUNGAN -->
+<section class="site-section bg-light" id="features-section" data-aos="fade-up">
   <div class="container">
-    <h1 class="text-black">
-      <strong>Simulasi</strong>
-    </h1>
-    <br>
     <div class="row">
+      <div class="col-12">
+        <h1 class="mb-5 text-black text-left">
+          <strong>Mengapa CashAja?</strong>
+        </h1>
+      </div>
+    </div>
 
-      <!-- Form Simulasi -->
-      <div class="col-md-6 col-sm-12">
-        <div id="simulasi-form">
-          <div class="card shadow">
-            <div class="card-body">
-              <h4 class="card-title black-text">FORM SIMULASI</h4>
-              <br>
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputTipeKendaraan">Tipe Kendaraan</label>
-                    <select class="form-control" id="inputTipeKendaraan">
-                      <option value="" selected disabled>Pilih produk kendaraan</option>
-                      <option>Mobil Kendaraan Penumpang</option>
-                      <option>Motor Gede (MOGE)</option>
-                      <option>Mobil Double Cabin</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputTahunKendaraan">Tahun Kendaraan</label>
-                    <select class="form-control" id="inputTahunKendaraan">
-                      <option value="" selected disabled>Pilih tahun kendaraan</option>
-                      <option>2020</option>
-                      <option>2019</option>
-                      <option>2018</option>
-                      <option>2017</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputHarga">Harga</label>
-                  <input type="text" class="form-control" id="inputHarga" placeholder="Masukkan harga kendaraan kamu">
-                </div>
-                <div class="form-group">
-                  <label for="inputAcuanHitung">Acuan Hitung</label>
-                  <select class="form-control" id="inputAcuanHitung">
-                    <option value="" selected disabled>Pilih acuan hitung</option>
-                    <option>Dicicil</option>
-                    <option>Tunai</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="inputEstimasiPerhitungan">Estimasi Perhitungan</label>
-                  <input type="number" class="form-control" id="inputEstimasiPerhitungan" placeholder="Contoh: 500.000">
-                </div>
-                <p> Estimasi perhitungan ini bisa diubah sesuai kebutuhanmu </p>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputAreaPlatNomor">Area Plat Nomor</label>
-                    <select class="form-control" id="inputAreaPlatNomor">
-                      <option value="" selected disabled>Pilih area</option>
-                      <option>DKI Jakarta, Banten, dan Jawa Barat</option>
-                      <option>Sumatera dan Sekitarnya</option>
-                      <option>Area Indonesia Lainnya</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputAreaTempatTinggal">Area Tempat Tinggal (Fiducia)</label>
-                    <select class="form-control" id="inputAreaTempatTinggal">
-                      <option value="" selected disabled>Pilih area</option>
-                      <option>DKI</option>
-                      <option>NON-DKI</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputAsuransi">Asuransi</label>
-                  <select class="form-control" id="inputAsuransi">
-                    <option value="" selected disabled>Pilih jenis asuransi</option>
-                    <option>Kombinasi</option>
-                    <option>Komprehensif</option>
-                    <option>TLO</option>
-                  </select>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">
-                  Cek Simulasi Kredit
-                </button>
-              </form>
-            </div>
+    <div id="benefits">
+      <div class="item5" data-aos="fade-up">
+        <div class="unit-4 d-block">
+          <div>
+            <img alt="Image" class="img-fluid icon-benefit-ca" src="cust/images/pencairantinggi.png">
+            <h3>Pencairan Tinggi</h3>
+            <p>Pencairan dana up to 80% dari harga kendaraanmu</p>
           </div>
         </div>
       </div>
 
-      <!-- Hasil Simulasi -->
-      <div class="col-md-6 col-sm-12">
-        <div id="simulasi-hasil">
-          <div class="card shadow">
-            <div class="card-body">
-              <h4 class="card-title black-text">Hasil Simulasi</h4>
-              <p> Hasil simulasi kamu akan tertampil di sini </p>
-            </div>
+      <div class="item5" data-aos="fade-up">
+        <div class="unit-4 d-block">
+          <div>
+            <img alt="Image" class="img-fluid icon-benefit-ca" src="cust/images/sukubungakompetitif.png">
+            <h3>Suku Bunga Kompetitif</h3>
+            <p>Kamu bisa mendapatkan bunga pinjaman yang kompetitif</p>
           </div>
         </div>
       </div>
+
+      <div class="item5" data-aos="fade-up">
+        <div class="unit-4 d-block">
+          <div>
+            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
+            <h3>Fast & Easy</h3>
+            <p>Proses pengajuan cepat dan persyaratan mudah</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item5" data-aos="fade-up">
+        <div class="unit-4 d-block">
+          <div>
+            <img alt="Image" class="img-fluid icon-benefit-ca" src="cust/images/angsuranterjangkau.png">
+            <h3>Angsuran Terjangkau & Tetap</h3>
+            <p>Kamu bisa atur besar angsuran sesuai kemampuanmu dan tidak akan berubah setiap bulannya</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item5" data-aos="fade-up">
+        <div class="unit-4 d-block">
+          <div>
+            <img alt="Image" class="img-fluid icon-benefit-ca" src="cust/images/jaringanluas.png">
+            <h3>Jaringan Luas Seluruh Indonesia</h3>
+            <p>Kantor cabang MTF tersebar di seluruh Indonesia, ajukan di cabang terdekatmu.<br>
+              <a href="https://www.mtf.co.id/id/jaringan-mtf"><u>Klik disini untuk cabang terdekat</u></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-
-
-<!--TOP UP EXPRESS-->
-<div class="topupexpress blue-bg" data-aos="fade-up">
-  <div id="topupexpress-asset">
-    <img src="cust/images/topupexpress.svg" alt="Image" class="img-fluid" id="topupexpress-img">
-  </div>
-  <div id="topupexpress-text">
-    <h6>
-      <bold>TOP UP EXPRESS</bold>
-    </h6>
-    <h4>Cicilan di MTF masih jalan tapi kamu butuh duit?
-      <br>
-      Langsung Klik, Dana Cair!
-    </h4>
-    <br>
-    <a href="https://www.mtf.co.id/id/top-up-express-kreditpas" class="btn btn-secondary mr-2 mb-2">Ajukan Top Up
-      Express</a>
-  </div>
-</div>
 
 <!-- CARA PENGAJUAN -->
 <section class="site-section" id="pengajuan-section" data-aos="fade-up">
@@ -242,29 +183,29 @@
         <!-- Tombol Pilihan Section Pengajuan-->
         <div class="row">
           <div class="col">
-            <button id="prosedur-title-btn" type="button" class="btn btn-lg btn-primary">Prosedur Pengajuan</button>
+            <button class="btn btn-lg btn-primary" id="prosedur-title-btn" type="button">Prosedur Pengajuan</button>
           </div>
           <div class="col">
-            <button id="syarat-title-btn" type="button" class="btn btn-lg">Syarat</button>
+            <button class="btn btn-lg" id="syarat-title-btn" type="button">Syarat</button>
           </div>
         </div>
         <br>
 
         <!-- Prosedur Pengajuan -->
         <div id="prosedur-content">
-          <div id="pengajuan-1" class="row cashaja-step-container">
+          <div class="row cashaja-step-container" id="pengajuan-1">
             <div class="col-2">
-              <img id="pengajuan-1-img" src="cust/images/pengajuan/1-colored.png" alt="Image" class="img-fluid">
+              <img alt="Image" class="img-fluid" id="pengajuan-1-img" src="cust/images/pengajuan/1-colored.png">
             </div>
             <div class="col">
-              <p id="pengajuan-1-desc" class="black-text"><strong> Mengisi Form Pengajuan </strong> <br>
+              <p class="black-text" id="pengajuan-1-desc"><strong> Mengisi Form Pengajuan </strong> <br>
                 Kamu bisa klik disini untuk mengisi form berikut
               </p>
             </div>
           </div>
-          <div id="pengajuan-2" class="row cashaja-step-container">
+          <div class="row cashaja-step-container" id="pengajuan-2">
             <div class="col-2">
-              <img id="pengajuan-2-img" src="cust/images/pengajuan/2-uncolored.png" alt="Image" class="img-fluid">
+              <img alt="Image" class="img-fluid" id="pengajuan-2-img" src="cust/images/pengajuan/2-uncolored.png">
             </div>
             <div class="col">
               <p id="pengajuan-2-desc"><strong> Follow up penawaran dari MTF </strong> <br>
@@ -272,9 +213,9 @@
               </p>
             </div>
           </div>
-          <div id="pengajuan-3" class="row cashaja-step-container">
+          <div class="row cashaja-step-container" id="pengajuan-3">
             <div class="col-2">
-              <img id="pengajuan-3-img" src="cust/images/pengajuan/3-uncolored.png" alt="Image" class="img-fluid">
+              <img alt="Image" class="img-fluid" id="pengajuan-3-img" src="cust/images/pengajuan/3-uncolored.png">
             </div>
             <div class="col">
               <p id="pengajuan-3-desc"><strong> Finalisasi Hitungan & Pencairan </strong> <br>
@@ -285,7 +226,7 @@
         </div>
 
         <!-- Syarat Pengajuan -->
-        <div id="syarat-content" class="d-none cashaja-step-container">
+        <div class="d-none cashaja-step-container" id="syarat-content">
           <p class="black-text">
             Jangan lupa siapkan dokumen - dokumen dibawah ini untuk mengajukan di CashAja
           </p>
@@ -294,26 +235,26 @@
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                  <button class="btn btn-link"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOne"
+                  <button aria-controls="collapseOne"
                           aria-expanded="true"
-                          aria-controls="collapseOne"
+                          class="btn btn-link"
+                          data-target="#collapseOne"
+                          data-toggle="collapse"
+                          type="button"
                   >
                     Untuk Pribadi
                   </button>
                 </h2>
               </div>
-              <div id="collapseOne"
+              <div aria-labelledby="headingOne"
                    class="collapse show"
-                   aria-labelledby="headingOne"
                    data-parent="#pengajuanAccordion"
+                   id="collapseOne"
               >
                 <div class="card-body">
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Bukti Identitas Yang Masih berlaku </p>
@@ -321,7 +262,7 @@
                   </div>
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Bukti Kepemilikan Tempat Tinggal </p>
@@ -329,7 +270,7 @@
                   </div>
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Data Keuangan </p>
@@ -337,7 +278,7 @@
                   </div>
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Dokumen Agunan </p>
@@ -345,7 +286,7 @@
                   </div>
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Legalitas Usaha </p>
@@ -357,26 +298,26 @@
             <div class="card">
               <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                  <button class="btn btn-link collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseTwo"
+                  <button aria-controls="collapseTwo"
                           aria-expanded="false"
-                          aria-controls="collapseTwo"
+                          class="btn btn-link collapsed"
+                          data-target="#collapseTwo"
+                          data-toggle="collapse"
+                          type="button"
                   >
                     Untuk Badan Usaha
                   </button>
                 </h2>
               </div>
-              <div id="collapseTwo"
+              <div aria-labelledby="headingTwo"
                    class="collapse"
-                   aria-labelledby="headingTwo"
                    data-parent="#pengajuanAccordion"
+                   id="collapseTwo"
               >
                 <div class="card-body">
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Dokumen Identitas dan Legalitas Badan Usaha </p>
@@ -384,7 +325,7 @@
                   </div>
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Data Keuangan Badan Usaha </p>
@@ -392,7 +333,7 @@
                   </div>
                   <div class="row">
                     <div class="col-2">
-                      <img src="cust/images/pengajuan/checkmark.png" alt="Image" class="img-fluid">
+                      <img alt="Image" class="img-fluid" src="cust/images/pengajuan/checkmark.png">
                     </div>
                     <div class="col">
                       <p class="black-text"> Data Agunan </p>
@@ -404,7 +345,7 @@
           </div>
           <br>
           <div>
-            <a href="/faq" class="btn btn-secondary mr-2 mb-2">Cek Info Lengkap Disini</a>
+            <a class="btn btn-secondary mr-2 mb-2" href="/faq">Cek Info Lengkap Disini</a>
           </div>
         </div>
       </div>
@@ -417,38 +358,38 @@
             <div class="card-body">
               <h4 class="card-title black-text">FORM PENGAJUAN</h4>
               <br>
-              <form id="form-pengajuan" class="needs-validation" novalidate>
+              <form class="form-pengajuan-submit" id="form-pengajuan" novalidate>
                 <div class="form-group">
                   <label for="inputName">Nama Kamu</label>
-                  <input required
-                         type="text"
-                         class="form-control"
+                  <input class="form-control"
                          id="inputName"
-                         placeholder="Masukkan nama lengkap kamu">
+                         placeholder="Masukkan nama lengkap kamu"
+                         required
+                         type="text">
                   <div class="invalid-feedback">
                     Masukkan nama kamu!
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">Alamat E-mail</label>
-                  <input required
-                         type="email"
-                         class="form-control"
+                  <input class="form-control"
                          id="inputEmail"
-                         placeholder="Masukkan e-mail">
+                         placeholder="Masukkan e-mail"
+                         required
+                         type="email">
                   <div class="invalid-feedback">
                     Masukkan alamat e-mail yang berlaku!
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPhone">Nomor Handphone</label>
-                  <input required
-                         type="text"
-                         class="form-control"
-                         pattern="\d*"
-                         maxlength="12"
+                  <input class="form-control"
                          id="inputPhone"
+                         maxlength="12"
+                         pattern="\d*"
                          placeholder="Masukkan nomor yang bisa dihubungi"
+                         required
+                         type="text"
                   >
                   <div class="invalid-feedback">
                     Masukkan nomor handphone kamu!
@@ -456,21 +397,21 @@
                 </div>
                 <div class="form-group">
                   <label for="inputKTP">Nomor KTP</label>
-                  <input required
-                         type="text"
-                         class="form-control"
-                         pattern="\d*"
-                         maxlength="16"
+                  <input class="form-control"
                          id="inputKTP"
-                         placeholder="Masukkan 16 digit nomor KTP">
+                         maxlength="16"
+                         pattern="\d*"
+                         placeholder="Masukkan 16 digit nomor KTP"
+                         required
+                         type="text">
                   <div class="invalid-feedback">
                     Masukkan 16 digit nomor KTP kamu!
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputDomisili">Domisili</label>
-                  <select required class="form-control" id="inputDomisili">
-                    <option value="" selected disabled>Pilih Domisili Terdekat Cabang MTF</option>
+                  <select class="form-control" id="inputDomisili" required>
+                    <option disabled selected value="">Pilih Domisili Terdekat Cabang MTF</option>
                     <option value="Ambon - REG 9">Ambon - REG 9</option>
                     <option value="Balikpapan - REG 8">Balikpapan - REG 8</option>
                     <option value="Banda Aceh - REG 1">Banda Aceh - REG 1</option>
@@ -573,8 +514,8 @@
                 </div>
                 <div class="form-group">
                   <label for="inputKetersediaanWaktu">Kapan Kamu Bersedia Dihubungi ?</label>
-                  <select required class="form-control" id="inputKetersediaanWaktu">
-                    <option value="" selected disabled>Pilih waktu</option>
+                  <select class="form-control" id="inputKetersediaanWaktu" required>
+                    <option disabled selected value="">Pilih waktu</option>
                     <option value="Hari Kerja - Pagi Hari">Hari Kerja - Pagi Hari</option>
                     <option value="Hari Kerja - Siang Hari">Hari Kerja - Siang Hari</option>
                     <option value="Hari Kerja - Sore Hari">Hari Kerja - Sore Hari</option>
@@ -586,8 +527,8 @@
                 </div>
                 <div class="form-group">
                   <div class="form-check">
-                    <input required type="checkbox" class="form-check-input" value="" id="inputConfirmation">
-                    <label class="form-check-label confirmation-box" for="inputConfirmation">
+                    <input class="form-check-input" id="inputConfirmation" required type="checkbox" value="">
+                    <label style="font-size:12px;" class="form-check-label confirmation-box" for="inputConfirmation">
                       Data yang saya berikan adalah benar.
                       Dengan saya mengirimkan form ini saya mengizinkan pihak Mandiri Tunas Finance
                       untuk menghubungi saya dalam membantu proses pengajuan dan
@@ -598,18 +539,18 @@
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button class="btn btn-primary" type="submit">
                   Ajukan Sekarang
                 </button>
               </form>
               <br>
 
               <!-- Alert Form Pengajuan -->
-              <div id="pengajuan-success" class="alert alert-info text-center d-none" role="alert">
+              <div class="alert alert-info text-center d-none" id="pengajuan-success" role="alert">
                 Terima kasih telah melakukan pengajuan, data Anda telah tersimpan di sistem kami.
                 Anda akan segera dihubungi oleh pihak MTF.
               </div>
-              <div id="pengajuan-fail" class="alert alert-danger text-center d-none" role="alert">
+              <div class="alert alert-danger text-center d-none" id="pengajuan-fail" role="alert">
                 Data tidak berhasil kami terima. Mohon dicoba kembali.
               </div>
 
@@ -617,141 +558,239 @@
           </div>
         </div>
 
+        <!-- Pengajuan Step 2 (Sebelah Kanan) -->
+        <div class="d-none" id="prosedur-step-2">
+          <img alt="Pengajuan Tahap 2" class="img-fluid" src="cust/images/pengajuan/step-2-followup.png">
+        </div>
+
+        <!-- Pengajuan Step 3 -->
+        <div class="d-none" id="prosedur-step-3">
+          <img alt="Pengajuan Tahap 3" class="img-fluid" src="cust/images/pengajuan/step-3-finalisasi.png">
+        </div>
+
         <!-- Syarat (Sebelah Kanan) -->
-        <div id="syarat-img" class="d-none">
-          <img src="cust/images/pengajuan/yellow-woman.png" alt="Image" class="img-fluid">
+        <div class="d-none" id="syarat-img">
+          <img alt="Syarat" class="img-fluid" src="cust/images/pengajuan/yellow-woman.png">
         </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- KEUNTUNGAN -->
-<section class="site-section bg-light" id="features-section" data-aos="fade-up">
+<!-- SIMULASI -->
+<section class="site-section bg-light" data-aos="fade-up" id="simulation-section">
   <div class="container">
+    <h1 class="text-black">
+      <strong>Simulasi Kredit</strong>
+    </h1>
+    <br>
     <div class="row">
-      <div class="col-12">
-        <h1 class="mb-5 text-black text-left">
-          <strong>Mengapa CashAja?</strong>
-        </h1>
-      </div>
-    </div>
-    <div id="benefits" class="row align-items-stretch">
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-        <div class="unit-4 d-block">
-          <div>
-            <img src="cust/images/pencairantinggi.png" alt="Image" class="img-fluid icon-benefit-ca">
-            <h3>Pencairan Tinggi</h3>
-            <p>Pencairan dana up to 80% dari harga kendaraanmu</p>
+
+      <!-- Form Simulasi -->
+      <div class="col">
+        <div id="simulasi-form">
+          <div class="card shadow">
+            <div class="card-body">
+              <div id="simulasi-container">
+                <h4 class="card-title black-text">FORM SIMULASI</h4>
+                <br>
+                <form id="form-simulasi">
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputTipeKendaraan">Tipe Kendaraan</label>
+                      <select class="form-control" id="inputTipeKendaraan">
+                        <option value="kendaraan Penumpang">Kendaraan Penumpang</option>
+                        <option value="Motor Gede (MOGE)">Motor Gede (MOGE)</option>
+                        <option value="Mobil Double Cabin">Mobil Double Cabin</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputTahunKendaraan">Tahun Kendaraan</label>
+                      <select class="form-control" id="inputTahunKendaraan">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2017">2016</option>
+                        <option value="2017">2015</option>
+                        <option value="2017">2014</option>
+                        <option value="2017">2013</option>
+                        <option value="2017">2012</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputAcuanHitung">Acuan Hitung</label>
+                      <select class="form-control" id="inputAcuanHitung">
+                        <option value="1">Pencairan</option>
+                        <option value="2">Angsuran</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputHarga">Harga (Dalam Rupiah)</label>
+                    <input class="form-control"
+                           id="inputHarga"
+                           placeholder="Masukkan harga kendaraan kamu"
+                           type="number"
+                           value="10000000"
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEstimasiPerhitungan">Estimasi Perhitungan (Dalam Rupiah)</label>
+                    <input class="form-control"
+                           id="inputEstimasiPerhitungan"
+                           placeholder="Contoh: 500.000"
+                           type="number"
+                           value="7000000"
+                    >
+                  </div>
+                  <p>Estimasi perhitungan ini bisa diubah sesuai dengan kebutuhan kamu.<br>
+                    Jika kamu memilih acuan hitung berupa angsuran, isilah dengan angsuran kamu perbulannya.</p>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputAreaPlatNomor">Area Plat Nomor</label>
+                      <select class="form-control" id="inputAreaPlatNomor">
+                        <option value="2">DKI Jakarta, Banten, dan Jawa Barat</option>
+                        <option value="1">Sumatera dan Sekitarnya</option>
+                        <option value="3">Area Indonesia Lainnya</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputAreaTempatTinggal">Tempat Tinggal (Fiducia)</label>
+                      <select class="form-control" id="inputAreaTempatTinggal">
+                        <option value="2">DKI</option>
+                        <option value="1">NON-DKI</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputJenisAsuransi">Asuransi</label>
+                      <select class="form-control" id="inputJenisAsuransi">
+                        <option value="2">Komprehensif</option>
+                        <option value="1">TLO</option>
+                        <option value="3">Kombinasi</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                  <button class="btn btn-primary" onclick="startSimulasi()" type="button">
+                    Cek Simulasi Kredit
+                  </button>
+                </form>
+                <br>
+                <div class="alert alert-danger text-center d-none" id="simulasi-fail" role="alert"></div>
+              </div>
+              <div class="d-none" id="hasil-simulasi-container">
+                <div id="hasil-simulasi-button">
+                  <button class="btn btn-lg btn-primary mr-2 mb-2"
+                          id="addm-section-btn"
+                          onclick=showSimulationResult("addm")
+                          type="button">
+                    Perhitungan ADDM
+                  </button>
+                  <button class="btn btn-lg mr-2 mb-2"
+                          id="addb-section-btn"
+                          onclick=showSimulationResult("addb")
+                          type="button">
+                    Perhitungan ADDB
+                  </button>
+                </div>
+                <br>
+
+                <!-- Hasil Perhitungan Simulasi ADDM -->
+                <div id="hasil-simulasi-addm-container">
+                  <h4 class="black-text">Hasil Simulasi Kredit</h4>
+                  <br>
+                  <table class="table table-borderless table-simulation table-striped"
+                         id="simulation-table">
+                    <thead>
+                    <tr>
+                      <th scope="col">TENOR</th>
+                      <th scope="col">BULAN</th>
+                      <th scope="col">ESTIMASI PENCAIRAN</th>
+                      <th scope="col">SUKU BUNGA</th>
+                      <th scope="col">ANGSURAN</th>
+                    </tr>
+                    </thead>
+                    <tbody id="simulation-tbody"></tbody>
+                  </table>
+                </div>
+
+                <!-- Hasil Perhitungan Simulasi ADDB -->
+                <div id="hasil-simulasi-addb-container">
+
+                </div>
+
+                <!-- Komponen Perhitungan Simulasi -->
+                <div id="hasil-simulasi-komponen-container">
+                  <h4 class="black-text">Komponen Perhitungan</h4>
+                  <br>
+                  <table class="table table-borderless table-simulation table-striped">
+                    <tr>
+                      <th>Acuan Perhitungan</th>
+                      <td id="komponen-acuan-perhitungan">Pencairan</td>
+                      <th>Harga Kendaraan</th>
+                      <td id="komponen-harga-kendaraan">1000000</td>
+                    </tr>
+                    <tr>
+                      <th>Pencairan</th>
+                      <td id="komponen-estimasi-perhitungan">Rp. 700.000.000</td>
+                      <th>Tahun Kendaraan</th>
+                      <td id="komponen-tahun-kendaraan">2019</td>
+                    </tr>
+                    <tr>
+                      <th>Area</th>
+                      <td id="komponen-area">Dimana saja</td>
+                      <th>Fiducia</th>
+                      <td id="komponen-fiducia">DKI</td>
+                    </tr>
+                    <tr>
+                      <th>Jenis Asuransi</th>
+                      <td id="komponen-jenis-asuransi">Komprehensif</td>
+                    </tr>
+                  </table>
+                </div>
+                <p>
+                  Perhitungan simulasi diatas bersifat estimasi per tanggal 11 November 2020.
+                  Harga dan bunga tergantung lokasi cabang, data dapat berubah sewaktu-waktu sesuai
+                  kebijakan dan ketentuan yang berlaku. Untuk perhitungan lebih detail,
+                  hubungi kami di Kantor Cabang Mandiri Tunas Finance terdekat dengan kamu.
+                </p>
+                <a class="btn btn-secondary mr-2 mb-2" href="#pengajuan-section">Ajukan Kredit</a>
+                <button class="btn btn-primary mr-2 mb-2"
+                        id="simualasi-btn"
+                        onclick="showSimulationForm()">
+                  Kembali ke Simulasi
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-        <div class="unit-4 d-block">
-          <div>
-            <img src="cust/images/sukubungakompetitif.png" alt="Image" class="img-fluid icon-benefit-ca">
-            <h3>Suku Bunga Kompetitif</h3>
-            <p>Kamu bisa mendapatkan bunga pinjaman yang kompetitif</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-        <div class="unit-4 d-block">
-          <div>
-            <img src="cust/images/fastneasy.png" alt="Image" class="img-fluid icon-benefit-ca">
-            <h3>Fast & Easy</h3>
-            <p>Proses pengajuan cepat dan persyaratan mudah</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-        <div class="unit-4 d-block">
-          <div>
-            <img src="cust/images/angsuranterjangkau.png" alt="Image" class="img-fluid icon-benefit-ca">
-            <h3>Angsuran Terjangkau & Tetap</h3>
-            <p>Kamu bisa atur besar angsuran sesuai kemampuanmu dan tidak akan berubah setiap bulannya</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-        <div class="unit-4 d-block">
-          <div>
-            <img src="cust/images/jaringanluas.png" alt="Image" class="img-fluid icon-benefit-ca">
-            <h3>Jaringan Luas Seluruh Indonesia</h3>
-            <p>Kantor cabang MTF tersebar di seluruh Indonesia, ajukan di cabang terdekatmu.<br>
-              <a href="https://www.mtf.co.id/id/jaringan-mtf"><u>Klik disini untuk cabang terdekat</u></a>
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!--TESTIMONIAL-->
-<section class="site-section" id="testimonials-section" data-aos="fade-up">
-  <div class="container">
-    <div class="row mb-6">
-      <div class="col-12 text-left">
-        <h1 class="mb-5 text-black">
-          <strong>Testimoni Customer</strong>
-        </h1>
-      </div>
-    </div>
-    <div id="testimonial-row">
-      <div id="youtube" class="col-lg-6 col-md-12 col-12">
-        <div id="container-iframe" style="word-wrap:break-word;">
-          <iframe src="https://www.youtube.com/embed/bxCH-t7YpHE" allowfullscreen frameborder="0" height="100%" width="100%">
-          </iframe>
-        </div>
-<!--        <div>-->
-<!--          <h4 class="text-black mb-3 my-3 text-left">-->
-<!--            <bold>Cerita dari Aria</bold>-->
-<!--          </h4>-->
-<!--          <p class="text-left">Simak cerita dari Pak Aria, sahabat setia CashAja Mandiri Tunas Finance.</p>-->
-<!--        </div>-->
-      </div>
-
-      <div class="col-lg-4 col-md-8 col-12" style="margin:auto">
-        <div class="card container card-testimoni">
-          <div class="slide-one-item home-slider owl-carousel">
-            <div class="testimonial">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="cust/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
-              </figure>
-              <h4 class="text-black mb-3">Marjono</h4>
-<!--              <p class="text-black mb-3">-->
-<!--                <bold>Businessman</bold>-->
-<!--              </p>-->
-              <p class="mb-3 text-black">&ldquo;Saya selaku konsumen MTF merasa mudah dan merasa nyaman.
-                Prosesnya juga mudah dan saya juga dilayani dengan baik.
-                Saya sangat nyaman sekali dengan MTF.&rdquo;</p>
-            </div>
-            <div class="testimonial">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="cust/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
-              </figure>
-              <h4 class="text-black mb-3">Iman Fajar Kurnia</h4>
-<!--              <p class="text-black mb-3">-->
-<!--                <bold>Businesswoman</bold>-->
-<!--              </p>-->
-              <p class="mb-3 text-black">&ldquo;Alhamdulillah lancar dan proses di MTF tidak berbelit.
-                Saya pilih MTF karena bunganya murah dan prosesnya cepet banget.&ldquo;
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--TOP UP EXPRESS-->
+<section id="topupexpress-section" data-aos="fade-up">
+  <div class="topupexpress blue-bg container">
+  <div id="topupexpress-asset">
+    <img src="cust/images/topup-express.png" alt="Image" class="img-fluid" id="topupexpress-img">
+  </div>
+  <div id="topupexpress-text">
+    <h6>
+      <bold>TOP UP EXPRESS</bold>
+    </h6>
+    <h4>Cicilan di MTF masih jalan tapi kamu butuh duit?
+      <br>
+      Langsung Klik, Dana Cair!
+    </h4>
+    <br>
+    <a class="btn btn-secondary mr-2 mb-2" href="https://topup.mtf.co.id:2121/Multiguna/topupmultiguna">Ajukan Top Up
+      Express</a>
+  </div>
   </div>
 </section>
-
-<br><br>
 
 <!--WIRA-->
 <section class="site-section" id="wira-section" data-aos="fade-up">
@@ -771,7 +810,7 @@
         <a href="https://www.mtf.co.id/id/mandiri-wira" class="btn btn-primary mr-2 mb-2">Gabung WIRA</a>
       </div>
       <div id="wira-img">
-        <img src="cust/images/wira.svg" alt="Image" class="img-fluid">
+        <img alt="Image" class="img-fluid" src="cust/images/wira.svg">
       </div>
     </div>
 
@@ -807,11 +846,75 @@
   </div>
 </section>
 
+<!--TESTIMONIAL-->
+<section class="site-section" id="testimonials-section" data-aos="fade-up">
+  <div class="container">
+    <div class="row mb-6">
+      <div class="col-12 text-left">
+        <h1 class="mb-5 text-black">
+          <strong>Testimoni Customer</strong>
+        </h1>
+      </div>
+    </div>
+    <div id="testimonial-row">
+      <div class="col-lg-6 col-md-12 col-12" id="youtube" style="margin-top:10px">
+        <div id="container-iframe" style="word-wrap:break-word;margin-top:auto;margin-bottom:auto">
+          <iframe allowfullscreen frameborder="0" height="100%" src="https://www.youtube.com/embed/bxCH-t7YpHE"
+                  width="100%">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-8 col-12" style="margin-top:10px;margin-left:auto;margin-right:auto;">
+        <div class="card container card-testimoni">
+          <div class="slide-one-item home-slider owl-carousel">
+            <div class="testimonial">
+              <figure class="mb-4 d-block align-items-center justify-content-center">
+                <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="cust/images/yulietta.PNG"></div>
+              </figure>
+              <h4 class="text-black mb-3">Yulietta Marchia H</h4>
+              <p class="mb-3 text-black">&ldquo;Marketing & Collector nya baik dan ramah. Proses Top Up juga dibantu dengan mudah, selain itu bunga nya juga ringan.&rdquo;</p>
+            </div>
+            <div class="testimonial">
+              <figure class="mb-4 d-block align-items-center justify-content-center">
+                <div><img src="cust/images/jerry.PNG" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
+              </figure>
+              <h4 class="text-black mb-3">Jerry Firdaus</h4>
+              <p class="mb-3 text-black">&ldquo;Semangat Pagi! Dengan adanya fasilitas multiguna dari MTF saya sangat terbantu dalam bisnis saya, 
+              karena bisnis saya butuh perputaran modal yang besar dan cepat. Dengan multiguna juga bisa di proses dan cair dengan cepat. 
+              Tentunya bunga yang rendah dan terjangkau. Proses juga tidak ribet sama sekali. Terimakasih banyak MTF atas fasilitas dan service nya. 
+              Semangat Pagi!&rdquo;</p>
+            </div>
+            <div class="testimonial">
+              <figure class="mb-4 d-block align-items-center justify-content-center">
+                <div><img src="cust/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
+              </figure>
+              <h4 class="text-black mb-3">Marjono</h4>
+              <p class="mb-3 text-black">&ldquo;Saya selaku konsumen MTF merasa mudah dan merasa nyaman.
+                Prosesnya juga mudah dan saya juga dilayani dengan baik.
+                Saya sangat nyaman sekali dengan MTF.&rdquo;</p>
+            </div>
+            <div class="testimonial">
+              <figure class="mb-4 d-block align-items-center justify-content-center">
+                <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="cust/images/user-avatar.png"></div>
+              </figure>
+              <h4 class="text-black mb-3">Iman Fajar Kurnia</h4>
+              <p class="mb-3 text-black">&ldquo;Alhamdulillah lancar dan proses di MTF tidak berbelit.
+                Saya pilih MTF karena bunganya murah dan prosesnya cepet banget.&ldquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!--FOOTER-->
 <div class="footer bg-light">
   <div class="float-left half-container">
-    <img id="logo" src="cust/images/footer-logo.svg" alt="Image" class="img-fluid">
+    <img alt="Image" class="img-fluid" id="logo" src="cust/images/footer-logo.svg">
     <p class="footer-text black-text">Mandiri Tunas Finance terdaftar dan diawasi oleh OJK</p>
     <p class="footer-text black-text">Copyright &copy;
       <script>
@@ -820,23 +923,24 @@
       All rights reserved
     </p>
   </div>
-  <div class="float-right half-container text-center">
+  <br>
+  <div class="float-right half-container">
     <p class="black-text">
       <strong>Unduh Aplikasi MTF Go</strong>
     </p>
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
+    <div id="row-mobapp">
+      <div class= "padding-right">
         <a href="https://apps.apple.com/my/app/mtf-go/id1123593855">
-          <img id="app-store-badge"
-               src="cust/images/store-badge/app-store.png"
-               alt="Unduh Aplikasi MTF GO di Apple App Store">
+          <img alt="Unduh Aplikasi MTF GO di Apple App Store"
+               id="app-store-badge"
+               src="cust/images/store-badge/app-store.png">
         </a>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class= "padding-right">
         <a href="https://play.google.com/store/apps/details?id=com.mtf.calculator.external">
-          <img id="google-play-badge"
-               src="cust/images/store-badge/google-play.png"
-               alt="Unduh Aplikasi MTF GO di Google Play Store">
+          <img alt="Unduh Aplikasi MTF GO di Google Play Store"
+               id="google-play-badge"
+               src="cust/images/store-badge/google-play.png">
         </a>
       </div>
     </div>
@@ -880,42 +984,77 @@
         $('#prosedur-title-btn').removeClass('btn-primary')
         $('#prosedur-content').addClass('d-none')
         $('#prosedur-form').addClass('d-none')
-    });
-    $('#pengajuan-1').hover(function () {
+
+        // Cleanup Hover
+        clearPengajuan2()
+        clearPengajuan3()
+
+        // Reset ke Tahap 1
         $('#pengajuan-1-desc').addClass("black-text")
         $('#pengajuan-1-img').attr("src", "cust/images/pengajuan/1-colored.png")
-    }, function () {
-        $('#pengajuan-1-desc').removeClass("black-text")
-        $('#pengajuan-1-img').attr("src", "cust/images/pengajuan/1-uncolored.png")
+    });
+    $('#pengajuan-1').hover(function () {
+        // Step Pengajuan
+        $('#pengajuan-1-desc').addClass("black-text")
+        $('#pengajuan-1-img').attr("src", "cust/images/pengajuan/1-colored.png")
+        // Elemen Sebelah Kanan (Form)
+        $('#prosedur-form').removeClass('d-none')
+        // Hapus State Hover
+        clearPengajuan2()
+        clearPengajuan3()
     });
     $('#pengajuan-2').hover(function () {
+        // Step Pengajuan
         $('#pengajuan-2-desc').addClass("black-text")
         $('#pengajuan-2-img').attr("src", "cust/images/pengajuan/2-colored.png")
-    }, function () {
-        $('#pengajuan-2-desc').removeClass("black-text")
-        $('#pengajuan-2-img').attr("src", "cust/images/pengajuan/2-uncolored.png")
+        // Elemen Sebelah Kanan (Gambar Tahap 2)
+        $('#prosedur-step-2').removeClass('d-none')
+        // Hapus State Hover
+        clearPengajuan1()
+        clearPengajuan3()
     });
     $('#pengajuan-3').hover(function () {
+        // Step Pengajuan
         $('#pengajuan-3-desc').addClass("black-text")
         $('#pengajuan-3-img').attr("src", "cust/images/pengajuan/3-colored.png")
-    }, function () {
+        // Elemen Sebelah Kanan (Form)
+        $('#prosedur-step-3').removeClass('d-none')
+        // Hapus State Hover
+        clearPengajuan1()
+        clearPengajuan2()
+    });
+
+    // Menghapus Hover Elemen Elemen Sebelumnya Jika Ada Elemen Lain di Hover
+    function clearPengajuan1() {
+        $('#pengajuan-1-desc').removeClass("black-text")
+        $('#pengajuan-1-img').attr("src", "cust/images/pengajuan/1-uncolored.png")
+        $('#prosedur-form').addClass('d-none')
+    }
+
+    function clearPengajuan2() {
+        $('#pengajuan-2-desc').removeClass("black-text")
+        $('#pengajuan-2-img').attr("src", "cust/images/pengajuan/2-uncolored.png")
+        $('#prosedur-step-2').addClass('d-none')
+    }
+
+    function clearPengajuan3() {
         $('#pengajuan-3-desc').removeClass("black-text")
         $('#pengajuan-3-img').attr("src", "cust/images/pengajuan/3-uncolored.png")
-    });
+        $('#prosedur-step-3').addClass('d-none')
+    }
 
     // Validasi form pengajuan
     (function () {
         'use strict';
         window.addEventListener('load', function () {
-            var forms = document.getElementsByClassName('needs-validation');
+            var forms = document.getElementsByClassName('form-pengajuan-submit');
             var validation = Array.prototype.filter.call(forms, function (form) {
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
                     if (form.checkValidity() === false) {
                         event.stopPropagation();
                     } else {
-                        kirim_pengajuan()
-                        return false
+                        startPengajuan()
                     }
                     form.classList.add('was-validated');
                 }, false);
@@ -924,14 +1063,14 @@
     })();
 
     // Melakukan sembunyikan alert pengajuan sebelum melakukan POST
-    function preprocess_pengajuan() {
+    function preprocessPengajuan() {
         $('#pengajuan-success').addClass('d-none')
         $('#pengajuan-fail').addClass('d-none')
     }
 
     // Fungsi melakukan start pengajuan CashAja
-    function kirim_pengajuan() {
-        preprocess_pengajuan()
+    function startPengajuan() {
+        preprocessPengajuan()
         $.post("/pengajuan/add/", {
             "name": $('#inputName').val(),
             "email": $('#inputEmail').val(),
@@ -949,7 +1088,161 @@
                 $('#pengajuan-fail').removeClass('d-none')
             });
     }
-</script>
 
+    // Kirim Form Pengajuan (Tidak perlu validasi karena sudah ada default value)
+    function startSimulasi() {
+        $('#simulasi-fail').addClass('d-none')
+
+        let form = {};
+        form['product_id'] = "54dd7eb003b811eb9ea5005056a5a40e";
+        form['otr'] = $('#inputHarga').val();
+        form['acuan_hitung'] = $('#inputAcuanHitung').val();
+        form['area'] = $('#inputAreaPlatNomor').val();
+        form['fiducia'] = $('#inputAreaTempatTinggal').val();
+        form['jenis_asuransi'] = $('#inputJenisAsuransi').val();
+        form['dp_persen'] = "30"
+        form['tahun_kendaraan'] = $('#inputTahunKendaraan').val();
+
+        if (form['otr'] === "" || form['otr'] === "0") {
+            return $('#simulasi-fail').removeClass('d-none').text('Harga kendaraan tidak boleh kosong atau bernilai nol')
+        } else if (parseInt($('#inputEstimasiPerhitungan').val()) >= form['otr']) {
+            return $('#simulasi-fail').removeClass('d-none').text('Estimasi perhitungan harus bernilai lebih kecil dari harga barang')
+        }
+
+        if (form['acuan_hitung'] === "1") {
+            form['tdp_diketahui'] = form['otr'] - $('#inputEstimasiPerhitungan').val()
+            $.ajax({
+                url: 'https://mcalc.mtf.co.id:8887/mtf-go/web/index.php/multiguna/api/budget/tdp-diketahui',
+                headers: {
+                    'Token': 'Ex6OF9RJDs09rmNsw_R3v23Ohg6lSDRO',
+                },
+                type: "POST",
+                dataType: 'json',
+                contentType: "application/json",
+                data: JSON.stringify(form),
+                success: function (data) {
+                    finishSimulationForm(data, form)
+                },
+                error: function (error) {
+                    $('#simulasi-fail').removeClass('d-none').text('Data tidak berhasil kami terima. Mohon dicoba kembali.')
+                }
+            });
+        } else {
+            form['angsuran_diketahui'] = $('#inputEstimasiPerhitungan').val()
+            $.ajax({
+                url: 'https://mcalc.mtf.co.id:8887/mtf-go/web/index.php/multiguna/api/budget/angsuran-diketahui',
+                headers: {
+                    'Token': 'Ex6OF9RJDs09rmNsw_R3v23Ohg6lSDRO',
+                },
+                type: "POST",
+                dataType: 'json',
+                contentType: "application/json",
+                data: JSON.stringify(form),
+                success: function (data) {
+                    finishSimulationForm(data, form)
+                },
+                error: function (error) {
+                    $('#simulasi-fail').removeClass('d-none').text('Data tidak berhasil kami terima. Mohon dicoba kembali.')
+                }
+            });
+        }
+    }
+
+    function finishSimulationForm(data, form) {
+        hideSimulationForm()
+        saveSimulationResult(data)
+        showSimulationResult("addm")
+        showCalculationComponent(form)
+    }
+
+    function hideSimulationForm() {
+        $('#simulasi-container').addClass('d-none')
+        $('#hasil-simulasi-container').removeClass('d-none')
+    }
+
+    function showSimulationForm() {
+        $('#simulasi-container').removeClass('d-none')
+        $('#hasil-simulasi-container').addClass('d-none')
+    }
+
+    function showCalculationComponent(formData) {
+        if (formData['acuan_hitung'] === '1') {
+            $('#komponen-acuan-perhitungan').text('Pencairan')
+        } else {
+            $('#komponen-acuan-perhitungan').text('Angsuran')
+        }
+
+        if (formData['area'] === '1') {
+            $('#komponen-area').text('Sumatera dan Sekitarnya')
+        } else if (formData['area'] === '2') {
+            $('#komponen-area').text('DKI Jakarta, Banten, dan Jawa Barat')
+        } else {
+            $('#komponen-area').text('Area Indonesia Lainnya')
+        }
+
+        if (formData['fiducia'] === '1') {
+            $('#komponen-fiducia').text('NON-DKI')
+        } else {
+            $('#komponen-fiducia').text('DKI')
+        }
+
+        if (formData['jenis_asuransi'] === '1') {
+            $('#komponen-jenis-asuransi').text('TLO')
+        } else if (formData['area'] === '2') {
+            $('#komponen-jenis-asuransi').text('Komprehensif')
+        } else {
+            $('#komponen-jenis-asuransi').text('Kombinasi')
+        }
+
+        $('#komponen-harga-kendaraan').text('Rp. ' + formData['otr'])
+        $('#komponen-estimasi-perhitungan').text('Rp. ' + $('#inputEstimasiPerhitungan').val())
+        $('#komponen-tahun-kendaraan').text(formData['tahun_kendaraan'])
+    }
+
+    let addb_data = null,
+        addm_data = null
+
+    function saveSimulationResult(data) {
+        addb_data = data.data.main.addb
+        addm_data = data.data.main.addm
+    }
+
+    function showSimulationResult(type) {
+        let props = ["tenor", "bulan", "tdp", "suku_bunga", "angsuran"],
+            tipe_angsuran = type === "addm" ? addm_data : addb_data
+
+        // Mengosongkan tabel jika user hendak berpindah menu ADDM / ADDB
+        $('#simulation-tbody').empty();
+
+        $.each(tipe_angsuran, function (i, data) {
+            let tr = $('<tr>');
+            $.each(props, function (i, prop) {
+                let tableData = null
+                if (prop === "tdp" || prop === "angsuran") {
+                    tableData = "Rp. " + data[prop]
+                } else if (prop === "suku_bunga") {
+                    tableData = data[prop] + " %"
+                } else {
+                    tableData = data[prop]
+                }
+                $('<td>').html(tableData).appendTo(tr);
+            });
+            $('#simulation-tbody').append(tr);
+            changeSimulationButtonColor(type)
+        });
+    }
+
+    function changeSimulationButtonColor(type) {
+        if (type === "addm") {
+            // Apabila tombol ADDM diklik oleh pengguna
+            $('#addm-section-btn').addClass("btn-primary")
+            $('#addb-section-btn').removeClass("btn-primary")
+        } else {
+            // Apabila tombol ADDB diklik oleh pengguna
+            $('#addm-section-btn').removeClass("btn-primary")
+            $('#addb-section-btn').addClass("btn-primary")
+        }
+    }
+</script>
 </body>
 </html>

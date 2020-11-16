@@ -4,7 +4,6 @@
   <title>MTF Kredit Multiguna</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
   <link rel="stylesheet" href="/cust/css/bootstrap.min.css">
@@ -17,6 +16,7 @@
   <link rel="stylesheet" href="/cust/fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="/cust/css/aos.css">
   <link rel="stylesheet" href="/cust/css/style.css">
+  <link rel="icon" href="/cust/images/cash-aja.png">
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -35,9 +35,9 @@
       <div class="col-12 col-md-12 main-menu">
         <nav class="site-navigation" role="navigation">
           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" padding="0px 0px 0px">
-            <a th:href="@{/}" class="logo-navbar text-black h2 mb-0"><img src="cust/images/cash-aja.png" style="width:45%"></a>
+            <a th:href="@{/}" class="logo-navbar text-black h2"><img class="img-navbar" src="cust/images/cashajalogo-blue.png"></a>
             <li><a th:href="@{/#simulation-section}" class="nav-link first-link">Simulasi</a></li>
-            <li><a href="https://mtf.co.id/id/top-up-express-kreditpas" onclick="window.open('https://mtf.co.id/id/top-up-express-kreditpas','_self')" class="nav-link">Top Up Express</a></li>
+            <li><a href="https://topup.mtf.co.id:2121/Multiguna/topupmultiguna" onclick="window.open('https://topup.mtf.co.id:2121/Multiguna/topupmultiguna','_self')" class="nav-link">Top Up Express</a></li>
             <li><a href="https://www.mtf.co.id/id/mandiri-wira" onclick="window.open('https://www.mtf.co.id/id/mandiri-wira','_self')" class="nav-link">WIRA</a></li>
             <li><a th:href="@{/faq}" onclick="window.open('/faq','_self')" class="nav-link">Tentang CashAja</a></li>
           </ul>
@@ -45,6 +45,7 @@
       </div>
     </div>
     <div class="col-12 col-md-12 d-inline-block d-lg-none ml-md-0">
+      <a th:href="@{/}" class="logo-navbar text-black h2 mb-0 float-left"><img class="img-navbar-mobile" src="cust/images/cashajalogo-blue.png"></a>
       <a class="site-menu-toggle js-menu-toggle text-black float-right">
         <span class="icon-menu h3"></span>
       </a>

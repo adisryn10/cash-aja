@@ -1,4 +1,9 @@
 /* Base */
+
+.icon-close2{
+  color:#fff;
+}
+
 .btn-link-faq:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
@@ -18,15 +23,44 @@
 .logo-navbar{
   text-align: left;
 }
+
+.logo-navbar-mobile{
+  text-align: left;
+}
+
 .faq-content{
   transition: background 1s ease; 
 }
+.icon-menu{
+  color:#fff;
+}
+
+.img-navbar{
+  width:100px;
+}@media (max-width: 992px) {
+  .img-navbar{
+    display: none;
+  }
+}
+.img-navbar-mobile{
+  width:60px;
+}
 
 .first-link{
-  margin-left:300px;
-}@media (max-width: 1095px) {
+  margin-left:600px;
+}@media (max-width: 1200px) {
   .first-link{
-    margin-left: 100px;
+    margin-left: 500px;
+  }
+}
+@media (max-width: 1100px) {
+  .first-link{
+    margin-left: 400px;
+  }
+}
+@media (max-width: 1000px) {
+  .first-link{
+    margin-left: 300px;
   }
 }
 @media (max-width: 992px) {
@@ -41,7 +75,7 @@
     border: 1px solid black;
 }@media (max-width: 768px) {
   .faq-table{
-    font-size: 9px;
+    font-size:10px;
   }
 }
 table, th, td {
@@ -368,7 +402,7 @@ h1{
   z-index: 1999;
   position: absolute;
   width: 100%;
-  background: #fff; }
+  background: #133061; }
   .site-navbar .site-logo {
     position: relative;
     left: 0;
@@ -378,7 +412,7 @@ h1{
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active {
-      color: #1F3C78;
+      color: #133061;
       display: inline-block;
       padding: 5px 20px; }
     .site-navbar .site-navigation .site-menu a {
@@ -391,11 +425,12 @@ h1{
       .site-navbar .site-navigation .site-menu > li > a {
         text-align: right;
         padding: 5px 20px;
-        color: #000;
+        color: #fff;
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #1F3C78; }
+          color: #edf0f5;
+          font-weight: 400px; }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a {
@@ -492,7 +527,7 @@ h1{
   position: fixed;
   right: 0;
   padding-top: 20px;
-  background: #fff;
+  background: #133061;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -553,14 +588,14 @@ h1{
       padding: 10px 20px;
       display: block;
       position: relative;
-      color: #212529; }
+      color: #fff; }
       .site-mobile-menu .site-nav-wrap a:hover {
-        color: #1F3C78; }
+        color: #edf0f5; }
     .site-mobile-menu .site-nav-wrap li {
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li .active {
-        color: #1F3C78; }
+        color: #edf0f5; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -687,7 +722,7 @@ h1{
   .site-blocks-cover h1 {
     font-size: 3.5rem;
     font-weight: 400;
-    color:rgb(46, 39, 39)
+    color:rgb(46, 39, 39);
     font-weight: 700; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
@@ -1321,7 +1356,8 @@ h1{
   -o-transition: .3s all ease;
   transition: .3s all ease;
   position: relative;
-  top: 0; }
+  top: 0;
+ }
   .unit-4 .unit-4-icon .icon-wrap {
     width: 40px;
     height: 40px;
@@ -2045,7 +2081,11 @@ h1{
   background-color: #ccc;
   bottom: 0;
   padding: 3em;
-}
+  display:flex;
+  flex-direction: row;
+} @media (max-width: 768px) {
+  .footer {
+    flex-direction: column; } }
 
 #logo{
   max-height: 3em;
@@ -2086,8 +2126,14 @@ iframe{
   min-height: fit-content;
 }
 
+#topupexpress-section{
+  background-color: #1B6DB4;
+}
+
 .icon-benefit-ca{
-  max-width: 10em;
+  max-width: 8em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .unit-4.d-block{
@@ -2171,4 +2217,44 @@ iframe{
 /* Untuk label form */
 label {
   color: black;
+}
+
+/* Untuk tabel simulasi */
+.table-simulation {
+  border: transparent;
+}
+th {
+  color: #061977;
+}
+
+#detail-asset{
+  display: block;
+  width:100%;
+  text-align: center;
+}
+
+#promo-detail{
+  padding-top: 7em;
+  padding-bottom: 5em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+#benefits{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#row-mobapp{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: flex-start;
+}
+
+.padding-right{
+  padding-right: 1em;
 }

@@ -722,7 +722,7 @@ h1{
   .site-blocks-cover h1 {
     font-size: 3.5rem;
     font-weight: 400;
-    color:rgb(46, 39, 39)
+    color:rgb(46, 39, 39);
     font-weight: 700; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
@@ -1356,7 +1356,8 @@ h1{
   -o-transition: .3s all ease;
   transition: .3s all ease;
   position: relative;
-  top: 0; }
+  top: 0;
+ }
   .unit-4 .unit-4-icon .icon-wrap {
     width: 40px;
     height: 40px;
@@ -2080,7 +2081,11 @@ h1{
   background-color: #ccc;
   bottom: 0;
   padding: 3em;
-}
+  display:flex;
+  flex-direction: row;
+} @media (max-width: 768px) {
+  .footer {
+    flex-direction: column; } }
 
 #logo{
   max-height: 3em;
@@ -2121,8 +2126,14 @@ iframe{
   min-height: fit-content;
 }
 
+#topupexpress-section{
+  background-color: #1B6DB4;
+}
+
 .icon-benefit-ca{
-  max-width: 10em;
+  max-width: 8em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .unit-4.d-block{
@@ -2227,4 +2238,23 @@ th {
   padding-bottom: 5em;
   padding-left: 5em;
   padding-right: 5em;
+}
+
+#benefits{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#row-mobapp{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: flex-start;
+}
+
+.padding-right{
+  padding-right: 1em;
 }

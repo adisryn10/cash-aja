@@ -34,7 +34,16 @@ public class AdminController{
         return "admin-home";
     }
 
-    @RequestMapping(path = "user/detail/{idUser}", method = RequestMethod.GET)
+    @RequestMapping(path = "/users", method = RequestMethod.GET)
+    public String user(Model model){
+
+        List<UserRoleModel> listUser = userService.getAllUser();
+
+        model.addAttribute("listUser", listUser);
+        return "users";
+    }
+
+    @RequestMapping(path = "/user/detail/{idUser}", method = RequestMethod.GET)
     public String userDetail(@PathVariable String idUser, Model model){
         UserRoleModel user = userService.getUserById(idUser);
         model.addAttribute("user", user);

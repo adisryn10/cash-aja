@@ -29,6 +29,11 @@ public class UserRoleModel implements Serializable{
 
     @NotNull
     @Size(max = 200)
+    @Column(name="name", nullable = false)
+    private String name;
+
+    @NotNull
+    @Size(max = 200)
     @Column(name="password", nullable = false)
     private String password;
 
@@ -68,5 +73,13 @@ public class UserRoleModel implements Serializable{
 
     public void setRole(RoleModel role) {
         this.role = role;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -33,7 +33,7 @@ public class UserRoleModel implements Serializable{
     private String name;
 
     @NotNull
-    @Size(max = 200)
+    @Lob
     @Column(name="password", nullable = false)
     private String password;
 

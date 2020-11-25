@@ -18,7 +18,7 @@
              $('#example').DataTable();
          });
       </script>
-      <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
    </head>
    <body id="page-top">
@@ -36,14 +36,16 @@
                   <h1 class="h3 mb-0 text-gray-800">Admin Management</h1>
                </div>
                <div>
-                  <a th:href="@{/admin/tambah}">
-                     <button class="btn btn-primary" style="margin-bottom:10px;margin-top:10px;">
-                        Tambah User
-                     </button>
-                  </a>
                   <div class="card">
                      <div class="row">
                         <div class="col-12 mx-auto">
+                           <div class = "float-right" style="margin-right:30px;gi">
+                              <a th:href="@{/admin/tambah}">
+                                 <button class="btn btn-primary" style="margin-bottom:10px;margin-top:10px;">
+                                    Tambahkan Admin Baru
+                                 </button>
+                              </a>
+                           </div>
                            <div class = "text-center text-black">
                               <table class="table text-left" style="width:100%" id="example">
                                  <thead>
@@ -60,7 +62,7 @@
                                        <td th:text="${user.name}"></td>
                                        <td th:text="${user.username}"></td>
                                        <td>
-                                          <a th:href="@{admin/user/manage/}+${user.id}">
+                                          <a th:href="@{/admin/detail/}+${user.username}">
                                           <button class="btn btn-primary">
                                              Sunting
                                           </button>

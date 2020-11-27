@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserRoleModel addUser(UserRoleModel user) {
         String pass = encrypt(user.getPassword());
-        RoleModel roleCustomer = roleDb.findByNama("CUSTOMER");
+        RoleModel roleCustomer = roleDb.findByNama("ADMIN");
         user.setPassword(pass);
         user.setRole(roleCustomer);
         return userDb.save(user);

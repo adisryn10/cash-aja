@@ -54,41 +54,9 @@
   </div>
 
 
-  <!--FOOTER-->
-<div class="footer bg-light">
-  <div class="float-left half-container">
-    <img alt="Image" class="img-fluid" id="logo" src="cust/images/footer-logo.svg">
-    <p class="footer-text black-text">Mandiri Tunas Finance terdaftar dan diawasi oleh OJK</p>
-    <p class="footer-text black-text">Copyright &copy;
-      <script>
-          document.write(new Date().getFullYear());
-      </script>
-      All rights reserved
-    </p>
-  </div>
-  <div class="float-right half-container text-center">
-    <p class="black-text">
-      <strong>Unduh Aplikasi MTF Go</strong>
-    </p>
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <a href="https://apps.apple.com/my/app/mtf-go/id1123593855">
-          <img alt="Unduh Aplikasi MTF GO di Apple App Store"
-               id="app-store-badge"
-               src="cust/images/store-badge/app-store.png">
-        </a>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <a href="https://play.google.com/store/apps/details?id=com.mtf.calculator.external">
-          <img alt="Unduh Aplikasi MTF GO di Google Play Store"
-               id="google-play-badge"
-               src="cust/images/store-badge/google-play.png">
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-</div>
+ <!--FOOTER-->
+ <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
+
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="cust/js/jquery-3.3.1.min.js"></script>

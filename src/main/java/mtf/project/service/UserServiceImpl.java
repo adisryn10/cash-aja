@@ -27,6 +27,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserRoleModel updateUser(UserRoleModel user) {
+        UserRoleModel userUpdated = userDb.findById(user.getId());
+        userUpdated.setName(user.getName());
+        userUpdated.setUsername(user.getUsername());
+        return userDb.save(userUpdated);
+    }
+
+    @Override
     public UserRoleModel getUserById(String id) {
         return userDb.findById(id);
     }
@@ -50,6 +58,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserRoleModel> getUserByRoleNama(String string) {
         return userDb.findByRoleNama(string);
+    }
+
+    @Override
+    public void deleteUser(UserRoleModel user) {
+        System.out.println("user : " + user.getUsername());
+        userDb.delete(user);
     }
 
     @Override

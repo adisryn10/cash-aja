@@ -33,7 +33,7 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                  <h1 class="h3 mb-0 text-gray-800">Add Admin</h1>
+                  <h1 class="h3 mb-0 text-gray-800">Tambah Admin</h1>
                </div>
                <div>
                   <div class="card">
@@ -41,22 +41,26 @@
                         <span style="color: red">Password didn't match!</span>
                     </div>
                     <div class="card-body">
-                        <form th:action="@{/admin/tambah}" method="POST">
-                            <label>Name</label>
-                            <input type="text" name="name" class="form-control" />
-                            
-                            <label>User Name</label>
-                            <input type="text" name="username" class="form-control" />
+                        <div class = "row">
+                            <div class = "col-6">
+                                <form th:action="@{/admin/tambah}" method="POST">
+                                    <label>Name</label>
+                                    <input type="text" name="name" class="form-control" />
 
-                            <label>Password</label>
-                            <input type="password" name="password" class="form-control">
+                                    <label>User Name</label>
+                                    <input type="text" name="username" class="form-control" />
 
-                            <label>Konfirmasi Password</label>
-                            <input type="password" name="konfirmasi" class="form-control" />
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="form-control">
 
-                            <br>
-                            <button type="submit" class="btn btn-primary">Simpan</button>
-                        </form>
+                                    <label>Konfirmasi Password</label>
+                                    <input type="password" name="konfirmasi" class="form-control" />
+
+                                    <br>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                   </div>
                </div>

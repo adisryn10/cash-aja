@@ -65,6 +65,20 @@ public class AdminController{
         return "form-tambah-admin";
     }
 
+    @RequestMapping(value = "/detail/{username}", method = RequestMethod.GET)
+    public String updateUserForm(@PathVariable String username, Model model){
+        UserRoleModel user = userService.getUserByUsername(username);
+        model.addAttribute("user", user);
+        return "form-update-admin";
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String updateUserSubmit(UserRoleModel user, Model model){
+        userService.updateUser(user);
+        model.addAttribute("user", user);
+        return "redirect:/admin/users";
+    }
+
     @RequestMapping(value = "/tambah", method = RequestMethod.POST)
     public String addUserSubmit(UserRoleModel user,
         @RequestParam("konfirmasi") String konfirmasi, Model model){
@@ -73,6 +87,13 @@ public class AdminController{
             return "form-tambah-admin";
         }
         userService.addUser(user);
+        model.addAttribute("user", user);
+        return "redirect:/admin/users";
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String deleteUserSubmit(UserRoleModel user, Model model){
+        userService.deleteUser(user);
         model.addAttribute("user", user);
         return "redirect:/admin/users";
     }

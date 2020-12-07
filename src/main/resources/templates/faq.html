@@ -403,21 +403,8 @@
         </div>
       </div>
 
-      <!--FOOTER-->
-      <div class="footer bg-light">
-        <div class="half-container">
-          <p style="opacity: 0;">Mandiri Tunas Finance</p>
-          <img alt="Image" class="img-fluid" id="logo" src="cust/images/footer-logo.svg">
-          <p class="footer-text">Mandiri Tunas Finance terdaftar dan diawasi oleh OJK</p>
-          <p class="footer-text">Copyright &copy;
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-            All rights reserved
-          </p>
-        </div>
-      </div>
-    </div>
+    <!--FOOTER-->
+    <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>

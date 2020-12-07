@@ -2251,10 +2251,26 @@ th {
 #row-mobapp{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;  
-  justify-content: flex-start;
+  flex-wrap: wrap; 
 }
 
-.padding-right{
-  padding-right: 1em;
+.padding-left{
+  padding-left: 1em;
+  padding-bottom: 1em;
+} @media (max-width: 768px) {
+  .padding-left {
+    padding-left: 0 } }
+
+#footer-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
+.flex-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+} @media (max-width: 768px) {
+  .flex-end {
+    justify-content: flex-start; } }

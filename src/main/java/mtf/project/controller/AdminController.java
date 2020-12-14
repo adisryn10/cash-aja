@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -73,28 +76,43 @@ public class AdminController{
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public String updateUserSubmit(UserRoleModel user, Model model){
+    public RedirectView updateUserSubmit(UserRoleModel user, Model model, Authentication auth, RedirectAttributes redirectAttributes){
+        UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
+        user.setLatestAuthor(latestAuthor);
+
+        Date date = new Date(System.currentTimeMillis());
+        user.setLatestEdit(date);
+
         userService.updateUser(user);
-        model.addAttribute("user", user);
-        return "redirect:/admin/users";
+        redirectAttributes.addFlashAttribute("updateSuccess", true);
+        return new RedirectView("/admin/detail/"+user.getUsername(),true);
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.POST)
-    public String addUserSubmit(UserRoleModel user,
-        @RequestParam("konfirmasi") String konfirmasi, Model model){
+    public RedirectView addUserSubmit(UserRoleModel user, Authentication auth,
+        @RequestParam("konfirmasi") String konfirmasi, Model model,RedirectAttributes redirectAttributes){
         if(!user.getPassword().equals(konfirmasi)){
-            model.addAttribute("isNotEqual", true);
-            return "form-tambah-admin";
+            redirectAttributes.addFlashAttribute("isNotEqual", true);
+            return new RedirectView("/admin/tambah",true);
         }
+        UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
+        user.setLatestAuthor(latestAuthor);
+
+        Date date = new Date(System.currentTimeMillis());
+        user.setLatestEdit(date);
+
+        user.setStatus(1);
+
         userService.addUser(user);
-        model.addAttribute("user", user);
-        return "redirect:/admin/users";
+        redirectAttributes.addFlashAttribute("addSuccess", true);
+        return new RedirectView("/admin/users");
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public String deleteUserSubmit(UserRoleModel user, Model model){
+    public RedirectView deleteUserSubmit(UserRoleModel user, Model model, RedirectAttributes redirectAttributes){
         userService.deleteUser(user);
-        model.addAttribute("user", user);
-        return "redirect:/admin/users";
+        redirectAttributes.addFlashAttribute("user", user);
+        redirectAttributes.addFlashAttribute("deleteSuccess",true);
+        return new RedirectView("/admin/users", true);
     }
 }

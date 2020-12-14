@@ -12,6 +12,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -42,6 +43,20 @@ public class UserRoleModel implements Serializable{
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private RoleModel role;
+
+    @NotNull
+    @Column(name = "status", nullable = false)
+    private Integer status;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "latest_author", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private UserRoleModel latestAuthor;
+
+    @NotNull
+    @Column(name = "latest_edit", nullable = false)
+    private Date latestEdit;
 
     public String getId() {
         return id;
@@ -81,5 +96,29 @@ public class UserRoleModel implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public UserRoleModel getLatestAuthor() {
+        return latestAuthor;
+    }
+
+    public void setLatestAuthor(UserRoleModel latestAuthor) {
+        this.latestAuthor = latestAuthor;
+    }
+
+    public Date getLatestEdit() {
+        return latestEdit;
+    }
+
+    public void setLatestEdit(Date latestEdit) {
+        this.latestEdit = latestEdit;
     }
 }

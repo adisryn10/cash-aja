@@ -5,41 +5,39 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
-@Table(name="testimoni")
-public class TestimoniModel {
+@Table(name="faq")
+public class FaqModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    @Column(name = "nama", nullable = false)
-    private String nama;
+    @Column(name = "pertanyaan", nullable = false)
+    private String pertanyaan;
 
     @NotNull
-    @Column(name = "testimoni", nullable = false)
-    private String testimoni;
+    @Column(name = "jawaban", nullable = false, length = 2147483647)
+    private String jawaban;
 
     @NotNull
     @Column(name = "statusPosting", nullable = false)
     private Integer statusPosting;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "file", referencedColumnName = "id")
-    private FileModel file;
+    @NotNull
+    @Column(name = "latest_edit", nullable = false)
+    private Date latestEdit;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "latest_author", referencedColumnName = "id")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private UserRoleModel latestAuthor;
-
-    @NotNull
-    @Column(name = "latest_edit", nullable = false)
-    private Date latestEdit;
 
     public Long getId() {
         return id;
@@ -49,28 +47,28 @@ public class TestimoniModel {
         this.id = id;
     }
 
-    public String getNama() {
-        return nama;
+    public String getPertanyaan() {
+        return pertanyaan;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setPertanyaan(String pertanyaan) {
+        this.pertanyaan = pertanyaan;
     }
 
-    public String getTestimoni() {
-        return testimoni;
+    public String getJawaban() {
+        return jawaban;
     }
 
-    public void setTestimoni(String testimoni) {
-        this.testimoni = testimoni;
+    public void setJawaban(String jawaban) {
+        this.jawaban = jawaban;
     }
 
-    public FileModel getFile() {
-        return file;
+    public Integer getStatusPosting() {
+        return statusPosting;
     }
 
-    public void setFile(FileModel file) {
-        this.file = file;
+    public void setStatusPosting(Integer statusPosting) {
+        this.statusPosting = statusPosting;
     }
 
     public UserRoleModel getLatestAuthor() {
@@ -87,13 +85,5 @@ public class TestimoniModel {
 
     public void setLatestEdit(Date latestEdit) {
         this.latestEdit = latestEdit;
-    }
-
-    public Integer getStatusPosting() {
-        return statusPosting;
-    }
-
-    public void setStatusPosting(Integer statusPosting) {
-        this.statusPosting = statusPosting;
     }
 }

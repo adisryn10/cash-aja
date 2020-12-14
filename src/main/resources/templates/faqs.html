@@ -33,22 +33,22 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Testimoni Management</h1>
+                    <h1 class="h3 mb-0 text-gray-800">FAQ Management</h1>
                 </div>
                 <div th:if="${addSuccess}" class="alert alert-info text-center" role="alert">
-                    Testimoni Berhasil ditambahkan
+                    FAQ Berhasil ditambahkan
                 </div>
                 <div th:if="${deleteSuccess}" class="alert alert-danger text-center" role="alert">
-                    Testimoni Berhasil dihapuskan
+                    FAQ Berhasil dihapuskan
                 </div>
                 <div>
                     <div class="card">
                         <div class="row">
                             <div class="col-12 mx-auto">
                                 <div class = "float-right" style="margin-right:30px;gi">
-                                    <a th:href="@{/admin/testimoni/tambah}">
+                                    <a th:href="@{/admin/faq/tambah}">
                                         <button class="btn btn-primary" style="margin-bottom:10px;margin-top:10px;">
-                                            Tambahkan Testimoni Baru
+                                            Tambahkan FAQ Baru
                                         </button>
                                     </a>
                                 </div>
@@ -57,19 +57,19 @@
                                         <thead>
                                         <tr>
                                             <th>Nomor</th>
-                                            <th>Nama</th>
+                                            <th>Pertanyaan</th>
                                             <th>Status Posting</th>
                                             <th>Sunting</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr th:each="testimoni, counter : ${listTestimoni}">
+                                        <tr th:each="faq, counter : ${listFaq}">
                                             <td th:text="${counter.count}"></td>
-                                            <td th:text="${testimoni.nama}"></td>
-                                            <td th:if="${testimoni.statusPosting == 0}">Draft</td>
-                                            <td th:if="${testimoni.statusPosting == 1}">Publish</td>
+                                            <td th:text="${faq.pertanyaan}"></td>
+                                            <td th:if="${faq.statusPosting == 0}">Draft</td>
+                                            <td th:if="${faq.statusPosting == 1}">Publish</td>
                                             <td>
-                                                <a th:href="@{/admin/testimoni/detail/}+${testimoni.id}">
+                                                <a th:href="@{/admin/faq/detail/}+${faq.id}">
                                                     <button class="btn btn-primary">
                                                         Sunting
                                                     </button>

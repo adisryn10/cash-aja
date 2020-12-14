@@ -9,4 +9,5 @@ public interface TestimoniService {
     TestimoniModel getTestimoniById(Long id);
     TestimoniModel createTestimoni(TestimoniModel testimoni);
     void deleteTestimoni(TestimoniModel testimoni);
+    void updateTestimoni(TestimoniModel testimoni);
 }

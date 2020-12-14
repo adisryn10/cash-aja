@@ -33,6 +33,11 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
+    public void deleteFile(FileModel file) {
+        fileDb.delete(file);
+    }
+
+    @Override
     public Stream<FileModel> getAllFiles() {
         return fileDb.findAll().stream();
     }

@@ -9,5 +9,6 @@ import java.util.stream.Stream;
 public interface FileService {
     FileModel store (MultipartFile file) throws IOException;
     FileModel getFile(String id);
+    void deleteFile(FileModel file);
     Stream<FileModel> getAllFiles();
 }

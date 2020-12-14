@@ -37,8 +37,8 @@
                </div>
                <div>
                   <div class="card">
-                    <div th:if="${isNotEqual}">
-                        <span style="color: red">Password didn't match!</span>
+                    <div th:if="${isNotEqual}" class="alert alert-danger text-center" role="alert">
+                        Password tidak sama dengan konfirmasi password!
                     </div>
                     <div class="card-body">
                         <div class = "row">

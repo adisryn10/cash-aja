@@ -31,6 +31,8 @@ public class UserServiceImpl implements UserService {
         UserRoleModel userUpdated = userDb.findById(user.getId());
         userUpdated.setName(user.getName());
         userUpdated.setUsername(user.getUsername());
+        userUpdated.setLatestAuthor(user.getLatestAuthor());
+        userUpdated.setLatestEdit(user.getLatestEdit());
         return userDb.save(userUpdated);
     }
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tambah Testimoni</title>
+    <title>Tambah FAQ</title>
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -17,9 +17,18 @@
          $(document).ready(function() {
              $('#example').DataTable();
          });
-      </script>
+     </script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/assets/summernote/summernote-bs4.js}"></script>
+
+    <link th:rel="stylesheet" th:href="@{/assets/summernote/summernote-bs4.css}"/>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
 </head>
 <body id="page-top">
 <!-- Page Wrapper -->
@@ -28,27 +37,24 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
-        <div id="content">
+        <div id="content-faq">
             <object th:replace="fragments/adminFragment  ::  topbar" th:remove="tag"></object>
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Tambah Testimoni</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Tambah FAQ</h1>
                 </div>
                 <div>
                     <div class="card">
                         <div class="card-body">
                             <div class = "row">
                                 <div class = "col-6">
-                                    <form th:action="@{/admin/testimoni/tambah}" enctype="multipart/form-data" method="POST">
-                                        <label>Nama</label>
-                                        <input type="text" name="nama" class="form-control" />
+                                    <form th:action="@{/admin/faq/tambah}" method="POST">
+                                        <label>Pertanyaan</label>
+                                        <input type="text" name="pertanyaan" class="form-control" />
 
-                                        <label>Foto pemberi testimoni</label>
-                                        <input type="file" name="files" class="form-control-file"/>
-
-                                        <label>Testimoni</label>
-                                        <textarea name="testimoni" class="form-control"></textarea>
+                                        <label>Jawaban</label>
+                                        <textarea type="text" id="content" rows="4" placeholder="Content" name="jawaban" class="form-control" autocomplete="off"></textarea>
 
                                         <br>
                                         <button type="submit" class="btn btn-primary mr-4" name="publish">Simpan & Publish</button>
@@ -67,5 +73,15 @@
         <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
+</div>
+
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script>
+$('#content').summernote({
+    height: 200
+});
+</script>
 </body>
 </html>

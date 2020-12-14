@@ -32,4 +32,9 @@ public class TestimoniServiceImpl implements TestimoniService{
     public void deleteTestimoni(TestimoniModel testimoni) {
         testimoniDb.delete(testimoni);
     }
+
+    @Override
+    public void updateTestimoni(TestimoniModel testimoni) {
+        testimoniDb.save(testimoni);
+    }
 }

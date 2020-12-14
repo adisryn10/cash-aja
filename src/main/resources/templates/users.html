@@ -36,6 +36,12 @@
                   <h1 class="h3 mb-0 text-gray-800">Admin Management</h1>
                </div>
                <div>
+                  <div th:if="${addSuccess}" class="alert alert-info text-center" role="alert">
+                     Admin Berhasil ditambahkan
+                  </div>
+                  <div th:if="${deleteSuccess}" class="alert alert-danger text-center" role="alert">
+                     Admin Berhasil dihapuskan
+                  </div>
                   <div class="card">
                      <div class="row">
                         <div class="col-12 mx-auto">

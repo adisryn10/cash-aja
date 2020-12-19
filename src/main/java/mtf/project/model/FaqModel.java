@@ -22,7 +22,7 @@ public class FaqModel {
     private String pertanyaan;
 
     @NotNull
-    @Column(name = "jawaban", nullable = false, length = 2147483647)
+    @Column(name = "jawaban", nullable = false, length = 10485760)
     private String jawaban;
 
     @NotNull

@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.annotations.Type;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -35,6 +36,7 @@ public class UserRoleModel implements Serializable{
 
     @NotNull
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     @Column(name="password", nullable = false)
     private String password;
 
@@ -54,7 +56,6 @@ public class UserRoleModel implements Serializable{
     @JsonIgnore
     private UserRoleModel latestAuthor;
 
-    @NotNull
     @Column(name = "latest_edit", nullable = false)
     private Date latestEdit;
 

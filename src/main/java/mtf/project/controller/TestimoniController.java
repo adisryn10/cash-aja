@@ -1,12 +1,11 @@
 package mtf.project.controller;
 
-import mtf.project.model.FileModel;
-import mtf.project.model.RoleModel;
-import mtf.project.model.TestimoniModel;
-import mtf.project.model.UserRoleModel;
+import mtf.project.model.*;
+import mtf.project.repository.YoutubeDb;
 import mtf.project.service.FileService;
 import mtf.project.service.TestimoniService;
 import mtf.project.service.UserService;
+import mtf.project.service.YoutubeService;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -23,10 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequestMapping("/admin/testimoni")
@@ -40,6 +36,9 @@ public class TestimoniController {
 
     @Autowired
     FileService fileService;
+
+    @Autowired
+    YoutubeService youtubeService;
 
     @RequestMapping(path = "")
     public String testimoniHome(Model model){
@@ -210,4 +209,34 @@ public class TestimoniController {
             return "form-update-testimoni";
         }
     }
+
+    @RequestMapping(value = "/youtube", method = RequestMethod.GET)
+    public String addYoutubeForm(Model model){
+
+        YoutubeModel currentYoutube = youtubeService.getYoutubeById((long) 1);
+        YoutubeModel newYoutube = new YoutubeModel();
+        if(currentYoutube == null){
+            newYoutube.setId((long)1);
+        }
+        else{
+            newYoutube = currentYoutube;
+        }
+
+        model.addAttribute("youtube", newYoutube);
+        return "form-update-youtube";
+    }
+
+    @RequestMapping(value = "/youtube", method = RequestMethod.POST)
+    public String updateYoutubePublish(YoutubeModel youtube, Model model){
+
+        YoutubeModel currentYoutube = youtubeService.getYoutubeById((long) 1);
+
+        YoutubeModel youtubeUpdated = youtubeService.updateYoutube(youtube);
+        model.addAttribute("updateSuccess", true);
+        model.addAttribute("youtube", youtubeUpdated);
+        return "form-update-youtube";
+    }
+
+
+
 }

@@ -48,7 +48,7 @@ public class PromoController {
     public String addPromoForm(Model model){
         PromoModel promo = new PromoModel();
         model.addAttribute("promo", promo);
-        return "form-tambah-promo";
+        return "cms/promo/form-tambah-promo";
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.POST, params={"draft"})

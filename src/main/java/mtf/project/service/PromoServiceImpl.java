@@ -11,30 +11,30 @@ import java.util.List;
 public class PromoServiceImpl implements PromoService{
 
     @Autowired
-    PromoDb testimoniDb;
+    PromoDb promoDb;
 
     @Override
     public List<PromoModel> getAllPromo() {
-        return testimoniDb.findAll();
+        return promoDb.findAll();
     }
 
     @Override
     public PromoModel getPromoById(Long id) {
-        return testimoniDb.findById(id).get();
+        return promoDb.findById(id).get();
     }
 
     @Override
-    public PromoModel createPromo(PromoModel testimoni) {
-        return testimoniDb.save(testimoni);
+    public PromoModel createPromo(PromoModel promo) {
+        return promoDb.save(promo);
     }
 
     @Override
-    public void deletePromo(PromoModel testimoni) {
-        testimoniDb.delete(testimoni);
+    public void deletePromo(PromoModel promo) {
+        promoDb.delete(promo);
     }
 
     @Override
-    public void updatePromo(PromoModel testimoni) {
-        testimoniDb.save(testimoni);
+    public void updatePromo(PromoModel promo) {
+        promoDb.save(promo);
     }
 }

@@ -1,17 +1,13 @@
 package mtf.project.controller;
 
 import mtf.project.model.FileModel;
-import mtf.project.model.RoleModel;
 import mtf.project.model.TestimoniModel;
 import mtf.project.model.UserRoleModel;
 import mtf.project.service.FileService;
 import mtf.project.service.TestimoniService;
 import mtf.project.service.UserService;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -20,11 +16,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Arrays;
-import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -45,14 +37,14 @@ public class TestimoniController {
     public String testimoniHome(Model model){
         List<TestimoniModel> listTestimoni = testimoniService.getAllTestimoni();
         model.addAttribute("listTestimoni", listTestimoni);
-        return "testimoni";
+        return "cms-testimoni";
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.GET)
     public String addTestimoniForm(Model model){
         TestimoniModel testimoni = new TestimoniModel();
         model.addAttribute("testimoni", testimoni);
-        return "form-tambah-testimoni";
+        return "cms-testimoni-form-tambah";
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.POST, params={"draft"})
@@ -127,7 +119,7 @@ public class TestimoniController {
         model.addAttribute("testimoni", testimoni);
 //        String dataImage = Base64.getEncoder().encodeToString(testimoni.getFile().getData());
 //        model.addAttribute("dataImage", dataImage);
-        return "form-update-testimoni";
+        return "cms-testimoni-form-update";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST, params={"draft"})
@@ -162,12 +154,11 @@ public class TestimoniController {
             model.addAttribute("testimoni", testimoni);
             model.addAttribute("listTestimoni", listTestimoni);
             model.addAttribute("updateSuccess", true);
-            return "form-update-testimoni";
         }
         catch (Exception e){
             e.printStackTrace();
-            return "form-update-testimoni";
         }
+        return "cms-testimoni-form-update";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST, params={"publish"})
@@ -203,11 +194,10 @@ public class TestimoniController {
             model.addAttribute("testimoni", testimoni);
             model.addAttribute("listTestimoni", listTestimoni);
             model.addAttribute("updateSuccess", true);
-            return "form-update-testimoni";
         }
         catch (Exception e){
             e.printStackTrace();
-            return "form-update-testimoni";
         }
+        return "cms-testimoni-form-update";
     }
 }

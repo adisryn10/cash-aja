@@ -40,7 +40,7 @@ public class AdminController{
         List<UserRoleModel> listUser = userService.getUserByRoleNama("CUSTOMER");
 
         model.addAttribute("listUser", listUser);
-        return "admin-home";
+        return "cms-home";
     }
 
     @RequestMapping(path = "/users", method = RequestMethod.GET)
@@ -49,14 +49,14 @@ public class AdminController{
         List<UserRoleModel> listUser = userService.getAllUser();
 
         model.addAttribute("listUser", listUser);
-        return "users";
+        return "cms-user";
     }
 
     @RequestMapping(path = "/user/detail/{idUser}", method = RequestMethod.GET)
     public String userDetail(@PathVariable String idUser, Model model){
         UserRoleModel user = userService.getUserById(idUser);
         model.addAttribute("user", user);
-        return "user-detail";
+        return "cms-user-detail";
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.GET)
@@ -65,14 +65,14 @@ public class AdminController{
         List<RoleModel> listRole = roleService.findAll();
         model.addAttribute("user", user);
         model.addAttribute("listRole", listRole);
-        return "form-tambah-admin";
+        return "cms-user-form-tambah";
     }
 
     @RequestMapping(value = "/detail/{username}", method = RequestMethod.GET)
     public String updateUserForm(@PathVariable String username, Model model){
         UserRoleModel user = userService.getUserByUsername(username);
         model.addAttribute("user", user);
-        return "form-update-admin";
+        return "cms-user-form-update";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)

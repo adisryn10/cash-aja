@@ -1,19 +1,16 @@
 package mtf.project.controller;
 
-import mtf.project.model.*;
+import mtf.project.model.FaqModel;
+import mtf.project.model.UserRoleModel;
 import mtf.project.service.FaqService;
 import mtf.project.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -38,17 +35,17 @@ public class FaqController {
         List<FaqModel> listFaq = faqService.getAllFaq();
 
         model.addAttribute("listFaq", listFaq);
-        return "faqs";
+        return "cms-faq";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addFaq(Model model){
         FaqModel faq = new FaqModel();
         model.addAttribute("faq", faq);
-        return "form-tambah-faq";
+        return "cms-faq-form-tambah";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params={"draft"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params={"draft"})
     public RedirectView addFaqDraft(FaqModel faq,
                               Authentication auth,
                               Model model,
@@ -70,7 +67,7 @@ public class FaqController {
         return new RedirectView("/admin/faq", true);
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params={"publish"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params={"publish"})
     public RedirectView addFaqPublish(FaqModel faq,
                                       Authentication auth,
                                       Model model,
@@ -93,7 +90,7 @@ public class FaqController {
     public String updateFaqForm(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException {
         FaqModel faq = faqService.getFaqById(id);
         model.addAttribute("faq", faq);
-        return "form-update-faq";
+        return "cms-faq-form-update";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST, params={"draft"})

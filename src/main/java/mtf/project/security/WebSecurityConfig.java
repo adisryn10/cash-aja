@@ -31,7 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/simulasi/**").permitAll()
                 .antMatchers("/css/**").permitAll()
                 .antMatchers("/*.css").permitAll()
-                .antMatchers("/cust/**").permitAll()
+                .antMatchers("/landing-page/**").permitAll()
                 .antMatchers("/js/**").permitAll()
                 .antMatchers("/images/**").permitAll()
                 .antMatchers("/admin/**").hasAuthority("ADMIN")

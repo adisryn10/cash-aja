@@ -9,7 +9,7 @@ public interface UserService {
 
     UserRoleModel getUserByUsername(String username);
 
-    public String encrypt(String password);
+    String encrypt(String password);
 
     List<UserRoleModel> getAllUser();
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FaqServiceImpl implements FaqService{
+public class FaqServiceImpl implements FaqService {
 
     @Autowired
     FaqDb faqDb;

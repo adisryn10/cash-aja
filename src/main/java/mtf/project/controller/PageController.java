@@ -1,5 +1,8 @@
 package mtf.project.controller;
 
+import mtf.project.model.FaqModel;
+import mtf.project.service.FaqService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -8,9 +11,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+
 
 @Controller
 public class PageController{
+
+    @Autowired
+    FaqService faqService;
 
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String register(){
@@ -65,6 +73,13 @@ public class PageController{
             model.addAttribute("role", authority.getAuthority());
         }
         return "wiraswasta-promo-detail";
+    }
+
+    @RequestMapping(path = "/faq-cms", method = RequestMethod.GET)
+    public String faqCms(Model model){
+        List<FaqModel> listFaq = faqService.getAllFaq();
+        model.addAttribute("listFaq", listFaq);
+        return "faq-cms";
     }
     
 }

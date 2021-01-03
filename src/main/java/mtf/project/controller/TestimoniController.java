@@ -124,8 +124,11 @@ public class TestimoniController {
     public String updateUserForm(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException{
         TestimoniModel testimoni = testimoniService.getTestimoniById(id);
         model.addAttribute("testimoni", testimoni);
-//        String dataImage = Base64.getEncoder().encodeToString(testimoni.getFile().getData());
-//        model.addAttribute("dataImage", dataImage);
+        if(testimoni.getFile() != null){
+            String dataImage = Base64.getEncoder().encodeToString(testimoni.getFile().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+        }
         return "form-update-testimoni";
     }
 
@@ -158,6 +161,11 @@ public class TestimoniController {
 
             testimoniService.updateTestimoni(testimoni);
             List<TestimoniModel> listTestimoni = testimoniService.getAllTestimoni();
+
+            String dataImage = Base64.getEncoder().encodeToString(testimoni.getFile().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+
             model.addAttribute("testimoni", testimoni);
             model.addAttribute("listTestimoni", listTestimoni);
             model.addAttribute("updateSuccess", true);
@@ -199,6 +207,11 @@ public class TestimoniController {
 
             testimoniService.updateTestimoni(testimoni);
             List<TestimoniModel> listTestimoni = testimoniService.getAllTestimoni();
+
+            String dataImage = Base64.getEncoder().encodeToString(testimoni.getFile().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+            
             model.addAttribute("testimoni", testimoni);
             model.addAttribute("listTestimoni", listTestimoni);
             model.addAttribute("updateSuccess", true);

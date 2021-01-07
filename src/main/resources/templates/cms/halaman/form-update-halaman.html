@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Detail Promo</title>
+    <title>Detail Page</title>
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -33,7 +33,7 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Sunting Promo</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Sunting Page</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-12">
@@ -41,18 +41,15 @@
                         <div class="card-body">
                             <div class = "row">
                                 <div class = "col-12">
-                                    <form th:action="@{/admin/promo/update}" enctype="multipart/form-data" method="POST">
+                                    <form th:action="@{/admin/halaman/update}" enctype="multipart/form-data" method="POST">
 
-                                        <input type="hidden" name="id" class="form-control mb-4" th:value="${promo.id}"/>
+                                        <input type="hidden" name="id" class="form-control mb-4" th:value="${halaman.id}"/>
 
                                         <label>Judul</label>
-                                        <input type="text" name="nama" class="form-control mb-4" th:value="${promo.nama}"  />
+                                        <input type="text" name="judul" class="form-control mb-4" th:value="${halaman.judul}"  />
 
-                                        <label>Foto Promo</label>
-                                        <input type="file" name="files" class="form-control-file mb-4" th:value="${promo.file}"/>
-
-                                        <label>Detail Promo</label>
-                                        <textarea name="promo" class="form-control mb-2" th:field="${promo.promo}"></textarea>
+                                        <label>Konten</label>
+                                        <textarea name="konten" class="form-control mb-2" th:field="${halaman.konten}"></textarea>
 
                                         <br>
                                         <button type="submit" class="btn btn-primary mr-4" name="publish">Simpan & Publish</button>
@@ -71,20 +68,20 @@
                                         <div class = "row">
                                             <div class="mb-3">
                                                 <h6><strong>Status</strong></h6>
-                                                <div th:if="${promo.statusPosting} == 0"> Draft</div>
-                                                <div th:if="${promo.statusPosting} == 1"> Publish</div>
+                                                <div th:if="${halaman.statusPosting} == 0"> Draft</div>
+                                                <div th:if="${halaman.statusPosting} == 1"> Publish</div>
                                             </div>
                                         </div>
                                         <div class = "row">
                                             <div class="mb-3">
                                                 <h6><strong>Latest Author</strong></h6>
-                                                <div th:text="${promo.latestAuthor.name}"></div>
+                                                <div th:text="${halaman.latestAuthor.name}"></div>
                                             </div>
                                         </div>
                                         <div class = "row">
                                             <div class="mb-3">
                                                 <h6><strong>Latest Edit</strong></h6>
-                                                <div th:text="${promo.latestEdit}"></div>
+                                                <div th:text="${halaman.latestEdit}"></div>
                                             </div>
                                         </div>
                                         <div class = "row">
@@ -92,9 +89,9 @@
                                                 <h6><strong>Hapus Halaman</strong></h6>
                                                 <p>Untuk menghapus halaman secara permanen, silahkan tekan tombol dibawah ini</p>
                                                 <div>
-                                                    <form th:action="@{/admin/promo/delete}" method="POST">
-                                                        <input type="hidden" name="id" class="form-control" th:value="${promo.id}"/>
-                                                        <button type="submit" class="btn btn-danger">Hapus Promo</button>
+                                                    <form th:action="@{/admin/halaman/delete}" method="POST">
+                                                        <input type="hidden" name="id" class="form-control" th:value="${halaman.id}"/>
+                                                        <button type="submit" class="btn btn-danger">Hapus Page</button>
                                                     </form>
                                                 </div>
                                             </div>

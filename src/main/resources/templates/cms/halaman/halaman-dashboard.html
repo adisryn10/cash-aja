@@ -57,25 +57,32 @@
                                  <thead>
                                     <tr>
                                        <th>Nomor</th>
-                                       <th>Name</th>
-                                       <th>Username</th>
-                                       <th>Sunting</th>
+                                       <th>Date Created</th>
+                                       <th>Title</th>
+                                       <th>Content</th>
+                                       <th>Author</th>
+                                       <th>Status</th>
+                                       <th>Options</th>
                                     </tr>
                                  </thead>
-                                 <tbody>
-                                    <tr th:each="user, counter : ${listUser}">
+                                 <!-- <tbody>
+                                    <tr th:each="halaman, counter : ${listHalaman}">
                                        <td th:text="${counter.count}"></td>
-                                       <td th:text="${user.name}"></td>
-                                       <td th:text="${user.username}"></td>
+                                       <td th:text="${halaman.latest_edit}"></td>
+                                       <td th:text="${halaman.judul}"></td>
+                                       <td th:text="${halaman.konten}"></td>
+                                       <td th:text="${halaman.latest_author}"></td>
+                                       <td th:if="${testimoni.statusPosting == 0}">Draft</td>
+                                       <td th:if="${testimoni.statusPosting == 1}">Publish</td>
                                        <td>
-                                          <a th:href="@{/admin/detail/}+${user.username}">
+                                          <a th:href="@{/admin/halaman/detail/}+${halaman.id}">
                                           <button class="btn btn-primary">
                                              Sunting
                                           </button>
                                           </a>
                                        </td>
                                     </tr>
-                                 </tbody>
+                                 </tbody> -->
                               </table>
                            </div>
                            <br>

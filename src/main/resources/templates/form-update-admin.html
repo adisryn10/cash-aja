@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Admin</title>
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <script type="text/javascript">
+         $(document).ready(function() {
+             $('#example').DataTable();
+         });
+      </script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <object th:replace="fragments/adminFragment  ::  sidebar" th:remove="tag"></object>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <object th:replace="fragments/adminFragment  ::  topbar" th:remove="tag"></object>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Admin Management</h1>
+                </div>
+                <div>
+                    <div class = "row">
+                        <div class = "col-8">
+                            <div class="card">
+                                <div class = "row">
+                                    <div th:if="${updateSuccess}" class="alert alert-info text-center" role="alert">
+                                        User berhasil diupdate
+                                    </div>
+                                    <div class = "col-6">
+                                        <div class="card-body">
+                                            <form th:action="@{/admin/update}" method="POST">
+
+                                                <input type="hidden" name="id" class="form-control mb-4" th:value="${user.id}"/>
+
+                                                <label>Name</label>
+                                                <input type="text" name="name" class="form-control mb-4" th:value="${user.name}"/>
+
+                                                <label>User Name</label>
+                                                <input type="text" name="username" class="form-control mb-4" th:value="${user.username}"/>
+
+                                                <input type="hidden" name="role" class="form-control mb-4" th:value="${user.role.id}"/>
+
+                                                <br>
+                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class = "row">
+                                        <div class = "col-12">
+                                            <div class = "row">
+                                                <div class="mb-3">
+                                                    <h6><strong>Status</strong></h6>
+                                                    <div th:if="${user.status} == 0"> Tidak Aktif</div>
+                                                    <div th:if="${user.status} == 1"> Aktif</div>
+                                                </div>
+                                            </div>
+                                            <div class = "row">
+                                                <div class="mb-3">
+                                                    <h6><strong>Latest Author</strong></h6>
+                                                    <div th:text="${user.latestAuthor.name}"></div>
+                                                </div>
+                                            </div>
+                                            <div class = "row">
+                                                <div class="mb-3">
+                                                    <h6><strong>Latest Edit</strong></h6>
+                                                    <div th:text="${user.latestEdit}"></div>
+                                                </div>
+                                            </div>
+                                            <div class = "row">
+                                                <div class = "mb-3">
+                                                    <h6><strong>Hapus Akun</strong></h6>
+                                                    <p>Untuk menghapus akun secara permanen, silahkan tekan tombol dibawah ini</p>
+                                                    <div>
+                                                        <form th:action="@{/admin/delete}" method="POST">
+                                                            <input type="hidden" name="id" class="form-control" th:value="${user.id}"/>
+                                                            <input type="hidden" name="username" class="form-control" th:value="${user.username}"/>
+                                                            <button type="submit" class="btn btn-danger">Hapus Akun</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+</body>
+</html>

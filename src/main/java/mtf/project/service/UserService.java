@@ -13,7 +13,11 @@ public interface UserService {
 
     List<UserRoleModel> getAllUser();
 
+    UserRoleModel updateUser(UserRoleModel user);
+
     UserRoleModel addUser(UserRoleModel user);
 
     List<UserRoleModel> getUserByRoleNama(String string);
+
+    void deleteUser(UserRoleModel user);
 }

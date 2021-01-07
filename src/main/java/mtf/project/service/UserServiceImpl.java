@@ -27,6 +27,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserRoleModel updateUser(UserRoleModel user) {
+        UserRoleModel userUpdated = userDb.findById(user.getId());
+        userUpdated.setName(user.getName());
+        userUpdated.setUsername(user.getUsername());
+        userUpdated.setLatestAuthor(user.getLatestAuthor());
+        userUpdated.setLatestEdit(user.getLatestEdit());
+        return userDb.save(userUpdated);
+    }
+
+    @Override
     public UserRoleModel getUserById(String id) {
         return userDb.findById(id);
     }
@@ -34,7 +44,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserRoleModel addUser(UserRoleModel user) {
         String pass = encrypt(user.getPassword());
-        RoleModel roleCustomer = roleDb.findByNama("CUSTOMER");
+        RoleModel roleCustomer = roleDb.findByNama("ADMIN");
         user.setPassword(pass);
         user.setRole(roleCustomer);
         return userDb.save(user);
@@ -50,6 +60,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserRoleModel> getUserByRoleNama(String string) {
         return userDb.findByRoleNama(string);
+    }
+
+    @Override
+    public void deleteUser(UserRoleModel user) {
+        System.out.println("user : " + user.getUsername());
+        userDb.delete(user);
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.util.List;
 public interface HalamanService {
     List<HalamanModel> getAllHalaman();
     HalamanModel getHalamanById(Long id);
-    HalamanModel createHalaman(HalamanModel testimoni);
-    void deleteHalaman(HalamanModel testimoni);
-    void updateHalaman(HalamanModel testimoni);
+    HalamanModel createHalaman(HalamanModel halaman);
+    void deleteHalaman(HalamanModel halaman);
+    void updateHalaman(HalamanModel halaman);
 }

@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name="promo")
+@Table(name="halaman")
 public class HalamanModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,12 +23,9 @@ public class HalamanModel implements Serializable {
     private String judul;
 
     @NotNull
-    @Column(name = "banner", length = Integer.MAX_VALUE, nullable = false)
-    private byte[] banner;
+    @Column(name = "konten", nullable = false)
+    private String konten;
 
-    @NotNull
-    @Column(name = "detail", length = Integer.MAX_VALUE, nullable = false)
-    private String detail;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "latest_author", referencedColumnName = "id")
@@ -44,9 +41,6 @@ public class HalamanModel implements Serializable {
     @Column(name = "statusPosting", nullable = false)
     private Integer statusPosting;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "file", referencedColumnName = "id")
-    private FileModel file;
 
     public Long getId() {
         return id;
@@ -58,15 +52,6 @@ public class HalamanModel implements Serializable {
 
     public void setJudul(String judul) {
         this.judul = judul;
-    }
-
-    
-    public void setBanner(byte[] banner) {
-        this.banner = banner;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
     }
 
     public UserRoleModel getLatestAuthor() {
@@ -83,14 +68,6 @@ public class HalamanModel implements Serializable {
 
     public void setLatestEdit(Date latestEdit) {
         this.latestEdit = latestEdit;
-    }
-
-    public FileModel getFile() {
-        return file;
-    }
-
-    public void setFile(FileModel file) {
-        this.file = file;
     }
 
     public Integer getStatusPosting() {

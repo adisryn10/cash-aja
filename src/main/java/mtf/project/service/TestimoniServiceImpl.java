@@ -19,6 +19,11 @@ public class TestimoniServiceImpl implements TestimoniService{
     }
 
     @Override
+    public List<TestimoniModel> getAllTestimoniByStatusPosting(Integer statusPosting) {
+        return testimoniDb.findByStatusPosting(statusPosting);
+    }
+
+    @Override
     public TestimoniModel getTestimoniById(Long id) {
         return testimoniDb.findById(id).get();
     }

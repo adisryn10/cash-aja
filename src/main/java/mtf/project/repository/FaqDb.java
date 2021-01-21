@@ -11,4 +11,5 @@ import java.util.Optional;
 public interface FaqDb extends JpaRepository<FaqModel, Long> {
     List<FaqModel> findAll();
     Optional<FaqModel> findById(Long id);
+    List<FaqModel> findByStatusPosting(Integer id);
 }

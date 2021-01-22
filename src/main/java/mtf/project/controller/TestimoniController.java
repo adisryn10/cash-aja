@@ -8,6 +8,7 @@ import mtf.project.service.UserService;
 import mtf.project.service.YoutubeService;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,9 +20,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 @Controller
@@ -92,8 +91,16 @@ public class TestimoniController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             testimoni.setLatestAuthor(latestAuthor);
 
+            if(file.isEmpty()){
+                File defaultFile = new File("src/main/resources/static/cust/images/user-avatar.png");
+                FileInputStream input = new FileInputStream(defaultFile);
+                file = new MockMultipartFile("defaultFile",
+                        defaultFile.getName(), "image/png", input.readAllBytes());
+            }
+
             FileModel fileSaved = fileService.store(file);
             testimoni.setFile(fileSaved);
+
 
             testimoni.setStatusPosting(1);
 

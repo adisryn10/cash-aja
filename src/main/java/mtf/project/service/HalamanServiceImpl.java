@@ -14,8 +14,18 @@ public class HalamanServiceImpl implements HalamanService{
     HalamanDb halamanDb;
 
     @Override
+    public HalamanModel createHalaman(HalamanModel halaman) {
+        return halamanDb.save(halaman);
+    }
+
+    @Override
     public List<HalamanModel> getAllHalaman() {
         return halamanDb.findAll();
+    }
+
+    @Override
+    public List<HalamanModel> getAllHalamanByStatusPosting(Integer statusPosting) {
+        return halamanDb.findByStatusPosting(statusPosting);
     }
 
     @Override
@@ -24,8 +34,8 @@ public class HalamanServiceImpl implements HalamanService{
     }
 
     @Override
-    public HalamanModel createHalaman(HalamanModel halaman) {
-        return halamanDb.save(halaman);
+    public void updateHalaman(HalamanModel halaman) {
+        halamanDb.save(halaman);
     }
 
     @Override
@@ -33,8 +43,4 @@ public class HalamanServiceImpl implements HalamanService{
         halamanDb.delete(halaman);
     }
 
-    @Override
-    public void updateHalaman(HalamanModel halaman) {
-        halamanDb.save(halaman);
-    }
 }

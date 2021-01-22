@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface HalamanDb extends JpaRepository<HalamanModel, Long>{
     List<HalamanModel> findAll();
     Optional<HalamanModel> findById(Long id);
+    List<HalamanModel> findByStatusPosting(Integer id);
 }

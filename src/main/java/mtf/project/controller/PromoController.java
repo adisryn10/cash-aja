@@ -75,7 +75,7 @@ public class PromoController {
             return new RedirectView("/admin/promo", true);
         }
         catch (Exception e){
-            return new RedirectView("/admin/tambah", true);
+            return new RedirectView("/admin/promo/tambah", true);
         }
     }
 
@@ -105,7 +105,7 @@ public class PromoController {
             return new RedirectView("/admin/promo", true);
         }
         catch (Exception e){
-            return new RedirectView("/admin/tambah", true);
+            return new RedirectView("/admin/promo/tambah", true);
         }
     }
 

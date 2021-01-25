@@ -42,18 +42,24 @@
                             <div class = "row">
                                 <div class = "col-12">
                                     <form th:action="@{/admin/promo/update}" enctype="multipart/form-data" method="POST">
-
+                                        
                                         <input type="hidden" name="id" class="form-control mb-4" th:value="${promo.id}"/>
 
                                         <label>Judul</label>
-                                        <input type="text" name="nama" class="form-control mb-4" th:value="${promo.nama}"  />
+                                        <input type="text" name="judul" class="form-control" th:value="${promo.judul}" />
 
-                                        <label>Foto Promo</label>
-                                        <input type="file" name="files" class="form-control-file mb-4" th:value="${promo.file}"/>
+                                        <label>Foto Web-banner</label>
+                                        <input type="file" name="files" class="form-control-file" th:value="${promo.banner}"/>
 
-                                        <label>Detail Promo</label>
-                                        <textarea name="promo" class="form-control mb-2" th:field="${promo.promo}"></textarea>
+                                        <div th:if="${hasImage}">
+                                            <figure class="mb-4 d-block align-items-center justify-content-center">
+                                                <div><img alt="Image" class="w-50 mb-4 my-5 shadow" th:src="'data:image/jpeg;base64,' + ${dataImage}"></div>
+                                            </figure>
+                                        </div>
 
+                                        <label>Detail Web-banner</label>
+                                        <textarea type="text" name="detail" id="content" rows="4" placeholder="Detail" class="form-control" autocomplete="off" th:value="${promo.detail}"></textarea>
+                                        
                                         <br>
                                         <button type="submit" class="btn btn-primary mr-4" name="publish">Simpan & Publish</button>
                                         <button type="submit" class="btn btn-secondary mr-4" name="draft">Simpan Sebagai Draft</button>

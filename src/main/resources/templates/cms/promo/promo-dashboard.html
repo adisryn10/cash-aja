@@ -57,23 +57,23 @@
                                  <thead>
                                     <tr>
                                        <th>Nomor</th>
-                                       <th>Date Created</th>
+                                       <!-- <th>Date Created</th> -->
                                        <th>Title</th>
                                        <th>Detail</th>
-                                       <th>Author</th>
-                                       <th>Status</th>
+                                       <!-- <th>Author</th> -->
+                                       <!-- <th>Status</th> -->
                                        <th>Options</th>
                                     </tr>
                                  </thead>
                                  <tbody>
                                     <tr th:each="promo, counter : ${listPromo}">
                                        <td th:text="${counter.count}"></td>
-                                       <td th:text="${promo.latest_edit}"></td>
+                                       <!-- <td th:text="${promo.latest_edit}"></td> -->
                                        <td th:text="${promo.judul}"></td>
-                                       <td th:text="${promo.latest_author}"></td>
-                                       <td th:text="${promo.status}"></td>
+                                       <!-- <td th:text="${promo.latest_author}"></td> -->
+                                       <!-- <td th:text="${promo.statusPosting}"></td> -->
                                        <td>
-                                          <a th:href="@{/admin/detail/}+${promo.id}">
+                                          <a th:href="@{/admin/promo/detail/}+${promo.id}">
                                           <button class="btn btn-primary">
                                              Sunting
                                           </button>

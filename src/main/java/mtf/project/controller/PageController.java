@@ -141,8 +141,8 @@ public class PageController{
             model.addAttribute("dataImage", dataImage);
             model.addAttribute("hasImage", true);
         }
-        return "promo/promo-detail";
-        
+        return "promo-detail";
+
     }
 }
 

@@ -1,9 +1,11 @@
 package mtf.project.controller;
 
 import mtf.project.model.FaqModel;
+import mtf.project.model.PromoModel;
 import mtf.project.model.TestimoniModel;
 import mtf.project.model.YoutubeModel;
 import mtf.project.service.FaqService;
+import mtf.project.service.PromoService;
 import mtf.project.service.TestimoniService;
 import mtf.project.service.YoutubeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +14,16 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 
 @Controller
@@ -31,7 +37,10 @@ public class PageController{
 
     @Autowired
     YoutubeService youtubeService;
-
+    
+    @Autowired
+    PromoService promoService;
+    
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String register(){
         return "register";
@@ -106,9 +115,34 @@ public class PageController{
             testimoniImage.add(dataImage);
         }
 
+        List<PromoModel> listPromo = promoService.getAllPromoByStatusPosting(1);
+
+        List<String> promoImage = new ArrayList<>();
+        for(PromoModel promo : listPromo){
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            promoImage.add(dataImage);
+        }
+
+        model.addAttribute("promoImage", promoImage);
+        model.addAttribute("listPromo", listPromo);
         model.addAttribute("testimoniImage", testimoniImage);
         model.addAttribute("listTestimoni", listTestimoni);
         model.addAttribute("youtubeLink", youtubeLink);
         return "home-cms";
     }
+
+    @RequestMapping(value = "/promo/{id}", method = RequestMethod.GET)
+    public String detailPromo(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException{
+
+        PromoModel promo = promoService.getPromoById(id);
+        model.addAttribute("promo", promo);
+        if(promo.getBanner() != null){
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+        }
+        return "promo/promo-detail";
+        
+    }
 }
+

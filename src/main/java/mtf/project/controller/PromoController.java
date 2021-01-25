@@ -61,7 +61,7 @@ public class PromoController {
             promo.setLatestAuthor(latestAuthor);
 
             FileModel fileSaved = fileService.store(file);
-            promo.setFile(fileSaved);
+            promo.setBanner(fileSaved);
 
             promo.setStatusPosting(0);
 
@@ -90,7 +90,7 @@ public class PromoController {
             promo.setLatestAuthor(latestAuthor);
 
             FileModel fileSaved = fileService.store(file);
-            promo.setFile(fileSaved);
+            promo.setBanner(fileSaved);
 
             promo.setStatusPosting(1);
 
@@ -121,9 +121,12 @@ public class PromoController {
     public String updateUserForm(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException{
         PromoModel promo = promoService.getPromoById(id);
         model.addAttribute("promo", promo);
-//        String dataImage = Base64.getEncoder().encodeToString(promo.getFile().getData());
-//        model.addAttribute("dataImage", dataImage);
-        return "form-update-promo";
+        if(promo.getBanner() != null){
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+        }
+        return "cms/promo/form-update-promo";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST, params={"draft"})
@@ -135,7 +138,7 @@ public class PromoController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
 
-            FileModel currentFile = promoService.getPromoById(promo.getId()).getFile();
+            FileModel currentFile = promoService.getPromoById(promo.getId()).getBanner();
 
             if(!file.isEmpty()){
                 if(currentFile!=null){
@@ -143,10 +146,10 @@ public class PromoController {
                 }
 
                 FileModel fileSaved = fileService.store(file);
-                promo.setFile(fileSaved);
+                promo.setBanner(fileSaved);
             }
             else{
-                promo.setFile(currentFile);
+                promo.setBanner(currentFile);
             }
             promo.setStatusPosting(0);
 
@@ -155,14 +158,19 @@ public class PromoController {
 
             promoService.updatePromo(promo);
             List<PromoModel> listPromo = promoService.getAllPromo();
+            
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+
             model.addAttribute("promo", promo);
             model.addAttribute("listPromo", listPromo);
             model.addAttribute("updateSuccess", true);
-            return "form-update-promo";
+            return "cms/promo/form-update-promo";
         }
         catch (Exception e){
             e.printStackTrace();
-            return "form-update-promo";
+            return "cms/promo/form-update-promo";
         }
     }
 
@@ -175,7 +183,7 @@ public class PromoController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
 
-            FileModel currentFile = promoService.getPromoById(promo.getId()).getFile();
+            FileModel currentFile = promoService.getPromoById(promo.getId()).getBanner();
 
             if(!file.isEmpty()){
                 if(currentFile!=null){
@@ -183,10 +191,10 @@ public class PromoController {
                 }
 
                 FileModel fileSaved = fileService.store(file);
-                promo.setFile(fileSaved);
+                promo.setBanner(fileSaved);
             }
             else{
-                promo.setFile(currentFile);
+                promo.setBanner(currentFile);
             }
 
             promo.setStatusPosting(1);
@@ -196,14 +204,19 @@ public class PromoController {
 
             promoService.updatePromo(promo);
             List<PromoModel> listPromo = promoService.getAllPromo();
+            
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+
             model.addAttribute("promo", promo);
             model.addAttribute("listPromo", listPromo);
             model.addAttribute("updateSuccess", true);
-            return "form-update-promo";
+            return "cms/promo/form-update-promo";
         }
         catch (Exception e){
             e.printStackTrace();
-            return "form-update-promo";
+            return "cms/promo/form-update-promo";
         }
     }
 

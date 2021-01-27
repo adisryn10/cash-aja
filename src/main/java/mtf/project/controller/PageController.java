@@ -144,10 +144,10 @@ public class PageController{
 
         PromoModel promo = promoService.getPromoById(id);
         model.addAttribute("promo", promo);
-        if(promo.getBanner() != null){
-            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
-            model.addAttribute("dataImage", dataImage);
-            model.addAttribute("hasImage", true);
+        if(promo.getBannerFull() != null){
+            String dataBannerFullImage = Base64.getEncoder().encodeToString(promo.getBannerFull().getData());
+            model.addAttribute("dataBannerFullImage", dataBannerFullImage);
+            model.addAttribute("hasBannerFullImage", true);
         }
         return "promo-detail";
     }

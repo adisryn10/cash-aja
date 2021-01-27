@@ -49,11 +49,20 @@
                                         <input type="text" name="judul" class="form-control" th:value="${promo.judul}" />
 
                                         <label>Foto Web-banner</label>
-                                        <input type="file" name="files" class="form-control-file" th:value="${promo.banner}"/>
+                                        <input type="file" name="file1" class="form-control-file" th:value="${promo.banner}"/>
 
-                                        <div th:if="${hasImage}">
+                                        <div th:if="${hasBannerImage}">
                                             <figure class="mb-4 d-block align-items-center justify-content-center">
-                                                <div><img alt="Image" class="w-50 mb-4 my-5 shadow" th:src="'data:image/jpeg;base64,' + ${dataImage}"></div>
+                                                <div><img alt="Image" class="w-50 mb-4 my-5 shadow" th:src="'data:image/jpeg;base64,' + ${dataBannerImage}"></div>
+                                            </figure>
+                                        </div>
+
+                                        <label>Foto Detail Web-banner</label>
+                                        <input type="file" name="file2" class="form-control-file" th:value="${promo.banner_full}"/>
+
+                                        <div th:if="${hasBannerFullImage}">
+                                            <figure class="mb-4 d-block align-items-center justify-content-center">
+                                                <div><img alt="Image" class="w-50 mb-4 my-5 shadow" th:src="'data:image/jpeg;base64,' + ${dataBannerFullImage}"></div>
                                             </figure>
                                         </div>
 

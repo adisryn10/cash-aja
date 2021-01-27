@@ -49,12 +49,15 @@
                         <div class="card-body">
                             <div class = "row">
                                 <div class = "col-6">
-                                    <form th:action="@{/admin/promo/tambah}" enctype="multipart/form-data" method="POST">
+                                    <form th:action="@{/admin/promo/tambah}" enctype="multipart/form-data" th:object="${promo}" method="POST">
                                         <label>Judul</label>
                                         <input type="text" name="judul" class="form-control" />
 
                                         <label>Foto Web-banner</label>
-                                        <input type="file" name="files" class="form-control-file"/>
+                                        <input type="file" name="file1" class="form-control-file"/>
+
+                                        <label>Foto Detail Web-banner</label>
+                                        <input type="file" name="file2" class="form-control-file"/>
 
                                         <label>Detail Web-banner</label>
                                         <textarea type="text" name="detail" id="content" rows="4" placeholder="Detail" class="form-control" autocomplete="off"></textarea>

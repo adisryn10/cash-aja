@@ -25,6 +25,10 @@ public class PromoModel {
     @JoinColumn(name = "banner", referencedColumnName = "id")
     private FileModel banner;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "banner_full", referencedColumnName = "id")
+    private FileModel banner_full;
+
     @NotNull
     @Column(name = "detail", length = Integer.MAX_VALUE, nullable = false)
     private String detail;
@@ -89,6 +93,14 @@ public class PromoModel {
 
     public void setBanner(FileModel banner) {
         this.banner = banner;
+    }
+
+    public FileModel getBannerFull() {
+        return banner_full;
+    }
+
+    public void setBannerFull(FileModel banner_full) {
+        this.banner_full = banner_full;
     }
 
     public Integer getStatusPosting() {

@@ -56,11 +56,11 @@
                               <table class="table text-left" style="width:100%" id="example">
                                  <thead>
                                     <tr>
-                                       <th>Nomor</th>
-                                       <!-- <th>Date Created</th> -->
+                                       <th>No</th>
+                                       <th>Last Edited</th>
                                        <th>Title</th>
                                        <th>Content</th>
-                                       <!-- <th>Author</th> -->
+                                       <th>Author</th>
                                        <th>Status</th>
                                        <th>Sunting</th>
                                     </tr>
@@ -68,10 +68,10 @@
                                  <tbody>
                                     <tr th:each="halaman, counter : ${listHalaman}">
                                        <td th:text="${counter.count}"></td>
-                                       <!-- <td th:text="${halaman.latest_edit}"></td> -->
+                                       <td th:text="${halaman.latestEdit}"></td>
                                        <td th:text="${halaman.judul}"></td>
                                        <td th:text="${halaman.konten}"></td>
-                                       <!-- <td th:text="${halaman.latest_author}"></td> -->
+                                       <td th:text="${halaman.latestAuthor.name}"></td>
                                        <td th:if="${halaman.statusPosting == 0}">Draft</td>
                                        <td th:if="${halaman.statusPosting == 1}">Publish</td>
                                        <td>

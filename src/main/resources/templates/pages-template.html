@@ -42,14 +42,9 @@
     <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
   </header>
   
-  <div id='promo-detail'>
-      <h1 th:text="${promo.judul}"><Strong></Strong></h1>
-      <div id="detail-asset">
-        <img alt="Image" class="img-fluid" id="topupexpress-img" th:src="'data:image/jpeg;base64,' + ${dataImage}">
-        <p th:utext="${promo.detail}"></p>
-        <!-- <c:out value="${promo.detail}" escapeXml="false" /> -->
-      </div>
-      
+  <div class='page-detail'>
+      <h1 th:text="${halaman.judul}"><Strong></Strong></h1>
+      <p th:utext="${halaman.konten}"></p>      
   </div>
 
 

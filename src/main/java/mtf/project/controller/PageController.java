@@ -1,10 +1,12 @@
 package mtf.project.controller;
 
 import mtf.project.model.FaqModel;
+import mtf.project.model.HalamanModel;
 import mtf.project.model.PromoModel;
 import mtf.project.model.TestimoniModel;
 import mtf.project.model.YoutubeModel;
 import mtf.project.service.FaqService;
+import mtf.project.service.HalamanService;
 import mtf.project.service.PromoService;
 import mtf.project.service.TestimoniService;
 import mtf.project.service.YoutubeService;
@@ -40,6 +42,9 @@ public class PageController{
     
     @Autowired
     PromoService promoService;
+
+    @Autowired
+    HalamanService halamanService;
     
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String register(){
@@ -123,6 +128,9 @@ public class PageController{
             promoImage.add(dataImage);
         }
 
+        List<HalamanModel> listHalaman = halamanService.getAllHalamanByStatusPosting(1);
+
+        model.addAttribute("listHalaman", listHalaman);
         model.addAttribute("promoImage", promoImage);
         model.addAttribute("listPromo", listPromo);
         model.addAttribute("testimoniImage", testimoniImage);
@@ -142,7 +150,14 @@ public class PageController{
             model.addAttribute("hasImage", true);
         }
         return "promo-detail";
-
     }
+
+    @RequestMapping(value = "/page/{id}", method = RequestMethod.GET)
+    public String updateHalamanForm(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException{
+        HalamanModel halaman = halamanService.getHalamanById(id);
+        model.addAttribute("halaman", halaman);
+        return "pages-template";
+    }
+    
 }
 

@@ -24,6 +24,11 @@ public class FaqServiceImpl implements FaqService {
     }
 
     @Override
+    public List<FaqModel> getAllFaqByStatusPosting(Integer statusPosting) {
+        return faqDb.findByStatusPosting(statusPosting);
+    }
+
+    @Override
     public FaqModel getFaqById(Long id) {
         return faqDb.findById(id).get();
     }

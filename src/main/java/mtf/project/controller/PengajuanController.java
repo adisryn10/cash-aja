@@ -32,10 +32,10 @@ public class PengajuanController {
     }
 
     @GetMapping(path = "/admin/pengajuan")
-    public String pengajuanHome(Model model){
+    public String pengajuanHome(Model model) {
         List<PengajuanModel> listPengajuan = pengajuanService.getAllPengajuan();
         model.addAttribute("listPengajuan", listPengajuan);
-        return "cms-pengajuan";
+        return "cms/pengajuan/pengajuan-dashboard";
     }
 
     @PostMapping(value = "/admin/pengajuan/delete")

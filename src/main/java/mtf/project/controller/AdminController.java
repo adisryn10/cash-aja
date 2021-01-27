@@ -23,7 +23,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
-public class AdminController{
+public class AdminController {
 
     @Autowired
     UserService userService;
@@ -32,51 +32,44 @@ public class AdminController{
     RoleService roleService;
 
     @RequestMapping(path = "")
-    public String home(Model model){
+    public String home(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        for (GrantedAuthority authority: auth.getAuthorities()){
+        for (GrantedAuthority authority : auth.getAuthorities()) {
             model.addAttribute("role", authority.getAuthority());
         }
         List<UserRoleModel> listUser = userService.getUserByRoleNama("CUSTOMER");
 
         model.addAttribute("listUser", listUser);
-        return "cms-home";
+        return "cms/admin/admin-dashboard";
     }
 
     @RequestMapping(path = "/users", method = RequestMethod.GET)
-    public String user(Model model){
+    public String user(Model model) {
 
         List<UserRoleModel> listUser = userService.getAllUser();
 
         model.addAttribute("listUser", listUser);
-        return "cms-user";
-    }
-
-    @RequestMapping(path = "/user/detail/{idUser}", method = RequestMethod.GET)
-    public String userDetail(@PathVariable String idUser, Model model){
-        UserRoleModel user = userService.getUserById(idUser);
-        model.addAttribute("user", user);
-        return "cms-user-detail";
+        return "cms/admin/admin-dashboard";
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.GET)
-    public String addUserForm(Model model){
+    public String addUserForm(Model model) {
         UserRoleModel user = new UserRoleModel();
         List<RoleModel> listRole = roleService.findAll();
         model.addAttribute("user", user);
         model.addAttribute("listRole", listRole);
-        return "cms-user-form-tambah";
+        return "cms/admin/form-tambah-admin";
     }
 
     @RequestMapping(value = "/detail/{username}", method = RequestMethod.GET)
-    public String updateUserForm(@PathVariable String username, Model model){
+    public String updateUserForm(@PathVariable String username, Model model) {
         UserRoleModel user = userService.getUserByUsername(username);
         model.addAttribute("user", user);
-        return "cms-user-form-update";
+        return "cms/admin/form-update-admin";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public RedirectView updateUserSubmit(UserRoleModel user, Model model, Authentication auth, RedirectAttributes redirectAttributes){
+    public RedirectView updateUserSubmit(UserRoleModel user, Model model, Authentication auth, RedirectAttributes redirectAttributes) {
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         user.setLatestAuthor(latestAuthor);
 
@@ -85,15 +78,15 @@ public class AdminController{
 
         userService.updateUser(user);
         redirectAttributes.addFlashAttribute("updateSuccess", true);
-        return new RedirectView("/admin/detail/"+user.getUsername(),true);
+        return new RedirectView("/admin/detail/" + user.getUsername(), true);
     }
 
     @RequestMapping(value = "/tambah", method = RequestMethod.POST)
     public RedirectView addUserSubmit(UserRoleModel user, Authentication auth,
-        @RequestParam("konfirmasi") String konfirmasi, Model model,RedirectAttributes redirectAttributes){
-        if(!user.getPassword().equals(konfirmasi)){
+                                      @RequestParam("konfirmasi") String konfirmasi, Model model, RedirectAttributes redirectAttributes) {
+        if (!user.getPassword().equals(konfirmasi)) {
             redirectAttributes.addFlashAttribute("isNotEqual", true);
-            return new RedirectView("/admin/tambah",true);
+            return new RedirectView("/admin/tambah", true);
         }
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         user.setLatestAuthor(latestAuthor);
@@ -109,10 +102,10 @@ public class AdminController{
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public RedirectView deleteUserSubmit(UserRoleModel user, Model model, RedirectAttributes redirectAttributes){
+    public RedirectView deleteUserSubmit(UserRoleModel user, Model model, RedirectAttributes redirectAttributes) {
         userService.deleteUser(user);
         redirectAttributes.addFlashAttribute("user", user);
-        redirectAttributes.addFlashAttribute("deleteSuccess",true);
+        redirectAttributes.addFlashAttribute("deleteSuccess", true);
         return new RedirectView("/admin/users", true);
     }
 }

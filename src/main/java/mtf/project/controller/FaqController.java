@@ -30,26 +30,24 @@ public class FaqController {
     UserService userService;
 
     @RequestMapping(path = "")
-    public String faqHome(Model model){
-
+    public String faqHome(Model model) {
         List<FaqModel> listFaq = faqService.getAllFaq();
-
         model.addAttribute("listFaq", listFaq);
-        return "cms-faq";
+        return "cms/faq/faq-dashboard";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addFaq(Model model){
+    public String addFaq(Model model) {
         FaqModel faq = new FaqModel();
         model.addAttribute("faq", faq);
-        return "cms-faq-form-tambah";
+        return "cms/faq/form-tambah-faq";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST, params={"draft"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"draft"})
     public RedirectView addFaqDraft(FaqModel faq,
-                              Authentication auth,
-                              Model model,
-                              RedirectAttributes redirectAttributes){
+                                    Authentication auth,
+                                    Model model,
+                                    RedirectAttributes redirectAttributes) {
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         faq.setLatestAuthor(latestAuthor);
 
@@ -63,15 +61,15 @@ public class FaqController {
         model.addAttribute("listFaq", listFaq);
         model.addAttribute("addSuccess", true);
         redirectAttributes.addFlashAttribute("listFaq", listFaq);
-        redirectAttributes.addFlashAttribute("addSuccess",true);
+        redirectAttributes.addFlashAttribute("addSuccess", true);
         return new RedirectView("/admin/faq", true);
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST, params={"publish"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"publish"})
     public RedirectView addFaqPublish(FaqModel faq,
                                       Authentication auth,
                                       Model model,
-                                      RedirectAttributes redirectAttributes){
+                                      RedirectAttributes redirectAttributes) {
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         faq.setLatestAuthor(latestAuthor);
 
@@ -90,14 +88,14 @@ public class FaqController {
     public String updateFaqForm(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException {
         FaqModel faq = faqService.getFaqById(id);
         model.addAttribute("faq", faq);
-        return "cms-faq-form-update";
+        return "cms/faq/form-update-faq";
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST, params={"draft"})
+    @RequestMapping(value = "/update", method = RequestMethod.POST, params = {"draft"})
     public RedirectView updateFaqDraft(FaqModel faq,
                                        Authentication auth,
                                        Model model,
-                                       RedirectAttributes redirectAttributes){
+                                       RedirectAttributes redirectAttributes) {
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         faq.setLatestAuthor(latestAuthor);
 
@@ -108,15 +106,15 @@ public class FaqController {
 
         faqService.updateFaq(faq);
 
-        redirectAttributes.addFlashAttribute("updateSuccess",true);
-        return new RedirectView("/admin/faq/detail/"+faq.getId(), true);
+        redirectAttributes.addFlashAttribute("updateSuccess", true);
+        return new RedirectView("/admin/faq/detail/" + faq.getId(), true);
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST, params={"publish"})
+    @RequestMapping(value = "/update", method = RequestMethod.POST, params = {"publish"})
     public RedirectView updateFaqPublish(FaqModel faq,
                                          Authentication auth,
                                          Model model,
-                                         RedirectAttributes redirectAttributes){
+                                         RedirectAttributes redirectAttributes) {
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         faq.setLatestAuthor(latestAuthor);
 
@@ -127,14 +125,14 @@ public class FaqController {
 
         faqService.updateFaq(faq);
         redirectAttributes.addFlashAttribute("updateSuccess", true);
-        return new RedirectView("/admin/faq/detail/"+faq.getId(), true);
+        return new RedirectView("/admin/faq/detail/" + faq.getId(), true);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public RedirectView deleteFaq(FaqModel faq, RedirectAttributes redirectAttributes){
+    public RedirectView deleteFaq(FaqModel faq, RedirectAttributes redirectAttributes) {
         FaqModel faqDeleted = faqService.getFaqById(faq.getId());
         faqService.deleteFaq(faqDeleted);
-        redirectAttributes.addFlashAttribute("deleteSuccess",true);
+        redirectAttributes.addFlashAttribute("deleteSuccess", true);
         return new RedirectView("/admin/faq", true);
     }
 }

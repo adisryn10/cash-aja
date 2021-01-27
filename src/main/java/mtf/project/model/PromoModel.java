@@ -1,7 +1,15 @@
 package mtf.project.model;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name="promo")
@@ -20,7 +28,29 @@ public class PromoModel implements Serializable {
 
     @NotNull
     @Column(name = "detail", length = Integer.MAX_VALUE, nullable = false)
-    private byte[] detail;
+    private String detail;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "latest_author", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private UserRoleModel latestAuthor;
+
+    @NotNull
+    @Column(name = "latest_edit", nullable = false)
+    private Date latestEdit;
+
+    @NotNull
+    @Column(name = "statusPosting", nullable = false)
+    private Integer statusPosting;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file", referencedColumnName = "id")
+    private FileModel file;
+
+    public Long getId() {
+        return id;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -35,10 +65,41 @@ public class PromoModel implements Serializable {
         this.banner = banner;
     }
 
-    public void setDetail(byte[] detail) {
+    public void setDetail(String detail) {
         this.detail = detail;
     }
 
+    public UserRoleModel getLatestAuthor() {
+        return latestAuthor;
+    }
+
+    public void setLatestAuthor(UserRoleModel latestAuthor) {
+        this.latestAuthor = latestAuthor;
+    }
+
+    public Date getLatestEdit() {
+        return latestEdit;
+    }
+
+    public void setLatestEdit(Date latestEdit) {
+        this.latestEdit = latestEdit;
+    }
+
+    public FileModel getFile() {
+        return file;
+    }
+
+    public void setFile(FileModel file) {
+        this.file = file;
+    }
+
+    public Integer getStatusPosting() {
+        return statusPosting;
+    }
+
+    public void setStatusPosting(Integer statusPosting) {
+        this.statusPosting = statusPosting;
+    }
     
 }
     

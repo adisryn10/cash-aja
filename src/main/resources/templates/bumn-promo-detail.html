@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
+
 <head>
-  <title>Tentang Cash Aja</title>
+  <title>CashAja - MTF Kredit Multiguna</title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,33 +23,31 @@
 
 <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
-<div class="site-wrap" id="home-section">
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
+  <div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
       </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
 
-  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-    <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
-  </header>
-  
-  <div id='promo-detail'>
+    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+    </header>
+
+    <div id='promo-detail'>
       <h1><Strong>Penawaran Spesial Khusus BUMN</Strong></h1>
       <br>
       <div>
         <img id="detail-asset" th:src="@{landing-page/images/promo/BUMN_detail.png}" />
-        <!-- <img src="landing-page/images/promo/BUMN_detail.png" alt="Image" class="img-fluid"> -->
       </div>
-      
-  </div>
 
-<!--FOOTER-->
-<object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
+    </div>
 
+    <!--FOOTER-->
+    <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
     <script src="landing-page/js/essentials/jquery-3.3.1.min.js"></script>
     <script src="landing-page/js/essentials/jquery-migrate-3.0.1.min.js"></script>
@@ -67,5 +66,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="landing-page/js/essentials/jquery.scrollie.min.js"></script>
 
-  </body>
+</body>
+
 </html>

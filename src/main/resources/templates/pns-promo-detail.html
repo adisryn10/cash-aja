@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
+
 <head>
-  <title>MTF Kredit Multiguna</title>
+  <title>CashAja - MTF Kredit Multiguna</title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
@@ -23,38 +24,36 @@
   <script>
     AOS.init();
   </script>
-  
+
 </head>
 
 <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
-<div class="site-wrap" id="home-section">
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
+  <div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
       </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
 
-  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-    <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
-  </header>
-  
-  <div id='promo-detail'>
+    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+    </header>
+
+    <div id='promo-detail'>
       <h1><Strong>Penawaran Spesial Khusus PNS</Strong></h1>
       <br>
       <div id="detail-asset">
         <img src="landing-page/images/promo/PNS_detail.png" alt="Image" class="img-fluid">
       </div>
-      
-  </div>
 
+    </div>
 
- <!--FOOTER-->
- <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
-
+    <!--FOOTER-->
+    <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="landing-page/js/essentials/jquery-3.3.1.min.js"></script>
@@ -71,6 +70,7 @@
     <script src="landing-page/js/essentials/jquery.fancybox.min.js"></script>
     <script src="landing-page/js/essentials/jquery.sticky.js"></script>
     <script src="landing-page/js/essentials/main.js"></script>
-    
+
 </body>
+
 </html>

@@ -9,6 +9,8 @@ public interface FaqService {
 
     List<FaqModel> getAllFaq();
 
+    List<FaqModel> getAllFaqByStatusPosting(Integer statusPosting);
+
     FaqModel getFaqById(Long id);
 
     void updateFaq(FaqModel faq);

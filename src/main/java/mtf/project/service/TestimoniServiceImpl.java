@@ -1,4 +1,4 @@
-package mtf.project.service;
+    package mtf.project.service;
 
 import mtf.project.model.TestimoniModel;
 import mtf.project.repository.TestimoniDb;
@@ -16,6 +16,11 @@ public class TestimoniServiceImpl implements TestimoniService{
     @Override
     public List<TestimoniModel> getAllTestimoni() {
         return testimoniDb.findAll();
+    }
+
+    @Override
+    public List<TestimoniModel> getAllTestimoniByStatusPosting(Integer statusPosting) {
+        return testimoniDb.findByStatusPosting(statusPosting);
     }
 
     @Override

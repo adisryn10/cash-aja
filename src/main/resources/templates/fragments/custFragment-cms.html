@@ -1,0 +1,60 @@
+<html th:fragment="all" xmlns:th="http://thymeleaf.org">
+
+<head>
+  <title>MTF Kredit Multiguna</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="/cust/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/cust/css/jquery-ui.css">
+  <link rel="stylesheet" href="/cust/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/cust/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/cust/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/cust/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/cust/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="/cust/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="/cust/css/aos.css">
+  <link rel="stylesheet" href="/cust/css/style.css">
+  <link rel="icon" href="/cust/images/cash-aja.png">
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<div class="site-wrap" id="home-section">
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar" role="banner">
+    <div class="col-container">
+      <div id= "navbar-left most-left" class="main-menu">
+        <a th:href="@{/}" class="logo-navbar text-black h2"><img class="img-navbar" src="cust/images/cashajalogo-blue.png"></img></a>
+      </div>
+      <div id="navbar-right">
+        <nav id= "navbar" class="site-navigation" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" padding="0px 0px 0px">
+            <li><a th:href="@{/#simulation-section}" class="nav-link first-link">Simulasi</a></li>
+            <li><a href="https://topup.mtf.co.id:2121/Multiguna/topupmultiguna" onclick="window.open('https://topup.mtf.co.id:2121/Multiguna/topupmultiguna','_self')" class="nav-link">Top Up Express</a></li>
+            <li><a href="https://www.mtf.co.id/id/mandiri-wira" onclick="window.open('https://www.mtf.co.id/id/mandiri-wira','_self')" class="nav-link">WIRA</a></li>
+            <li><a th:href="@{/faq}" onclick="window.open('/faq','_self')" class="nav-link">Tentang CashAja</a></li>
+            <li th:each="halaman, counter : ${listHalaman}"><a th:href="@{/page/}+${halaman.id}" onclick="window.open('@{/page/}+${halaman.id}','_self')" class="nav-link" th:text="${halaman.judul}"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-12 d-inline-block d-lg-none ml-md-0">
+      <a th:href="@{/}" class="logo-navbar text-black h2 mb-0 float-left"><img class="img-navbar-mobile" src="cust/images/cashajalogo-blue.png"></a>
+      <a class="site-menu-toggle js-menu-toggle text-black float-right">
+        <span class="icon-menu h3"></span>
+      </a>
+    </div>
+  </header>
+</div>
+</body>
+</html>

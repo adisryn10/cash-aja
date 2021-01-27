@@ -56,10 +56,10 @@
                               <table class="table text-left" style="width:100%" id="example">
                                  <thead>
                                     <tr>
-                                       <th>Nomor</th>
-                                       <th>Date Created</th>
+                                       <th>No</th>
+                                       <th>Latest Edit</th>
                                        <th>Title</th>
-                                       <th>Detail</th>
+                                       <th>Content</th>
                                        <th>Author</th>
                                        <th>Status</th>
                                        <th>Options</th>
@@ -68,12 +68,14 @@
                                  <tbody>
                                     <tr th:each="promo, counter : ${listPromo}">
                                        <td th:text="${counter.count}"></td>
-                                       <td th:text="${promo.latest_edit}"></td>
+                                       <td th:text="${promo.latestEdit}"></td>
                                        <td th:text="${promo.judul}"></td>
-                                       <td th:text="${promo.latest_author}"></td>
-                                       <td th:text="${promo.status}"></td>
+                                       <td th:text="${promo.detail}"></td>
+                                       <td th:text="${promo.latestAuthor.name}"></td>
+                                       <td th:if="${promo.statusPosting == 0}">Draft</td>
+                                       <td th:if="${promo.statusPosting == 1}">Publish</td>
                                        <td>
-                                          <a th:href="@{/admin/detail/}+${promo.id}">
+                                          <a th:href="@{/admin/promo/detail/}+${promo.id}">
                                           <button class="btn btn-primary">
                                              Sunting
                                           </button>

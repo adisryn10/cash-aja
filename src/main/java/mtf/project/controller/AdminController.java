@@ -52,7 +52,7 @@ public class AdminController {
         return "cms/admin/admin-dashboard";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addUserForm(Model model) {
         UserRoleModel user = new UserRoleModel();
         List<RoleModel> listRole = roleService.findAll();
@@ -81,12 +81,12 @@ public class AdminController {
         return new RedirectView("/admin/detail/" + user.getUsername(), true);
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST)
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public RedirectView addUserSubmit(UserRoleModel user, Authentication auth,
                                       @RequestParam("konfirmasi") String konfirmasi, Model model, RedirectAttributes redirectAttributes) {
         if (!user.getPassword().equals(konfirmasi)) {
             redirectAttributes.addFlashAttribute("isNotEqual", true);
-            return new RedirectView("/admin/tambah", true);
+            return new RedirectView("/admin/add", true);
         }
         UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
         user.setLatestAuthor(latestAuthor);

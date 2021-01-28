@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PromoServiceImpl implements PromoService{
+public class PromoServiceImpl implements PromoService {
 
     @Autowired
     PromoDb promoDb;
@@ -17,6 +17,12 @@ public class PromoServiceImpl implements PromoService{
     public List<PromoModel> getAllPromo() {
         return promoDb.findAll();
     }
+
+    @Override
+    public List<PromoModel> getAllPromoByStatusPosting(Integer statusPosting) {
+        return promoDb.findByStatusPosting(statusPosting);
+    }
+
 
     @Override
     public PromoModel getPromoById(Long id) {

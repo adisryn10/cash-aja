@@ -20,6 +20,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -43,24 +44,28 @@ public class PromoController {
         return "cms/promo/promo-dashboard";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPromoForm(Model model) {
         PromoModel promo = new PromoModel();
         model.addAttribute("promo", promo);
         return "cms/promo/form-tambah-promo";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params = {"draft"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"draft"})
     public RedirectView addPromoDraft(PromoModel promo,
                                       Authentication auth,
-                                      @RequestParam("files") MultipartFile file,
+                                      @RequestParam("file1") MultipartFile file1,
+                                      @RequestParam("file2") MultipartFile file2,
                                       Model model, RedirectAttributes redirectAttributes) {
         try {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
 
-            FileModel fileSaved = fileService.store(file);
-            promo.setFile(fileSaved);
+            FileModel file1Saved = fileService.store(file1);
+            promo.setBanner(file1Saved);
+
+            FileModel file2Saved = fileService.store(file2);
+            promo.setBannerFull(file2Saved);
 
             promo.setStatusPosting(0);
 
@@ -73,22 +78,26 @@ public class PromoController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/promo", true);
         } catch (Exception e) {
-            return new RedirectView("/admin/promo/tambah", true);
+            return new RedirectView("/admin/promo/add", true);
         }
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params = {"publish"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"publish"})
     public RedirectView addPromoPublish(PromoModel promo,
                                         Authentication auth,
-                                        @RequestParam("files") MultipartFile file,
+                                        @RequestParam("file1") MultipartFile file1,
+                                        @RequestParam("file2") MultipartFile file2,
                                         Model model,
                                         RedirectAttributes redirectAttributes) {
         try {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
 
-            FileModel fileSaved = fileService.store(file);
-            promo.setFile(fileSaved);
+            FileModel file1Saved = fileService.store(file1);
+            promo.setBanner(file1Saved);
+
+            FileModel file2Saved = fileService.store(file2);
+            promo.setBannerFull(file2Saved);
 
             promo.setStatusPosting(1);
 
@@ -102,7 +111,7 @@ public class PromoController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/promo", true);
         } catch (Exception e) {
-            return new RedirectView("/admin/promo/tambah", true);
+            return new RedirectView("/admin/promo/add", true);
         }
     }
 
@@ -118,8 +127,19 @@ public class PromoController {
     public String updateUserForm(@PathVariable Long id, Model model, HttpServletResponse response) throws IOException {
         PromoModel promo = promoService.getPromoById(id);
         model.addAttribute("promo", promo);
-//        String dataImage = Base64.getEncoder().encodeToString(promo.getFile().getData());
-//        model.addAttribute("dataImage", dataImage);
+
+        if (promo.getBanner() != null) {
+            String dataBannerImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataBannerImage", dataBannerImage);
+            model.addAttribute("hasBannerImage", true);
+        }
+
+        if (promo.getBannerFull() != null) {
+            String dataBannerFullImage = Base64.getEncoder().encodeToString(promo.getBannerFull().getData());
+            model.addAttribute("dataBannerFullImage", dataBannerFullImage);
+            model.addAttribute("hasBannerFullImage", true);
+        }
+
         return "cms/promo/form-update-promo";
     }
 
@@ -132,7 +152,7 @@ public class PromoController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
 
-            FileModel currentFile = promoService.getPromoById(promo.getId()).getFile();
+            FileModel currentFile = promoService.getPromoById(promo.getId()).getBanner();
 
             if (!file.isEmpty()) {
                 if (currentFile != null) {
@@ -140,9 +160,9 @@ public class PromoController {
                 }
 
                 FileModel fileSaved = fileService.store(file);
-                promo.setFile(fileSaved);
+                promo.setBanner(fileSaved);
             } else {
-                promo.setFile(currentFile);
+                promo.setBanner(currentFile);
             }
             promo.setStatusPosting(0);
 
@@ -151,6 +171,11 @@ public class PromoController {
 
             promoService.updatePromo(promo);
             List<PromoModel> listPromo = promoService.getAllPromo();
+
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+
             model.addAttribute("promo", promo);
             model.addAttribute("listPromo", listPromo);
             model.addAttribute("updateSuccess", true);
@@ -170,7 +195,7 @@ public class PromoController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
 
-            FileModel currentFile = promoService.getPromoById(promo.getId()).getFile();
+            FileModel currentFile = promoService.getPromoById(promo.getId()).getBanner();
 
             if (!file.isEmpty()) {
                 if (currentFile != null) {
@@ -178,9 +203,9 @@ public class PromoController {
                 }
 
                 FileModel fileSaved = fileService.store(file);
-                promo.setFile(fileSaved);
+                promo.setBanner(fileSaved);
             } else {
-                promo.setFile(currentFile);
+                promo.setBanner(currentFile);
             }
 
             promo.setStatusPosting(1);
@@ -190,6 +215,11 @@ public class PromoController {
 
             promoService.updatePromo(promo);
             List<PromoModel> listPromo = promoService.getAllPromo();
+
+            String dataImage = Base64.getEncoder().encodeToString(promo.getBanner().getData());
+            model.addAttribute("dataImage", dataImage);
+            model.addAttribute("hasImage", true);
+
             model.addAttribute("promo", promo);
             model.addAttribute("listPromo", listPromo);
             model.addAttribute("updateSuccess", true);
@@ -199,5 +229,4 @@ public class PromoController {
             return "cms/promo/form-update-promo";
         }
     }
-
 }

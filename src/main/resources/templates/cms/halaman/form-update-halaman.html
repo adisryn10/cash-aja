@@ -21,8 +21,18 @@
       $('#example').DataTable();
     });
   </script>
+
   <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+  <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+  <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+  <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+  <script th:src="@{/assets/summernote/summernote-bs4.js}"></script>
+
+  <link th:rel="stylesheet" th:href="@{/assets/summernote/summernote-bs4.css}" />
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} " />
+
 </head>
 
 <body id="page-top">
@@ -32,7 +42,7 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
       <!-- Main Content -->
-      <div id="content">
+      <div id="content-page">
         <object th:replace="fragments/adminFragment  ::  topbar" th:remove="tag"></object>
         <!-- Begin Page Content -->
         <div class="container-fluid">
@@ -46,6 +56,9 @@
                   <div class="row">
                     <div class="col-12">
                       <form th:action="@{/admin/halaman/update}" enctype="multipart/form-data" method="POST">
+                        <div th:if="${updateSuccess}" class="alert alert-info text-center" role="alert">
+                          Halaman berhasil diubah
+                        </div>
 
                         <input type="hidden" name="id" class="form-control mb-4" th:value="${halaman.id}" />
 
@@ -53,7 +66,8 @@
                         <input type="text" name="judul" class="form-control mb-4" th:value="${halaman.judul}" />
 
                         <label>Konten</label>
-                        <textarea name="konten" class="form-control mb-2" th:field="${halaman.konten}"></textarea>
+                        <textarea type="text" name="konten" id="content" th:field="${halaman.konten}" rows="4"
+                          placeholder="Content" class="form-control mb2" autocomplete="off"></textarea>
 
                         <br>
                         <button type="submit" class="btn btn-primary mr-4" name="publish">Simpan & Publish</button>
@@ -68,35 +82,37 @@
               <div class="card">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-12">
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Status</strong></h6>
-                          <div th:if="${halaman.statusPosting} == 0"> Draft</div>
-                          <div th:if="${halaman.statusPosting} == 1"> Publish</div>
+                    <div class="container">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Status</strong></h6>
+                            <div th:if="${halaman.statusPosting} == 0">Draft</div>
+                            <div th:if="${halaman.statusPosting} == 1">Publish</div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Pengubah Terakhir</strong></h6>
-                          <div th:text="${halaman.latestAuthor.name}"></div>
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Pengubah Terakhir</strong></h6>
+                            <div th:text="${halaman.latestAuthor.name}"></div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Waktu Perubahan</strong></h6>
-                          <div th:text="${halaman.latestEdit}"></div>
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Waktu Perubahan</strong></h6>
+                            <div th:text="${halaman.latestEdit}"></div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Hapus Halaman</strong></h6>
-                          <p>Untuk menghapus halaman secara permanen, silahkan tekan tombol dibawah ini</p>
-                          <div>
-                            <form th:action="@{/admin/halaman/delete}" method="POST">
-                              <input type="hidden" name="id" class="form-control" th:value="${halaman.id}" />
-                              <button type="submit" class="btn btn-danger">Hapus Page</button>
-                            </form>
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Hapus Halaman</strong></h6>
+                            <p>Untuk menghapus halaman secara permanen, silahkan tekan tombol dibawah ini</p>
+                            <div>
+                              <form th:action="@{/admin/halaman/delete}" method="POST">
+                                <input type="hidden" name="id" class="form-control" th:value="${halaman.id}" />
+                                <button type="submit" class="btn btn-danger">Hapus Halaman</button>
+                              </form>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -113,6 +129,16 @@
       <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
+  </div>
+  <!-- include summernote css/js -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+  <script>
+    $('#content').summernote({
+      height: 200
+    });
+  </script>
+</body>
 </body>
 
 </html>

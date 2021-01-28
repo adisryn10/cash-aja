@@ -35,14 +35,14 @@ public class HalamanController {
         return "cms/halaman/halaman-dashboard";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addHalaman(Model model) {
         HalamanModel halaman = new HalamanModel();
         model.addAttribute("halaman", halaman);
         return "cms/halaman/form-tambah-halaman";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params = {"draft"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"draft"})
     public RedirectView addHalamanDraft(HalamanModel halaman,
                                         Authentication auth,
                                         Model model,
@@ -64,7 +64,7 @@ public class HalamanController {
         return new RedirectView("/admin/halaman", true);
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params = {"publish"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"publish"})
     public RedirectView addHalamanPublish(HalamanModel halaman,
                                           Authentication auth,
                                           Model model,

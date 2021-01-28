@@ -1,29 +1,10 @@
 <html th:fragment="promo" xmlns:th="http://thymeleaf.org">
 <div id='slider-promo' data-aos="fade-up">
-  <div id="carouselExampleControls" data-background="#41a7b3" class="carousel slide" data-ride="carousel"
-    style="margin-top:30px;margin-bottom:30px">
-    <div class="carousel-inner container">
-      <div class="carousel-item active">
-        <a href="/promo-bumn"><img class="d-block w-100" src="landing-page/images/promo/BUMN_banner.png"
-            alt="First slide"></a>
-      </div>
-      <div class="carousel-item">
-        <a href="/promo-pns"><img class="d-block w-100" src="landing-page/images/promo/PNS_banner.png"
-            alt="Second slide"></a>
-      </div>
-      <div class="carousel-item">
-        <a href="/promo-wiraswasta"><img class="d-block w-100" src="landing-page/images/promo/Wiraswasta_banner.png"
-            alt="Third slide"></a>
-      </div>
+  <div class="slide-one-item home-slider owl-carousel">
+    <div th:each="promo, counter : ${listPromo}">
+      <a th:href="@{/promo/}+${promo.id}"><img class="d-block w-100" alt="Image"
+          th:src="'data:image/jpeg;base64,' + ${promoImage.get(counter.count-1)}"></a>
     </div>
-    <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls" role="button">
-      <span aria-hidden="true" class="carousel-control-prev-icon"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" data-slide="next" href="#carouselExampleControls" role="button">
-      <span aria-hidden="true" class="carousel-control-next-icon"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 </div>
 

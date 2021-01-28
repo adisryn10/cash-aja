@@ -9,6 +9,7 @@ import mtf.project.service.TestimoniService;
 import mtf.project.service.UserService;
 import mtf.project.service.YoutubeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.Date;
@@ -49,14 +52,14 @@ public class TestimoniController {
         return "cms/testimoni/testimoni-dashboard";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addTestimoniForm(Model model) {
         TestimoniModel testimoni = new TestimoniModel();
         model.addAttribute("testimoni", testimoni);
         return "cms/testimoni/form-tambah-testimoni";
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params = {"draft"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"draft"})
     public RedirectView addTestimoniDraft(TestimoniModel testimoni,
                                           Authentication auth,
                                           @RequestParam("files") MultipartFile file,
@@ -79,11 +82,11 @@ public class TestimoniController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/testimoni", true);
         } catch (Exception e) {
-            return new RedirectView("/admin/tambah", true);
+            return new RedirectView("/admin/add", true);
         }
     }
 
-    @RequestMapping(value = "/tambah", method = RequestMethod.POST, params = {"publish"})
+    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"publish"})
     public RedirectView addTestimoniPublish(TestimoniModel testimoni,
                                             Authentication auth,
                                             @RequestParam("files") MultipartFile file,
@@ -93,8 +96,16 @@ public class TestimoniController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             testimoni.setLatestAuthor(latestAuthor);
 
+            if (file.isEmpty()) {
+                File defaultFile = new File("src/main/resources/static/cust/images/user-avatar.png");
+                FileInputStream input = new FileInputStream(defaultFile);
+                file = new MockMultipartFile("defaultFile",
+                        defaultFile.getName(), "image/png", input.readAllBytes());
+            }
+
             FileModel fileSaved = fileService.store(file);
             testimoni.setFile(fileSaved);
+
 
             testimoni.setStatusPosting(1);
 
@@ -108,7 +119,7 @@ public class TestimoniController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/testimoni", true);
         } catch (Exception e) {
-            return new RedirectView("/admin/tambah", true);
+            return new RedirectView("/admin/add", true);
         }
     }
 

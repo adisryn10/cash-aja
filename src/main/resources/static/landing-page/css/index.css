@@ -46,7 +46,7 @@
   width:60px;
 }
 
-.first-link{
+/* .first-link{
   margin-left:500px;
 }@media (max-width: 1200px) {
   .first-link{
@@ -67,7 +67,7 @@
   .first-link{
     margin-left: 0px;
   }
-}
+} */
 
 
 .faq-table{
@@ -2125,6 +2125,30 @@ h1{
   font-weight:400;
 }
 
+#navbar{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navbar-left{
+  justify-content: flex-start;
+}
+
+.col-container{
+  display:grid;
+  flex-wrap: nowrap;
+}
+
+.width-parent{
+  width: 100%;
+}
+
+.most-left{
+  /* position: absolute;
+  left: 0; */
+  float:left;
+}
+
 #testimonial-row{
   display:flex;
   flex-direction: row;
@@ -2249,7 +2273,7 @@ th {
   text-align: center;
 }
 
-#promo-detail{
+.page-detail{
   padding-top: 7em;
   padding-bottom: 5em;
   padding-left: 5em;

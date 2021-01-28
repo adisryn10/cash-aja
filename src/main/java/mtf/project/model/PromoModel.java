@@ -8,12 +8,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name="promo")
-public class PromoModel implements Serializable {
+public class PromoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,13 +21,21 @@ public class PromoModel implements Serializable {
     @Column(name = "judul", nullable = false)
     private String judul;
 
-    @NotNull
-    @Column(name = "banner", length = Integer.MAX_VALUE, nullable = false)
-    private byte[] banner;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "banner", referencedColumnName = "id")
+    private FileModel banner;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "banner_full", referencedColumnName = "id")
+    private FileModel banner_full;
 
     @NotNull
     @Column(name = "detail", length = Integer.MAX_VALUE, nullable = false)
     private String detail;
+
+    @NotNull
+    @Column(name = "statusPosting", nullable = false)
+    private Integer statusPosting;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "latest_author", referencedColumnName = "id")
@@ -39,14 +46,6 @@ public class PromoModel implements Serializable {
     @NotNull
     @Column(name = "latest_edit", nullable = false)
     private Date latestEdit;
-
-    @NotNull
-    @Column(name = "statusPosting", nullable = false)
-    private Integer statusPosting;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "file", referencedColumnName = "id")
-    private FileModel file;
 
     public Long getId() {
         return id;
@@ -60,9 +59,12 @@ public class PromoModel implements Serializable {
         this.judul = judul;
     }
 
+    public String getJudul() {
+        return judul;
+    }
     
-    public void setBanner(byte[] banner) {
-        this.banner = banner;
+    public String getDetail() {
+        return detail;
     }
 
     public void setDetail(String detail) {
@@ -85,12 +87,20 @@ public class PromoModel implements Serializable {
         this.latestEdit = latestEdit;
     }
 
-    public FileModel getFile() {
-        return file;
+    public FileModel getBanner() {
+        return banner;
     }
 
-    public void setFile(FileModel file) {
-        this.file = file;
+    public void setBanner(FileModel banner) {
+        this.banner = banner;
+    }
+
+    public FileModel getBannerFull() {
+        return banner_full;
+    }
+
+    public void setBannerFull(FileModel banner_full) {
+        this.banner_full = banner_full;
     }
 
     public Integer getStatusPosting() {

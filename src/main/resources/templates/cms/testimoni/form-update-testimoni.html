@@ -46,7 +46,9 @@
                   <div class="row">
                     <div class="col-12">
                       <form th:action="@{/admin/testimoni/update}" enctype="multipart/form-data" method="POST">
-
+                        <div th:if="${updateSuccess}" class="alert alert-info text-center" role="alert">
+                          Testimoni berhasil diubah
+                        </div>
                         <input type="hidden" name="id" class="form-control mb-4" th:value="${testimoni.id}" />
 
                         <label>Nama</label>
@@ -72,35 +74,37 @@
               <div class="card">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-12">
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Status</strong></h6>
-                          <div th:if="${testimoni.statusPosting} == 0"> Draft</div>
-                          <div th:if="${testimoni.statusPosting} == 1"> Publish</div>
+                    <div class="container">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Status</strong></h6>
+                            <div th:if="${testimoni.statusPosting} == 0">Draft</div>
+                            <div th:if="${testimoni.statusPosting} == 1">Publish</div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Pengubah Terakhir</strong></h6>
-                          <div th:text="${testimoni.latestAuthor.name}"></div>
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Pengubah Terakhir</strong></h6>
+                            <div th:text="${testimoni.latestAuthor.name}"></div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Waktu Perubahan</strong></h6>
-                          <div th:text="${testimoni.latestEdit}"></div>
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Waktu Perubahan</strong></h6>
+                            <div th:text="${testimoni.latestEdit}"></div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3">
-                          <h6><strong>Hapus Testimoni</strong></h6>
-                          <p>Untuk menghapus testimoni secara permanen, silahkan tekan tombol dibawah ini</p>
-                          <div>
-                            <form th:action="@{/admin/testimoni/delete}" method="POST">
-                              <input type="hidden" name="id" class="form-control" th:value="${testimoni.id}" />
-                              <button type="submit" class="btn btn-danger">Hapus Testimoni</button>
-                            </form>
+                        <div class="row">
+                          <div class="mb-3">
+                            <h6><strong>Hapus Testimoni</strong></h6>
+                            <p>Untuk menghapus testimoni secara permanen, silahkan tekan tombol dibawah ini</p>
+                            <div>
+                              <form th:action="@{/admin/testimoni/delete}" method="POST">
+                                <input type="hidden" name="id" class="form-control" th:value="${testimoni.id}" />
+                                <button type="submit" class="btn btn-danger">Hapus Testimoni</button>
+                              </form>
+                            </div>
                           </div>
                         </div>
                       </div>

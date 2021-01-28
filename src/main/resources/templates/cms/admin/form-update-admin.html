@@ -37,7 +37,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Sunting Admi CMS</h1>
+            <h1 class="h3 mb-0 text-gray-800">Sunting Admin CMS</h1>
           </div>
           <div>
             <div class="row">
@@ -69,40 +69,43 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-md-4 col-12">
                 <div class="card">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="mb-3">
-                            <h6><strong>Status</strong></h6>
-                            <div th:if="${user.status} == 0">Tidak Aktif</div>
-                            <div th:if="${user.status} == 1">Aktif</div>
+                      <div class="container">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="mb-3">
+                              <h6><strong>Status</strong></h6>
+                              <div th:if="${user.status} == 0">Tidak Aktif</div>
+                              <div th:if="${user.status} == 1">Aktif</div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="mb-3">
-                            <h6><strong>Pengubah Terakhir</strong></h6>
-                            <div th:text="${user.latestAuthor.name}"></div>
+                          <div class="row">
+                            <div class="mb-3">
+                              <h6><strong>Pengubah Terakhir</strong></h6>
+                              <div th:text="${user.latestAuthor.name}"></div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="mb-3">
-                            <h6><strong>Waktu Perubahan</strong></h6>
-                            <div th:text="${user.latestEdit}"></div>
+                          <div class="row">
+                            <div class="mb-3">
+                              <h6><strong>Waktu Perubahan</strong></h6>
+                              <div th:text="${user.latestEdit}"></div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="mb-3">
-                            <h6><strong>Hapus Akun</strong></h6>
-                            <p>Untuk menghapus akun secara permanen, silahkan tekan tombol dibawah ini</p>
-                            <div>
-                              <form th:action="@{/admin/delete}" method="POST">
-                                <input type="hidden" name="id" class="form-control" th:value="${user.id}" />
-                                <input type="hidden" name="username" class="form-control" th:value="${user.username}" />
-                                <button type="submit" class="btn btn-danger">Hapus Akun</button>
-                              </form>
+                          <div class="row">
+                            <div class="mb-3">
+                              <h6><strong>Hapus Akun Admin</strong></h6>
+                              <p>Untuk menghapus akun admin secara permanen, silahkan tekan tombol dibawah ini</p>
+                              <div>
+                                <form th:action="@{/admin/delete}" method="POST">
+                                  <input type="hidden" name="id" class="form-control" th:value="${user.id}" />
+                                  <input type="hidden" name="username" class="form-control"
+                                    th:value="${user.username}" />
+                                  <button type="submit" class="btn btn-danger">Hapus Akun</button>
+                                </form>
+                              </div>
                             </div>
                           </div>
                         </div>

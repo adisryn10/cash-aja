@@ -21,10 +21,10 @@
   <link rel="stylesheet" href="landing-page/css/essentials/aos.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="landing-page/css/index.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/index.css">
 </head>
 
-<body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
+<body class="faq" data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
   <div class="site-wrap" id="home-section">
     <div class="site-mobile-menu site-navbar-target">
@@ -35,43 +35,27 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
+
+    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+    </header>
+
+    <div class='page-detail'>
+      <h1 th:text="${promo.judul}"><Strong></Strong></h1>
+      <div id="detail-asset">
+        <img alt="Image" class="img-fluid" id="topupexpress-img"
+          th:src="'data:image/jpeg;base64,' + ${dataBannerFullImage}">
+        <p th:utext="${promo.detail}"></p>
+      </div>
+    </div>
   </div>
-
-  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-    <object th:include="fragments/custFragment-cms  ::  all" th:remove="tag"></object>
-  </header>
-
-  <br><br>
-
-  <!-- FIRST LANDING -->
-  <object th:include="fragments/home/intro  ::  intro" th:remove="tag"></object>
-
-  <!-- PROMO -->
-  <object th:include="fragments/home/promo  ::  promo" th:remove="tag"></object>
-
-  <!-- KEUNTUNGAN -->
-  <object th:include="fragments/home/keuntungan  ::  keuntungan" th:remove="tag"></object>
-
-  <!-- CARA PENGAJUAN -->
-  <object th:include="fragments/home/pengajuan  ::  pengajuan" th:remove="tag"></object>
-
-  <!-- SIMULASI -->
-  <object th:include="fragments/home/simulasi  ::  simulasi" th:remove="tag"></object>
-
-  <!--TOP UP EXPRESS-->
-  <object th:include="fragments/home/topupexpress  ::  topupexpress" th:remove="tag"></object>
-
-  <!--WIRA-->
-  <object th:include="fragments/home/wira  ::  wira" th:remove="tag"></object>
-
-  <!--TESTIMONI-->
-  <object th:include="fragments/home/testimoni  ::  testimoni" th:remove="tag"></object>
 
   <!--FOOTER-->
   <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
 </body>
 
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="landing-page/js/essentials/jquery-3.3.1.min.js"></script>
 <script src="landing-page/js/essentials/jquery-migrate-3.0.1.min.js"></script>
 <script src="landing-page/js/essentials/jquery-ui.js"></script>
@@ -86,8 +70,5 @@
 <script src="landing-page/js/essentials/jquery.fancybox.min.js"></script>
 <script src="landing-page/js/essentials/jquery.sticky.js"></script>
 <script src="landing-page/js/essentials/main.js"></script>
-<script src="landing-page/js/essentials/jquery.scrollie.min.js"></script>
-<script src="landing-page/js/others/js-webshim/minified/polyfiller.js"></script>
-<script src="landing-page/js/index.js"></script>
 
 </html>

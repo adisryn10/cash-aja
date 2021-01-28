@@ -82,7 +82,7 @@ public class TestimoniController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/testimoni", true);
         } catch (Exception e) {
-            return new RedirectView("/admin/add", true);
+            return new RedirectView("/admin/testimoni/add", true);
         }
     }
 
@@ -119,7 +119,7 @@ public class TestimoniController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/testimoni", true);
         } catch (Exception e) {
-            return new RedirectView("/admin/add", true);
+            return new RedirectView("/admin/testimoni/add", true);
         }
     }
 

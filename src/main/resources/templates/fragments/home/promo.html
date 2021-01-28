@@ -1,0 +1,11 @@
+<html th:fragment="promo" xmlns:th="http://thymeleaf.org">
+<div id='slider-promo' data-aos="fade-up">
+  <div class="slide-one-item home-slider owl-carousel">
+    <div th:each="promo, counter : ${listPromo}">
+      <a th:href="@{/promo/}+${promo.id}"><img class="d-block w-100" alt="Image"
+          th:src="'data:image/jpeg;base64,' + ${promoImage.get(counter.count-1)}"></a>
+    </div>
+  </div>
+</div>
+
+</html>

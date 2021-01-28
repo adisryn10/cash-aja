@@ -35,6 +35,34 @@ public class PengajuanModel implements Serializable {
     @Column(name = "hubungi", nullable = false)
     private String hubungi;
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getNoktp() {
+        return noktp;
+    }
+
+    public String getLokasi() {
+        return lokasi;
+    }
+
+    public String getHubungi() {
+        return hubungi;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

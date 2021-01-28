@@ -2,23 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <object th:include="fragments/fragment  ::  css" th:remove="tag"></object>
-    <object th:include="fragments/fragment  ::  js" th:remove="tag"></object>
+  <object th:include="fragments/fragment  ::  css" th:remove="tag"></object>
+  <object th:include="fragments/fragment  ::  js" th:remove="tag"></object>
 </head>
 
 <body>
 <section class="py-5 text-center bg-light">
-    <div class="container">
-        <h1 class="text-center">404</h1>
-        <h2 class="text-center">Not Found Error</h2>
-        <div>
-            <a th:href="@{/}">
-                <button class="btn btn-sm btn-dark">
-                    Kembali ke Halaman Utama
-                </button></a>
-
-        </div>
+  <div class="container">
+    <img alt="Image" class="img-fluid" id="404-error" src="landing-page/images/error/404.png">
+    <div>
+      <a th:href="@{/}">
+        <button class="btn btn-lg btn-primary">
+          Halaman Utama
+        </button></a>
     </div>
+  </div>
 </section>
 </body>
 

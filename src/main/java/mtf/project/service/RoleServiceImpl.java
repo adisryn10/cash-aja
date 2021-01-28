@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class RoleServiceImpl implements RoleService{
+public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private RoleDb roleDb;
 
-    public List<RoleModel> findAll(){
+    public List<RoleModel> findAll() {
         return roleDb.findAll();
     }
 

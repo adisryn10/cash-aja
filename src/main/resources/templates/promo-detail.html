@@ -1,90 +1,74 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
+
 <head>
-  <title>MTF Kredit Multiguna</title>
+  <title>CashAja - MTF Kredit Multiguna</title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="icon" href="/cust/images/cash-aja-square.PNG">
-  <link rel="stylesheet" href="cust/fonts/icomoon/style.css">
-  <link rel="stylesheet" href="cust/css/bootstrap.min.css">
-  <link rel="stylesheet" href="cust/css/jquery-ui.css">
-  <link rel="stylesheet" href="cust/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="cust/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="cust/css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="cust/css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="cust/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="cust/css/aos.css">
+  <link rel="icon" href="landing-page/images/cash-aja-square.PNG">
+  <link rel="stylesheet" href="landing-page/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/bootstrap.min.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/jquery-ui.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/owl.carousel.min.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/owl.theme.default.min.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/owl.theme.default.min.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="landing-page/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="landing-page/css/essentials/aos.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="cust/css/style.css">
-  <script>
-    AOS.init();
-  </script>
+  <link rel="stylesheet" href="landing-page/css/essentials/index.css">
 </head>
 
 <body class="faq" data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
-<div class="site-wrap" id="home-section">
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
-  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-    <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
-  </header>
-  
-  <div class='page-detail'>
-      <h1 th:text="${promo.judul}"><Strong></Strong></h1>
-      <div id="detail-asset">
-        <img alt="Image" class="img-fluid" id="topupexpress-img" th:src="'data:image/jpeg;base64,' + ${dataBannerFullImage}">
-        <p th:utext="${promo.detail}"></p>
-      </div>
-      
-  </div>
-
-
-      <!--FOOTER-->
-      <div class="footer bg-light">
-        <div class="half-container">
-          <p style="opacity: 0;">Mandiri Tunas Finance</p>
-          <img alt="Image" class="img-fluid" id="logo" src="cust/images/footer-logo.svg">
-          <p class="footer-text">Mandiri Tunas Finance terdaftar dan diawasi oleh OJK</p>
-          <p class="footer-text">Copyright &copy;
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-            All rights reserved
-          </p>
+  <div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
 
+    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+    </header>
 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="cust/js/jquery-3.3.1.min.js"></script>
-    <script src="cust/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="cust/js/jquery-ui.js"></script>
-    <script src="cust/js/popper.min.js"></script>
-    <script src="cust/js/bootstrap.min.js"></script>
-    <script src="cust/js/owl.carousel.min.js"></script>
-    <script src="cust/js/jquery.stellar.min.js"></script>
-    <script src="cust/js/jquery.countdown.min.js"></script>
-    <script src="cust/js/bootstrap-datepicker.min.js"></script>
-    <script src="cust/js/jquery.easing.1.3.js"></script>
-    <script src="cust/js/aos.js"></script>
-    <script src="cust/js/jquery.fancybox.min.js"></script>
-    <script src="cust/js/jquery.sticky.js"></script>
-    <script src="cust/js/main.js"></script>
-    <script>
+    <div class='page-detail'>
+      <h1 th:text="${promo.judul}"><Strong></Strong></h1>
+      <div id="detail-asset">
+        <img alt="Image" class="img-fluid" id="topupexpress-img"
+          th:src="'data:image/jpeg;base64,' + ${dataBannerFullImage}">
+        <p th:utext="${promo.detail}"></p>
+      </div>
+    </div>
+  </div>
+
+  <!--FOOTER-->
+  <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
 </body>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="landing-page/js/essentials/jquery-3.3.1.min.js"></script>
+<script src="landing-page/js/essentials/jquery-migrate-3.0.1.min.js"></script>
+<script src="landing-page/js/essentials/jquery-ui.js"></script>
+<script src="landing-page/js/essentials/popper.min.js"></script>
+<script src="landing-page/js/essentials/bootstrap.min.js"></script>
+<script src="landing-page/js/essentials/owl.carousel.min.js"></script>
+<script src="landing-page/js/essentials/jquery.stellar.min.js"></script>
+<script src="landing-page/js/essentials/jquery.countdown.min.js"></script>
+<script src="landing-page/js/essentials/bootstrap-datepicker.min.js"></script>
+<script src="landing-page/js/essentials/jquery.easing.1.3.js"></script>
+<script src="landing-page/js/essentials/aos.js"></script>
+<script src="landing-page/js/essentials/jquery.fancybox.min.js"></script>
+<script src="landing-page/js/essentials/jquery.sticky.js"></script>
+<script src="landing-page/js/essentials/main.js"></script>
+
 </html>

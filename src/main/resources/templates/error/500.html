@@ -2,23 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <object th:include="fragments/fragment  ::  css" th:remove="tag"></object>
-    <object th:include="fragments/fragment  ::  js" th:remove="tag"></object>
+  <object th:include="fragments/fragment  ::  css" th:remove="tag"></object>
+  <object th:include="fragments/fragment  ::  js" th:remove="tag"></object>
 </head>
 
 <body>
 <section class="py-5 text-center bg-light">
-    <div class="container">
-        <h1 class="text-center">500</h1>
-        <h2 class="text-center">Internal Server Error</h2>
-        <div>
-            <a th:href="@{/}">
-                <button class="btn btn-sm btn-dark">
-                    Kembali ke Halaman Utama
-                </button></a>
+  <div class="container">
+    <h1 class="text-center">500</h1>
+    <h2 class="text-center">Internal Server Error</h2>
+    <div>
+      <a th:href="@{/}">
+        <button class="btn btn-sm btn-dark">
+          Kembali ke Halaman Utama
+        </button></a>
 
-        </div>
     </div>
+  </div>
 </section>
 </body>
 

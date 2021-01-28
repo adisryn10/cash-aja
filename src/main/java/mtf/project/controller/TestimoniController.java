@@ -97,7 +97,7 @@ public class TestimoniController {
             testimoni.setLatestAuthor(latestAuthor);
 
             if (file.isEmpty()) {
-                File defaultFile = new File("src/main/resources/static/cust/images/user-avatar.png");
+                File defaultFile = new File("src/main/resources/static/landing-page/images/user-avatar.png");
                 FileInputStream input = new FileInputStream(defaultFile);
                 file = new MockMultipartFile("defaultFile",
                         defaultFile.getName(), "image/png", input.readAllBytes());
@@ -119,6 +119,7 @@ public class TestimoniController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/testimoni", true);
         } catch (Exception e) {
+            System.out.println(e);
             return new RedirectView("/admin/testimoni/add", true);
         }
     }

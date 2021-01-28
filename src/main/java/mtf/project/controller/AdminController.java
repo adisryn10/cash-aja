@@ -33,21 +33,14 @@ public class AdminController {
 
     @RequestMapping(path = "")
     public String home(Model model) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        for (GrantedAuthority authority : auth.getAuthorities()) {
-            model.addAttribute("role", authority.getAuthority());
-        }
-        List<UserRoleModel> listUser = userService.getUserByRoleNama("CUSTOMER");
-
+        List<UserRoleModel> listUser = userService.getAllUser();
         model.addAttribute("listUser", listUser);
         return "cms/admin/admin-dashboard";
     }
 
     @RequestMapping(path = "/users", method = RequestMethod.GET)
     public String user(Model model) {
-
         List<UserRoleModel> listUser = userService.getAllUser();
-
         model.addAttribute("listUser", listUser);
         return "cms/admin/admin-dashboard";
     }

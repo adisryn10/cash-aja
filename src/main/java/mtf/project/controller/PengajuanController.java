@@ -1,6 +1,5 @@
 package mtf.project.controller;
 
-import mtf.project.helpers.ClickConnectionHelper;
 import mtf.project.helpers.PengajuanExporter;
 import mtf.project.model.PengajuanModel;
 import mtf.project.service.PengajuanService;
@@ -29,13 +28,9 @@ public class PengajuanController {
     PengajuanService pengajuanService;
 
     @PostMapping(value = "/pengajuan/add")
-    public ResponseEntity<Object> submitPengajuan(@ModelAttribute PengajuanModel pengajuan) throws IOException {
+    public ResponseEntity<Object> submitPengajuan(@ModelAttribute PengajuanModel pengajuan) {
         try {
-            ClickConnectionHelper.addClickCounter("Kirim Pengajuan");
             pengajuanService.addPengajuan(pengajuan);
-            return ResponseEntity.status(HttpStatus.OK).body(null);
-        } catch (IOException e) {
-            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.OK).body(null);
         } catch (Exception handlerException) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(handlerException);

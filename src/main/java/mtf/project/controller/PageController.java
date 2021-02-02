@@ -1,6 +1,5 @@
 package mtf.project.controller;
 
-import mtf.project.helpers.ClickConnectionHelper;
 import mtf.project.model.*;
 import mtf.project.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -35,12 +33,7 @@ public class PageController {
     HalamanService halamanService;
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String index() throws IOException {
-        try {
-            ClickConnectionHelper.addClickCounter("Halaman Utama");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public String index() {
         return "home";
     }
 
@@ -82,12 +75,7 @@ public class PageController {
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public String login() throws IOException {
-        try {
-            ClickConnectionHelper.addClickCounter("CMS Login");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public String login() {
         return "cms-login";
     }
 
@@ -107,43 +95,28 @@ public class PageController {
     }
 
     @RequestMapping(path = "/faq", method = RequestMethod.GET)
-    public String faq(Model model) throws IOException {
-        try {
-            ClickConnectionHelper.addClickCounter("FAQ Layanan");
-            List<FaqModel> listFaq = faqService.getAllFaqByStatusPosting(1);
-            model.addAttribute("listFaq", listFaq);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public String faq(Model model) {
+        List<FaqModel> listFaq = faqService.getAllFaqByStatusPosting(1);
+        model.addAttribute("listFaq", listFaq);
         return "faq";
     }
 
     @RequestMapping(value = "/promo/{id}", method = RequestMethod.GET)
-    public String detailPromo(@PathVariable Long id, Model model) throws IOException {
-        try {
-            ClickConnectionHelper.addClickCounter("Web Banner & Promo");
-            PromoModel promo = promoService.getPromoById(id);
-            model.addAttribute("promo", promo);
-            if (promo.getBannerFull() != null) {
-                String dataBannerFullImage = Base64.getEncoder().encodeToString(promo.getBannerFull().getData());
-                model.addAttribute("dataBannerFullImage", dataBannerFullImage);
-                model.addAttribute("hasBannerFullImage", true);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+    public String detailPromo(@PathVariable Long id, Model model) {
+        PromoModel promo = promoService.getPromoById(id);
+        model.addAttribute("promo", promo);
+        if (promo.getBannerFull() != null) {
+            String dataBannerFullImage = Base64.getEncoder().encodeToString(promo.getBannerFull().getData());
+            model.addAttribute("dataBannerFullImage", dataBannerFullImage);
+            model.addAttribute("hasBannerFullImage", true);
         }
         return "promo-detail";
     }
 
     @RequestMapping(value = "/page/{id}", method = RequestMethod.GET)
-    public String updateHalamanForm(@PathVariable Long id, Model model) throws IOException {
-        try {
-            ClickConnectionHelper.addClickCounter("Pages on Navigation Bar");
-            HalamanModel halaman = halamanService.getHalamanById(id);
-            model.addAttribute("halaman", halaman);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public String updateHalamanForm(@PathVariable Long id, Model model) {
+        HalamanModel halaman = halamanService.getHalamanById(id);
+        model.addAttribute("halaman", halaman);
         return "pages-template";
     }
 }

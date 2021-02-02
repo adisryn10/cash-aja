@@ -75,25 +75,20 @@
 
 <!--Slider Promo-->
 <div id='slider-promo' data-aos="fade-up">
+    <div  class= "container" >
+    <h1 class="col-12" style="color:white">
+      <strong>Mengapa CashAja?</strong>
+    </h1>
+    <br>
+    </div>
+
     <div class="slide-one-item home-slider owl-carousel">
         <div th:each="promo, counter : ${listPromo}">
                 <a th:href="@{/promo/}+${promo.id}"><img class="d-block w-100" alt="Image" th:src="'data:image/jpeg;base64,' + ${promoImage.get(counter.count-1)}"></a>
         </div>
     </div>
-</div>
-
 
 <!-- KEUNTUNGAN -->
-<section class="site-section bg-light" id="features-section" data-aos="fade-up">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="mb-5 text-black text-left">
-                    <strong>Mengapa CashAja?</strong>
-                </h1>
-            </div>
-        </div>
-
         <div id="benefits">
             <div class="item5" data-aos="fade-up">
                 <div class="unit-4 d-block">

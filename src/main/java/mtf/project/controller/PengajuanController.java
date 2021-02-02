@@ -1,6 +1,7 @@
 package mtf.project.controller;
 
 import mtf.project.helpers.ClickConnectionHelper;
+import mtf.project.helpers.PengajuanExporter;
 import mtf.project.model.PengajuanModel;
 import mtf.project.service.PengajuanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -50,5 +55,20 @@ public class PengajuanController {
         pengajuanService.deletePengajuan(pengajuanDeleted);
         redirectAttributes.addFlashAttribute("deleteSuccess", true);
         return new RedirectView("/admin/pengajuan", true);
+    }
+
+    @GetMapping("/admin/pengajuan/export")
+    public void exportToExcel(HttpServletResponse response) throws IOException {
+        response.setContentType("application/octet-stream");
+        DateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");
+        String currentDateTime = dateFormatter.format(new Date());
+
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=pengajuan " + currentDateTime + ".xlsx";
+        response.setHeader(headerKey, headerValue);
+
+        List<PengajuanModel> listPengajuan = pengajuanService.getAllPengajuan();
+        PengajuanExporter excelExporter = new PengajuanExporter(listPengajuan);
+        excelExporter.export(response);
     }
 }

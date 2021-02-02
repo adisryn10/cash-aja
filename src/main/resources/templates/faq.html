@@ -4,187 +4,178 @@
 <head>
   <title>Tentang CashAja</title>
   <meta charset="utf-8">
+  <link rel="icon" href="/landing-page/images/cash-aja-square.PNG">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="icon" href="/landing-page/images/cash-aja-square.PNG">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="landing-page/fonts/icomoon/style.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/bootstrap.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/jquery-ui.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/owl.carousel.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/owl.theme.default.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/owl.theme.default.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/jquery.fancybox.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/bootstrap-datepicker.css" rel="stylesheet">
-  <link href="landing-page/fonts/flaticon/font/flaticon.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/aos.css" rel="stylesheet">
   <link href="landing-page/css/faq.css" rel="stylesheet">
 </head>
 
 <body class="faq" data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
-<div class="site-wrap" id="home-section">
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
+  <div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
       </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
 
-  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-    <object th:include="fragments/custFragment-cms  ::  all" th:remove="tag"></object>
-  </header>
+    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+    </header>
 
-  <div class="faq-content">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-8 col-sm-12">
-          <div class="faq-text">
-            <h2>Tentang Cash Aja</h2>
-            <p>Pemberian kredit atau pembiayaan kepada customer untuk kebutuhan dana atau kebutuhan konsumtif dengan
-              jaminan
-              dokumen kepemilikan kendaraan (BPKB) yang dimiliki customer dengan batas tahun kendaraan
-              2012-2020.Penuhi kebutuhan
-              untuk Modal Bisnis, Pendidikan, Pernikahan, Renovasi rumah, Travel, Kesehatan, dll.
-            </p>
+    <div class="faq-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 col-sm-12">
+            <div class="faq-text">
+              <h2>Tentang Cash Aja</h2>
+              <p>Pemberian kredit atau pembiayaan kepada customer untuk kebutuhan dana atau kebutuhan konsumtif dengan
+                jaminan
+                dokumen kepemilikan kendaraan (BPKB) yang dimiliki customer dengan batas tahun kendaraan
+                2012-2020.Penuhi kebutuhan
+                untuk Modal Bisnis, Pendidikan, Pernikahan, Renovasi rumah, Travel, Kesehatan, dll.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <img alt="Image" class="img-fluid" id="faq-logo" src="landing-page/images/cashajalogo-yellow.png">
           </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-          <img alt="Image" class="img-fluid" id="faq-logo" src="landing-page/images/cashajalogo-yellow.png">
-        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
 
-<!-- FAQ -->
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-12" data-aos="fade-up" style="position: relative;">
-      <div class="row">
-        <div class="col-md-12" data-aos="fade-up" style="position: relative;">
-          <div class="row">
-            <div class="col-lg-7 mr-auto">
-              <div id="accordion-faq">
-                <h2 class="text-faq">Frequently Asked Question</h2>
-                <p>Temukan jawaban dari pertanyaanmu disini.</p>
-                <div th:each="faq : ${listFaq}" class="card mt-4">
-                  <div aria-controls="collapseOne" aria-expanded="false" class="card-header"
-                       th:attr="data-target='#collapse'+${faq.id}" data-toggle="collapse" id="headingOne">
-                    <h5 class="btn-link-faq mt-3 mb-3" th:text="${faq.pertanyaan}"></h5>
-                  </div>
+  <!-- FAQ -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12" data-aos="fade-up" style="position: relative;">
+        <div class="row">
+          <div class="col-md-12" data-aos="fade-up" style="position: relative;">
+            <div class="row">
+              <div class="col-lg-7 mr-auto">
+                <div id="accordion-faq">
+                  <h2 class="text-faq">Frequently Asked Question</h2>
+                  <p>Temukan jawaban dari pertanyaanmu disini.</p>
+                  <div th:each="faq : ${listFaq}" class="card mt-4">
+                    <div aria-controls="collapseOne" aria-expanded="false" class="card-header"
+                      th:attr="data-target='#collapse'+${faq.id}" data-toggle="collapse" id="headingOne">
+                      <h5 class="btn-link-faq mt-3 mb-3" th:text="${faq.pertanyaan}"></h5>
+                    </div>
 
-                  <div th:id="'collapse'+${faq.id}" aria-labelledby="headingOne" data-parent="#accordion-faq"
-                       class="collapse">
-                    <div class="card-body" th:utext="${faq.jawaban}">
+                    <div th:id="'collapse'+${faq.id}" aria-labelledby="headingOne" data-parent="#accordion-faq"
+                      class="collapse">
+                      <div class="card-body" th:utext="${faq.jawaban}">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-4 " style="margin-left:auto;margin-right:auto;margin-top:0px;">
+              <div class="col-lg-4 " style="margin-left:auto;margin-right:auto;margin-top:0px;">
 
-              <!--Contact info-->
-              <h2 class="text-faq mt-5">Hubungi Kami</h2>
-              <div>Siap menjawab pertanyaan kamu </br>Senin-Jumat, pukul 08.00 - 17.00</div>
-              <div class="row mt-3">
-                <div class="col-2">
-                  <i class="fab fa-whatsapp-square" style='font-size:38px;'></i>
+                <!--Contact info-->
+                <h2 class="text-faq mt-5">Hubungi Kami</h2>
+                <div>Siap menjawab pertanyaan kamu </br>Senin-Jumat, pukul 08.00 - 17.00</div>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <i class="fab fa-whatsapp-square" style='font-size:38px;'></i>
+                  </div>
+                  <div class="col">
+                    <strong>
+                      <p>Whatsapp<br><a href="http://bit.ly/tanya-MARSHA">+62 81113705740</a></p>
+                    </strong>
+                  </div>
                 </div>
-                <div class="col">
-                  <strong>
-                    <p>Whatsapp<br><a href="http://bit.ly/tanya-MARSHA">+62 81113705740</a></p>
-                  </strong>
-                </div>
-              </div>
 
-              <div class="row mt-3">
-                <div class="col-2">
-                  <i class="fab fa-line" style='font-size:38px;'></i>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <i class="fab fa-line" style='font-size:38px;'></i>
+                  </div>
+                  <div class="col">
+                    <strong>
+                      <p>LINE<br><a href="http://qr.w69b.com/g/sprBVpGVy">@mandiritunasfin</a></p>
+                    </strong>
+                  </div>
                 </div>
-                <div class="col">
-                  <strong>
-                    <p>LINE<br><a href="http://qr.w69b.com/g/sprBVpGVy">@mandiritunasfin</a></p>
-                  </strong>
-                </div>
-              </div>
 
-              <div class="row mt-3">
-                <div class="col-2">
-                  <i class="fa fa-globe" style='font-size:38px;'></i>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <i class="fa fa-globe" style='font-size:38px;'></i>
+                  </div>
+                  <div class="col">
+                    <strong>
+                      <p>Website<br><a href="https://www.mtf.co.id/">mtf.co.id</a></p>
+                    </strong>
+                  </div>
                 </div>
-                <div class="col">
-                  <strong>
-                    <p>Website<br><a href="https://www.mtf.co.id/">mtf.co.id</a></p>
-                  </strong>
-                </div>
-              </div>
 
-              <div class="row mt-3">
-                <div class="col-2">
-                  <i class="fa fa-phone" style='font-size:38px;'></i>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <i class="fa fa-phone" style='font-size:38px;'></i>
+                  </div>
+                  <div class="col">
+                    <strong>
+                      <p>Care Center<br><a href="tel:1500059">1500059<a></p>
+                    </strong>
+                  </div>
                 </div>
-                <div class="col">
-                  <strong>
-                    <p>Care Center<br><a href="tel:1500059">1500059<a></p>
-                  </strong>
-                </div>
-              </div>
 
-              <div class="row mt-3">
-                <div class="col-2">
-                  <i class="material-icons" style='font-size:38px;'>email</i>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <i class="material-icons" style='font-size:38px;'>email</i>
+                  </div>
+                  <div class="col">
+                    <strong>
+                      <p>E-mail<br><a href="mailto:customer.service@mtf.co.id">customer.service@mtf.co.id</a></p>
+                    </strong>
+                  </div>
                 </div>
-                <div class="col">
-                  <strong>
-                    <p>E-mail<br><a href="mailto:customer.service@mtf.co.id">customer.service@mtf.co.id</a></p>
-                  </strong>
-                </div>
-              </div>
 
-              <!--Lokasi-->
-              <h5 class="text-black mt-5">Lokasi</h5>
-              <div class="row mt-3">
-                <div class="col-2">
-                  <i class="material-icons" style='font-size:48px;'>location_on</i>
+                <!--Lokasi-->
+                <h5 class="text-black mt-5">Lokasi</h5>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <i class="material-icons" style='font-size:48px;'>location_on</i>
+                  </div>
+                  <div class="col">
+                    <p>Graha Mandiri Lt.3A<br>Jl. Imam Bonjol No.61<br>Jakarta 10310</p>
+                  </div>
                 </div>
-                <div class="col">
-                  <p>Graha Mandiri Lt.3A<br>Jl. Imam Bonjol No.61<br>Jakarta 10310</p>
-                </div>
-              </div>
 
-              <!--Media Sosial-->
-              <h5 class="text-black mt-5">Media Sosial</h5>
-              <div class="row mt-3">
-                <div class="col-2">
-                  <a href="https://www.facebook.com/MTFAutoLoan">
-                    <i class="fab fa-facebook-f" style='font-size:38px;'></i>
-                  </a>
-                </div>
-                <div class="col-2">
-                  <a href="https://www.instagram.com/mandiritunasfinance">
-                    <i class="fab fa-instagram" style='font-size:38px;'></i>
-                  </a>
-                </div>
-                <div class="col-2">
-                  <a href="https://twitter.com/MandiriTunasFin">
-                    <i class="fab fa-twitter" style='font-size:38px;'></i>
-                  </a>
-                </div>
-                <div class="col-2">
-                  <a href="https://www.youtube.com/MandiriTunasFinanceOfficial">
-                    <i class="fab fa-youtube" style='font-size:38px;'></i>
-                  </a>
-                </div>
-                <div class="col-2">
-                  <a href="https://www.linkedin.com/company/pt.-mandiri-tunas-finance">
-                    <i class="fab fa-linkedin" style='font-size:38px;'></i>
-                  </a>
+                <!--Media Sosial-->
+                <h5 class="text-black mt-5">Media Sosial</h5>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <a href="https://www.facebook.com/MTFAutoLoan">
+                      <i class="fab fa-facebook-f" style='font-size:38px;'></i>
+                    </a>
+                  </div>
+                  <div class="col-2">
+                    <a href="https://www.instagram.com/mandiritunasfinance">
+                      <i class="fab fa-instagram" style='font-size:38px;'></i>
+                    </a>
+                  </div>
+                  <div class="col-2">
+                    <a href="https://twitter.com/MandiriTunasFin">
+                      <i class="fab fa-twitter" style='font-size:38px;'></i>
+                    </a>
+                  </div>
+                  <div class="col-2">
+                    <a href="https://www.youtube.com/MandiriTunasFinanceOfficial">
+                      <i class="fab fa-youtube" style='font-size:38px;'></i>
+                    </a>
+                  </div>
+                  <div class="col-2">
+                    <a href="https://www.linkedin.com/company/pt.-mandiri-tunas-finance">
+                      <i class="fab fa-linkedin" style='font-size:38px;'></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -193,28 +184,11 @@
       </div>
     </div>
   </div>
-</div>
+</body>
 
 <!--FOOTER-->
 <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
-</body>
-
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="landing-page/js/essentials/jquery-3.3.1.min.js"></script>
-<script src="landing-page/js/essentials/jquery-migrate-3.0.1.min.js"></script>
-<script src="landing-page/js/essentials/jquery-ui.js"></script>
-<script src="landing-page/js/essentials/popper.min.js"></script>
-<script src="landing-page/js/essentials/bootstrap.min.js"></script>
-<script src="landing-page/js/essentials/owl.carousel.min.js"></script>
-<script src="landing-page/js/essentials/jquery.stellar.min.js"></script>
-<script src="landing-page/js/essentials/jquery.countdown.min.js"></script>
-<script src="landing-page/js/essentials/bootstrap-datepicker.min.js"></script>
-<script src="landing-page/js/essentials/jquery.easing.1.3.js"></script>
-<script src="landing-page/js/essentials/aos.js"></script>
-<script src="landing-page/js/essentials/jquery.fancybox.min.js"></script>
-<script src="landing-page/js/essentials/jquery.sticky.js"></script>
-<script src="landing-page/js/essentials/main.js"></script>
 <script src="landing-page/js/faq.js"></script>
 
 </html>

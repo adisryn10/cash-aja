@@ -24,7 +24,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/click/**").permitAll()
                 .antMatchers("/home-cms").permitAll()
                 .antMatchers("/faq").permitAll()
-                .antMatchers("/faq-cms").permitAll()
                 .antMatchers("/page/**").permitAll()
                 .antMatchers("/promo/**").permitAll()
                 .antMatchers("/promo-bumn").permitAll()

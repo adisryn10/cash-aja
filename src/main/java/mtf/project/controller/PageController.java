@@ -108,20 +108,15 @@ public class PageController {
     }
 
     @RequestMapping(path = "/faq", method = RequestMethod.GET)
-    public String faq() throws IOException {
+    public String faq(Model model) throws IOException {
         try {
             ClickConnectionHelper.addClickCounter("FAQ Layanan");
+            List<FaqModel> listFaq = faqService.getAllFaqByStatusPosting(1);
+            model.addAttribute("listFaq", listFaq);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return "faq";
-    }
-
-    @RequestMapping(path = "/faq-cms", method = RequestMethod.GET)
-    public String faqCms(Model model) {
-        List<FaqModel> listFaq = faqService.getAllFaqByStatusPosting(1);
-        model.addAttribute("listFaq", listFaq);
-        return "faq-cms";
     }
 
     @RequestMapping(value = "/promo/{id}", method = RequestMethod.GET)

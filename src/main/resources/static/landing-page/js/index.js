@@ -42,13 +42,13 @@ $('#syarat-title-btn').click(function () {
 
   // Reset ke Tahap 1
   $('#pengajuan-1-desc').addClass("black-text")
-  $('#pengajuan-1-img').attr("src", "landing-page/images/pengajuan/1-colored.png")
+  $('#pengajuan-1-img').attr("src", "/landing-page/images/pengajuan/1-colored.png")
 });
 
 $('#pengajuan-1').hover(function () {
   // Step Pengajuan
   $('#pengajuan-1-desc').addClass("black-text")
-  $('#pengajuan-1-img').attr("src", "landing-page/images/pengajuan/1-colored.png")
+  $('#pengajuan-1-img').attr("src", "/landing-page/images/pengajuan/1-colored.png")
   // Elemen Sebelah Kanan (Form)
   $('#prosedur-form').removeClass('d-none')
   // Hapus State Hover
@@ -59,7 +59,7 @@ $('#pengajuan-1').hover(function () {
 $('#pengajuan-2').hover(function () {
   // Step Pengajuan
   $('#pengajuan-2-desc').addClass("black-text")
-  $('#pengajuan-2-img').attr("src", "landing-page/images/pengajuan/2-colored.png")
+  $('#pengajuan-2-img').attr("src", "/landing-page/images/pengajuan/2-colored.png")
   // Elemen Sebelah Kanan (Gambar Tahap 2)
   $('#prosedur-step-2').removeClass('d-none')
   // Hapus State Hover
@@ -70,7 +70,7 @@ $('#pengajuan-2').hover(function () {
 $('#pengajuan-3').hover(function () {
   // Step Pengajuan
   $('#pengajuan-3-desc').addClass("black-text")
-  $('#pengajuan-3-img').attr("src", "landing-page/images/pengajuan/3-colored.png")
+  $('#pengajuan-3-img').attr("src", "/landing-page/images/pengajuan/3-colored.png")
   // Elemen Sebelah Kanan (Form)
   $('#prosedur-step-3').removeClass('d-none')
   // Hapus State Hover
@@ -81,19 +81,19 @@ $('#pengajuan-3').hover(function () {
 // Menghapus Hover Elemen Elemen Sebelumnya Jika Ada Elemen Lain di Hover
 function clearPengajuan1() {
   $('#pengajuan-1-desc').removeClass("black-text")
-  $('#pengajuan-1-img').attr("src", "landing-page/images/pengajuan/1-uncolored.png")
+  $('#pengajuan-1-img').attr("src", "/landing-page/images/pengajuan/1-uncolored.png")
   $('#prosedur-form').addClass('d-none')
 }
 
 function clearPengajuan2() {
   $('#pengajuan-2-desc').removeClass("black-text")
-  $('#pengajuan-2-img').attr("src", "landing-page/images/pengajuan/2-uncolored.png")
+  $('#pengajuan-2-img').attr("src", "/landing-page/images/pengajuan/2-uncolored.png")
   $('#prosedur-step-2').addClass('d-none')
 }
 
 function clearPengajuan3() {
   $('#pengajuan-3-desc').removeClass("black-text")
-  $('#pengajuan-3-img').attr("src", "landing-page/images/pengajuan/3-uncolored.png")
+  $('#pengajuan-3-img').attr("src", "/landing-page/images/pengajuan/3-uncolored.png")
   $('#prosedur-step-3').addClass('d-none')
 }
 

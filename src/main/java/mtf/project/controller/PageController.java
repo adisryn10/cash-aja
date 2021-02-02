@@ -74,7 +74,6 @@ public class PageController {
             model.addAttribute("promoImage", promoImage);
             model.addAttribute("listPromo", listPromo);
         }
-
         List<HalamanModel> listHalaman = halamanService.getAllHalamanByStatusPosting(1);
         if (listHalaman.size() != 0) {
             model.addAttribute("listHalaman", listHalaman);

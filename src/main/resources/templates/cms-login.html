@@ -3,54 +3,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="landing-page/fonts/icomoon/style.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/bootstrap.min.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/jquery-ui.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/owl.carousel.min.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/owl.theme.default.min.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/owl.theme.default.min.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="/landing-page/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="/landing-page/css/essentials/bootstrap.min.css">
+  <link rel="stylesheet" href="/landing-page/css/essentials/jquery-ui.css">
   <link rel="stylesheet" href="/landing-page/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="landing-page/css/essentials/aos.css">
-  <link rel="stylesheet" href="landing-page/css/index.css">
+  <link rel="stylesheet" href="/landing-page/css/index.css">
   <link rel="icon" href="/landing-page/images/cash-aja.png">
 </head>
 
-<div class="site-section bg-light" id="contact-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-12 text-center">
-          <img alt="Image" class="img-fluid" id="cashaja-logo-cms" src="landing-page/images/cash-aja-logo-small.png">
-        </div>
+<div class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <img alt="Image" class="img-fluid" id="cashaja-logo-cms"
+          src="/landing-page/images/cash-aja-logo-small-rounded.png">
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-7 mb-5">
-          <form  th:action="@{/login}" class="p-5 bg-white" method="POST">
-            <div th:if="${param.error}">
-              <span style="color: red">Invalid username or password</span>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-7 mb-5">
+        <form th:action="@{/login}" class="p-5 bg-white" method="POST">
+          <div th:if="${param.error}">
+            <span style="color: red">Username atau Password Salah</span>
+          </div>
+
+          <div class="row form-group">
+
+            <div class="col-md-12">
+              <label class="text-black" for="subject">Username</label>
+              <input type="subject" id="subject" name="username" class="form-control rounded-0">
             </div>
+          </div>
 
-            <div class="row form-group">
-              
-              <div class="col-md-12">
-                <label class="text-black" for="subject">Username</label> 
-                <input type="subject" id="subject" name="username" class="form-control rounded-0">
-              </div>
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="text-black" for="subject">Password</label>
+              <input type="password" id="subject" name="password" class="form-control rounded-0">
             </div>
+          </div>
 
-            <div class="row form-group">       
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Password</label> 
-                  <input type="password" id="subject" name="password"class="form-control rounded-0">
-                </div>
-              </div>
-
-            <div class="row form-group justify-content-center">
-              <div class="row">
-                <input type="submit" value="Log In" class="btn btn-primary mr-2 mb-2">
-              </div>
+          <div class="row form-group justify-content-center">
+            <div class="row">
+              <input type="submit" value="Masuk" class="btn btn-primary mr-2 mb-2">
+            </div>
             <div>
-
-          </form>
-          </div></div></div></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

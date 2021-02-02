@@ -33,19 +33,12 @@ public class PageController {
     HalamanService halamanService;
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String index() {
-        return "home";
-    }
-
-    @RequestMapping(path = "/home-cms", method = RequestMethod.GET)
-    public String homeCms(Model model) {
-
+    public String index(Model model) {
         YoutubeModel youtubeModel = youtubeService.getYoutubeById((long) 1);
         if (youtubeModel != null) {
             String youtubeLink = youtubeModel.getLink().split("v=")[1];
             model.addAttribute("youtubeLink", youtubeLink);
         }
-
         List<TestimoniModel> listTestimoni = testimoniService.getAllTestimoniByStatusPosting(1);
         if (listTestimoni.size() != 0) {
             List<String> testimoniImage = new ArrayList<>();
@@ -56,7 +49,6 @@ public class PageController {
             model.addAttribute("testimoniImage", testimoniImage);
             model.addAttribute("listTestimoni", listTestimoni);
         }
-
         List<PromoModel> listPromo = promoService.getAllPromoByStatusPosting(1);
         if (listPromo.size() != 0) {
             List<String> promoImage = new ArrayList<>();
@@ -68,10 +60,8 @@ public class PageController {
             model.addAttribute("listPromo", listPromo);
         }
         List<HalamanModel> listHalaman = halamanService.getAllHalamanByStatusPosting(1);
-        if (listHalaman.size() != 0) {
-            model.addAttribute("listHalaman", listHalaman);
-        }
-        return "home-cms";
+        model.addAttribute("listHalaman", listHalaman);
+        return "home";
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
@@ -79,25 +69,12 @@ public class PageController {
         return "cms-login";
     }
 
-    @RequestMapping(path = "/promo-bumn", method = RequestMethod.GET)
-    public String bumn() {
-        return "bumn-promo-detail";
-    }
-
-    @RequestMapping(path = "/promo-pns", method = RequestMethod.GET)
-    public String pns() {
-        return "pns-promo-detail";
-    }
-
-    @RequestMapping(path = "/promo-wiraswasta", method = RequestMethod.GET)
-    public String wiraswasta() {
-        return "wiraswasta-promo-detail";
-    }
-
     @RequestMapping(path = "/faq", method = RequestMethod.GET)
     public String faq(Model model) {
         List<FaqModel> listFaq = faqService.getAllFaqByStatusPosting(1);
         model.addAttribute("listFaq", listFaq);
+        List<HalamanModel> listHalaman = halamanService.getAllHalamanByStatusPosting(1);
+        model.addAttribute("listHalaman", listHalaman);
         return "faq";
     }
 
@@ -110,6 +87,8 @@ public class PageController {
             model.addAttribute("dataBannerFullImage", dataBannerFullImage);
             model.addAttribute("hasBannerFullImage", true);
         }
+        List<HalamanModel> listHalaman = halamanService.getAllHalamanByStatusPosting(1);
+        model.addAttribute("listHalaman", listHalaman);
         return "promo-detail";
     }
 
@@ -117,7 +96,8 @@ public class PageController {
     public String updateHalamanForm(@PathVariable Long id, Model model) {
         HalamanModel halaman = halamanService.getHalamanById(id);
         model.addAttribute("halaman", halaman);
+        List<HalamanModel> listHalaman = halamanService.getAllHalamanByStatusPosting(1);
+        model.addAttribute("listHalaman", listHalaman);
         return "pages-template";
     }
 }
-

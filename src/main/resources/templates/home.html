@@ -26,41 +26,7 @@
   <object th:include="fragments/home/intro  ::  intro" th:remove="tag"></object>
 
   <!-- PROMO -->
-  <div id='slider-promo' data-aos="fade-up">
-
-    <div  class= "container" >
-      <h1 class="col-12" style="color:white">
-        <strong>Mengapa CashAja?</strong>
-      </h1>
-      <br>
-      </div>
-    
-    <div id="carouselExampleControls" data-background="#41a7b3" class="carousel slide" data-ride="carousel"
-      style="margin-top:30px;margin-bottom:30px">
-      <div class="carousel-inner container">
-        <div class="carousel-item active">
-          <a href="/promo-bumn"><img class="d-block w-100" src="landing-page/images/promo/BUMN_banner.png"
-              alt="First slide"></a>
-        </div>
-        <div class="carousel-item">
-          <a href="/promo-pns"><img class="d-block w-100" src="landing-page/images/promo/PNS_banner.png"
-              alt="Second slide"></a>
-        </div>
-        <div class="carousel-item">
-          <a href="/promo-wiraswasta"><img class="d-block w-100" src="landing-page/images/promo/Wiraswasta_banner.png"
-              alt="Third slide"></a>
-        </div>
-      </div>
-      <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls" role="button">
-        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" data-slide="next" href="#carouselExampleControls" role="button">
-        <span aria-hidden="true" class="carousel-control-next-icon"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
+  <object th:include="fragments/home/promo  ::  promo" th:remove="tag"></object>
 
   <!-- KEUNTUNGAN -->
   <object th:include="fragments/home/keuntungan  ::  keuntungan" th:remove="tag"></object>
@@ -78,77 +44,16 @@
   <object th:include="fragments/home/wira  ::  wira" th:remove="tag"></object>
 
   <!--TESTIMONI-->
-  <section class="site-section" id="testimonials-section" data-aos="fade-up">
-    <div class="container">
-      <div class="row mb-6">
-        <div class="col-12 text-left">
-          <h1 class="mb-5 text-black">
-            <strong>Testimoni Customer</strong>
-          </h1>
-        </div>
-      </div>
-      <div id="testimonial-row">
-        <div class="col-lg-6 col-md-12 col-12" id="youtube" style="margin-top:10px">
-          <div id="container-iframe" style="word-wrap:break-word;margin-top:auto;margin-bottom:auto">
-            <iframe allowfullscreen frameborder="0" height="100%" src="https://www.youtube.com/embed/bxCH-t7YpHE"
-              width="100%">
-            </iframe>
-          </div>
-        </div>
+  <object th:include="fragments/home/testimoni  ::  testimoni" th:remove="tag"></object>
 
-        <div class="col-lg-5 col-md-8 col-12" style="margin-top:10px;margin-left:auto;margin-right:auto;">
-          <div class="card container card-testimoni">
-            <div class="slide-one-item home-slider owl-carousel">
-              <div class="testimonial">
-                <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="landing-page/images/yulietta.PNG"></div>
-                </figure>
-                <h4 class="text-black mb-3">Yulietta Marchia H</h4>
-                <p class="mb-3 text-black">&ldquo;Marketing & Collector nya baik dan ramah. Proses Top Up juga dibantu
-                  dengan mudah, selain itu bunga nya juga ringan.&rdquo;</p>
-              </div>
-              <div class="testimonial">
-                <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img src="landing-page/images/jerry.PNG" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
-                </figure>
-                <h4 class="text-black mb-3">Jerry Firdaus</h4>
-                <p class="mb-3 text-black">&ldquo;Semangat Pagi! Dengan adanya fasilitas multiguna dari MTF saya sangat
-                  terbantu dalam bisnis saya,
-                  karena bisnis saya butuh perputaran modal yang besar dan cepat. Dengan multiguna juga bisa di proses
-                  dan cair dengan cepat.
-                  Tentunya bunga yang rendah dan terjangkau. Proses juga tidak ribet sama sekali. Terimakasih banyak MTF
-                  atas fasilitas dan service nya.
-                  Semangat Pagi!&rdquo;</p>
-              </div>
-              <div class="testimonial">
-                <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img src="landing-page/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
-                </figure>
-                <h4 class="text-black mb-3">Marjono</h4>
-                <p class="mb-3 text-black">&ldquo;Saya selaku konsumen MTF merasa mudah dan merasa nyaman.
-                  Prosesnya juga mudah dan saya juga dilayani dengan baik.
-                  Saya sangat nyaman sekali dengan MTF.&rdquo;</p>
-              </div>
-              <div class="testimonial">
-                <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="landing-page/images/user-avatar.png"></div>
-                </figure>
-                <h4 class="text-black mb-3">Iman Fajar Kurnia</h4>
-                <p class="mb-3 text-black">&ldquo;Alhamdulillah lancar dan proses di MTF tidak berbelit.
-                  Saya pilih MTF karena bunganya murah dan prosesnya cepet banget.&ldquo;
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </body>
 
 <!--FOOTER-->
 <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
 <object th:include="fragments/general-script  ::  general-script" th:remove="tag"></object>
+
+<script src="/landing-page/js/essentials/jquery.scrollie.min.js"></script>
+<script src="/landing-page/js/others/js-webshim/minified/polyfiller.js"></script>
 
 </html>

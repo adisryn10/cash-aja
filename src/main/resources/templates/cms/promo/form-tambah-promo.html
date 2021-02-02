@@ -48,32 +48,33 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Tambah Promo</h1>
           </div>
-          <div>
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <form th:action="@{/admin/promo/add}" enctype="multipart/form-data" th:object="${promo}"
-                      method="POST">
-                      <label>Judul</label>
-                      <input type="text" name="judul" class="form-control" />
+          <div class="card">
+            <div class="card-body">
+              <div th:if="${saveFailed}" class="alert alert-danger text-center" role="alert">
+                Penyimpanan gagal! Maksimal ukuran setiap gambar adalah 2,5 MB (2500 KB)
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <form th:action="@{/admin/promo/add}" enctype="multipart/form-data" th:object="${promo}"
+                    method="POST">
+                    <label>Judul</label>
+                    <input type="text" name="judul" class="form-control" />
 
-                      <label>Foto Promo</label>
-                      <input type="file" name="file1" class="form-control-file" />
+                    <label>Foto Promo</label>
+                    <input type="file" name="file1" class="form-control-file" />
 
-                      <label>Foto Detail Promo</label>
-                      <input type="file" name="file2" class="form-control-file" />
+                    <label>Foto Detail Promo</label>
+                    <input type="file" name="file2" class="form-control-file" />
 
-                      <label>Detail Promo</label>
-                      <textarea type="text" name="detail" id="content" rows="4" placeholder="Detail"
-                        class="form-control" autocomplete="off"></textarea>
+                    <label>Detail Promo</label>
+                    <textarea type="text" name="detail" id="content" rows="4" placeholder="Detail" class="form-control"
+                      autocomplete="off"></textarea>
 
-                      <br>
-                      <button type="submit" class="btn btn-primary mr-4" name="publish">Simpan & Publish</button>
-                      <button type="submit" class="btn btn-secondary mr-4" name="draft">Simpan Sebagai Draft</button>
+                    <br>
+                    <button type="submit" class="btn btn-primary mr-4" name="publish">Simpan & Publish</button>
+                    <button type="submit" class="btn btn-secondary mr-4" name="draft">Simpan Sebagai Draft</button>
 
-                    </form>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

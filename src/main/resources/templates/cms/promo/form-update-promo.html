@@ -53,6 +53,9 @@
             <div class="col-md-8 col-12">
               <div class="card">
                 <div class="card-body">
+                  <div th:if="${saveFailed}" class="alert alert-danger text-center" role="alert">
+                    Penyimpanan gagal! Maksimal ukuran setiap gambar adalah 2,5 MB (2500 KB)
+                  </div>
                   <div class="row">
                     <div class="col-12">
                       <form th:action="@{/admin/promo/update}" enctype="multipart/form-data" method="POST">

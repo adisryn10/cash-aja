@@ -56,7 +56,7 @@ public class PromoController {
                                       Authentication auth,
                                       @RequestParam("file1") MultipartFile file1,
                                       @RequestParam("file2") MultipartFile file2,
-                                      Model model, RedirectAttributes redirectAttributes) {
+                                      RedirectAttributes redirectAttributes) {
         try {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
@@ -78,6 +78,7 @@ public class PromoController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/promo", true);
         } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("saveFailed", true);
             return new RedirectView("/admin/promo/add", true);
         }
     }
@@ -87,7 +88,6 @@ public class PromoController {
                                         Authentication auth,
                                         @RequestParam("file1") MultipartFile file1,
                                         @RequestParam("file2") MultipartFile file2,
-                                        Model model,
                                         RedirectAttributes redirectAttributes) {
         try {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
@@ -111,6 +111,7 @@ public class PromoController {
             redirectAttributes.addFlashAttribute("addSuccess", true);
             return new RedirectView("/admin/promo", true);
         } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("saveFailed", true);
             return new RedirectView("/admin/promo/add", true);
         }
     }
@@ -147,7 +148,8 @@ public class PromoController {
     public String updatePromoDraft(PromoModel promo,
                                    Authentication auth,
                                    @RequestParam("files") MultipartFile file,
-                                   Model model) {
+                                   Model model,
+                                   RedirectAttributes redirectAttributes) {
         try {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
@@ -181,7 +183,7 @@ public class PromoController {
             model.addAttribute("updateSuccess", true);
             return "cms/promo/form-update-promo";
         } catch (Exception e) {
-            e.printStackTrace();
+            redirectAttributes.addFlashAttribute("saveFailed", true);
             return "cms/promo/form-update-promo";
         }
     }
@@ -190,7 +192,8 @@ public class PromoController {
     public String updatePromoPublish(PromoModel promo,
                                      Authentication auth,
                                      @RequestParam("files") MultipartFile file,
-                                     Model model) {
+                                     Model model,
+                                     RedirectAttributes redirectAttributes) {
         try {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             promo.setLatestAuthor(latestAuthor);
@@ -225,7 +228,7 @@ public class PromoController {
             model.addAttribute("updateSuccess", true);
             return "cms/promo/form-update-promo";
         } catch (Exception e) {
-            e.printStackTrace();
+            redirectAttributes.addFlashAttribute("saveFailed", true);
             return "cms/promo/form-update-promo";
         }
     }

@@ -114,63 +114,11 @@ function clearPengajuan3() {
         } else {
           startPengajuan()
         }
-        sendClickAction("Kirim Pengajuan")
         form.classList.add('was-validated');
       }, false);
     });
   }, false);
 })();
-
-// Fungsi untuk melakukan pengiriman data klik tombol ke server
-function sendClickAction(category) {
-  $.ajax({
-    url: '/click/add',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    type: "POST",
-    data: JSON.stringify({"category": category})
-  });
-}
-
-// Fungsi untuk klik Prosedur Pengajuan CashAja
-$('#prosedur-title-btn').click(function () {
-  sendClickAction("Prosedur Pengajuan")
-});
-
-// Fungsi untuk klik Prosedur Pengajuan CashAja
-$('#syarat-title-btn').click(function () {
-  sendClickAction("Syarat Pengajuan")
-});
-
-// Fungsi untuk klik Cek Info Lengkap Pengajuan
-$('#cek-info-lengkap-pengajuan').click(function () {
-  sendClickAction("Cek Info Lengkap Pengajuan")
-});
-
-// Fungsi untuk tombol Ajukan Kredit
-$('#ajukan-kredit').click(function () {
-  window.location.href = '#pengajuan';
-  sendClickAction("Ajukan Kredit")
-});
-
-// Fungsi untuk tombol Ajukan Topup Express
-$('#ajukan-topup-express').click(function () {
-  window.location.href = 'https://topup.mtf.co.id:2121/Multiguna/topupmultiguna';
-  sendClickAction("Ajukan Top Up Express")
-});
-
-// Fungsi untuk tombol Gabung Wira
-$('#gabung-wira').click(function () {
-  window.location.href = 'https://www.mtf.co.id/id/mandiri-wira';
-  sendClickAction("Gabung WIRA")
-});
-
-// Fungsi untuk klik Video Testimoni
-$('#testimonial-row').click(function () {
-  sendClickAction("Testimoni Customer")
-});
 
 // Melakukan sembunyikan alert pengajuan sebelum melakukan POST
 function preprocessPengajuan() {
@@ -198,6 +146,8 @@ function startPengajuan() {
       $('#pengajuan-fail').removeClass('d-none')
     });
 }
+
+// ===== KOMPONEN SIMULASI ===== //
 
 // Mengambil data yang terdapat pada form simulasi
 function getSimulationFormValues() {
@@ -234,9 +184,6 @@ function checkSimulationFormValues(form) {
 function startSimulasi() {
 
   let form = getSimulationFormValues()
-
-  // Kirim data klik tombol
-  sendClickAction("Simulasi Kredit")
 
   // Apabila terdapat kesalahan form, maka batal dikirimkan
   if (!checkSimulationFormValues(form)) return
@@ -390,3 +337,20 @@ function changeSimulationButtonColor(type) {
     $('#addb-section-btn').addClass("btn-primary")
   }
 }
+
+// ===== LAIN - LAIN ===== //
+
+// Fungsi untuk tombol Ajukan Kredit
+$('#ajukan-kredit').click(function () {
+  window.location.href = '#pengajuan';
+});
+
+// Fungsi untuk tombol Ajukan Topup Express
+$('#ajukan-topup-express').click(function () {
+  window.location.href = 'https://topup.mtf.co.id:2121/Multiguna/topupmultiguna';
+});
+
+// Fungsi untuk tombol Gabung Wira
+$('#gabung-wira').click(function () {
+  window.location.href = 'https://www.mtf.co.id/id/mandiri-wira';
+});

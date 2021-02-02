@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 
-<head>
-  <title>CashAja - MTF Kredit Multiguna</title>
-  <meta charset="utf-8">
-  <link rel="icon" href="/landing-page/images/cash-aja-square.PNG">
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
+<object th:include="fragments/general-header  ::  general-header" th:remove="tag"></object>
 
 <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
@@ -48,15 +39,15 @@
       style="margin-top:30px;margin-bottom:30px">
       <div class="carousel-inner container">
         <div class="carousel-item active">
-          <a href="/promo-bumn"><img class="d-block w-100" src="/landing-page/images/promo/BUMN_banner.png"
+          <a href="/promo-bumn"><img class="d-block w-100" src="landing-page/images/promo/BUMN_banner.png"
               alt="First slide"></a>
         </div>
         <div class="carousel-item">
-          <a href="/promo-pns"><img class="d-block w-100" src="/landing-page/images/promo/PNS_banner.png"
+          <a href="/promo-pns"><img class="d-block w-100" src="landing-page/images/promo/PNS_banner.png"
               alt="Second slide"></a>
         </div>
         <div class="carousel-item">
-          <a href="/promo-wiraswasta"><img class="d-block w-100" src="/landing-page/images/promo/Wiraswasta_banner.png"
+          <a href="/promo-wiraswasta"><img class="d-block w-100" src="landing-page/images/promo/Wiraswasta_banner.png"
               alt="Third slide"></a>
         </div>
       </div>
@@ -110,7 +101,7 @@
             <div class="slide-one-item home-slider owl-carousel">
               <div class="testimonial">
                 <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="/landing-page/images/yulietta.PNG"></div>
+                  <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="landing-page/images/yulietta.PNG"></div>
                 </figure>
                 <h4 class="text-black mb-3">Yulietta Marchia H</h4>
                 <p class="mb-3 text-black">&ldquo;Marketing & Collector nya baik dan ramah. Proses Top Up juga dibantu
@@ -118,7 +109,7 @@
               </div>
               <div class="testimonial">
                 <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img src="/landing-page/images/jerry.PNG" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
+                  <div><img src="landing-page/images/jerry.PNG" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
                 </figure>
                 <h4 class="text-black mb-3">Jerry Firdaus</h4>
                 <p class="mb-3 text-black">&ldquo;Semangat Pagi! Dengan adanya fasilitas multiguna dari MTF saya sangat
@@ -131,7 +122,7 @@
               </div>
               <div class="testimonial">
                 <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img src="/landing-page/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
+                  <div><img src="landing-page/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow"></div>
                 </figure>
                 <h4 class="text-black mb-3">Marjono</h4>
                 <p class="mb-3 text-black">&ldquo;Saya selaku konsumen MTF merasa mudah dan merasa nyaman.
@@ -140,7 +131,7 @@
               </div>
               <div class="testimonial">
                 <figure class="mb-4 d-block align-items-center justify-content-center">
-                  <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="/landing-page/images/user-avatar.png"></div>
+                  <div><img alt="Image" class="w-100 mb-3 my-5 shadow" src="landing-page/images/user-avatar.png"></div>
                 </figure>
                 <h4 class="text-black mb-3">Iman Fajar Kurnia</h4>
                 <p class="mb-3 text-black">&ldquo;Alhamdulillah lancar dan proses di MTF tidak berbelit.
@@ -158,8 +149,6 @@
 <!--FOOTER-->
 <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
 
-<script src="/landing-page/js/essentials/jquery.scrollie.min.js"></script>
-<script src="/landing-page/js/others/js-webshim/minified/polyfiller.js"></script>
-<script src="/landing-page/js/index.js"></script>
+<object th:include="fragments/general-script  ::  general-script" th:remove="tag"></object>
 
 </html>

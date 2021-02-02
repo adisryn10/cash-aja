@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 
-<head>
-  <title>Tentang CashAja</title>
-  <meta charset="utf-8">
-  <link rel="icon" href="/landing-page/images/cash-aja-square.PNG">
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/landing-page/css/faq.css" rel="stylesheet">
-</head>
+<object th:include="fragments/general-header  ::  general-header" th:remove="tag"></object>
 
 <body class="faq" data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 
@@ -23,32 +14,31 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
+  </div>
 
-    <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-      <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
-    </header>
+  <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
+    <object th:include="fragments/custFragment  ::  all" th:remove="tag"></object>
+  </header>
 
-    <div class="faq-content">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-8 col-sm-12">
-            <div class="faq-text">
-              <h2>Tentang Cash Aja</h2>
-              <p>Pemberian kredit atau pembiayaan kepada customer untuk kebutuhan dana atau kebutuhan konsumtif dengan
-                jaminan
-                dokumen kepemilikan kendaraan (BPKB) yang dimiliki customer dengan batas tahun kendaraan
-                2012-2020.Penuhi kebutuhan
-                untuk Modal Bisnis, Pendidikan, Pernikahan, Renovasi rumah, Travel, Kesehatan, dll.
-              </p>
-            </div>
+  <div class="faq-content">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 col-sm-12">
+          <div class="faq-text">
+            <h2>Tentang Cash Aja</h2>
+            <p>Pemberian kredit atau pembiayaan kepada customer untuk kebutuhan dana atau kebutuhan konsumtif dengan
+              jaminan
+              dokumen kepemilikan kendaraan (BPKB) yang dimiliki customer dengan batas tahun kendaraan
+              2012-2020.Penuhi kebutuhan
+              untuk Modal Bisnis, Pendidikan, Pernikahan, Renovasi rumah, Travel, Kesehatan, dll.
+            </p>
           </div>
-          <div class="col-md-4 col-sm-12">
-            <img alt="Image" class="img-fluid" id="faq-logo" src="/landing-page/images/cashajalogo-yellow.png">
-          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <img alt="Image" class="img-fluid" id="faq-logo" src="/landing-page/images/cashajalogo-yellow.png">
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <!-- FAQ -->
@@ -188,6 +178,8 @@
 
 <!--FOOTER-->
 <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
+
+<object th:include="fragments/general-script  ::  general-script" th:remove="tag"></object>
 
 <script src="/landing-page/js/faq.js"></script>
 

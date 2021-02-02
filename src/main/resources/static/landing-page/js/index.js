@@ -3,8 +3,8 @@ AOS.init();
 
 // Webshim Library untuk Masalah Currency
 webshims.setOptions('forms-ext', {
-    replaceUI: 'auto',
-    types: 'number'
+  replaceUI: 'auto',
+  types: 'number'
 });
 webshims.polyfill('forms forms-ext');
 
@@ -12,8 +12,8 @@ webshims.polyfill('forms forms-ext');
 
 // Webshim Library untuk Masalah Currency
 webshims.setOptions('forms-ext', {
-    replaceUI: 'auto',
-    types: 'number'
+  replaceUI: 'auto',
+  types: 'number'
 });
 webshims.polyfill('forms forms-ext');
 
@@ -114,11 +114,63 @@ function clearPengajuan3() {
         } else {
           startPengajuan()
         }
+        sendClickAction("Kirim Pengajuan")
         form.classList.add('was-validated');
       }, false);
     });
   }, false);
 })();
+
+// Fungsi untuk melakukan pengiriman data klik tombol ke server
+function sendClickAction(category) {
+  $.ajax({
+    url: '/click/add',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    type: "POST",
+    data: JSON.stringify({"category": category})
+  });
+}
+
+// Fungsi untuk klik Prosedur Pengajuan CashAja
+$('#prosedur-title-btn').click(function () {
+  sendClickAction("Prosedur Pengajuan")
+});
+
+// Fungsi untuk klik Prosedur Pengajuan CashAja
+$('#syarat-title-btn').click(function () {
+  sendClickAction("Syarat Pengajuan")
+});
+
+// Fungsi untuk klik Cek Info Lengkap Pengajuan
+$('#cek-info-lengkap-pengajuan').click(function () {
+  sendClickAction("Cek Info Lengkap Pengajuan")
+});
+
+// Fungsi untuk tombol Ajukan Kredit
+$('#ajukan-kredit').click(function () {
+  window.location.href = '#pengajuan';
+  sendClickAction("Ajukan Kredit")
+});
+
+// Fungsi untuk tombol Ajukan Topup Express
+$('#ajukan-topup-express').click(function () {
+  window.location.href = 'https://topup.mtf.co.id:2121/Multiguna/topupmultiguna';
+  sendClickAction("Ajukan Top Up Express")
+});
+
+// Fungsi untuk tombol Gabung Wira
+$('#gabung-wira').click(function () {
+  window.location.href = 'https://www.mtf.co.id/id/mandiri-wira';
+  sendClickAction("Gabung WIRA")
+});
+
+// Fungsi untuk klik Video Testimoni
+$('#testimonial-row').click(function () {
+  sendClickAction("Testimoni Customer")
+});
 
 // Melakukan sembunyikan alert pengajuan sebelum melakukan POST
 function preprocessPengajuan() {
@@ -135,16 +187,16 @@ function startPengajuan() {
     "phone": $('#inputPhone').val(),
     "noktp": $('#inputKTP').val(),
     "lokasi": $('#inputDomisili').val(),
-    "hubungi": $('#inputKetersediaanWaktu').val(),
+    "hubungi": $('#inputKetersediaanWaktu').val()
   }, "json")
-  // Pemanggilan AJAX sukses
-  .done(function (data) {
-    $('#pengajuan-success').removeClass('d-none')
-  })
-  // Pemanggilan AJAX gagal, umumnya karena masalah sistem & internet
-  .fail(function (data) {
-    $('#pengajuan-fail').removeClass('d-none')
-  });
+    // Pemanggilan AJAX sukses
+    .done(function (data) {
+      $('#pengajuan-success').removeClass('d-none')
+    })
+    // Pemanggilan AJAX gagal, umumnya karena masalah sistem & internet
+    .fail(function (data) {
+      $('#pengajuan-fail').removeClass('d-none')
+    });
 }
 
 // Mengambil data yang terdapat pada form simulasi
@@ -170,14 +222,11 @@ function checkSimulationFormValues(form) {
     $('#simulasi-fail').removeClass('d-none').text('Harga kendaraan tidak boleh kosong atau bernilai nol')
     $('#simulasi-process').addClass('d-none')
     return false
-  } 
-  
-  else if (parseInt($('#inputEstimasiPerhitungan').val()) >= form['otr']) {
+  } else if (parseInt($('#inputEstimasiPerhitungan').val()) >= form['otr']) {
     $('#simulasi-fail').removeClass('d-none').text('Estimasi perhitungan harus bernilai lebih kecil dari harga barang')
     $('#simulasi-process').addClass('d-none')
     return false
   }
-
   return true
 }
 
@@ -185,7 +234,10 @@ function checkSimulationFormValues(form) {
 function startSimulasi() {
 
   let form = getSimulationFormValues()
-  
+
+  // Kirim data klik tombol
+  sendClickAction("Simulasi Kredit")
+
   // Apabila terdapat kesalahan form, maka batal dikirimkan
   if (!checkSimulationFormValues(form)) return
 

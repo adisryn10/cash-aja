@@ -79,12 +79,6 @@ public class HalamanModel {
         return latestEdit;
     }
 
-    // public String getLatestEdit() {
-    //     DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");  
-    //     String strDate = dateFormat.format(latestEdit);
-    //     return strDate;
-    // }
-
     public void setLatestEdit(Date latestEdit) {
         this.latestEdit = latestEdit;
     }

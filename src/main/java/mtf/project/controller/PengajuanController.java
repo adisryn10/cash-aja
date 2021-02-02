@@ -1,5 +1,6 @@
 package mtf.project.controller;
 
+import mtf.project.helpers.ClickConnectionHelper;
 import mtf.project.model.PengajuanModel;
 import mtf.project.service.PengajuanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -22,9 +24,13 @@ public class PengajuanController {
     PengajuanService pengajuanService;
 
     @PostMapping(value = "/pengajuan/add")
-    public ResponseEntity<Object> submitPengajuan(@ModelAttribute PengajuanModel pengajuan) {
+    public ResponseEntity<Object> submitPengajuan(@ModelAttribute PengajuanModel pengajuan) throws IOException {
         try {
+            ClickConnectionHelper.addClickCounter("Kirim Pengajuan");
             pengajuanService.addPengajuan(pengajuan);
+            return ResponseEntity.status(HttpStatus.OK).body(null);
+        } catch (IOException e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.OK).body(null);
         } catch (Exception handlerException) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(handlerException);

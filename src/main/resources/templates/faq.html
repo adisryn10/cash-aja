@@ -4,22 +4,12 @@
 <head>
   <title>Tentang CashAja</title>
   <meta charset="utf-8">
+  <link rel="icon" href="/landing-page/images/cash-aja-square.PNG">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="icon" href="/landing-page/images/cash-aja-square.PNG">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="landing-page/fonts/icomoon/style.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/bootstrap.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/jquery-ui.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/owl.carousel.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/owl.theme.default.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/owl.theme.default.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/jquery.fancybox.min.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/bootstrap-datepicker.css" rel="stylesheet">
-  <link href="landing-page/fonts/flaticon/font/flaticon.css" rel="stylesheet">
-  <link href="landing-page/css/essentials/aos.css" rel="stylesheet">
-  <link href="landing-page/css/faq.css" rel="stylesheet">
+  <link href="/landing-page/css/faq.css" rel="stylesheet">
 </head>
 
 <body class="faq" data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
@@ -53,7 +43,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
-            <img alt="Image" class="img-fluid" id="faq-logo" src="landing-page/images/cashajalogo-yellow.png">
+            <img alt="Image" class="img-fluid" id="faq-logo" src="/landing-page/images/cashajalogo-yellow.png">
           </div>
         </div>
       </div>
@@ -72,223 +62,15 @@
                 <div id="accordion-faq">
                   <h2 class="text-faq">Frequently Asked Question</h2>
                   <p>Temukan jawaban dari pertanyaanmu disini.</p>
-                  <div class="card">
-                    <div aria-controls="collapseOne" class="card-header" data-target="#collapseOne"
-                      data-toggle="collapse" id="headingOne">
-                      <h5 class="btn-link-faq mt-3 mb-3">
-                        Siapa saja yang dapat mengajukan Pembiayaan Multiguna?
-                      </h5>
+                  <div th:each="faq : ${listFaq}" class="card mt-4">
+                    <div aria-controls="collapseOne" aria-expanded="false" class="card-header"
+                      th:attr="data-target='#collapse'+${faq.id}" data-toggle="collapse" id="headingOne">
+                      <h5 class="btn-link-faq mt-3 mb-3" th:text="${faq.pertanyaan}"></h5>
                     </div>
 
-                    <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion-faq">
-                      <div class="card-body">
-                        Pembiayaan Multiguna dapat diajukan oleh customer Perorangan dan Badan Usaha (Perusahaan)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div aria-controls="collapseTwo" aria-expanded="false" class="card-header"
-                      data-target="#collapseTwo" data-toggle="collapse" id="headingTwo">
-                      <h5 class="btn-link-faq mt-3 mb-3 collapsed">
-                        Jenis-jenis Kendaraan apa saja yang dapat dibiayai?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseTwo" class="collapse">
-                      <div class="card-body">
-                        2 jenis kendaraan yang dapat dibiayai yaitu :
-                        <ol>
-                          <li>Passenger : Tenor max 4 tahun</li>
-                          <li>Commercial : Tenor max 3 tahun</li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div aria-controls="collapseThree" aria-expanded="false" class="card-header"
-                      data-target="#collapseThree" data-toggle="collapse" id="headingThree">
-                      <h5 class="btn-link-faq mt-3 mb-3 collapsed">
-                        Jenis pembiayaan multiguna apa saja yang dibiayai MTF?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseThree" class="collapse">
-                      <div class="card-body">
-                        Terdapat dua jenis yaitu:
-                        <ul>
-                          <li>
-                            Fasilitas Dana <br>
-                            Pembiayaan barang dan / atau jasa yang disalurkan langsung kepada
-                            debitur untuk pemakaian / kebutuhan konsumtif atau produktif seperti
-                            Pendidikan, pernikahan, renovasi rumah, travelling, Kesehatan, dan
-                            lainnya dimana nilai pembiayaan setiap debitur maksimal
-                          </li>
-                          <li>
-                            Modal Usaha <br>
-                            Pembiayaan untuk memenuhi kebutuhan pengeluaran yang habis
-                            dalam satu siklus usaha
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div class="card-header" id="headingFour">
-                      <h5 aria-controls="collapseFour" aria-expanded="false" class="btn-link-faq mt-3 mb-3 collapsed"
-                        data-target="#collapseFour" data-toggle="collapse">
-                        Apa saja ketentuan unit yang bisa dibiayai?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseFour" class="collapse">
-                      <div class="card-body">
-                        Ketentuannya yaitu:
-                        <ol>
-                          <li>
-                            Passenger Car &amp; Commercial Car
-                          </li>
-                          <li>
-                            Usia Kendaraan maksimal pada saat akhir masa tenor
-                            <ul>
-                              <li>Jepang : 12 Tahun</li>
-                              <li>Non Jepang : 10 Tahun</li>
-                              <li>Commercial : 7 Tahun</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Jika jenis pembiayaan di Lembaga keuangan sebelumnya used car
-                            dan belum dibalik nama ken ama customer, maka wajib dilakukan
-                            balik nama di MTF
-                          </li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div class="card-header" id="headingFive">
-                      <h5 aria-controls="collapseFive" aria-expanded="false" class="btn-link-faq mt-3 mb-3 collapsed"
-                        data-target="#collapseFive" data-toggle="collapse">
-                        Jenis asuransi apa saja yang dicover?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseFive" class="collapse">
-                      <div class="card-body">
-                        <ul>
-                          <li>
-                            Comprehensive (All Risk)<br>
-                            Melindungi kendaraan kerusakan sebagian / keseluruhan dan kehilangan
-                            Sebagian / keseluruhan
-                          </li>
-                          <li>
-                            TLO (Total Loss Only) <br>
-                            Melindungi kendaraan dari kerusakan &amp; kehilangan keseluruhan
-                          </li>
-                          <li>
-                            Kombinasi (1 Tahun All Risk, Tahun Selanjutnya TLO) <br>
-                            All Risk untuk tahun pertama dan TLO untuk tahun selanjutnya
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div class="card-header" id="headingSix">
-                      <h5 aria-controls="collapseSix" aria-expanded="false" class="btn-link-faq mt-3 mb-3 collapsed"
-                        data-target="#collapseSix" data-toggle="collapse">
-                        Apa yang dimaksud ADDM dan ADDB?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseSix" class="collapse">
-                      <div class="card-body">
-                        <table class="faq-table">
-                          <tr>
-                            <th>Keterangan</th>
-                            <th>ADMM</th>
-                            <th>ADDB</th>
-                          </tr>
-                          <tr>
-                            <td>Pencairan Dana</td>
-                            <td>
-                              ”Angsuran Dibayar Di
-                              Muka” dimana customer
-                              terhitung telah
-                              melakukan pembayaran
-                              angsuran pertama
-                              dengan metode potong
-                              pencairan (pencairan
-                              berkurang 1x angsuran)
-                            </td>
-                            <td>
-                              “Angsuran Dibayar Di
-                              Belakang” dimana
-                              nominal pencairan
-                              customer belum
-                              dipotong dengan
-                              angsurannya
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Pencairan Dana</td>
-                            <td>Lebih Kecil</td>
-                            <td>Lebih Besar</td>
-                          </tr>
-                          <tr>
-                            <td>Bunga</td>
-                            <td>Lebih Murah</td>
-                            <td>Lebih Mahal</td>
-                          </tr>
-                          <tr>
-                            <td>Contoh</td>
-                            <td>
-                              Jika customer mengambil pembiayaan 1 tahun (12 bulan) dengan skema ADDM
-                              maka customer hanya perlu membayar 11x angsuran
-                            </td>
-                            <td>Jika customer mengambil pembiayaan 1 tahun (12 bulan) dengan skema ADDB
-                              maka customer tetap harus membayar 12x angsuran
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div aria-controls="collapseSeven" aria-expanded="false" class="card-header"
-                      data-target="#collapseSeven" data-toggle="collapse" id="headingSeven">
-                      <h5 class="btn-link-faq mt-3 mb-3 collapsed">
-                        Apa yang dimaksud dengan ACP?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseSeven" class="collapse">
-                      <div class="card-body">
-                        ACP adalah "Asuransi Credit Protection" dimana pembiayaan kredit customer di cover oleh asuransi
-                        yang artinya jika customer (pemohon) meninggal dunia, maka kreditnya akan dilunasi oleh pihak
-                        asuransi (jika syarat dan ketentuan terpenuhi)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div aria-controls="collapseEight" aria-expanded="false" class="card-header"
-                      data-target="#collapseEight" data-toggle="collapse" id="headingEight">
-                      <h5 class="btn-link-faq mt-3 mb-3 collapsed">
-                        Apa yang dimaksud dengan Provisi?
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseEight" class="collapse">
-                      <div class="card-body">
-                        Provisi adalah biaya proses kredit yang dibebankan kepada customer. Biaya provisi akan
-                        mengurangi
-                        pencairan customer
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mt-4">
-                    <div aria-controls="collapseNine" aria-expanded="false" class="card-header"
-                      data-target="#collapseNine" data-toggle="collapse" id="headingNine">
-                      <h5 class="btn-link-faq mt-3 mb-3 collapsed">
-                        Apa yang dimaksud dengan Fidusia
-                      </h5>
-                    </div>
-                    <div data-parent="#accordion-faq" id="collapseNine" class="collapse">
-                      <div class="card-body">
-                        Fidusia adalah jaminan untuk perusahaan pembiayaan agar bisa melakukan penarikan unit ketika
-                        terjadi wanprestasi / customer menunggak bayar dalam kurun waktu yang telah ditentukan
+                    <div th:id="'collapse'+${faq.id}" aria-labelledby="headingOne" data-parent="#accordion-faq"
+                      class="collapse">
+                      <div class="card-body" th:utext="${faq.jawaban}">
                       </div>
                     </div>
                   </div>
@@ -402,27 +184,11 @@
       </div>
     </div>
   </div>
-
-  <!--FOOTER-->
-  <object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
-
 </body>
 
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="landing-page/js/essentials/jquery-3.3.1.min.js"></script>
-<script src="landing-page/js/essentials/jquery-migrate-3.0.1.min.js"></script>
-<script src="landing-page/js/essentials/jquery-ui.js"></script>
-<script src="landing-page/js/essentials/popper.min.js"></script>
-<script src="landing-page/js/essentials/bootstrap.min.js"></script>
-<script src="landing-page/js/essentials/owl.carousel.min.js"></script>
-<script src="landing-page/js/essentials/jquery.stellar.min.js"></script>
-<script src="landing-page/js/essentials/jquery.countdown.min.js"></script>
-<script src="landing-page/js/essentials/bootstrap-datepicker.min.js"></script>
-<script src="landing-page/js/essentials/jquery.easing.1.3.js"></script>
-<script src="landing-page/js/essentials/aos.js"></script>
-<script src="landing-page/js/essentials/jquery.fancybox.min.js"></script>
-<script src="landing-page/js/essentials/jquery.sticky.js"></script>
-<script src="landing-page/js/essentials/main.js"></script>
-<script src="landing-page/js/faq.js"></script>
+<!--FOOTER-->
+<object th:include="fragments/footer  ::  footer" th:remove="tag"></object>
+
+<script src="/landing-page/js/faq.js"></script>
 
 </html>

@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
-@Table(name="halaman")
+@Table(name = "halaman")
 public class HalamanModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class HalamanModel {
     private String judul;
 
     @NotNull
-    @Column(name = "konten", nullable = false,  length = 10485760)
+    @Column(name = "konten", nullable = false, length = 10485760)
     private String konten;
 
     @NotNull
@@ -51,7 +51,7 @@ public class HalamanModel {
         this.id = id;
     }
 
-    public String getJudul(){
+    public String getJudul() {
         return judul;
     }
 
@@ -59,7 +59,7 @@ public class HalamanModel {
         this.judul = judul;
     }
 
-    public String getKonten(){
+    public String getKonten() {
         return konten;
     }
 
@@ -90,6 +90,6 @@ public class HalamanModel {
     public void setStatusPosting(Integer statusPosting) {
         this.statusPosting = statusPosting;
     }
-    
+
 }
     

@@ -1853,7 +1853,13 @@ body {
       .blue-bg{
         background-color: #1B6DB4;
       }
-  
+
+  #promodetail-img{
+      max-height: 250px;
+      height: 100%;
+      left:0px;
+      flex:2;
+    } 
   .topupexpress{
     display: flex;
     align-items: flex-start;

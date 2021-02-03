@@ -2273,6 +2273,10 @@ th {
   text-align: center;
 }
 
+.page-detail p img{
+  width: 100% !important;
+} 
+
 .page-detail{
   padding-top: 7em;
   padding-bottom: 5em;

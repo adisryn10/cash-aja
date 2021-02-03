@@ -68,6 +68,13 @@ public class TestimoniController {
             UserRoleModel latestAuthor = userService.getUserByUsername(auth.getName());
             testimoni.setLatestAuthor(latestAuthor);
 
+            if (file.isEmpty()) {
+                File defaultFile = new File("src/main/resources/static/landing-page/images/user-avatar.png");
+                FileInputStream input = new FileInputStream(defaultFile);
+                file = new MockMultipartFile("defaultFile",
+                        defaultFile.getName(), "image/png", input.readAllBytes());
+            }
+
             FileModel fileSaved = fileService.store(file);
             testimoni.setFile(fileSaved);
 

@@ -57,6 +57,12 @@
                         <label>Foto Pemberi Testimoni</label>
                         <input type="file" name="files" class="form-control-file mb-4" th:value="${testimoni.file}" />
 
+                        <div th:if="${hasImage}">
+                          <figure class="mb-4 d-block align-items-center justify-content-center">
+                            <div><img alt="Image" class="w-50 mb-4 my-5 shadow" th:src="'data:image/jpeg;base64,' + ${dataImage}"></div>
+                          </figure>
+                        </div>
+
                         <label>Testimoni</label>
                         <textarea name="testimoni" class="form-control mb-2"
                           th:field="${testimoni.testimoni}"></textarea>

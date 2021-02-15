@@ -1,0 +1,179 @@
+<html th:fragment="simulasi" xmlns:th="http://thymeleaf.org">
+<section class="site-section bg-light" data-aos="fade-up" id="simulasi">
+  <div class="container">
+    <h1 class="text-black">
+      <strong>Simulasi Kredit</strong>
+    </h1>
+    <br>
+    <div class="row">
+      <!-- Form Simulasi -->
+      <div class="col">
+        <div id="simulasi-form">
+          <div class="card shadow">
+            <div class="card-body">
+              <div id="simulasi-container">
+                <h4 class="card-title black-text">FORM SIMULASI</h4>
+                <br>
+                <form id="form-simulasi">
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputTipeKendaraan">Tipe Kendaraan</label>
+                      <select class="form-control" id="inputTipeKendaraan">
+                        <option value="kendaraan Penumpang">Kendaraan Penumpang</option>
+                        <option value="Motor Gede (MOGE)">Motor Gede (MOGE)</option>
+                        <option value="Mobil Double Cabin">Mobil Double Cabin</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputTahunKendaraan">Tahun Kendaraan</label>
+                      <select class="form-control" id="inputTahunKendaraan">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2017">2016</option>
+                        <option value="2017">2015</option>
+                        <option value="2017">2014</option>
+                        <option value="2017">2013</option>
+                        <option value="2017">2012</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputAcuanHitung">Acuan Hitung</label>
+                      <select class="form-control" id="inputAcuanHitung">
+                        <option value="1">Pencairan</option>
+                        <option value="2">Angsuran</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputHarga">Harga Kendaraan (Dalam Rupiah)</label>
+                    <input class="form-control" id="inputHarga" min="0" step="1000000" placeholder="Contoh: 150.000.000"
+                      type="number" value="10000000">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEstimasiPerhitungan">Estimasi Perhitungan (Dalam Rupiah)</label>
+                    <input class="form-control" id="inputEstimasiPerhitungan" min="0" step="1000000"
+                      placeholder="Contoh: 500.000" type="number" value="500000">
+                  </div>
+                  <p>Estimasi perhitungan ini bisa diubah sesuai dengan kebutuhan kamu.<br>
+                    Jika kamu memilih acuan hitung berupa angsuran, isilah dengan angsuran kamu perbulannya.</p>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputAreaPlatNomor">Area Plat Nomor</label>
+                      <select class="form-control" id="inputAreaPlatNomor">
+                        <option value="2">DKI Jakarta, Banten, dan Jawa Barat</option>
+                        <option value="1">Sumatera dan Sekitarnya</option>
+                        <option value="3">Area Indonesia Lainnya</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputAreaTempatTinggal">Tempat Tinggal (Fiducia)</label>
+                      <select class="form-control" id="inputAreaTempatTinggal">
+                        <option value="2">DKI</option>
+                        <option value="1">NON-DKI</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputJenisAsuransi">Asuransi</label>
+                      <select class="form-control" id="inputJenisAsuransi">
+                        <option value="2">Komprehensif</option>
+                        <option value="1">TLO</option>
+                        <option value="3">Kombinasi</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                  <button class="btn btn-primary" onclick="startSimulasi()" type="button">
+                    Cek Simulasi Kredit
+                  </button>
+                </form>
+                <br>
+                <div class="alert alert-info text-center d-none" id="simulasi-process" role="alert"></div>
+                <div class="alert alert-danger text-center d-none" id="simulasi-fail" role="alert"></div>
+              </div>
+              <div class="d-none" id="hasil-simulasi-container">
+                <div id="hasil-simulasi-button">
+                  <button class="btn btn-lg btn-primary mr-2 mb-2" id="addm-section-btn"
+                    onclick=showSimulationResult("addm") type="button">
+                    Perhitungan ADDM
+                  </button>
+                  <button class="btn btn-lg mr-2 mb-2" id="addb-section-btn" onclick=showSimulationResult("addb")
+                    type="button">
+                    Perhitungan ADDB
+                  </button>
+                </div>
+                <br>
+
+                <!-- Hasil Perhitungan Simulasi ADDM -->
+                <div id="hasil-simulasi-addm-container">
+                  <h4 class="black-text">Hasil Simulasi Kredit</h4>
+                  <br>
+                  <table class="table table-borderless table-simulation table-striped" id="simulation-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">TENOR</th>
+                        <th scope="col">BULAN</th>
+                        <th scope="col">ESTIMASI PENCAIRAN</th>
+                        <th scope="col">SUKU BUNGA</th>
+                        <th scope="col">ANGSURAN</th>
+                      </tr>
+                    </thead>
+                    <tbody id="simulation-tbody"></tbody>
+                  </table>
+                </div>
+
+                <!-- Hasil Perhitungan Simulasi ADDB -->
+                <div id="hasil-simulasi-addb-container">
+
+                </div>
+
+                <!-- Komponen Perhitungan Simulasi -->
+                <div id="hasil-simulasi-komponen-container">
+                  <h4 class="black-text">Komponen Perhitungan</h4>
+                  <br>
+                  <table class="table table-borderless table-simulation table-striped">
+                    <tr>
+                      <th>Acuan Perhitungan</th>
+                      <td id="komponen-acuan-perhitungan">Pencairan</td>
+                      <th>Harga Kendaraan</th>
+                      <td id="komponen-harga-kendaraan">1000000</td>
+                    </tr>
+                    <tr>
+                      <th>Pencairan</th>
+                      <td id="komponen-estimasi-perhitungan">Rp. 700.000.000</td>
+                      <th>Tahun Kendaraan</th>
+                      <td id="komponen-tahun-kendaraan">2019</td>
+                    </tr>
+                    <tr>
+                      <th>Area</th>
+                      <td id="komponen-area">Dimana saja</td>
+                      <th>Fiducia</th>
+                      <td id="komponen-fiducia">DKI</td>
+                    </tr>
+                    <tr>
+                      <th>Jenis Asuransi</th>
+                      <td id="komponen-jenis-asuransi">Komprehensif</td>
+                    </tr>
+                  </table>
+                </div>
+                <p>
+                  Perhitungan simulasi diatas bersifat estimasi per tanggal 11 November 2020.
+                  Harga dan bunga tergantung lokasi cabang, data dapat berubah sewaktu-waktu sesuai
+                  kebijakan dan ketentuan yang berlaku. Untuk perhitungan lebih detail,
+                  hubungi kami di Kantor Cabang Mandiri Tunas Finance terdekat dengan kamu.
+                </p>
+                <a class="btn btn-secondary mr-2 mb-2" href="#pengajuan">Ajukan Kredit</a>
+                <button class="btn btn-primary mr-2 mb-2" id="simualasi-btn" onclick="showSimulationForm()">
+                  Kembali ke Simulasi
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</html>

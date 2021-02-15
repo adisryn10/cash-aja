@@ -1,39 +1,41 @@
 <html th:fragment="footer" xmlns:th="http://thymeleaf.org">
-<div class="footer bg-light">
+
+<footer>
+  <div class="footer bg-light">
     <div class="float-left half-container">
-      <img alt="Image" class="img-fluid" id="logo" src="cust/images/footer-logo.svg">
+      <img alt="Image" class="img-fluid" id="logo" src="/landing-page/images/footer-logo.svg">
       <p class="footer-text black-text">Mandiri Tunas Finance terdaftar dan diawasi oleh OJK</p>
-      <p class="footer-text black-text">Copyright &copy;
+      <p class="footer-text black-text">Hak Cipta &copy;
         <script>
-            document.write(new Date().getFullYear());
+          document.write(new Date().getFullYear());
         </script>
-        All rights reserved
+        Hak Cipta Dilindungi Undang - Undang
       </p>
     </div>
     <br>
-    <div class="half-container" id = "footer-right">
-      <div class = "flex-end">
-      <p class="black-text">
-        <strong>Unduh Aplikasi MTF Go</strong>
-      </p>
-    </div>
+    <div class="half-container" id="footer-right">
+      <div class="flex-end">
+        <p class="black-text">
+          <strong>Unduh Aplikasi MTF Go</strong>
+        </p>
+      </div>
       <div id="row-mobapp" class="flex-end">
         <div class="padding-left">
           <a href="https://apps.apple.com/my/app/mtf-go/id1123593855">
-            <img alt="Unduh Aplikasi MTF GO di Apple App Store"
-                 id="app-store-badge"
-                 src="cust/images/store-badge/app-store.png">
+            <img alt="Unduh Aplikasi MTF GO di Apple App Store" id="app-store-badge"
+              src="/landing-page/images/store-badge/app-store.png">
           </a>
         </div>
         <div class="padding-left">
           <a href="https://play.google.com/store/apps/details?id=com.mtf.calculator.external">
-            <img alt="Unduh Aplikasi MTF GO di Google Play Store"
-                 id="google-play-badge"
-                 src="cust/images/store-badge/google-play.png">
+            <img alt="Unduh Aplikasi MTF GO di Google Play Store" id="google-play-badge"
+              src="/landing-page/images/store-badge/google-play.png">
           </a>
         </div>
       </div>
     </div>
     <div class="clearfix"></div>
   </div>
-  </html>
+</footer>
+
+</html>

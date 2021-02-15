@@ -5,10 +5,12 @@ import mtf.project.repository.FaqDb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class FaqServiceImpl implements FaqService{
+@Transactional
+public class FaqServiceImpl implements FaqService {
 
     @Autowired
     FaqDb faqDb;

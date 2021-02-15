@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+
   <head th:fragment="css">
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
   </head>
+
   <head th:fragment="js">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
   </head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +28,9 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
@@ -36,82 +40,65 @@
 
 </body>
 
-    <!-- Sidebar -->
-    <ul th:fragment="sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- Sidebar -->
+<ul th:fragment="sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand -->
+  <!-- Sidebar - Brand -->
+  <h4 class="sidebar-brand-text mx-3 mt-4 mb-4" style="text-align:center;color:white;">CMS CashAja</h4>
 
-      <h4 class="sidebar-brand-text mx-3 mt-4 mb-4" style="text-align:center;color:white;">Content Management System</h4>
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+  <!-- Nav Item -->
+  <li class="nav-item">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link" href="/admin">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
+<!--    <a class="nav-link" href="/admin">-->
+<!--      <i class="fas fa-fw fa-tachometer-alt"></i>-->
+<!--      <span>Dasbor</span></a>-->
 
-      <hr class="sidebar-divider my-0">
+    <a class="nav-link" href="/admin/users">
+      <i class="fas fa-fw fa-user"></i>
+      <span>Admin CMS</span></a>
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Content
-      </div>
-      
+    <a class="nav-link" href="/admin/faq">
+      <i class="fas fa-fw fa-table"></i>
+      <span>FAQ</span></a>
 
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="/admin/halaman">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Pages</span></a>
+    <a class="nav-link" href="/admin/halaman">
+      <i class="fas fa-fw fa-chart-area"></i>
+      <span>Halaman / Pages</span></a>
 
-        <a class="nav-link" href="/admin/promo">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Web Banner</span></a>
+    <a class="nav-link" href="/admin/pengajuan">
+      <i class="fas fa-fw fa-globe"></i>
+      <span>Pengajuan Pinjaman</span></a>
 
-        <a class="nav-link" href="/admin/faq">
-          <i class="fas fa-fw fa-table"></i>
-          <span>FAQ</span></a>
+    <a class="nav-link" href="/admin/promo">
+      <i class="fas fa-fw fa-image"></i>
+      <span>Promo / Web Banner</span></a>
 
-        <a class="nav-link" href="/admin/testimoni">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Testimoni</span></a>
-      </li>
-      
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+    <a class="nav-link" href="/admin/testimoni">
+      <i class="fas fa-fw fa-comment"></i>
+      <span>Testimoni</span></a>
 
-      <!-- Users -->
-      <div class="sidebar-heading">
-        Users
-      </div>
+  </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/admin/users">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Users</span></a>
-      </li>
+</ul>
+<!-- End of Sidebar -->
 
-    </ul>
-    <!-- End of Sidebar -->
+<!-- Topbar -->
+<nav th:fragment="topbar" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-    <!-- Topbar -->
-    <nav th:fragment="topbar" class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+  <!-- Topbar Navbar -->
+  <ul class="navbar-nav ml-auto">
+    <!-- Nav Item - User Information -->
+    <li class="nav-item dropdown no-arrow">
+      <a class="nav-link red" href="/logout" role="button">
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Logout</span>
+      </a>
+    </li>
+  </ul>
 
-        <!-- Topbar Navbar -->
-        <ul class="navbar-nav ml-auto">
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-                <a class="nav-link red" href="/logout" role="button">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Logout</span>
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-    <!-- End of Topbar -->
+</nav>
+<!-- End of Topbar -->
 
 </html>

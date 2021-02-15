@@ -1,0 +1,380 @@
+<html th:fragment="pengajuan" xmlns:th="http://thymeleaf.org">
+<section class="site-section" id="pengajuan" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mb-5 text-black text-left">
+          <strong>Pengajuan CashAja</strong>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+
+        <!-- Tombol Pilihan Section Pengajuan-->
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-lg btn-primary" id="prosedur-title-btn" type="button">Prosedur</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-lg" id="syarat-title-btn" type="button">Syarat</button>
+          </div>
+        </div>
+        <br>
+
+        <!-- Prosedur Pengajuan -->
+        <div id="prosedur-content">
+          <div class="row cashaja-step-container" id="pengajuan-1">
+            <div class="col-2">
+              <img alt="Image" class="img-fluid" id="pengajuan-1-img" src="/landing-page/images/pengajuan/1-colored.png">
+            </div>
+            <div class="col">
+              <p class="black-text" id="pengajuan-1-desc"><strong> Mengisi Form Pengajuan </strong> <br>
+                Kamu bisa klik disini untuk mengisi form berikut
+              </p>
+            </div>
+          </div>
+          <div class="row cashaja-step-container" id="pengajuan-2">
+            <div class="col-2">
+              <img alt="Image" class="img-fluid" id="pengajuan-2-img"
+                src="/landing-page/images/pengajuan/2-uncolored.png">
+            </div>
+            <div class="col">
+              <p id="pengajuan-2-desc"><strong> Follow up penawaran dari MTF </strong> <br>
+                Tinggal duduk manis, kamu akan segera dihubungi oleh pihak MTF saat hari kerja
+              </p>
+            </div>
+          </div>
+          <div class="row cashaja-step-container" id="pengajuan-3">
+            <div class="col-2">
+              <img alt="Image" class="img-fluid" id="pengajuan-3-img"
+                src="/landing-page/images/pengajuan/3-uncolored.png">
+            </div>
+            <div class="col">
+              <p id="pengajuan-3-desc"><strong> Finalisasi Hitungan & Pencairan </strong> <br>
+                Setelah dokumen lengkap, survey telah dilakukan, dana siap cair ke rekeningmu
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Syarat Pengajuan -->
+        <div class="d-none cashaja-step-container" id="syarat-content">
+          <p class="black-text">
+            Jangan lupa siapkan dokumen - dokumen dibawah ini untuk mengajukan di CashAja
+          </p>
+          <br>
+          <div class="accordion" id="pengajuanAccordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"
+                    data-target="#collapseOne" data-toggle="collapse" type="button">
+                    Untuk Pribadi
+                  </button>
+                </h2>
+              </div>
+              <div aria-labelledby="headingOne" class="collapse show" data-parent="#pengajuanAccordion"
+                id="collapseOne">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Bukti Identitas Yang Masih berlaku </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Bukti Kepemilikan Tempat Tinggal </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Data Keuangan </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Dokumen Agunan </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Legalitas Usaha </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed"
+                    data-target="#collapseTwo" data-toggle="collapse" type="button">
+                    Untuk Badan Usaha
+                  </button>
+                </h2>
+              </div>
+              <div aria-labelledby="headingTwo" class="collapse" data-parent="#pengajuanAccordion" id="collapseTwo">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Dokumen Identitas dan Legalitas Badan Usaha </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Data Keuangan Badan Usaha </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img alt="Image" class="img-fluid" src="/landing-page/images/pengajuan/checkmark.png">
+                    </div>
+                    <div class="col">
+                      <p class="black-text"> Data Agunan </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+            <a id="cek-info-lengkap-pengajuan" class="btn btn-secondary mr-2 mb-2" href="/faq">Cek Info Lengkap Disini</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+
+        <!-- Form Pengajuan -->
+        <div id="prosedur-form">
+          <div class="card shadow">
+            <div class="card-body">
+              <h4 class="card-title black-text">FORM PENGAJUAN</h4>
+              <br>
+              <form class="form-pengajuan-submit" id="form-pengajuan" novalidate>
+                <div class="form-group">
+                  <label for="inputName">Nama Kamu</label>
+                  <input class="form-control" id="inputName" placeholder="Masukkan nama lengkap kamu" required
+                    type="text">
+                  <div class="invalid-feedback">
+                    Masukkan nama kamu!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail">Alamat E-mail</label>
+                  <input class="form-control" id="inputEmail" placeholder="Masukkan e-mail" required type="email">
+                  <div class="invalid-feedback">
+                    Masukkan alamat e-mail dengan format yang benar!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPhone">Nomor Telepon</label>
+                  <input class="form-control" id="inputPhone" minlength="7" maxlength="12" pattern="\d*"
+                    placeholder="Masukkan nomor yang bisa dihubungi" required type="text">
+                  <div class="invalid-feedback">
+                    Nomor telepon minimal berjumlah 7 digit dan maksimal 12 digit!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputKTP">Nomor KTP</label>
+                  <input class="form-control" id="inputKTP" minlength="16" maxlength="16" pattern="\d*"
+                    placeholder="Masukkan 16 digit nomor KTP" required type="text">
+                  <div class="invalid-feedback">
+                    Nomor KTP harus berjumlah 16 Digit!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputDomisili">Domisili</label>
+                  <select class="form-control" id="inputDomisili" required>
+                    <option disabled selected value="">Pilih Domisili Terdekat Cabang MTF</option>
+                    <option value="Ambon - REG 9">Ambon - REG 9</option>
+                    <option value="Balikpapan - REG 8">Balikpapan - REG 8</option>
+                    <option value="Banda Aceh - REG 1">Banda Aceh - REG 1</option>
+                    <option value="Bandar Jaya - REG 2">Bandar Jaya - REG 2</option>
+                    <option value="Bandung - REG 5">Bandung - REG 5</option>
+                    <option value="Banjarbaru - REG 8">Banjarbaru - REG 8</option>
+                    <option value="Banjarmasin - REG 8">Banjarmasin - REG 8</option>
+                    <option value="Banyuwangi - REG 7">Banyuwangi - REG 7</option>
+                    <option value="Batam - REG 1">Batam - REG 1</option>
+                    <option value="Baturaja - REG 2">Baturaja - REG 2</option>
+                    <option value="Bekasi - REG 4">Bekasi - REG 4</option>
+                    <option value="Bengkulu - REG 2">Bengkulu - REG 2</option>
+                    <option value="Bintaro - REG 3">Bintaro - REG 3</option>
+                    <option value="Bogor - REG 4">Bogor - REG 4</option>
+                    <option value="Bontang - REG 8">Bontang - REG 8</option>
+                    <option value="BSD - REG 3">BSD - REG 3</option>
+                    <option value="Bukit Tinggi - REG 2">Bukit Tinggi - REG 2</option>
+                    <option value="Cibinong - REG 4">Cibinong - REG 4</option>
+                    <option value="Cibubur - REG 4">Cibubur - REG 4</option>
+                    <option value="Cikarang - REG 4">Cikarang - REG 4</option>
+                    <option value="Cilegon - REG 3">Cilegon - REG 3</option>
+                    <option value="Cirebon - REG 5">Cirebon - REG 5</option>
+                    <option value="Denpasar - REG 7">Denpasar - REG 7</option>
+                    <option value="Depok - REG 4">Depok - REG 4</option>
+                    <option value="Duren Tiga 2 - REG 4">Duren Tiga 2 - REG 4</option>
+                    <option value="Duri - REG 1">Duri - REG 1</option>
+                    <option value="Fatmawati - REG 4">Fatmawati - REG 4</option>
+                    <option value="Garut - REG 5">Garut - REG 5</option>
+                    <option value="Gianyar - REG 7">Gianyar - REG 7</option>
+                    <option value="Gorontalo - REG 9">Gorontalo - REG 9</option>
+                    <option value="Gresik - REG 7">Gresik - REG 7</option>
+                    <option value="Jakarta Selatan - REG 4">Jakarta Selatan - REG 4</option>
+                    <option value="Jakarta Timur - REG 4">Jakarta Timur - REG 4</option>
+                    <option value="Jakarta Barat - REG 3">Jakarta Barat - REG 3</option>
+                    <option value="Jakarta Utara - REG 3">Jakarta Utara - REG 3</option>
+                    <option value="Jakarta Pusat - REG 3">Jakarta Pusat - REG 3</option>
+                    <option value="Jambi - REG 2">Jambi - REG 2</option>
+                    <option value="Jayapura - REG 9">Jayapura - REG 9</option>
+                    <option value="Jember - REG 7">Jember - REG 7</option>
+                    <option value="Karawang - REG 5">Karawang - REG 5</option>
+                    <option value="Kebon Jeruk - REG 3">Kebon Jeruk - REG 3</option>
+                    <option value="Kemayoran - REG 3">Kemayoran - REG 3</option>
+                    <option value="Kediri- REG 7">Kediri- REG 7</option>
+                    <option value="Kendari - REG 9">Kendari - REG 9</option>
+                    <option value="Ketapang - REG 8">Ketapang - REG 8</option>
+                    <option value="Kotamobagu - REG 9">Kotamobagu - REG 9</option>
+                    <option value="Kudus - REG 6">Kudus - REG 6</option>
+                    <option value="Kupang - REG 7">Kupang - REG 7</option>
+                    <option value="Lampung - REG 2">Lampung - REG 2</option>
+                    <option value="Lebak Bulus - REG 4">Lebak Bulus - REG 4</option>
+                    <option value="Lubuk Linggau - REG 2">Lubuk Linggau - REG 2</option>
+                    <option value="Luwuk - REG 9">Luwuk - REG 9</option>
+                    <option value="Madiun - REG 7">Madiun - REG 7</option>
+                    <option value="Magelang - REG 6">Magelang - REG 6</option>
+                    <option value="Makassar - REG 9">Makassar - REG 9</option>
+                    <option value="Malang- REG 7">Malang- REG 7</option>
+                    <option value="Mamuju - REG 9">Mamuju - REG 9</option>
+                    <option value="Manado - REG 9">Manado - REG 9</option>
+                    <option value="Mataram - REG 7">Mataram - REG 7</option>
+                    <option value="Matraman - REG 4">Matraman - REG 4</option>
+                    <option value="Medan - REG 1">Medan - REG 1</option>
+                    <option value="Mojokerto - REG 7">Mojokerto - REG 7</option>
+                    <option value="Muara Bungo - REG 2">Muara Bungo - REG 2</option>
+                    <option value="Padang - REG 2">Padang - REG 2</option>
+                    <option value="Palangkaraya - REG 8">Palangkaraya - REG 8</option>
+                    <option value="Palembang - REG 2">Palembang - REG 2</option>
+                    <option value="Palu - REG 9">Palu - REG 9</option>
+                    <option value="Pangkal Pinang - REG 2">Pangkal Pinang - REG 2</option>
+                    <option value="Pare-Pare - REG 9">Pare-Pare - REG 9</option>
+                    <option value="Pecenongan - REG 3">Pecenongan - REG 3</option>
+                    <option value="Pekalongan - REG 6">Pekalongan - REG 6</option>
+                    <option value="Pekanbaru - REG 1">Pekanbaru - REG 1</option>
+                    <option value="Pluit - REG 3">Pluit - REG 3</option>
+                    <option value="Pondok Gede - REG 4">Pondok Gede - REG 4</option>
+                    <option value="Pontianak - REG 8">Pontianak - REG 8</option>
+                    <option value="Purwokerto - REG 6">Purwokerto - REG 6</option>
+                    <option value="Rangkas Bitung - REG 3">Rangkas Bitung - REG 3</option>
+                    <option value="Rantau Prapat - REG 1">Rantau Prapat - REG 1</option>
+                    <option value="Samarinda - REG 8">Samarinda - REG 8</option>
+                    <option value="Sampit - REG 8">Sampit - REG 8</option>
+                    <option value="Semarang - REG 6">Semarang - REG 6</option>
+                    <option value="Serang - REG 3">Serang - REG 3</option>
+                    <option value="Sintang - REG 8">Sintang - REG 8</option>
+                    <option value="Solo - REG 6">Solo - REG 6</option>
+                    <option value="Sorong - REG 9">Sorong - REG 9</option>
+                    <option value="Subang - REG 5">Subang - REG 5</option>
+                    <option value="Sukabumi - REG 5">Sukabumi - REG 5</option>
+                    <option value="Surabaya - REG 7">Surabaya - REG 7</option>
+                    <option value="Tangerang - REG 3">Tangerang - REG 3</option>
+                    <option value="Tarakan - REG 8">Tarakan - REG 8</option>
+                    <option value="Tasikmalaya - REG 5">Tasikmalaya - REG 5</option>
+                    <option value="Tegal - REG 6">Tegal - REG 6</option>
+                    <option value="Tuban - REG 7">Tuban - REG 7</option>
+                    <option value="Ungaran - REG 6">Ungaran - REG 6</option>
+                    <option value="Yogyakarta - REG 6">Yogyakarta - REG 6</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Pilih lokasi terdekat dengan kamu!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputKetersediaanWaktu">Kapan Kamu Bersedia Dihubungi ?</label>
+                  <select class="form-control" id="inputKetersediaanWaktu" required>
+                    <option disabled selected value="">Pilih waktu</option>
+                    <option value="Hari Kerja - Pagi Hari">Hari Kerja - Pagi Hari</option>
+                    <option value="Hari Kerja - Siang Hari">Hari Kerja - Siang Hari</option>
+                    <option value="Hari Kerja - Sore Hari">Hari Kerja - Sore Hari</option>
+                    <option value="Bersedia Kapan Saja">Bersedia Kapan Saja</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Pilih waktu yang kamu inginkan!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" id="inputConfirmation" required type="checkbox" value="">
+                    <label style="font-size:12px;" class="form-check-label confirmation-box" for="inputConfirmation">
+                      Data yang saya berikan adalah benar.
+                      Dengan saya mengirimkan form ini saya mengizinkan pihak Mandiri Tunas Finance
+                      untuk menghubungi saya dalam membantu proses pengajuan dan
+                      bersedia menerima informasi lanjutan.
+                    </label>
+                    <div class="invalid-feedback">
+                      Kamu harus menyetujui sebelum melanjutkan
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                  Ajukan Sekarang
+                </button>
+              </form>
+              <br>
+
+              <!-- Alert Form Pengajuan -->
+              <div class="alert alert-info text-center d-none" id="pengajuan-success" role="alert">
+                Terima kasih telah melakukan pengajuan, data Anda telah tersimpan di sistem kami.
+                Anda akan segera dihubungi oleh pihak MTF.
+              </div>
+              <div class="alert alert-danger text-center d-none" id="pengajuan-fail" role="alert">
+                Data tidak berhasil kami terima. Mohon dicoba kembali.
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Pengajuan Step 2 (Sebelah Kanan) -->
+        <div class="d-none" id="prosedur-step-2">
+          <img alt="Pengajuan Tahap 2" class="img-fluid" src="/landing-page/images/pengajuan/step-2-followup.png">
+        </div>
+
+        <!-- Pengajuan Step 3 -->
+        <div class="d-none" id="prosedur-step-3">
+          <img alt="Pengajuan Tahap 3" class="img-fluid" src="/landing-page/images/pengajuan/step-3-finalisasi.png">
+        </div>
+
+        <!-- Syarat (Sebelah Kanan) -->
+        <div class="d-none" id="syarat-img">
+          <img alt="Syarat" class="img-fluid" src="/landing-page/images/pengajuan/yellow-woman.png">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</html>

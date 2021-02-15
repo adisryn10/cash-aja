@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<object th:include="fragments/general-header  ::  general-header" th:remove="tag"></object>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <img alt="Image" class="img-fluid" id="cashaja-logo-cms" src="/landing-page/images/cash-aja-blue-2-small.png">
+        <br><br>
+        <h5>CashAja CMS</h5>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-7 mb-5">
+        <form th:action="@{/login}" class="p-5 bg-white" method="POST">
+          <div th:if="${param.error}">
+            <span style="color: red">Username atau Password Salah</span>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="text-black" for="subject">Username</label>
+              <input type="subject" id="subject" name="username" class="form-control rounded-0">
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="text-black" for="subject">Password</label>
+              <input type="password" id="subject" name="password" class="form-control rounded-0">
+            </div>
+          </div>
+
+          <div class="row form-group justify-content-center">
+            <div class="row">
+              <input type="submit" value="Masuk" class="btn btn-primary mr-2 mb-2">
+            </div>
+            <div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

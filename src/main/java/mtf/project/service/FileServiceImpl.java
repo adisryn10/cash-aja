@@ -7,11 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.transaction.Transactional;
 import java.io.IOException;
-import java.util.Base64;
 import java.util.stream.Stream;
 
 @Service
+@Transactional
 public class FileServiceImpl implements FileService {
 
     @Autowired

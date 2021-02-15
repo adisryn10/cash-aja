@@ -1,0 +1,47 @@
+<html th:fragment="testimoni" xmlns:th="http://thymeleaf.org">
+<section class="site-section" id="testimonials-section" data-aos="fade-up">
+  <div class="container">
+    <div class="row mb-6">
+      <div class="col-12 text-left">
+        <h1 class="mb-5 text-black">
+          <strong>Testimoni Pelanggan</strong>
+        </h1>
+      </div>
+    </div>
+    <div id="testimonial-row">
+      <div class="col-lg-6 col-md-12 col-12" id="youtube" style="margin-top:10px">
+        <div id="container-iframe" style="word-wrap:break-word;margin-top:auto;margin-bottom:auto">
+          <iframe allowfullscreen frameborder="0" height="100%"
+            th:src="'https://www.youtube.com/embed/' + ${youtubeLink}" width="100%">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-8 col-12" style="margin-top:10px;margin-left:auto;margin-right:auto;">
+        <div class="card container card-testimoni">
+          <div class="slide-one-item home-slider owl-carousel">
+            <div class="testimonial" th:each="testimoni, counter : ${listTestimoni}">
+              <figure class="mb-4 d-block align-items-center justify-content-center">
+
+                <!-- Jika Tidak Ada Foto -->
+                <div th:if="${testimoniImage.get(counter.count-1).empty}">
+                  <img src="/landing-page/images/user-avatar.png" alt="Image" class="w-100 mb-3 my-5 shadow">
+                </div>
+
+                <!-- Jika Ada Foto -->
+                <div th:unless="${testimoniImage.get(counter.count-1).empty}">
+                  <img alt="Image" class="w-100 mb-3 my-5 shadow" th:src="'data:image/jpeg;base64,' + ${testimoniImage.get(counter.count-1)}">
+                </div>
+
+              </figure>
+              <h4 class="text-black mb-3" th:text="${testimoni.nama}"></h4>
+              <p class="mb-3 text-black" th:text="${testimoni.testimoni}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</html>

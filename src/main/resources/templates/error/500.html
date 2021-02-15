@@ -2,23 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <object th:include="fragments/fragment  ::  css" th:remove="tag"></object>
-    <object th:include="fragments/fragment  ::  js" th:remove="tag"></object>
+  <title>Kesalahan Sistem</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/landing-page/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="/landing-page/css/essentials/bootstrap.min.css">
+  <link rel="stylesheet" href="/landing-page/css/essentials/jquery-ui.css">
+  <link rel="stylesheet" href="/landing-page/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="/landing-page/css/index.css">
+  <link rel="icon" href="/landing-page/images/cash-aja.png">
 </head>
 
 <body>
 <section class="py-5 text-center bg-light">
-    <div class="container">
-        <h1 class="text-center">500</h1>
-        <h2 class="text-center">Internal Server Error</h2>
-        <div>
-            <a th:href="@{/}">
-                <button class="btn btn-sm btn-dark">
-                    Kembali ke Halaman Utama
-                </button></a>
-
-        </div>
+  <div class="container">
+    <h1 class="text-center">500</h1>
+    <h2 class="text-center">Internal Server Error</h2>
+    <div>
+      <a th:href="@{/}">
+        <button class="btn btn-sm btn-dark">
+          Kembali ke Halaman Utama
+        </button>
+      </a>
     </div>
+  </div>
 </section>
 </body>
 

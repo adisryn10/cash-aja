@@ -2318,3 +2318,7 @@ th {
 } @media (max-width: 768px) {
   .flex-end {
     justify-content: flex-start; } }
+
+#p-first {
+  font-size: 1.2rem;
+}

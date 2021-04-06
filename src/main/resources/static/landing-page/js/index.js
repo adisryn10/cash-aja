@@ -191,7 +191,7 @@ function startSimulasi() {
   if (form['acuan_hitung'] === "1") {
     form['tdp_diketahui'] = form['otr'] - $('#inputEstimasiPerhitungan').val()
     $.ajax({
-      url: 'https://cash-aja-proxy.herokuapp.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/tdp-diketahui',
+      url: 'http://proxy.cashaja.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/tdp-diketahui',
       headers: {
         'Token': 'Ex6OF9RJDs09rmNsw_R3v23Ohg6lSDRO',
       },
@@ -210,7 +210,7 @@ function startSimulasi() {
   } else {
     form['angsuran_diketahui'] = $('#inputEstimasiPerhitungan').val()
     $.ajax({
-      url: 'https://cash-aja-proxy.herokuapp.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/angsuran-diketahui',
+      url: 'http://proxy.cashaja.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/angsuran-diketahui',
       headers: {
         'Token': 'Ex6OF9RJDs09rmNsw_R3v23Ohg6lSDRO',
       },
@@ -301,7 +301,7 @@ function saveSimulationResult(data) {
 
 // Menampilkan hasil simulasi dengan melakukan iterasi (BAGIAN PEMBUATAN TABEL HASIL PERHITUNGAN)
 function showSimulationResult(type) {
-  let props = ["tenor", "bulan", "tdp", "suku_bunga", "angsuran"],
+  let props = ["tenor", "bulan", "tdp", "angsuran"],
     tipe_angsuran = type === "addm" ? addm_data : addb_data
 
   // Mengosongkan tabel jika user hendak berpindah menu ADDM / ADDB
@@ -313,8 +313,6 @@ function showSimulationResult(type) {
       let tableData = null
       if (prop === "tdp" || prop === "angsuran") {
         tableData = "Rp. " + data[prop]
-      } else if (prop === "suku_bunga") {
-        tableData = data[prop] + " %"
       } else {
         tableData = data[prop]
       }

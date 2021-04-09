@@ -41,6 +41,7 @@ public class PengajuanExporter {
         createCell(row, 4, "Nomor KTP", style);
         createCell(row, 5, "Domisili", style);
         createCell(row, 6, "Waktu Bersedia Dihubungi", style);
+        createCell(row, 7, "Waktu Permintaan", style);
     }
 
     private void createCell(Row row, int columnCount, Object value, CellStyle style) {
@@ -75,6 +76,7 @@ public class PengajuanExporter {
             createCell(row, columnCount++, pengajuan.getNoktp(), style);
             createCell(row, columnCount++, pengajuan.getLokasi(), style);
             createCell(row, columnCount++, pengajuan.getHubungi(), style);
+            createCell(row, columnCount++, pengajuan.getWaktuPermintaan(), style);
         }
     }
 

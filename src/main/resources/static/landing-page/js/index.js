@@ -1,13 +1,6 @@
 // AOS untuk animasi
 AOS.init();
 
-// Webshim Library untuk Masalah Currency
-webshims.setOptions('forms-ext', {
-  replaceUI: 'auto',
-  types: 'number'
-});
-webshims.polyfill('forms forms-ext');
-
 // ===== STYLING UMUM MENGGUNAKAN JQUERY ===== //
 
 // Webshim Library untuk Masalah Currency
@@ -191,7 +184,7 @@ function startSimulasi() {
   if (form['acuan_hitung'] === "1") {
     form['tdp_diketahui'] = form['otr'] - $('#inputEstimasiPerhitungan').val()
     $.ajax({
-      url: 'http://proxy.cashaja.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/tdp-diketahui',
+      url: 'http://cash-aja-proxy.herokuapp.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/tdp-diketahui',
       headers: {
         'Token': 'Ex6OF9RJDs09rmNsw_R3v23Ohg6lSDRO',
       },
@@ -210,7 +203,7 @@ function startSimulasi() {
   } else {
     form['angsuran_diketahui'] = $('#inputEstimasiPerhitungan').val()
     $.ajax({
-      url: 'http://proxy.cashaja.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/angsuran-diketahui',
+      url: 'http://cash-aja-proxy.herokuapp.com/http://mcalc.mtf.co.id:8988/mtf-go/web/index.php/multiguna/api/budget/angsuran-diketahui',
       headers: {
         'Token': 'Ex6OF9RJDs09rmNsw_R3v23Ohg6lSDRO',
       },
@@ -285,13 +278,17 @@ function showCalculationComponent(formData) {
     $('#komponen-jenis-asuransi').text('Kombinasi')
   }
 
-  $('#komponen-harga-kendaraan').text('Rp. ' + formData['otr'])
-  $('#komponen-estimasi-perhitungan').text('Rp. ' + $('#inputEstimasiPerhitungan').val())
+  $('#komponen-harga-kendaraan').text('Rp. ' + currencyFormatter(formData['otr']))
+  $('#komponen-estimasi-perhitungan').text('Rp. ' + currencyFormatter($('#inputEstimasiPerhitungan').val()))
   $('#komponen-tahun-kendaraan').text(formData['tahun_kendaraan'])
 }
 
-let addb_data = null,
-  addm_data = null
+// Menambahkan titik untuk setiap 3 digit angka, Misalnya: 100000 -> 100.000
+function currencyFormatter(amount) {
+  return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+let addb_data = null, addm_data = null
 
 // Menyimpan ke variabel global terkait hasil pengambilan data
 function saveSimulationResult(data) {
@@ -312,7 +309,7 @@ function showSimulationResult(type) {
     $.each(props, function (i, prop) {
       let tableData = null
       if (prop === "tdp" || prop === "angsuran") {
-        tableData = "Rp. " + data[prop]
+        tableData = "Rp. " + currencyFormatter(data[prop])
       } else {
         tableData = data[prop]
       }

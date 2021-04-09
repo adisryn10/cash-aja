@@ -49,12 +49,12 @@
                   <div class="form-group">
                     <label for="inputHarga">Harga Kendaraan (Dalam Rupiah)</label>
                     <input class="form-control" id="inputHarga" min="0" step="1000000" placeholder="Contoh: 150.000.000"
-                      type="number" value="10000000">
+                           type="number" value="10000000">
                   </div>
                   <div class="form-group">
                     <label for="inputEstimasiPerhitungan">Estimasi Perhitungan (Dalam Rupiah)</label>
                     <input class="form-control" id="inputEstimasiPerhitungan" min="0" step="1000000"
-                      placeholder="Contoh: 500.000" type="number" value="500000">
+                           placeholder="Contoh: 500.000" type="number" value="500000">
                   </div>
                   <p>Estimasi perhitungan ini bisa diubah sesuai dengan kebutuhan kamu.<br>
                     Jika kamu memilih acuan hitung berupa angsuran, isilah dengan angsuran kamu perbulannya.</p>
@@ -95,11 +95,11 @@
               <div class="d-none" id="hasil-simulasi-container">
                 <div id="hasil-simulasi-button">
                   <button class="btn btn-lg btn-primary mr-2 mb-2" id="addm-section-btn"
-                    onclick=showSimulationResult("addm") type="button">
+                          onclick=showSimulationResult("addm") type="button">
                     Perhitungan ADDM
                   </button>
                   <button class="btn btn-lg mr-2 mb-2" id="addb-section-btn" onclick=showSimulationResult("addb")
-                    type="button">
+                          type="button">
                     Perhitungan ADDB
                   </button>
                 </div>
@@ -111,21 +111,19 @@
                   <br>
                   <table class="table table-borderless table-simulation table-striped" id="simulation-table">
                     <thead>
-                      <tr>
-                        <th scope="col">TENOR</th>
-                        <th scope="col">BULAN</th>
-                        <th scope="col">ESTIMASI PENCAIRAN</th>
-                        <th scope="col">ANGSURAN</th>
-                      </tr>
+                    <tr>
+                      <th scope="col">TENOR</th>
+                      <th scope="col">BULAN</th>
+                      <th scope="col">ESTIMASI PENCAIRAN</th>
+                      <th scope="col">ANGSURAN</th>
+                    </tr>
                     </thead>
                     <tbody id="simulation-tbody"></tbody>
                   </table>
                 </div>
 
                 <!-- Hasil Perhitungan Simulasi ADDB -->
-                <div id="hasil-simulasi-addb-container">
-
-                </div>
+                <div id="hasil-simulasi-addb-container"></div>
 
                 <!-- Komponen Perhitungan Simulasi -->
                 <div id="hasil-simulasi-komponen-container">

@@ -64,6 +64,7 @@
                           <th>Telepon</th>
                           <th>No. KTP</th>
                           <th>Waktu Hubungi</th>
+                          <th>Waktu Permintaan</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
@@ -76,6 +77,7 @@
                           <td th:text="${pengajuan.phone}"></td>
                           <td th:text="${pengajuan.noktp}"></td>
                           <td th:text="${pengajuan.hubungi}"></td>
+                          <td th:text="${pengajuan.waktuPermintaan}"></td>
                           <td>
                             <form method="POST" th:action="@{/admin/pengajuan/delete}">
                               <input class="form-control" name="id" th:value="${pengajuan.id}" type="hidden" />

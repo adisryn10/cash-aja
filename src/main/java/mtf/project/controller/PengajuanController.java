@@ -30,6 +30,10 @@ public class PengajuanController {
     @PostMapping(value = "/pengajuan/add")
     public ResponseEntity<Object> submitPengajuan(@ModelAttribute PengajuanModel pengajuan) {
         try {
+            Date date = new Date(System.currentTimeMillis());
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            String strDate = dateFormat.format(date);
+            pengajuan.setWaktuPermintaan(strDate);
             pengajuanService.addPengajuan(pengajuan);
             return ResponseEntity.status(HttpStatus.OK).body(null);
         } catch (Exception handlerException) {
@@ -59,7 +63,7 @@ public class PengajuanController {
         String currentDateTime = dateFormatter.format(new Date());
 
         String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=pengajuan " + currentDateTime + ".xlsx";
+        String headerValue = "attachment; filename=Pengajuan " + currentDateTime + ".xlsx";
         response.setHeader(headerKey, headerValue);
 
         List<PengajuanModel> listPengajuan = pengajuanService.getAllPengajuan();
